@@ -78,7 +78,7 @@ f^{-1} := \{ (y, x) \in Y \times X \mid (x, y) \in f \}
 \end{gather}
 $$
 
-Because the source mapping $f$ is surjective, the domain of $f^{-1}$ is guaranteed to be the entirety of $Y$. Because $f$ is injective, the relation $f^{-1}$ satisfies the uniqueness constraint of Definition 1, establishing $f^{-1}$ as a valid function mapping $Y \to X$ such that $f^{-1}(y) = x \iff f(x) = y$. The inverse of a function is also known as its *preimage*. (see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 4/Proof of Definition 6\|Proof of Definition 6]] for further explanation)
+Because the source mapping $f$ is surjective, the domain of $f^{-1}$ is guaranteed to be the entirety of $Y$. Because $f$ is injective, the relation $f^{-1}$ satisfies the uniqueness constraint of Definition 1, establishing $f^{-1}$ as a valid function mapping $Y \to X$ such that $f^{-1}(y) = x \iff f(x) = y$. The inverse of a function is also known as its *preimage*. (see [[Proof of Definition 6\|Proof of Definition 6]] for further explanation)
 
 > [!danger]+ Intuition: Inverse Functions Undo the Original
 > A clever way to think about the inverse of a function $f$ is that it "undoes" what the original function does.
@@ -203,7 +203,7 @@ $$
 \text{2. Bijective if and only if } f^{-1}(f(A)) = A \wedge f(f^{-1}(B')) = B' 
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 4/Proof of Proposition 4\|proof]])
+(see [[Proof of Proposition 4\|proof]])
 $$
 \begin{gather}
 \textbf{Proposition: } \\[5mm]
@@ -215,6 +215,6 @@ $$
 \text{5. }  f(A \ \backslash \ B) = f(A) \ \backslash  \ f(B) \text{ whenever } B \subset A \subset X
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 4/Proof of Proposition 5\|proof]])
+(see [[Proof of Proposition 5\|proof]])
 
 

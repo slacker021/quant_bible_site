@@ -8,11 +8,11 @@ The objective of this proof is to demonstrate the existence of a martingale meas
 3. **Linearity of Asset Combinations:** $P_Z(t) = \sum_{i=0}^N \Delta^i(t) X_Z^i(t)$
 
 ###### Step 1: Portfolio Dynamics via Linearity (Axiom 3)
-Consider a trading strategy holding quantities $\Delta^i(t)$ of no-arbitrage assets $X^i$ for $i = 0, 1, \dots, N$. Selecting $Y = X^0$ as the reference numeraire, the total portfolio value relative to $Y$ at time $t$ is expressed via [[Mathematics/Linear Analysis/Volume 1 - Elementary Linear Algebra/Chapter 1 - Vector Space of Linear Maps\|Linearity]] as:
+Consider a trading strategy holding quantities $\Delta^i(t)$ of no-arbitrage assets $X^i$ for $i = 0, 1, \dots, N$. Selecting $Y = X^0$ as the reference numeraire, the total portfolio value relative to $Y$ at time $t$ is expressed via [[Chapter 1 - Vector Space of Linear Maps\|Linearity]] as:
 $$P_Y(t) = \sum_{i=0}^N \Delta^i(t) X_Y^i(t) \tag{1}$$
 For a self-financing portfolio, value changes are driven exclusively by shifts in underlying relative asset prices:
 $$dP_Y(t) = \sum_{i=1}^N \Delta^i(t) \, dX_Y^i(t) \tag{2}$$
-###### Step 2: Inheritance of the [[Mathematics/Stochastic Analysis/Volume 2/Module 1 - Stochastic Processes/Chapter 4 - Filtrations and Martingales\|Martingale]] Property
+###### Step 2: Inheritance of the [[Chapter 4 - Filtrations and Martingales\|Martingale]] Property
 If each relative price process $X_Y^i(t)$ is a $\mathbb{P}^Y$-martingale, then by the linearity of conditional expectations and stochastic integration, the self-financing portfolio price process $P_Y(t)$ is likewise a martingale under measure $\mathbb{P}^Y$. Therefore, over the horizon $[0, T]$:
 $$\mathbb{E}^{\mathbb{P}^Y} \left[ P_Y(T) \mid \mathcal{F}_0 \right] = P_Y(0) \tag{3}$$
 

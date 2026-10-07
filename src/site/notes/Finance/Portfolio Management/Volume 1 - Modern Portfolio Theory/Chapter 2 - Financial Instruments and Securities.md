@@ -22,7 +22,7 @@ t \in [0,T]. \text{ Additionally, let } \mathcal{A} \text{ denote the set of str
 \text{1 unit of } X = X_{Y}(t) \text{ units of Y } \iff X_{t} = X_{Y}(t) \cdot Y_{t} \text{ for } X_{Y}(t)
 \end{gather}
 $$
-(See [[Mathematics/Stochastic Analysis/Volume 1 - Random Variables and Distributions/Module 1 - Measures and Probability Spaces/Chapter 1 - Measurable and Probability Spaces\|probability spaces]] for more information)
+(See [[Chapter 1 - Measurable and Probability Spaces\|probability spaces]] for more information)
 
 ### Foundational Axioms
 From this pairwise algebraic definition arises several structural properties. These properties are considered to be the fundamental [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Chapter 1 - Basic Rules of Logic\|assumptions]] of financial mathematics that provide a non-ambiguous and grounded approach to understanding pricing:  
@@ -56,10 +56,10 @@ X^i \in \mathcal{A} \text{ held in quantities } \Delta^i(t). \text{ The price pr
 P_Z(t) = \left[ \sum_{i=1}^N \Delta^i(t) \cdot X^i \right]_Z (t) = \sum_{i=1}^N \Delta^i(t) \cdot X_Z^i(t)
 \end{gather}
 $$
-(see [[Mathematics/Linear Analysis/Volume 1 - Elementary Linear Algebra/Chapter 2 - Finite-Dimensional Vector Spaces\|linear combinations]] for more information)
+(see [[Chapter 2 - Finite-Dimensional Vector Spaces\|linear combinations]] for more information)
 
 ### The Fundamental Theorem of Asset Pricing
-These three axioms, along with the definition of a [[Mathematics/Stochastic Analysis/Volume 2/Module 1 - Stochastic Processes/Chapter 4 - Filtrations and Martingales\|martingale]], can be used to construct an important fact: 
+These three axioms, along with the definition of a [[Chapter 4 - Filtrations and Martingales\|martingale]], can be used to construct an important fact: 
 $$
 \begin{gather}
 \textbf{Theorem 1: The Fundmental Theorem of Asset Pricing (Part 1)} \\[5mm]
@@ -71,7 +71,7 @@ $$
 \text{then the financial economy contains no arbitrage opportunities. } 
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 3 - Elementary Measure Theory and Integration Theory/Module 1 - Elementary Measure Theory/Chapter 1 - Measurable Spaces\|measure theory]] for more information and [[Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Proofs and Derivations/Chapter 2/Proof of Theorem 1\|proof]] for verification)
+(see [[Chapter 1 - Measurable Spaces\|measure theory]] for more information and [[Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Proofs and Derivations/Chapter 2/Proof of Theorem 1\|proof]] for verification)
 
 In formal measure-theoretic notation, for any time $s \le t \le T$, the normalized price process satisfies the conditional expectation:
 $$X_Y(s) = \mathbb{E}^{\mathbb{P}^Y} \left[ X_Y(t) \mid \mathcal{F}_s \right] \quad \text{almost surely} \tag{1}$$
@@ -402,7 +402,7 @@ $$
 I_{t} = I_{t-1} \cdot \left(\sum^N_{i=1} w_{i,t} \frac{P_{i,t}}{P_{i,t-1}}\right)
 \end{gather}
 $$
-Arithmetic value-weighted indices provide an accurate representation of aggregate market value and total changes in sectoral wealth over time. This is critical in value-weighted indices, where arithmetic averaging preserves direct proportional mapping to aggregate market capitalization and total corporate wealth. Arithmetically averaged value-weighted indices are the only benchmarks that're macroconsistent. Macroconsistency guarantees that all market participants can hold the index portfolio simultaneously in aggregate equilibrium without forcing artificial trade flows. (see [[Mathematics/Stochastic Analysis/Volume 1 - Random Variables and Distributions/Module 2 - Random Variables/Chapter 2 - Expected Value\|arithmetic averaging]]) for more information)
+Arithmetic value-weighted indices provide an accurate representation of aggregate market value and total changes in sectoral wealth over time. This is critical in value-weighted indices, where arithmetic averaging preserves direct proportional mapping to aggregate market capitalization and total corporate wealth. Arithmetically averaged value-weighted indices are the only benchmarks that're macroconsistent. Macroconsistency guarantees that all market participants can hold the index portfolio simultaneously in aggregate equilibrium without forcing artificial trade flows. (see [[Chapter 2 - Expected Value\|arithmetic averaging]]) for more information)
 
 ###### Geometric Averaging
 $$

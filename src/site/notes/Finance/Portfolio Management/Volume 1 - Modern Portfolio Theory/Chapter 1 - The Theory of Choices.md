@@ -21,7 +21,7 @@ The simplest way to model making decisions under uncertainty is through the *opp
 - The time periods that the investor is operating in 
 - The product or service the investor wants to consume
 - The combination of products or services the investor can consume at any moment
-Although the opportunity set may be visualized as simple plots on a two-dimensional grid, it may be more dynamic to graph these as [[Mathematics/Linear Analysis/Volume 1 - Elementary Linear Algebra/Chapter 1 - Vector Space of Linear Maps\|linear]] [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Chapter 4 - Functions and Cardinality\|functions]] that are drawn across the grid. This system of representation takes preferences over bundles and assigns each bundle a single number, where higher numbers represent more preferred bundles: 
+Although the opportunity set may be visualized as simple plots on a two-dimensional grid, it may be more dynamic to graph these as [[Chapter 1 - Vector Space of Linear Maps\|linear]] [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Chapter 4 - Functions and Cardinality\|functions]] that are drawn across the grid. This system of representation takes preferences over bundles and assigns each bundle a single number, where higher numbers represent more preferred bundles: 
 $$
 \begin{gather}
 \textbf{Definition: Utility Function} \\[5mm]
@@ -45,7 +45,7 @@ I_{k} = \{ x \in X \ | \ u(x) = k \} \\[2.5mm]
 \text{delineates the individual's indifference curve within the choice space.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|axiom of completeness]], [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Chapter 1 - Limits of Sequences\|limit of monotonic sequences]], [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Chapter 2 - Limits of Functions\|limit of a function]],  and [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 5 - Differential Calculus/Chapter 4 - Study of Functions Using Methods of Differential Calculus\|differential calculus]] for more information) 
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|axiom of completeness]], [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Chapter 1 - Limits of Sequences\|limit of monotonic sequences]], [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Chapter 2 - Limits of Functions\|limit of a function]],  and [[Chapter 4 - Study of Functions Using Methods of Differential Calculus\|differential calculus]] for more information) 
 
 In other words, the utility function takes in two or more arguments, which are the specific quantities of each good consumed. Each output of the function, represents a certain amount of *utility*, which is the level of satisfaction or happiness obtained from this particular bundle. The higher the utility, the higher the satisfaction the investor has from that specific bundle. 
 
@@ -84,7 +84,7 @@ $$
 \mathcal{I}_k = u^{-1}(\{k\}) = \{ x \in X \mid u(x) = k \}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 4 - Continuous Functions/Chapter 1 - Definition of Continuity at a Point\|definition of continuity]] and [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 8/Chapter 2 - Differentiation of Multivariate Functions\|multivariate derivatives]] for more information)
+(see [[Chapter 1 - Definition of Continuity at a Point\|definition of continuity]] and [[Chapter 2 - Differentiation of Multivariate Functions\|multivariate derivatives]] for more information)
 
 The indifference curves and opportunity set represent the tools necessary for the investor to reach a solution. The optimum pattern for the investor is determined by the point at which a number of the set of indifference curves is tangent to the opportunity set. The investor ought to select the bundle corresponding to the point of tangency between the budget line and an indifference curve, rather than a curve that intersects the utility line at two points or a curve that doesn't intersect the line at all. When an indifference curve crosses a linear budget line at one point, this one point represents the option the investor is most satisfied with. 
 

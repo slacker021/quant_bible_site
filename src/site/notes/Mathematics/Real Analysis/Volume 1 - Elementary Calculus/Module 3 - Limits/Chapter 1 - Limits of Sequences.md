@@ -218,4 +218,4 @@ $$
 S_{k}(n) = a_{k+1}n^{k+1} + \dots + a_{1}n + a_{0}
 \end{gather}
 $$
-(see [[Derivation of Faulhaber's Formulae\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Derivation of Faulhaber's Formulae\|proof]])

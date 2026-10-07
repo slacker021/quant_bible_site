@@ -169,7 +169,7 @@ $$
 \text{If } X \times Y \neq \emptyset, \text{ then } A \times B \subset X \times Y \iff A \subset X \wedge B \subset Y
 \end{gather}
 $$
-(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 3/Proof of Theorem 3\|proof]])
+(See [[Proof of Theorem 3\|proof]])
 $$
 \begin{gather}
 \textbf{Theorem:} \\[5mm]
@@ -177,11 +177,11 @@ $$
 (X \times Y) \cup (Z \times Y) = (X \cup Z) \times Y
 \end{gather}
 $$
-(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 3/Proof of Theorem 4\|proof]])
+(See [[Proof of Theorem 4\|proof]])
 $$
 \begin{gather}
 \textbf{Theorem: } \\[5mm]
 (X \times Y) \cap (X' \times Y') = (X \cap X') \times (Y \cap Y')
 \end{gather}
 $$
-(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 3/Proof of Theorem 5\|proof]])
+(See [[Proof of Theorem 5\|proof]])

@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/finance/portfolio-management/volume-1-modern-portfolio-theory/chapter-3-financial-markets/","dg-note-properties":{}}
 ---
 
-There is a special [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Chapter 2 - Elementary Set Theory\|subset]] of the economy dedicated to trading [[Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Chapter 2 - Financial Instruments and Securities\|financial securities]] and other instruments. Mathematically, this can be modeled as an adapted [[Mathematics/Linear Analysis/Volume 1 - Elementary Linear Algebra/Chapter 1 - Vector Space of Linear Maps\|vector]] or [[Mathematics/Real Analysis/Volume 3 - Elementary Measure Theory and Integration Theory/Module 1 - Elementary Measure Theory/Chapter 1 - Measurable Spaces\|probability space]]: 
+There is a special [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Chapter 2 - Elementary Set Theory\|subset]] of the economy dedicated to trading [[Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Chapter 2 - Financial Instruments and Securities\|financial securities]] and other instruments. Mathematically, this can be modeled as an adapted [[Chapter 1 - Vector Space of Linear Maps\|vector]] or [[Chapter 1 - Measurable Spaces\|probability space]]: 
 $$
 \begin{gather}
 \textbf{Definition: Financial Market} \\[5mm]
