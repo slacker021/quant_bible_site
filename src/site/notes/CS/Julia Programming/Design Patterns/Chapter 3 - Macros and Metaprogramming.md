@@ -56,27 +56,26 @@ Creating a manual timing function (e.g., `timeit(func)`) requires wrapping the c
 > Which could yield the following output:
 > ```
 > 2500-element Vector{Float64}:
- 100.0
- 100.2755847118968
- 100.48739941154705
-   ⋮
-  85.05026828595291
-  84.75490230132971
-  84.67653415718318
+ >100.0
+ >100.2755847118968
+ >100.48739941154705
+   >⋮
+  >85.05026828595291
+  >84.75490230132971
+  >84.67653415718318
 > ```
 > How much time this takes to process can be tested with the `@time` macro, where `@time simulate_gbm!(S₀, T, μ, σ, steps)` can be entered. The following output is yielded:
-> ```
->  0.000035 seconds (13 allocations: 46.059 KiB)
-2500-element Vector{Float64}:
- 100.0
-  99.57231194379743
-  99.82686995865562
-   ⋮
-  80.7498146393798
-  81.10022819644011
-  81.02159975515873
-> ```
-
+>```
+>0.000035 seconds (13 allocations: 46.059 KiB)
+>2500-element Vector{Float64}:
+ >100.0
+>99.57231194379743
+>99.82686995865562
+>⋮
+>80.7498146393798
+>81.10022819644011
+>81.02159975515873
+>```
 
 ---
 # Working with Expressions
