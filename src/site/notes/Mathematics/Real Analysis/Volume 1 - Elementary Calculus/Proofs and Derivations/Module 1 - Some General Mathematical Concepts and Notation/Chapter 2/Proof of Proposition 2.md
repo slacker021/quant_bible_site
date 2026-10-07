@@ -86,3 +86,6 @@ Therefore,
 $$
 C_{M}(A \cap B) \supseteq C_{M}(A) \cup C_{M}(B) \tag{19}
 $$
+$$
+\textbf{Q.E.D}
+$$

@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-1-general-mathematical-concepts-and-notation/proofs-and-derivations/chapter-4/proof-of-cantor-s-theorem/","dg-note-properties":{}}
 ---
 
-# Part 1: Existence of an Injection ($\vert{}X\vert{} \le \vert{}\mathcal{P}(X)\vert{}$)
+# Theorem 1
 Define the mapping $f: X \to \mathcal{P}(X)$ by assigning to each element $x \in X$ its singleton set:
 $$f(x) := \{x\} \tag{1}$$
 Let $x_1, x_2 \in X$ and suppose $f(x_1) = f(x_2)$. By definition of $f$, 
@@ -11,7 +11,9 @@ By the Axiom of Extensionality, two singleton sets are equal if and only if thei
 $$x_1 = x_2 \tag{3}$$
 Thus, $f$ is an injective mapping (one-to-one), establishing that
 $$\vert{}X\vert{} \le \vert{}\mathcal{P}(X)\vert{} \tag{4}$$
-# Part 2: Non-Existence of a Surjection ($\vert{}X\vert{} \neq \vert{}\mathcal{P}(X)\vert{}$)
+
+---
+# Theorem 2
 Let $g: X \to \mathcal{P}(X)$ be an arbitrary mapping. To demonstrate that $g$ cannot be surjective, it suffices to construct a subset $D \in \mathcal{P}(X)$ that is not in the image of $g$. Construct the "diagonal" set $D$ consisting of all elements in $X$ that are not members of the subset to which $g$ maps them:
 $$D := \{ x \in X \mid x \notin g(x) \} \tag{5}$$
 Because $D$ is composed entirely of elements from $X$, $D \subseteq X$, which implies $D \in \mathcal{P}(X)$. Now, assume for the sake of contradiction that $g$ is surjective. If $g$ is surjective, then every element in the codomain $\mathcal{P}(X)$ has a pre-image in $X$. In particular, there must exist some element $d \in X$ such that

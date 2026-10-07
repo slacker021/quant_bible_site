@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-1-general-mathematical-concepts-and-notation/proofs-and-derivations/chapter-2/proof-of-elementary-lemma-of-set-complementation/","dg-note-properties":{}}
 ---
 
-# Part 1: $(A \subset C) \wedge (B \subset C) \iff (A \cup B) \subset C$
+# Proposition 1
 
 ### LHS ($\implies$)
 Assume $(A \subseteq C) \land (B \subseteq C)$ and let $x \in A \cup B$ be an arbitrary element. By definition of the union, 
@@ -32,7 +32,8 @@ $$
 Therefore, 
 $$(A \subseteq C) \land (B \subseteq C) \tag{7}$$
 
-# Part 2: $(A \subseteq B) \iff C_M B \subseteq C_M A)$
+---
+# Proposition 2
 
 ### LHS ($\implies$) 
 Assume $A \subseteq B$ and let $x \in C_{M}(B)$. By definition of the complement, 
@@ -62,7 +63,8 @@ $$x \in C_M(A) \implies x \notin A \tag{14}$$
 Step 14 contradicts the initial premise that $x \in A$. Therefore, $x \in B$ establishes that 
 $$A \subseteq B \tag{15}$$
 
-# Part 3: $C_{M}(C_{M}(A)) = A$
+---
+# Proposition 3
 
 ### LHS ($C_{M}(C_{M}(A))$)
 Let $x \in C_M{C}_M(A)$. By definition of complementation, 

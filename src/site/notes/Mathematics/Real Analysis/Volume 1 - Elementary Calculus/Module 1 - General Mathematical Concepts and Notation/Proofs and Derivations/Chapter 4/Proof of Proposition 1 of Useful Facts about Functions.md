@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-1-general-mathematical-concepts-and-notation/proofs-and-derivations/chapter-4/proof-of-proposition-1-of-useful-facts-about-functions/","dg-note-properties":{}}
 ---
 
-# Part 1: $A \subset B \implies f(A) \subset f(B) \neq A \subset B$
+# Proposition 1
 
 ### LHS ($\implies$)
 Assume $A \subseteq B$ and let $y \in f(A)$ be an arbitrary element. By definition of the direct image under $f$, there exists at least one element $x \in A$ such that
@@ -21,14 +21,16 @@ f(A) = \{0\} \text{ and } f(B) = \{0\} \tag{5}
 $$
 Here, $f(A) = f(B)$, so $f(A) \subseteq f(B)$ holds trivially. However, $A = \{1\} \nsubseteq \{2\} = B$ because $1 \notin \{2\}$. herefore, $f(A) \subseteq f(B)$ does not imply $A \subseteq B$ in general. 
 
-# Part 2: $A \neq \emptyset \implies f(A) \implies \emptyset$
+---
+# Proposition 2
 Assume $A \neq \emptyset$. Since $A \neq \emptyset$, there exists at least one element $x_0 \in A$. Since $f: X \to Y$ is a well-defined mapping, $f(x_0)$ exists and assigns $x_0$ to a unique element $y_0 \in Y$. By definition of the direct image
 $$
 f(A) = \{ f(x) \in Y \mid x \in A \} \tag{6}
 $$
 the element $y_0 = f(x_0)$ belongs to $f(A)$. Because $f(A)$ contains at least one element $y_0$, $f(A) \neq \emptyset$. 
 
-# Part 3: $f(A \cap B) \subset f(A) \cap f(B)$
+---
+# Proposition 3
 Let $y \in f(A \cap B)$ be an arbitrary element. By definition of direct image, there exists an element $x \in A \cap B$ such that $f(x) = y$. By definition of set intersection,
 $$x \in A \cap B \implies (x \in A) \wedge (x \in B \tag{7})$$
 Since $x \in A$ and $y = f(x)$, $y \in f(A)$, and since $x \in B$ and $y = f(x)$, $y \in f(B)$. Combining these statements yields $(y \in f(A)) \land (y \in f(B))$, which by definition of set intersection implies:
@@ -36,7 +38,8 @@ $$y \in f(A) \cap f(B) \tag{8}$$
 Therefore, 
 $$f(A \cap B) \subseteq f(A) \cap f(B) \tag{9}$$
 
-# Part 4: $f(A \cup B) = f(A) \cup f(B)$
+---
+# Proposition 4
 
 ### LHS: $f(A \cup B) \subseteq f(A) \cup f(B)$
 Let $y \in f(A \cup B)$ be an arbitrary element. - By definition of direct image, there exists an element $x \in A \cup B$ such that $f(x) = y$. By definition of set union,

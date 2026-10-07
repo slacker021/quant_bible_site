@@ -10,7 +10,7 @@ Finance is fundamentally the art and science of making decisions regarding fisca
 Furthermore, individual solutions can be aggregated to describe *equilibrium* in the economy: 
 $$
 \begin{gather}
-\textbf{Definition 1: Equilibrium} \\[5mm]
+\textbf{Definition: Equilibrium} \\[5mm]
 \text{An economic state in which supply and demand for a } \\
 \text{given good or service are in balance. }
 \end{gather}
@@ -24,7 +24,7 @@ The simplest way to model making decisions under uncertainty is through the *opp
 Although the opportunity set may be visualized as simple plots on a two-dimensional grid, it may be more dynamic to graph these as [[Mathematics/Linear Analysis/Volume 1 - Elementary Linear Algebra/Chapter 1 - Vector Space of Linear Maps\|linear]] [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Chapter 4 - Functions and Cardinality\|functions]] that are drawn across the grid. This system of representation takes preferences over bundles and assigns each bundle a single number, where higher numbers represent more preferred bundles: 
 $$
 \begin{gather}
-\textbf{Definition 2: Utility Function} \\[5mm]
+\textbf{Definition: Utility Function} \\[5mm]
 \text{Let } X \text{ denote the consumption space or choice set, } \\
 \text{which is typically a non-empty subset of the Euclidean Space, } \\
 X \subseteq \mathbb{R}^n_{+}. \text{ Let } \succsim \text{represent a binary } \text{preference relation over the set } X,  \\
@@ -45,7 +45,7 @@ I_{k} = \{ x \in X \ | \ u(x) = k \} \\[2.5mm]
 \text{delineates the individual's indifference curve within the choice space.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|axiom of completeness]], [[Chapter 1 - monotonic sequences\|limit of monotonic sequences]], [[Chapter 2 -  limit of a function\|limit of a function]],  and [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 5 - Differential Calculus/Chapter 4 - Study of Functions Using Methods of Differential Calculus\|differential calculus]] for more information) 
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|axiom of completeness]], [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Chapter 1 - Limits of Sequences\|limit of monotonic sequences]], [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Chapter 2 - Limits of Functions\|limit of a function]],  and [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 5 - Differential Calculus/Chapter 4 - Study of Functions Using Methods of Differential Calculus\|differential calculus]] for more information) 
 
 In other words, the utility function takes in two or more arguments, which are the specific quantities of each good consumed. Each output of the function, represents a certain amount of *utility*, which is the level of satisfaction or happiness obtained from this particular bundle. The higher the utility, the higher the satisfaction the investor has from that specific bundle. 
 
@@ -64,14 +64,14 @@ In other words, the utility function takes in two or more arguments, which are t
 > - $B:$ The investor can opt to save nothing and consume $20,000$ of income and $50,000$ of their initial capital, in the first period. By the second period, the investor earns $20,000$ in income. In total, the investor spends $90,000$
 > - $C:$ The investor can opt to consume $20,000$ of income and $50,000$ of initial capital in the first period. Furthermore, the investor decides to borrow $20,000$ at a cost of $5 \%$ interest at the same period. By the first period's end, the investor'll have consumed $89,047.6191$. Because they borrowed against the future, they have nothing to spend in the second period. 
 >   The opportunity set can be visualized as
-![figure_1.png](/img/user/Finance/Portfolio%20Management/Volume%201%20-%20Modern%20Portfolio%20Theory/Figures/Chapter%202/figure_1.png)
+![figure_1.png](/img/user/Finance/Portfolio%20Management/Volume%201%20-%20Modern%20Portfolio%20Theory/Figures/Chapter%201/figure_1.png)
 > In the figure above, the utility function takes the form of the function $u(x_{1},x_{2}) = -1.05x + 93.5$, which shows the whole range of possible combinations of consumption the investor can make. 
 
 ### Indifference Curves
 Although the investor has many choices to make concerning the combination of two (or more) assets, not all those combinations are made equal. If there're one or two outputs of the function that are said to yield the same level of utility. Determining the bundle combinations that yield the same level of satisfaction can be done with *indifference curves*. The curves are "indifferent" because it's assumed that everywhere along the same curve, the investor is assumed to be equally satisfied: 
 $$
 \begin{gather}
-\textbf{Definition 3: Indifference Curve} \\[5mm]
+\textbf{Definition: Indifference Curve} \\[5mm]
 \text{An indifference curve is the level or countour set of a } \\
 \text{real-valued preference function } u:X \rightarrow \mathbb{R} \text{ defined} \\
 \text{over a choice set } X \subseteq \mathbb{R}_{+}^n.  \\[2.5mm] 

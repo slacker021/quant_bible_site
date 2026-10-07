@@ -14,6 +14,7 @@ By the set-builder definition of $f^{-1}$:
 $$(x, y) \in f \implies (y, x) \in f^{-1} \tag{3}$$
 Thus, for every $y \in Y$, there exists at least one $x \in X$ such that
 $$(y, x) \in f^{-1} \tag{4}$$
+---
 # Part 2: Uniqueness (Injectivity of $f$)
 Let $y \in Y$ be an arbitrary element, and suppose there exist elements $x_1, x_2 \in X$ such that
 $$(y, x_1) \in f^{-1} \text{ and } (y, x_2) \in f^{-1} \tag{5}$$ By definition of $f^{-1}$, this implies:

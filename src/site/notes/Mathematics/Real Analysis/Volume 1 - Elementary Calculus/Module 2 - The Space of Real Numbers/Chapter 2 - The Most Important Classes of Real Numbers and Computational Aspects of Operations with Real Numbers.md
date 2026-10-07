@@ -34,7 +34,6 @@ $$\begin{gather} \textbf{Theorem: The Principle of Induction} \\ \text{If a subs
 
 This principle can be illustrated in action by having it prove several useful properties of the natural numbers that'll see constant use from now on:
 $$\begin{gather} \textbf{Proposition: Properties of Natural Numbers} \\ \text{1. The sum and product of natural numbers are natural numbers.} \\ \text{2. } (n \in \mathbb{N}) \wedge (n \ne 1) \implies ((n - 1) \in \mathbb{N}). \\ \text{3. For any } n \in \mathbb{N}, \text{ the set } \{x \in \mathbb{N} \mid n < x\} \text{ contains a minimal element, namely, } \\ \min\{x \in \mathbb{N} \mid n < x\} = n + 1. \\ \text{4. } (m, n \in \mathbb{N}) \wedge (n < m) \implies (n + 1 \le m). \\ \text{5. } n + 1 \text{ is the immediate successor of } n \text{ in } \mathbb{N} \text{ (no natural numbers lie between them).} \\ \text{6. If } n \ne 1, n - 1 \text{ is the immediate predecessor of } n \text{ in } \mathbb{N}. \\ \text{7. Any nonempty subset of } \mathbb{N} \text{ contains a minimal element.} \end{gather}$$
-
 (see [proof](Proof%20of%20the%20Properties%20of%20Natural%20Numbers.md "null"))
 
 ---

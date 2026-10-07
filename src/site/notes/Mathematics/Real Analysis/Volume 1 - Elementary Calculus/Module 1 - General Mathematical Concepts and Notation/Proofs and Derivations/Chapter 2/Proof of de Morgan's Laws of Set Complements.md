@@ -4,7 +4,8 @@
 
 Let $A$ and $B$ be both subsets of $M$. 
 
-# Part 1: $C_{M}(A \cup B) = C_{M}(A) \cap C_{M}(B)$
+---
+# Proposition 1
 
 ### LHS: $C_{M}(A\cup B)$
 Let $x \in C_{M}(A \cup B)$. By definition of the complement, 
@@ -45,7 +46,9 @@ Therefore,
 $$ 
 C_{M}(A \cup B) \supseteq C_{M}(A) \cap C_{M}(B) \tag{10}
 $$
-# Part 2: $C_{M}(A \cap B) = C_{M}(A) \cup C_{M}(B)$
+
+---
+# Proposition 2
 
 ### LHS: $C_{M}(A \cap B)$
 Let $x \in C_{M}(A\cap B)$. By definition of the complement, 
@@ -85,4 +88,7 @@ $$
 Therefore, 
 $$
 C_{M}(A \cap B) \supseteq C_{M}(A) \cup C_{M}(B) \tag{19}
+$$
+$$
+\textbf{Q.E.D}
 $$

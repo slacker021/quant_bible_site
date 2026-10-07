@@ -2,6 +2,8 @@
 {"dg-publish":true,"permalink":"/cs/appendix-quick-references/git-quick-reference/rewriting-commit-history/","dg-note-properties":{}}
 ---
 
+
+
 > [!warning]+ Warning: On Shared Repositories
 > Rewriting commit history isn't recommended on repositories being worked on by many developers. Doing so can confuse others working on their project. However, doing this is fine on a solo project. 
 # Rebasing

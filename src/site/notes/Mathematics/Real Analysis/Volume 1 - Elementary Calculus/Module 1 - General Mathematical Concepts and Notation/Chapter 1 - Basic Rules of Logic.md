@@ -4,6 +4,7 @@
 
 *Real Analysis* is fundamentally concerned with constructing *calculus* and other topics involving real numbers by providing a rigorous and unambiguous theoretical basis. In constructing the various topics concerned with the study of real numbers, a convention for developing complex abstract ideas is needed. These conventions use the following: *Axioms, Definitions, Lemmas, Propositions, and Theorems.* These are the fundamental building blocks of modern analytical mathematics. 
 
+---
 # The Five Fundamental Mathematical Statements
 ### Axioms 
 Axioms are starting propositions that're taken as true without the need to prove them. These are assumptions meant to act as starting points for the formation of new branches of mathematics. Without axioms, a newly-minted system of mathematics cannot be formed. The lack of axioms would result in circular arguments that lead to nowhere. 
@@ -12,9 +13,12 @@ A definition assigns a precise and unambiguous meaning to a term, symbol, or obj
 ### Lemmas
 A lemma is a minor idea or truth that has been proven to be true using the appropriate axioms and definitions. However, lemmas are not considered to be very useful on their own and are usually used to support a proposition or theorem. Lemmas can also be proven using previously established theorems and propositions. 
 ### Proposition
-A proposition is a statement that has been proven true under specific assumptions but is less useful or impactful as a theorem. 
+A proposition is a statement that has been proven true under specific assumptions but is less useful or impactful as a theorem. These are useful and important but aren't considered to provide deeper insight to the subject matter. 
 ### Theorems
-A theorem is a statement that has been proven true and is considered to be very important, holding numerous implications for the rest of the field it helps define. It usually uses multiple definitions and lemmas into a conclusion that provides deep insight into the structure of the system trying to be defined. 
+A theorem is a statement that has been proven true and is considered to be very important, holding numerous major implications for the rest of the field it helps define. It usually uses multiple definitions and lemmas into a conclusion that provides deep insight into the structure of the system trying to be defined. 
+
+### Corollary
+A *corollary* is a fact that quickly and easily follows from an already-proven statement. 
 
 ### Logical Connectives
 However, these basic statements on their own require *logical connectives* for them to be chained into more complex statements. Furthermore, symbols allow for compound statements to be more concise. These logical connectives are meant to connect *atomic propositions*, which are basic declarative statements in formal logic that express a complete idea. These atomic propositions are either *true* or *false*. Suppose that $A$, $B$, and $C$ are three atomic propositions, where each one can either be true or false. With these statements, the following are the five basic symbols of mathematical logic which can be used on them: $\neg, \wedge, \lor, \implies, \iff$. Furthermore, each logical connective can be associated with a *truth table* to indicate its truth or falsehood depending on the truth of the statements $A, B$, and $C$. 
@@ -61,12 +65,14 @@ This is a two-directional implication where it is true if and only if both state
 - $A$ if and only if $B$. 
 - $A$ is equivalent to $B$. 
 
-# Remark on Proofs
-When it comes to showing that a lemma, proposition, or theorem is true when its premises are true, these must be proven. When proving a proposition, the proposition usually takes the form of $A \implies B$, where $A$ is the assumption and $B$ is the conclusion. 
+
+---
+# Proofs
+When it comes to showing that a lemma, proposition, or theorem is true when its premises are true, these must be proven. When proving a proposition, the proposition usually takes the form of $A \implies B$, where $A$ is the assumption and $B$ is the conclusion. A proof may be considered a convincing argument that shows why a certain claim backed by certain assumptions holds true. It's impossible to show, at least in the context of mathematical sciences, that a certain claim holds true even if one were to show many examples that demonstrate its truth. Instead, a single argument must be provided. 
 ### Direct Proof
-The proof of a proposition usually involves constructing a chain of arguments $A \implies C_{1} \implies \dots \implies C_{n} \implies  B$, where each element of the argument is either an axiom or proposition that has already been shown to be true. In the context of direct proofs, an important rule to take note of is the *classical rule of inference:* If $A$ is true and $A \implies B$ is true, then $B$ is also true. 
+The proof of a proposition usually involves constructing a chain of arguments $A \implies C_{1} \implies \dots \implies C_{n} \implies  B$, where each element of the argument is either an axiom or proposition that has already been shown to be true. In the context of direct proofs, an important rule to take note of is the *classical rule of inference:* If $A$ is true and $A \implies B$ is true, then $B$ is also true. This is the most common way of demonstrating that a certain claim holds true. 
 ### Proof by Contradiction
-There are cases where directly proving something is true is difficult. Another way to show that something is true is to assume that the premise is false, and show how a proposition is impossible or absurd, as seen in the proof table of the implication. 
+There are cases where directly proving something is true is difficult. Another way to show that something is true is to assume that the conclusion is false, which is then followed by an explanation as to why it can't be false. 
 ### Proof by the Contrapositive
 An alternative to directly proving something is to assume to negate both the premise and conclusion, where they are then swapped in the implication. Thus, the contrapositive of $A \implies B$ is $\neg B \implies \neg A.$ This works because both the implication and its contrapositive are logically equivalent. 
 ### Useful Relations

@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-3-basic-lemmas-connected-with-the-completeness-of-the-real-numbers/proof-that-different-axioms-can-be-used/","dg-note-properties":{}}
 ---
 
-# Theorem 1: Cauchy-Cantor and Archimedes Principles $\implies$ Axiom of Completeness
+# Theorem 1
 Let $X \subset \mathbb{R}$ be a non-empty set that is bounded from above. If $X$ possesses a maximum element, that element is trivially the supremum and the proof is complete. Assume $X$ has no maximum element, which implies that no element within $X$ is an upper bound.
 
 Now, select an element $a_0 \in X$ (which is not an upper bound) and an upper bound $b_0$ of $X$. Construct the closed interval $I_0 = [a_0, b_0]$. Bisect $I_0$ at its midpoint $m_0 = \frac{a_0 + b_0}{2}$.
@@ -24,7 +24,8 @@ To prove that $c = \sup X$, it must be shown that $c$ is an upper bound and that
 
 Therefore, $c = \sup X$, establishing the Axiom of Completeness.
 
-# Theorem 2: Bolzano-Weierstrass Principle $\implies$ Axiom of Completeness
+---
+# Theorem 2
 To utilize the proof from Part 1, it suffices to show that the Bolzano-Weierstrass Principle implies both the Principle of Archimedes and the Cauchy-Cantor Principle.
 
 Assume, for the sake of contradiction, that the set of natural numbers $\mathbb{N}$ is bounded from above in $\mathbb{R}$. As an infinite bounded set, $\mathbb{N}$ must possess a limit point $c \in \mathbb{R}$ by the Bolzano-Weierstrass Principle. By the definition of a limit point, any $\epsilon$-neighborhood around $c$, including $(c - 1/2, c + 1/2)$, must contain infinitely many points of $\mathbb{N}$. However, the distance between any two distinct natural numbers is at least $1$. Consequently, an open interval of length $1$ can contain at most one natural number. This yields a direct contradiction, proving that $\mathbb{N}$ is unbounded and the Principle of Archimedes holds.
@@ -35,7 +36,8 @@ Then, let $I_n = [a_n, b_n]$ be a sequence of nested closed intervals. Consider 
 
 In both cases, $c \in \bigcap_{n=1}^\infty I_n$, satisfying the Cauchy-Cantor Principle. Since the Bolzano-Weierstrass Principle guarantees both Archimedes and Cauchy-Cantor, it guarantees the Axiom of Completeness via Part 1.
 
-# Part 3: Borel-Lebesgue Principle $\implies$ Axiom of Completeness
+---
+# Theorem 3
 Let $X \subset \mathbb{R}$ be a non-empty set bounded from above. Let $M$ be the set of all upper bounds of $X$. Since $X$ is bounded from above, $M$ is non-empty. Assume, for the sake of contradiction, that $X$ has no least upper bound.
 
 Because $X$ possesses no least upper bound, the set $M$ possesses no minimum element. Thus, for every upper bound $y \in M$, there exists another, strictly smaller upper bound $y' \in M$ such that $y' < y$. Construct the open ray $U_y = (y', \infty)$. The family of all such rays $\{U_y \mid y \in M\}$ forms an open cover for $M$.

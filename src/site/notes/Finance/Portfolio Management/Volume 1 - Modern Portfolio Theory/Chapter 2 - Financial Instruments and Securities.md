@@ -10,7 +10,7 @@
 In any economy, the purchase of a good or service comes with a *price*. Intuitively speaking, the price is the cost of acquiring the good or service that someone in the economy is providing. Due to the many forms of goods and services being available in the economy, it's often possible to price these goods and services in terms of one another. Formally, this can be defined as *relative asset price:*
 $$
 \begin{gather}
-\textbf{Definition 1: Relative Asset Price} \\[5mm]
+\textbf{Definition: Relative Asset Price} \\[5mm]
 \text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \ge 0}, \mathbb{P}) \text{ be a filtered probability space representing the} \\
 \text{stochastic environment and information flow of a financial economy over a time horizon } \\
 t \in [0,T]. \text{ Additionally, let } \mathcal{A} \text{ denote the set of strictly positive non-worthless} \\
@@ -28,7 +28,7 @@ $$
 From this pairwise algebraic definition arises several structural properties. These properties are considered to be the fundamental [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Chapter 1 - Basic Rules of Logic\|assumptions]] of financial mathematics that provide a non-ambiguous and grounded approach to understanding pricing:  
 $$
 \begin{gather}
-\textbf{Axiom 1: Inverse Price Symmetry (Reciporocal Relation)} \\[5mm]
+\textbf{Axiom: Inverse Price Symmetry (Reciporocal Relation)} \\[5mm]
 \text{If neither asset } X \text{ nor asset } Y \text{ is worthless } (0 < X_{Y}(t) < \infty), \text{ the price of asset } Y  \\
 \text{using asset } X \text{ as the numeraire, } \text{ denoted by } Y_{X}(t), \text{ is the multiplicative inverse of } X_{Y}(t):  \\[2.5mm]
 
@@ -39,7 +39,7 @@ To prevent risk-free *arbitrage* opportunities between economic participants, th
 
 $$
 \begin{gather}
-\textbf{Axiom 2: Change of Numeraire (Transitivity): } \\[5mm]
+\textbf{Axiom: Change of Numeraire (Transitivity): } \\[5mm]
 \text{For any valid non-zero assets } X,Y,Z \in \mathcal{A}, \text{ the price of asset } X \text{ in terms of } \\
 \text{numeraire } Y \text{ can be decomposed through an intermediate reference asset } Z:  \\[2.5mm]
 X_Y(t) = X_Z(t) \cdot Z_Y(t) = \frac{X_Z(t)}{Y_Z(t)}
@@ -49,7 +49,7 @@ This coordinate transformation relation allows for the translation of pricing pr
 
 $$
 \begin{gather}
-\textbf{Axiom 3: Linearity of Asset Combinations} \\[5mm]
+\textbf{Axiom: Linearity of Asset Combinations} \\[5mm]
 \text{Let } P_{t} = \sum_{i = 1}^N \Delta^i(t) \cdot X^i \text{ represent a portfolio formed by linear combinations of assets } \\
 X^i \in \mathcal{A} \text{ held in quantities } \Delta^i(t). \text{ The price process of the portfolio } P \text{ relative to }\ \\
 \text{numeraire } Z \text{ exhibits linearity: } \\[2.5mm]
@@ -86,7 +86,7 @@ In other words, prices in the economy are based off some sorta benchmark. A rela
 ### The Need for Cash
 While the aforementioned axioms and theorems provide an un-ambiguous and useful means of comparing the values of other goods based on an asset, as relative pricing suggest, this comparison doesn't always work. It would be much easier if there was a universal and common measure of value that could be utilized as a universal financial solvent of sorts. While cash is often seen as an intuitive economic concept, it could also be given an un-ambiguous definition that fits in a precise mathematical framework: 
 $$\begin{gather}
-\textbf{Definition 2: Cash} \\[5mm]
+\textbf{Definition: Cash} \\[5mm]
 \text{Cash is a spot reference coordinate and arbitrage asset exhibiting a non-zero rate } \\
 \text{of time depreciation. While it serves as an immediate liquid unit of account for spot transactions, } \\
 \text{it lacks an independent pricing martingale measure } \mathbb{P} \text{ across time.}
@@ -100,7 +100,7 @@ Acquiring goods and services, in the hypothetical economy that this framework co
 2. Increase the amount of assets they own, especially of the cash-generating sort. These assets can bring in extra income or be sold at a higher price. 
 Alas, doing one of two of these steps is easier said than done. In such a circumstance, the agent may opt for a third option: Credit-fueled spending: 
 $$
-\begin{gather} \textbf{Definition 3 : Credit} \\[5mm] 
+\begin{gather} \textbf{Definition: Credit} \\[5mm] 
 \text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \ge 0}, \mathbb{P}) \text{ be a filtered probability space governing the economy.} \\ \text{Credit is an intertemporal financial contract wherein a borrower acquires immediate}
 \\ \text{spot numeraire at time } t \text{ by issuing an enforceable liability process } L_t \text{ against}  \\
 \text{their stochastic future cash flows or wealth endowment } \mathcal{F}_T. \\
@@ -128,7 +128,7 @@ Equity holders assume the ultimate downside risk caused by the value of their eq
 Formally speaking, equity can be formally defined as
 $$
 \begin{gather}
-\textbf{Definition 4: Equity } \\[5mm]
+\textbf{Definition: Equity } \\[5mm]
 \text{Let } (\Omega, \mathcal{F}, \{\mathcal{F}_{t} \}_{t \geq 0}, \mathbb{P}) \text{ be a filtered probability space representing the economy. } \\
 \text{Equity is a perpetual and subordinated financial claim } S_{t} \text{ representing the residual } \\
 \text{ownership interest in an economic asset process } A_{t} \text{ after satisfying all senior credit } \\
@@ -318,7 +318,7 @@ One of the core tenets of portfolio management are risk and return, where invest
 When discussing the tradeoff between potential risk and return, it's important to understand what is meant by "return." There are many ways to measure return but in most cases, the following definition of return will be used: 
 $$
 \begin{gather}
-\textbf{Definition 3: Holding Period Return} \\[5mm]
+\textbf{Definition: Holding Period Return} \\[5mm]
 \text{The sum of the change in the market price of a security and } \\
 \text{any income received over a period, divided by the price of the security at the start } \\
 \text{of the holding period. }
@@ -340,7 +340,7 @@ With the many types of assets available for investing in the market, there comes
 
 $$
 \begin{gather}
-\textbf{Definition 4: Index} \\[5mm]
+\textbf{Definition: Index} \\[5mm]
 \text{An index represents a standardized and quantifiable proxy for measuring the} \\
 \text{continuous price or tota return dynamics of a defined basket of financial securities. } \\
 \end{gather}
@@ -351,7 +351,7 @@ The weight $w_{i,t}$ assigned to constituent security $i$ at time $t$ dictates h
 ###### Price-Weighted Index
 $$
 \begin{gather}
-\textbf{Definition 5: Price-Weighted Index} \\[5mm]
+\textbf{Definition: Price-Weighted Index} \\[5mm]
 \text{If } P_{i,t} \text{ is the price of an asset, then the individual weight of each} \\
 \text{asset is measured as } \\[2.5mm]
 w_{i,t} = \frac{P_{i,t}}{\sum^N_{j=1} P_{j,t}} \\[2.5mm]
@@ -365,7 +365,7 @@ One notable characteristic of a price-weighted index is that a higher-priced ass
 ###### Value-Weighted Index
 $$
 \begin{gather}
-\textbf{Definition 6: Value-Weighted Index} \\[5mm]
+\textbf{Definition: Value-Weighted Index} \\[5mm]
 \text{If } P_{i,t} \text{ is the price of an asset and } Q_{i,t} \text{ is the total number of units of the asset in the economy, } \\
 \text{then the individual weight of each asset is measured as} \\[2.5mm]
 w_{i,t} = \frac{P_{i,t} \, Q_{i,t}}{\sum_{j=1}^N P_{j,t} \, Q_{j,t}} \\[2.5mm]
@@ -381,7 +381,7 @@ This index has three primary characteristics:
 ###### Equal-Weighted (Unweighted) Indices
 $$
 \begin{gather}
-\textbf{Definition 7: Equal-Weighted Indices} \\[5mm]
+\textbf{Definition: Equal-Weighted Indices} \\[5mm]
 \text{An index where every asset is assigned an identical portfolio weight},  \\
 \text{where } w_{i,t} = \frac{1}{N} \text{at each balancing interval. }
 \end{gather}
@@ -394,7 +394,7 @@ In the architecture of index construction and quantitative benchmark design, the
 ###### Arithmetic Averaging
 $$
 \begin{gather}
-\textbf{Definition 8: Arithmetic Averaging} \\[5mm]
+\textbf{Definition: Arithmetic Averaging} \\[5mm]
 \text{Measures the additing relative performance of constituent security } \\
 \text{prices or total capitalization of an asset across a single period. } \\
 \text{The index value at a specific time } t \text{ is defined as 
@@ -407,7 +407,7 @@ Arithmetic value-weighted indices provide an accurate representation of aggregat
 ###### Geometric Averaging
 $$
 \begin{gather}
-\textbf{Definition 9: Geometric Averaging} \\[5mm]
+\textbf{Definition: Geometric Averaging} \\[5mm]
 \text{Measures relative performance via multiplicative compounding across } \\
 \text{constituent price relatives. It calculates the } N\text{th root of the product of } \\
 \text{relative price changes. } \\[2.5mm]

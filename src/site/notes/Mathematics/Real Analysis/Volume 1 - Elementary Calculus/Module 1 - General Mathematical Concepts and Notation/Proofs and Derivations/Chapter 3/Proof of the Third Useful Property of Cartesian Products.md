@@ -48,6 +48,8 @@ $$ (X \cup Z) \times Y \subseteq (X \times Y) \cup (Z \times Y) \tag{6}$$
 $$
 \textbf{Q.E.D}
 $$
+
+---
 # Proof Method 2: Direct Logical Equivalence
 Classic predicate logic can be used to verify the theorem: 
 $$

@@ -5,7 +5,7 @@
 
 This proof is unique because the equivalence of these five statements is established via a circular chain of implications: 
 
-# Part 1: Fact 1 $\implies$ Fact 2
+#  Proposition 1
 Assume $f$ is injective. Let $A \subseteq X$ be an arbitrary subset. By [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Proposition 3 of Useful Facts about Functions\|proposition 3]], the containment $A \subseteq f^{-1}(f(A))$ holds for any mapping $f$. To establish the reverse inclusion $f^{-1}(f(A)) \subseteq A$, let $x \in f^{-1}(f(A))$ be an arbitrary element. By definition of the inverse image,
 $$x \in f^{-1}(f(A)) \implies f(x) \in f(A) \tag{1}$$
 By definition of the direct image,
@@ -14,7 +14,9 @@ Since $f$ is injective (one-to-one),
 $$f(x) = f(a) \implies x = a \tag{3}$$
 Since $a \in A$, it follows that $x \in A$. Thus, $f^{-1}(f(A)) \subseteq A$. Combining both inclusions yields 
 $$f^{-1}(f(A)) = A \tag{4}$$
-# Part 2: Fact 2 $\implies$ Fact 3
+
+---
+#  Proposition 2
 Assume $f^{-1}(f(S)) = S$ holds for every subset $S \subseteq X$. Let $A, B \subseteq X$. By [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Proposition 1 of Useful Facts about Functions\|proposition 1]], the inclusion $$f(A \cap B) \subseteq f(A) \cap f(B) \tag{5}$$ holds for any mapping $f$. To establish the reverse inclusion
 $$f(A) \cap f(B) \subseteq f(A \cap B) \tag{6}$$let $y \in f(A) \cap f(B)$ be an arbitrary element. By definition of set intersection, 
 $$y \in f(A) \text{ and } y \in f(B) \tag{7}$$
@@ -38,7 +40,8 @@ $$f(x) = y \in f(A \cap B) \tag{11}$$
 Thus, $f(A) \cap f(B) \subseteq f(A \cap B)$, establishing 
 $$f(A \cap B) = f(A) \cap f(B) \tag{12}$$
 
-# Part 3: Fact 3 $\implies$ Fact 4
+---
+#  Proposition 3
 
 ### LHS ($\implies$) 
 Assume $f(A \cap B) = f(A) \cap f(B)$ for all $A, B \subseteq X$. By this premise, 
@@ -51,7 +54,8 @@ $$f(A) \cap f(B) = f(A \cap B) = f(\emptyset) = \emptyset \tag{15}$$
 Therefore,
 $$f(A) \cap f(B) = \emptyset \iff A \cap B = \emptyset \tag{16}$$
 
-# Part 4: Fact 4 $\implies$ Fact 5
+---
+#  Proposition 4
 Assume $f(A) \cap f(B) = \emptyset \iff A \cap B = \emptyset$ for all $A, B \subseteq X$. Let $B \subseteq A \subseteq X$. 
 
 ### LHS (Forward Inclusion)
@@ -71,7 +75,8 @@ Thus,
 $$$f(A) \setminus f(B) \subseteq f(A \setminus B) \tag{21}$$
 Combining inclusions gives $f(A \setminus B) = f(A) \setminus f(B)$
 
-# Part 5: Fact 5 $\implies$ Fact 1
+---
+#  Proposition 5
 Assume $f(A \setminus B) = f(A) \setminus f(B)$ whenever $B \subseteq A \subseteq X$. Let $x_1, x_2 \in X$ be distinct elements ($x_1 \neq x_2$). It must be shown that
 $$f(x_1) \neq f(x_2) \tag{22}$$
 Define the subsets $A = \{x_1, x_2\}$ and $B = \{x_2\}$, which implies that

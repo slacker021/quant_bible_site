@@ -2,13 +2,14 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-1-general-mathematical-concepts-and-notation/proofs-and-derivations/chapter-4/proof-of-proposition-2-of-useful-facts-about-functions/","dg-note-properties":{}}
 ---
 
-### Part 1: $f^{-1}(A' \setminus B') = f^{-1}(A') \setminus f^{-1}(B')$
+# Proposition 1
 To establish set equality, a continuous chain of logical equivalences is demonstrated for an arbitrary element $x \in X$:
 $$\begin{aligned} x \in f^{-1}(A' \setminus B') &\iff f(x) \in A' \setminus B' & \text{(Definition of inverse image)} \\ &\iff (f(x) \in A') \land (f(x) \notin B') & \text{(Definition of set difference)} \\ &\iff (x \in f^{-1}(A')) \land (x \notin f^{-1}(B')) & \text{(Definition of inverse image)} \\ &\iff x \in f^{-1}(A') \setminus f^{-1}(B') & \text{(Definition of set difference)} & & \text{(1)}
 \end{aligned}$$
 Because every step is a logical equivalence ($\iff$), the set identity $f^{-1}(A' \setminus B') = f^{-1}(A') \setminus f^{-1}(B')$ holds.
 
-# Part 2: $f^{-1}(C_Y (A') = C_X f^{-1}(A')$
+---
+#  Proposition 2
 
 ### Proof Method 1: Direct Application of Set Difference (Part 1)
 Since $f: X \to Y$ is a well-defined mapping from domain $X$ to codomain $Y$, every element $x \in X$ maps into $Y$. Thus, the inverse image of the total codomain is the total domain:

@@ -4,7 +4,7 @@
 
 Let $A,B,C$ be subsets of $M$. 
 
-# Fact 1: $A \cap (B \cup C) = (A \cup B) \cap (A \cup C)$
+# Proposition 1
 
 ### LHS: $A \cap (B \cup C)$
 Let $x \in A \cap (B \cup C)$. By definition of the intersection, 
@@ -44,10 +44,11 @@ This leads to two cases:
 2. If $x \in A \cap C$. Then $x \in A$ and $x \in C$. Since $x \in C$, $x \in B \cup C$. Thus, $x \in A \cap (B \cup C)$.
 Therefore, 
 $$
-$(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C)$ \tag{8}
+(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C) \tag{8}
 $$
 
-# Fact 2: $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+---
+# Proposition 2
 
 ### LHS: $A \cup (B \cap C)$
 Let $x \in A \cup (B \cap C)$. The definition of the union would provide two cases: 

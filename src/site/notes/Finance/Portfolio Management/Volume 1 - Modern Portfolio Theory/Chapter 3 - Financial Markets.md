@@ -5,7 +5,7 @@
 There is a special [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Chapter 2 - Elementary Set Theory\|subset]] of the economy dedicated to trading [[Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Chapter 2 - Financial Instruments and Securities\|financial securities]] and other instruments. Mathematically, this can be modeled as an adapted [[Mathematics/Linear Analysis/Volume 1 - Elementary Linear Algebra/Chapter 1 - Vector Space of Linear Maps\|vector]] or [[Mathematics/Real Analysis/Volume 3 - Elementary Measure Theory and Integration Theory/Module 1 - Elementary Measure Theory/Chapter 1 - Measurable Spaces\|probability space]]: 
 $$
 \begin{gather}
-\textbf{Definition 1: Financial Market} \\[5mm]
+\textbf{Definition: Financial Market} \\[5mm]
 \text{Let }(\Omega, \mathcal{F}, \{\mathcal{F}_t\}_{t \in [0,T]}, \mathbb{P}) \text{ be a filtered probability space satisfying} \\ \text{ the usual conditions of right-continuity and completeness, where } \\
 \Omega \text{ is the sample space of all possible future states of the world, } \\
 \mathcal{F }\text{ is the global } \sigma\text{-algebra of verifiable economic events up to time horizon } T,  \\
@@ -97,7 +97,7 @@ _Market efficiency_ broadly refers to how effectively a financial market aggrega
 Allocative efficiency concerns the dynamic distribution of financial resources to their most productively beneficial opportunities across time and states of the world: 
 $$
 \begin{gather}  
-\textbf{Definition 2: Allocative Efficiency (Pareto Optimality)} \\[5mm] 
+\textbf{Definition: Allocative Efficiency (Pareto Optimality)} \\[5mm] 
 \text{Let } x^i(\omega) \in \mathbb{R}^n_+ \text{ denote the state-contingent asset allocation or consumption vector} \\
 \text{of agent } i \in {1, \dots, I} \text{ given state } \omega \in \Omega \text{ on a filtered probability space }  \\
 (\Omega, \mathcal{F}, {\mathcal{F}_t}_{t \ge 0}, \mathbb{P}). \ \text{An allocation } {x^i(\omega)}_{i=1}^I \text{ is allocatively efficient (Pareto optimal) 
@@ -111,14 +111,14 @@ $$
 Productive efficiency measures the transaction cost structure and operational friction involved in executing financial transfers and market-making operations: 
 $$
 \begin{gather} 
- \textbf{Definition 3: Productive (Operational) Efficiency} \\[5mm] \text{Let } C(v) \text{ denote the total transaction friction cost incurred when executing a trading volume } v, \\ 
+ \textbf{Definition: Productive (Operational) Efficiency} \\[5mm] \text{Let } C(v) \text{ denote the total transaction friction cost incurred when executing a trading volume } v, \\ 
 \text{incorporating explicit fees, bid-ask spreads } \mathcal{S}_{\text{bid-ask}}, \text{ and price impact } \Delta P(v): \\[2.5mm] C(v) = \text{Commissions} + v \cdot \left( \frac{P_{\text{ask}} - P_{\text{bid}}}{2} \right) + f(\Delta P(v)) \\[2.5mm] \text{A financial market mechanism is productively efficient if, given technology and market architecture,} \\ \text{the expected transaction cost per unit volume is minimized across all feasible market mechanisms:} \\[2.5mm] \min_{\text{Mechanism}} \mathbb{E}\left[ C(v) \right] \end{gather}
 $$
 
 ### Informational Efficiency
 $$
 \begin{gather}
-\textbf{Definition 6: Informational Efficiency} \\[5mm]
+\textbf{Definition: Informational Efficiency} \\[5mm]
 \text{Let } \mathcal{H}_t \text{ denote the information filtration available to market participants at time } t, \text{ and let } S_j(t)  \\
 \text{be the price process of asset } j. \text{ A market is informationally efficient with respect to } \mathcal{H}_t \text{ if the } \\
 \text{discounted price process } \frac{S_j(t)}{S_0(t)} \text{ follows a martingale under the equivalent risk-neutral measure } \mathbb{P}:  \\[2.5mm]
@@ -175,7 +175,7 @@ In addition to the three basic order types the investor can execute, they can al
 ### Margin Long Positions
 For *long positions*, _margin_ is defined as the proportion of total asset market value provided by equity:
 $$\begin{align}  \\
-&\textbf{Definition 2: Margin on Long Position} \\[5mm] \text{Margin} & = \frac{\text{Market Value of Assets} - \text{Amount Borrowed}}{\text{Market Value of Assets}}  \\
+&\textbf{Definition: Margin on Long Position} \\[5mm] \text{Margin} & = \frac{\text{Market Value of Assets} - \text{Amount Borrowed}}{\text{Market Value of Assets}}  \\
 & = \frac{\text{equity}}{\text{Market value of assets}}
 \end{align}$$
 
@@ -195,7 +195,7 @@ The long position of a margin position has three main components
 For short positions, margin is calculated relative to the market value of the shorted securities:
 $$
 \begin{align} 
-& \textbf{Definition 2: Margin on Short Position} \\[5mm] 
+& \textbf{Definition: Margin on Short Position} \\[5mm] 
 \text{Margin} &= \frac{\text{Total Account Assets} - \text{Market Value of Short Securities}}{\text{Market Value of Short Securities}}  \\
 &= \frac{\text{Equity}}{\text{Market Value of Short Securities}}
 \end{align}

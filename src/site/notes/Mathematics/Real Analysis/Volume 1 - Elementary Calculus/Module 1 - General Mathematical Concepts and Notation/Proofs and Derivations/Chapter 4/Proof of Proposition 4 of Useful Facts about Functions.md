@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-1-general-mathematical-concepts-and-notation/proofs-and-derivations/chapter-4/proof-of-proposition-4-of-useful-facts-about-functions/","dg-note-properties":{}}
 ---
 
-# Part 1: Surjectivity Characterization
+#  Proposition 1
 
 ### LHS ($\implies$)
 Assume that $f: X \to Y$ is surjective and let $B' \subseteq Y$ be an arbitrary subset. From [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Proposition 3 of Useful Facts about Functions\|proposition 3]], the containment $f(f^{-1}(B')) \subseteq B'$ holds for any mapping $f$. To establish the reverse inclusion $B' \subseteq f(f^{-1}(B'))$, let $y \in B'$ be an arbitrary element. Since $f$ is surjective, there exists at least one element $x \in X$ such that $f(x) = y$. Because $f(x) = y \in B'$, by definition of the inverse image,
@@ -25,7 +25,8 @@ Therefore, $Y = f(f^{-1}(Y)) \subseteq f(X) \subseteq Y$, which forces:
 $$f(X) = Y \tag{7}$$
 By definition, $f(X) = Y$ means that every element of the codomain $Y$ has at least one pre-image in $X$. Hence, $f$ is surjective.
 
-# Part 2: Bijectivity Characterization
+---
+#  Proposition 2
 
 ### LHS ($\implies$)
 Assume $f: X \to Y$ is bijective. Since, $f$ is surjective, part 1 guarantees that $f(f^{-1}(B')) = B'$ for all $B' \subseteq Y$. Now, let $A \subseteq X$. From Proposition 3, $A \subseteq f^{-1}(f(A))$ holds for any mapping $f$. To establish $f^{-1}(f(A)) \subseteq A$, let $x \in f^{-1}(f(A))$. By definition of the pre-image, 
