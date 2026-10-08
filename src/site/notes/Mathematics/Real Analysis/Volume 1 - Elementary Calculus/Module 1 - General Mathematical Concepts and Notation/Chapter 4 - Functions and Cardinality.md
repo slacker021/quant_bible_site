@@ -29,10 +29,10 @@ $$
 \text{ran}(f) := \{ y \in Y \mid \exists x \in X \, (y = f(x)) \}
 \end{gather}
 $$
-The range is also known as the *image* of the function. The behavior of a function can be generalized to act on entire subsets of the domain and codomain: 
-- Let $A \subset X$. The image of $A$ under $f$ is the subset $f(A) \subset Y$ defined by: $$
-    f(A) := \{y \in Y \ | \ \exists x \in A (y = f(A)) \} \tag{1}
-	$$
+The range is also known as the *image* of the function. The behavior of a function can be generalized to act on entire subsets of the domain and codomain. If $A \subset X$, then the image of $A$ under $f$ is the subset $f(A) \subset Y$, which can be defined as
+$$
+ f(A) := \{y \in Y \ | \ \exists x \in A (y = f(A)) \} \tag{1}	
+$$
 ### Classifications of Mappings
 To analyze how distinct spaces correspond to one another, functions are classified based on the density and uniqueness of their coordinate distribution across the domain and codomain. Special types of mappings can be constructed using **definitions 1 and 2**. 
 
