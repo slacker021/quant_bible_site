@@ -34,13 +34,13 @@ $$\begin{gather} \textbf{Definition: Constant and Bounded Sequences } \\[5mm] \t
 With the formal definitions established, fundamental properties regarding the behavior and algebra of limits can be deduced.  
 
 $$\begin{gather} \textbf{Theorem: Basic Properties of Limits} \\[5mm] \text{1. An ultimately constant sequence converges.} \\ \text{2. Any neighborhood of the limit of a sequence contains all but a finite number} \\ \text{of terms of the sequence.} \\ \text{3. A convergent sequence has a unique limit.} \\ \text{4. A convergent sequence is bounded.} \end{gather}$$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Basic Properties of Limits\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Basic Properties of Limits\|proof]]) 
 
 > [!warning]+ Warning: Convergence vs. Boundedness
 >  It is crucial to note that while convergence strictly implies boundedness, the converse is decisively false. A bounded sequence can oscillate indefinitely (e.g., $x_n = (-1)^n$) without ever settling toward a single point. To guarantee convergence in a bounded sequence, additional structural conditions, such as monotonicity, must be introduced.
 
 Given that existent limits are real numbers, it naturally follows that standard arithmetic operations defined by the axioms of addition and multiplication apply directly to limits:  
-$$\begin{gather} \textbf{Theorem: Arithmetic Properties of Limits} \\[5mm] \text{If } \lim_{ n \to \infty } x_{n} = A \text{ and } \lim_{ n \to \infty } y_{n} = B, \text{ then:} \\ \text{1. } \lim_{ n \to \infty }(x_{n} + y_{n}) = A + B \\ \text{2. } \lim_{ n \to \infty }(x_{n} \cdot y_{n}) = A \cdot B \\ \text{3. } \lim_{ n \to \infty } \frac{x_n}{y_n} = \frac{A}{B} \text{ if } B \neq 0 \text{ and } y_{n} \neq 0 \text{ for all } n. \end{gather}$$
+$$\begin{gather} \textbf{Theorem: Arithmetic Properties of Limits} \\[5mm] \text{If } \lim_{ n \to \infty } x_{n} = A \text{ and } \lim_{ n \to \infty } y_{n} = B, \text{ then:} \\ \text{1. } \lim_{ n \to \infty }(x_{n} + y_{n}) = A + B \\ \text{2. } \lim_{ n \to \infty }(x_{n} \cdot y_{n}) = A \cdot B \\ \text{3. } \lim_{ n \to \infty } \frac{x_n}{y_n} = \frac{A}{B} \text{ if } B \neq 0 \text{ and } y_{n} \neq 0 \text{ for all } n. \\ 4. \lim_{ n \to \infty } c x_{n} = c A, \text{ where } c \text{ is a real-valued constant}.  \\  5. \lim_{ n \to \infty } x_{n}^p  = A^p, \text{ where } p \text{ is a real-valued }  p \text{ exponent and } x_{n} \ge 0. \end{gather}$$
 (see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Operations Involving Limits\|proof]])
 
 Another consequence of sequence limits being real numbers is that the axioms of ordering can be applied to them, allowing for bounded comparisons:  
@@ -50,6 +50,31 @@ $$\begin{gather} \textbf{Theorem: Inequalities Involving Limits} \\[5mm] \text{1
 This ordered structure yields the following corollary regarding strict and non-strict inequalities:  
 $$\begin{gather} \textbf{Corollary: Limit Inequalities} \\[5mm] \text{Suppose } \lim_{ n \to \infty } x_{n} = A \text{ and } \lim_{ n \to \infty } y_{n} = B. \text{ If there exists an } N \text{ such that } \\ \text{for all } n > N, \text{ then:} \\ \text{1. } x_{n} > y_{n} \implies A \ge B \\ \text{2. } x_{n} \ge y_{n} \implies A \ge B \\ \text{3. } x_{n} > b \implies A \ge b \text{ (where } b \text{ is a constant)} \\ \text{4. } x_{n} \ge b \implies A \ge b \end{gather}$$
 (see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Corollary for Limit Inequalities\|proof]])
+
+This next theorem is useful for giving the convergence/divergence and value (when it's convergent) of a sequence that arises on occasion: 
+$$
+\begin{gather}
+\textbf{Theorem: } \\[5mm]
+\text{The sequence } \{r^n\}^\infty_{n=0} \text{ converges if } -1 < r \le 1 \text{ and } \\
+\text{ diverges for all other values of } r. \ \text{ Furthermore, } \\[2.5mm]
+\lim_{ n \to \infty }  r^n = \begin{cases}
+0 \text{ if } -1 < r < 1 \\
+1 \text{ if } r = 1  \\[2.5mm]
+\end{cases} \\[2.5mm]
+\text{For all other values of } r, \text{ where } r > 1 \text{ or } r \le -1, \text{ the sequence is divergent. } 
+\end{gather}
+$$
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem About r and n\|proof]])
+
+$$
+\begin{gather}
+\textbf{Theorem: } \\[5mm]
+\text{For the sequence } \{x_{n}  \} \text{ if both } \lim_{ n \to \infty } x_{2n} = A \text{ and } \lim_{ n \to \infty } x_{2n+1}, \text{ then } \{x_{n}  \} \text{ is convergent and } \\
+\lim_{ n \to \infty } x_{n} = A. 
+\end{gather}
+$$
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem Involving Odd and Even-Indexed Sequences\|proof]])
+This theorem provides a necessary and sufficient condition for the convergence of a sequence. It states that if the even-indexed subsequence $\{ x_{2n}\}$ and the odd-indexed subsequence $\{ x_{2n+1} \}$ both converge to the same limit $A$, then the entire sequence converges to $A$. This is useful for reducing a complicated sequence into two simpler subsequences. 
 
 > [!info]+ Remark: Strict Inequalities in Limits 
 > It is worth noting that a strict inequality between sequence terms may degrade into an equality in the limit. For example, $\frac{1}{n} > 0$ for all $n \in \mathbb{N}$, yet the limit as $n \to \infty$ of $\frac{1}{n}$ is exactly $0$.
@@ -68,7 +93,7 @@ A specific type of sequence can be constructed depending on whether the size of 
 $$\begin{gather} \textbf{Definition: Monotonic Sequences} \\[5mm] \text{1. A sequence } \{x_{n}\} \text{ is increasing if } x_{n} < x_{n+1} \text{ for all } n \in \mathbb{N}. \\ \text{2. A sequence } \{x_{n}\} \text{ is nondecreasing if } x_{n} \ge x_{n+1} \text{ for all } n \in \mathbb{N}. \\ \text{3. A sequence } \{x_{n}\} \text{ is decreasing if } x_{n} > x_{n+1} \text{ for all } n \in \mathbb{N}. \\ \text{4. A sequence } \{x_{n}\} \text{ is nonincreasing if } x_{n} \le x_{n+1} \text{ for all } n \in \mathbb{N}. \\ \text{Sequences satisfying any of these conditions are considered monotonic.} \end{gather}$$
 
 When combined with the concept of boundedness, monotonic sequences display a guaranteed convergence behavior:  
-$$\begin{gather} \textbf{Theorem: Weierstrass Theorem on Monotonic Sequences} \\[5mm]\text{1. For a nondecreasing sequence to have a limit, it is necessary and sufficient} \\ \text{that it be bounded above.} \\ \text{2. For a nonincreasing sequence to have a limit, it is necessary and sufficient} \\ \text{that it be bounded below.} \end{gather}$$
+$$\begin{gather} \textbf{Weierstrass Theorem on Monotonic Sequences:} \\[5mm]\text{1. For a nondecreasing sequence to have a limit, it is necessary and sufficient} \\ \text{that it be bounded above.} \\ \text{2. For a nonincreasing sequence to have a limit, it is necessary and sufficient} \\ \text{that it be bounded below.} \end{gather}$$
 (see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Weierstrass Theorem on Monotonic Sequences\|proof]])
 
 This theorem directly facilitates the evaluation of limits involving specific roots:
@@ -131,20 +156,76 @@ $$\begin{gather} \textbf{Theorem: Cauchy Convergence Criterion for a Series} \\[
 While the necessary condition is straightforward, analyzing series containing a mix of positive and negative terms can be difficult. Thus, a stricter form of convergence is defined to simplify stability tests: 
 $$\begin{gather} \textbf{Definition: Absolute Convergence} \\[5mm] \text{The series } \sum_{n=1}^\infty a_n \text{ is absolutely convergent if the corresponding series} \\ \text{of absolute values } \sum_{n=1}^\infty \vert{}a_n\vert{} \text{ converges.} \end{gather}$$
 
-Because of the triangle inequality $\left\vert{} \sum_{k=n}^m a_k \right\vert{} \le \sum_{k=n}^m \vert{}a_k\vert{}$, any absolutely convergent series is mathematically guaranteed to be convergent in the ordinary sense. Therefore, to test for absolute convergence, analysts only need to study series constructed with non-negative terms: 
+Because of the triangle inequality $\left\vert{} \sum_{k=n}^m a_k \right\vert{} \le \sum_{k=n}^m \vert{}a_k\vert{}$, any absolutely convergent series is mathematically guaranteed to be convergent in the ordinary sense: 
+$$
+\begin{gather}
+\textbf{Theorem of Absolute Convergence: } \\[5mm]
+\text{If } \sum x_{n} \text{ is absolutely convergent, then it's also convergent.}
+\end{gather}
+$$
+(see [[Proof of Theorem of Absolute Convergence\|proof]])
+This serves as a bridge between the behavior of magnitudes of terms in a series and the behavior of the magnitudes of terms in a series and the behavior of the series itself. 
+
+Therefore, to test for absolute convergence, analysts only need to study series constructed with non-negative terms: 
 $$\begin{gather} \textbf{Theorem: Convergence Criterion for Series with Non-negative Terms} \\[5mm] \text{A series } \sum_{n=1}^\infty a_n \text{ with } a_n \ge 0 \text{ converges if and only if } \\ \text{its sequence of partial sums is bounded above.} \end{gather}$$
 
 This bounding logic leads to a highly practical evaluation method where unknown series are compared against known baseline series: 
-$$\begin{gather} \textbf{Theorem: Comparison} \\[5mm] \text{Let } \sum_{n=1}^\infty a_n \text{ and } \sum_{n=1}^\infty b_n \text{ be two series with non-negative terms. } \\ \text{If there exists an index } N \in \mathbb{N} \text{ such that } a_n \le b_n \text{ for all } n > N, \text{ then:} \\ \text{1. The convergence of } \sum_{n=1}^\infty b_n \text{ strictly implies the convergence of } \sum_{n=1}^\infty a_n. \\ \text{2. The divergence of } \sum_{n=1}^\infty a_n \text{ strictly implies the divergence of } \sum_{n=1}^\infty b_n. \end{gather}$$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Comparison Theorem\|proof]])
+$$\begin{gather} \textbf{Theorem: Standard Comparison Test} \\[5mm] \text{Let } \sum_{n=1}^\infty a_n \text{ and } \sum_{n=1}^\infty b_n \text{ be two series with non-negative terms. } \\ \text{If there exists an index } N \in \mathbb{N} \text{ such that } a_n \le b_n \text{ for all } n > N, \text{ then:} \\ \text{1. The convergence of } \sum_{n=1}^\infty b_n \text{ strictly implies the convergence of } \sum_{n=1}^\infty a_n. \\ \text{2. The divergence of } \sum_{n=1}^\infty a_n \text{ strictly implies the divergence of } \sum_{n=1}^\infty b_n. \end{gather}$$
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Standard Comparison Test\|proof]])
+
+An alternative means of testing by comparison involves using the limits of the underlying sequence:
+$$
+\begin{gather}
+\textbf{Theorem: Limit Comparison Test} \\[5mm]
+\text{Let } \sum x_{n} \text{ and } \sum y_{n} \text{ with } x_{n} \ge 0, b_{n} \ge 0 \text{ for all } n. \text{ Additionally, let }  \\
+c = \lim_{ n \to \infty } \frac{x_{n}}{y_{n}}. \text{ If } c \text{ is positive and finite, then either both series } \\
+\text{ converge or both series diverge. }
+\end{gather}
+$$
 
 The Comparison Theorem directly yields several robust algebraic tests used to rapidly determine series convergence:  
-$$\begin{gather} \textbf{Corollary: Standard Convergence Tests} \\[5mm] \text{1. \textbf{Weierstrass M-Test}: If } \vert{}a_n\vert{} \le b_n \text{ for all } n > N \text{ and } \sum_{n=1}^\infty b_n \text{ converges, } \\ \text{then the original series } \sum_{n=1}^\infty a_n \text{ converges absolutely.} \\ \text{2. \textbf{Cauchy's Root Test}: Let } \alpha = \limsup_{n \to \infty} \sqrt[n]{\vert{}a_n\vert{}}. \text{ If } \alpha < 1, \text{ the series } \\ \text{converges absolutely; if } \alpha > 1, \text{ the series diverges.} \\ \text{3. \textbf{d'Alembert's Ratio Test}: Let } \alpha = \lim_{n \to \infty} \left\vert{} \frac{a_{n+1}}{a_n} \right\vert{}. \text{ If } \alpha < 1, \text{ the series } \\ \text{converges absolutely; if } \alpha > 1, \text{ the series diverges.} \end{gather}$$
-Note that if $\alpha = 1$ in either Cauchy's or d'Alembert's tests, the methodology is inconclusive, requiring more advanced convergence tests. (see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Standard Convergence Tests\|proof]])
+$$\begin{gather} \textbf{Corollary: Standard Convergence Tests} \\[5mm] \text{1. \textbf{Weierstrass M-Test}: If } \vert{}x_n\vert{} \le y_n \text{ for all } n > N \text{ and } \sum_{n=1}^\infty y_n \text{ converges, } \\ \text{then the original series } \sum_{n=1}^\infty x_n \text{ converges absolutely.} \\ \text{2. \textbf{Cauchy's Root Test}: Let } \alpha = \limsup_{n \to \infty} \sqrt[n]{\vert{}x_n\vert{}}. \text{ If } \alpha < 1, \text{ the series } \\ \text{converges absolutely; if } \alpha > 1, \text{ the series diverges.} \\ \text{3. \textbf{d'Alembert's Ratio Test}: Let } \alpha = \lim_{n \to \infty} \left\vert{} \frac{x_{n+1}}{x_n} \right\vert{}. \text{ If } \alpha < 1, \text{ the series } \\ \text{converges absolutely; if } \alpha > 1, \text{ the series diverges.}  \\  4. \textbf{ Guaranteed Divergence: } \text{ If } \lim_{ n \to \infty } x_{n} \neq 0, \text{ then } \sum x_{n} \text{ will diverge.} \end{gather}$$
+Note that if $\alpha = 1$ in either Cauchy's or d'Alembert's tests, the methodology is inconclusive, requiring more advanced convergence tests. (see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Corollary for Standard Convergence Test\|proof]])
 
 Finally, for sequences where the terms are strictly monotonic and decreasing towards zero, a highly specialized condensation test exists:  
 $$\begin{gather} \textbf{Proposition: Cauchy Condensation Test} \\ \text{If } a_1 \ge a_2 \ge \dots \ge 0, \text{ the series } \sum_{n=1}^\infty a_n \text{ converges if and only if } \\ \text{the exponentially condensed series } \sum_{k=0}^\infty 2^k a_{2^k} \text{ converges.} \\ \textbf{Corollary: Convergence of the p-Series} \\ \text{The fundamental p-series } \sum_{n=1}^\infty \frac{1}{n^p} \text{ converges for } p > 1 \text{ and diverges for } p \le 1. \end{gather}$$
 (see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Cauchy Condensation Test\|proof]])
+
+### Arithmetic Properties of Series
+Like sequences, convergent series can also be interacted with via the rules of arithmetic. After all, convergent series converge towards a real number: 
+$$
+\begin{gather}
+\textbf{Proposition: Arithmetic Properties of Series} \\[5mm]
+\text{If } \sum x_{n} \text{ and } \sum y_{n} \text{ are convergent series, then } \\[2.5mm]
+1. \ \sum c x_{n} =  c \sum x_{n}, \text{ where } c \text{ is a real-valued constant. } \\
+2. \sum_{n = k}^\infty x_{n} \pm \sum_{n=k}^\infty y_{n} = \sum_{n=k}^\infty (x_{n} + y_{n})
+\end{gather}
+$$
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Properties of Series\|proof]])
+
+### Series Rearrangement
+The terms of an absolutely convergent series can be rearranged while still being the same series: 
+$$
+\begin{gather}
+\textbf{Proposition: Rearrangement of Series} \\[5mm]
+\text{1. If } \sum x_{n} \text{ is absolutely convergent and its value is } x, \text{ then any rearrangement } \\
+\text{ of } \sum x_{n} \text{ will also contain the value of } x.  \\
+\text{2. If } \sum x_{n} \text{ is conditionally convergent and } y \text{ is any real number, then there's a } \\
+\text{ rearrangement of } \sum x_{n} \text{ whose value will be } y. 
+\end{gather}
+$$
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Series Rearrangement Proposition\|proof]])
+
+### Alternating Series Test
+In some cases, the sequence of the series may display alternating terms—which involves the signs of the terms switching back and forth between positive and negative. It may be difficult to test as to what the series even converges to. Before trying to discover what the convergent term even is, it's prudent to determine if the series is even convergent in the first place: 
+$$
+\begin{gather}
+\textbf{Theorem: Alternating Series Test} \\[5mm]
+\text{Let } \sum x_{n} \text{ be a series, and either } x_{n} = (-1)^n y_{n} \text{ or } x_{n} = (-1)^{n+1}y_{n} \text{ where } y_{n} \ge 0  \\
+\text{ for all } n. \text{ If } \lim_{ n \to \infty }  y_{n} = 0 \text{ and } \{y_{n}  \} \text{ is a decreasing sequence, then } \sum x_{n} \text{ is convergent.}
+\end{gather}
+$$
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Alternating Series Test\|proof]])
 
 ---
 # Additional Useful Facts
@@ -170,6 +251,15 @@ $$
 \end{gather}
 $$
 (see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Squeeze Theorem\|proof]])
+
+This intuitive theorem can then be used to prove another simple but still important fact:
+$$
+\begin{gather}
+\textbf{Corollary: Squeeze Theorem} \\[5mm]
+\text{If } \lim_{ n \to \infty } |x_{n}| = 0, \text{ then } \lim_{ n \to \infty } x_{n} = 0
+\end{gather}
+$$
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Corollary for the Squeeze Theorem of Limits\|proof]])
 
 ### Representing Values in Computational Bases
 The following is crucial for distinguishing between discrete and continuous systems, being a cornerstone of positional notation and is essential for understanding how values in various computational bases are to be represented: 
