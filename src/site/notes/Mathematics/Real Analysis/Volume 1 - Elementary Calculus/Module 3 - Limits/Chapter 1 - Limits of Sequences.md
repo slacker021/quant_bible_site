@@ -163,7 +163,7 @@ $$
 \text{If } \sum x_{n} \text{ is absolutely convergent, then it's also convergent.}
 \end{gather}
 $$
-(see [[Proof of Theorem of Absolute Convergence\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem of Absolute Convergence\|proof]])
 This serves as a bridge between the behavior of magnitudes of terms in a series and the behavior of the magnitudes of terms in a series and the behavior of the series itself. 
 
 Therefore, to test for absolute convergence, analysts only need to study series constructed with non-negative terms: 
