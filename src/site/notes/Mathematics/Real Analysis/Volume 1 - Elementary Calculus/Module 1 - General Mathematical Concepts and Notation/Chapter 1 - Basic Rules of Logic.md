@@ -23,14 +23,14 @@ A *corollary* is a fact that quickly and easily follows from an already-proven s
 ### Logical Connectives
 However, these basic statements on their own require *logical connectives* for them to be chained into more complex statements. Furthermore, symbols allow for compound statements to be more concise. These logical connectives are meant to connect *atomic propositions*, which are basic declarative statements in formal logic that express a complete idea. These atomic propositions are either *true* or *false*. Suppose that $A$, $B$, and $C$ are three atomic propositions, where each one can either be true or false. With these statements, the following are the five basic symbols of mathematical logic which can be used on them: $\neg, \wedge, \lor, \implies, \iff$. Furthermore, each logical connective can be associated with a *truth table* to indicate its truth or falsehood depending on the truth of the statements $A, B$, and $C$. 
 ##### Negation ($\neg$)
-This means "not" and is meant to negate the truth value of a statement. If $A$ is true, then $\neg A$ means that $A$ is not true or $A$ is false. The truth table for this is one is
+This means "not" and is meant to negate the truth value of a statement. If $A$ is true, then $\neg A$ means that $A$ is not true or $A$ is false. The truth table for this is as follows:
 
 | $A$      | True  | False |
 | -------- | ----- | ----- |
 | $\neg A$ | False | True  |
 
 ##### Conjunction ($\wedge$)
-This means "and" or "but" and requires all statements chained together to hold true for the *compound proposition*, which is a more complex proposition made up of two or more atomic propositions. The truth table for this is
+This means "and" or "but" and requires all statements chained together to hold true for the *compound proposition*, which is a more complex proposition made up of two or more atomic propositions. The truth table for this is as follows:
 
 | $A$   | $B$   | $A \wedge B$ |
 | ----- | ----- | ------------ |
@@ -40,7 +40,7 @@ This means "and" or "but" and requires all statements chained together to hold t
 | False | False | False        |
 A special property of the conjunction is that the order at which the atomic propositions are specified will not alter the fundamental truth of the compound proposition. This means that $A \wedge B = B \wedge A$. This property extends to use of parentheses to group propositions, where $(A \wedge B) \wedge C = A \wedge (B \wedge C).$
 ##### Disjunction
-This means "or" and is meant to act as an inclusive "or" where at least one of the statements in the disjunction needs to hold true for the compound proposition to hold true. The truth table for this is
+This means "or" and is meant to act as an inclusive "or" where at least one of the statements in the disjunction needs to hold true for the compound proposition to hold true. The truth table for this is as follows:
 
 | $A$   | $B$   | $A \lor B$ |
 | ----- | ----- | ---------- |
@@ -50,7 +50,7 @@ This means "or" and is meant to act as an inclusive "or" where at least one of t
 | False | False | False      |
 Like with the conjunction, the order at which the statements are mentioned in a disjunction does not matter, nor does the use of parentheses to group specific parts of the disjunction alter its fundamental truth. 
 ##### Implication 
-An implication is a compound proposition where a *premise*, which hold the *assumptions*, leads to a result, which is the *conclusion*. This usually takes the form of an "if-then" statement. The truth table for this is
+An implication is a compound proposition where a *premise*, which hold the *assumptions*, leads to a result, which is the *conclusion*. This usually takes the form of an "if-then" statement. The truth table for this is as follows:
 
 | $A$   | $B$   | $A \implies B$ |
 | ----- | ----- | -------------- |

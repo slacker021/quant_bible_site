@@ -3,17 +3,16 @@
 ---
 
 Let $A,B,C$ be subsets of $M$. 
-
 # Proposition 1
 
-### LHS: $A \cap (B \cup C)$
+### Necessity
 Let $x \in A \cap (B \cup C)$. By definition of the intersection, 
 $$
-x \in A \wedge x \text{ and } (B \cup C) \tag{1}
+x \in A \wedge x \in (B \cup C) \tag{1}
 $$
 and by definition of the union, 
 $$x \in B \lor x \in C \tag{2}$$
-Regardless of whether or not $x$ is in $B$ or/and $C$, the following hold true because $x \in A$: 
+Regardless of whether or not $x$ is in $B$ or $C$, the following hold true because $x \in A$: 
 $$
 \begin{align}
 x \in A \cup B & \\ 
@@ -21,16 +20,16 @@ x \in A \cup C \tag{3}
 \end{align}
 $$
 
-If the two sets above we to be intersected, 
+If the two sets above were to be intersected, 
 $$
 x \in (A \cup B) \cap (A \cup C) \tag{4}
 $$
 Therefore, 
 $$
-A \cap (B \cup C) \subseteq (A \cup B) \cap (A \cup C) \tag{5}
+A \cap (B \cup C) \subset (A \cap B) \cup (A \cap C) \tag{5}
 $$
 
-### RHS: $(A \cup B) \cap (A \cup C)$
+### Sufficiency 
 Let $x \in (A \cup B) \cap (A \cup C)$. By definition of the intersection, 
 $$
 x \in (A \cup B) \text{ and } x \in (A \cup C) \tag{6}
@@ -40,11 +39,11 @@ $$
 x \in A \lor x \in B \text{ and } x \in A \lor x \in C \tag{7}
 $$
 This leads to two cases: 
-1. If $x \in A \cap B$. Then $x \in A$ and $x \in B$. Since $x \in B$, $x \in B \cup C$. Thus, $x \in A \cap (B \cup C)$.
-2. If $x \in A \cap C$. Then $x \in A$ and $x \in C$. Since $x \in C$, $x \in B \cup C$. Thus, $x \in A \cap (B \cup C)$.
+1. $x \in A \cap (B \cup C) \implies x \in A \land (x \in B \lor x \in C) \implies (x \in A \land x \in B) \lor (x \in A \land x \in C) \implies x \in (A \cap B) \cup (A \cap C)$. 
+2. $x∈(A∩B)∪(A∩C)⟹(x∈A∧x∈B)∨(x∈A∧x∈C)⟹x∈A∧(x∈B∨x∈C)⟹x∈A∩(B∪C).$
 Therefore, 
 $$
-(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C) \tag{8}
+(A \cap B) \cup (A \cap C) \subset A \cap (B \cup C) \tag{8}
 $$
 
 ---

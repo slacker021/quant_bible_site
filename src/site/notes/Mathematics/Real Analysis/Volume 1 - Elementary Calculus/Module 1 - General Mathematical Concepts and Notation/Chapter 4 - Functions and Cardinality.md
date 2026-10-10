@@ -31,7 +31,7 @@ $$
 $$
 The range is also known as the *image* of the function. The behavior of a function can be generalized to act on entire subsets of the domain and codomain. If $A \subset X$, then the image of $A$ under $f$ is the subset $f(A) \subset Y$, which can be defined as
 $$
- f(A) := \{y \in Y \ | \ \exists x \in A (y = f(A)) \} \tag{1}	
+ f(A) := \{y \in Y \ | \ \exists x \in A (y = f(x)) \} \tag{1}	
 $$
 ### Classifications of Mappings
 To analyze how distinct spaces correspond to one another, functions are classified based on the density and uniqueness of their coordinate distribution across the domain and codomain. Special types of mappings can be constructed using **definitions 1 and 2**. 
@@ -78,7 +78,8 @@ f^{-1} := \{ (y, x) \in Y \times X \mid (x, y) \in f \}
 \end{gather}
 $$
 
-Because the source mapping $f$ is surjective, the domain of $f^{-1}$ is guaranteed to be the entirety of $Y$. Because $f$ is injective, the relation $f^{-1}$ satisfies the uniqueness constraint of Definition 1, establishing $f^{-1}$ as a valid function mapping $Y \to X$ such that $f^{-1}(y) = x \iff f(x) = y$. The inverse of a function is also known as its *preimage*. (see [[Proof of Definition 6\|Proof of Definition 6]] for further explanation)
+(see [[Proof of the Existence of Inverse Mappings\|proof]]) 
+Because the source mapping $f$ is surjective, the domain of $f^{-1}$ is guaranteed to be the entirety of $Y$. Because $f$ is injective, the relation $f^{-1}$ satisfies the uniqueness constraint of Definition 1, establishing $f^{-1}$ as a valid function mapping $Y \to X$ such that $f^{-1}(y) = x \iff f(x) = y$. The inverse of a function is also known as its *preimage*. 
 
 > [!danger]+ Intuition: Inverse Functions Undo the Original
 > A clever way to think about the inverse of a function $f$ is that it "undoes" what the original function does.
@@ -97,10 +98,10 @@ Because the source mapping $f$ is surjective, the domain of $f^{-1}$ is guarante
 >6. Let $E \subset M$. The real-valued function $χE: M \rightarrow \mathbb{R}$ is defined on the set $M$ by the conditions $(χE (x) = 1 \text{ if } x ∈ E) ∧ (χE (x) = 0 \text{ if } x ∈ C_{M} E)$is called the characteristic function of the set E. This function is neither injective nor surjective. 
 >7. Let $M(X; Y)$ be the set of mappings of the set $X$ into the set $Y$ and $x_0$ a fixed element of $X$. To any function $f \in M(X; Y)$, the value $f(x_{0}) \in Y$ is assigned at element $x_{0}$. This relation defines a function $F: M(X; Y) \rightarrow Y$. In particular, if $Y = \mathbb{R}$, that is, $Y$ is the set of real numbers, then to each function $f:X \rightarrow \mathbb{R}$ the function $F:M(X; \mathbb{R})$ assigns the number $F(f) = f(x_{0})$. Thus, $F$ is a function defined on functions. This class of functions is called *functionals*. The first function is surjective while the second one is neither. 
 >8. Let $\Gamma$ be the set of curves lying on a surface and joining two given points on the surface. To each curve $\gamma \in \Gamma$ one can assign its length. The function $F: \Gamma \rightarrow \mathbb{R}$ can then be obtained, which is used to assign the shortest curve, or as it's called, the *geodesic* between two given points on the surface. This function is bijective. 
->9. Consider the set $M(\mathbb{R}; \mathbb{R})$ of real-valued functions defined on the entire real line $\mathbb{R}$. After fixing a number $a \in \mathbb{R}$, each function is assigned $f \in M(\mathbb{R}; \mathbb{R})$ that function $f_{a} \in M(\mathbb{R}; \mathbb{R})$ connected with the relation $f_{a}(x) = f(x + a)$. The function $f_{a}(x)$ is usually called the *translate* or *shift* of the function $f$ by $a$. The mapping $A:M(\mathbb{R};\mathbb{R}) \rightarrow M(\mathbb{R}; \mathbb{R})$ that arises in this way is called the *translation* of *shift operator*. This the operator $A$ is defined on functions and its values are also functions $f_{a} = A(f)$. This is a bijective function. 
+>9. Consider the set $M(\mathbb{R}; \mathbb{R})$ of real-valued functions defined on the entire real line $\mathbb{R}$. After fixing a number $a \in \mathbb{R}$, each function is assigned $f \in M(\mathbb{R}; \mathbb{R})$ that function $f_{a} \in M(\mathbb{R}; \mathbb{R})$ connected with the relation $f_{a}(x) = f(x + a)$. The function $f_{a}(x)$ is usually called the *translate* or *shift* of the function $f$ by $a$. The mapping $A:M(\mathbb{R};\mathbb{R}) \rightarrow M(\mathbb{R}; \mathbb{R})$ that arises in this way is called the *translation* of *shift operator*. This operator $A$ is defined on functions and its values are also functions $f_{a} = A(f)$. This is a bijective function. 
 >10. The position of a particle in space is determined by an ordered triple of numbers $(x,y,z)$ called its spatial coordinates. The set of all such ordered triples can be thought of as the direct product $\mathbb{R} \times \mathbb{R} \times \mathbb{R} = \mathbb{R}^3$ of the three real lines $\mathbb{R}$. A particle in motion is located at some point of the space $\mathbb{R}^3$ having coordinates $(x(t), y(t),z(t))$ at each instant $t$ of time. Thus, the motion of a particle can be interpreted as a mapping $\gamma:\mathbb{R} \rightarrow \mathbb{R}^3$, where $\mathbb{R}$ is the time axis and $\mathbb{R}^3$ is the three-dimensional space. If a system consists of $n$ particles, its configuration is defined by the position of each of the particles, that is, it's defined by an ordered set $(x_{1}, y_{1},z_{1};x_{2}, y_{2}, z_{2};\dots x_{n},y_{n},z_{n})$ consisting of $3n$ numbers. The set of all such ordered sets is called the *configuration space* of the system of $n$ particles. Consequently, the configuration space of system of $n$ particles can be interpreted as the direct product $\mathbb{R}^3 \times \mathbb{R}^3 \times \dots \times \mathbb{R}^3 = \mathbb{R}^{3n}$ of $n$ copies of $\mathbb{R}^{3}$. To the motion of a system of $n$ particles there corresponds a mapping $\gamma:\mathbb{R} \rightarrow \mathbb{R}^{3n}$ of the time axis into the configuration space of the system. This function is neither surjective nor injective. 
 >11. The potential energy $U$ of a mechanical system is connected with the mutual positions of the particles of the system, that is, it's determined by the configuration that the system has. Let $Q$ be the set of possible of possible configurations of a system. This is a certain subset of the configuration space of the system. To each position $q \in Q$ there corresponds a certain value $U(q)$ of the potential energy of the system. Thus the potential energy is a function $U:Q \rightarrow \mathbb{R}$ is defined on a subset $Q$ of the configuration space with values in the domain $\mathbb{R}$ of real numbers. This function is neither injective nor surjective. 
->12. The kinetic energy $K$ of a system of $n$ material particles depends on their velocities. The total mechanical energy of the system $E$, defined as $E = K + U$, that is. the sum of the kinetic and potential energies, thus depends on both the configuration $q$ of the system and the set of velocities $v$ of its particles. Like the configuration $q$ of the particles in space, the set of velocities $v$, which consists of $n$ three-dimensional vectors, can be defined as an ordered set of $3n$ numbers. The ordered pairs $(q,v)$ corresponding to the states of the system form a subset $\Phi$ in the direct product $\mathbb{R}^{3n} \times \mathbb{R}^{3n} = \mathbb{R}^{6n}$, called the *phase* space of the system of $n$ particles (to be distinguished form the configuration space $\mathbb{R}^{3n}$). The total mechanical energy of the system is therefore a function $E:\Phi \rightarrow \mathbb{R}$ defined on the subset $\Phi$ of the phase space $\mathbb{R}^{6n}$ and assuming values in the domain $\mathbb{R}$ of real numbers. In particular, if the system is isolated, that is, no external forces are acting on it, then by the law of the conservation of energy, at each point of the set $\Phi$ of states of the system the function $E$ will have the same value $E_{0} \in \mathbb{R}$. This is neither an injective nor surjective function. This function is neither injective nor surjective. 
+>12. The kinetic energy $K$ of a system of $n$ material particles depends on their velocities. The total mechanical energy of the system $E$, defined as $E = K + U$, that is, the sum of the kinetic and potential energies, thus depends on both the configuration $q$ of the system and the set of velocities $v$ of its particles. Like the configuration $q$ of the particles in space, the set of velocities $v$, which consists of $n$ three-dimensional vectors, can be defined as an ordered set of $3n$ numbers. The ordered pairs $(q,v)$ corresponding to the states of the system form a subset $\Phi$ in the direct product $\mathbb{R}^{3n} \times \mathbb{R}^{3n} = \mathbb{R}^{6n}$, called the *phase* space of the system of $n$ particles (to be distinguished form the configuration space $\mathbb{R}^{3n}$). The total mechanical energy of the system is therefore a function $E:\Phi \rightarrow \mathbb{R}$ defined on the subset $\Phi$ of the phase space $\mathbb{R}^{6n}$ and assuming values in the domain $\mathbb{R}$ of real numbers. In particular, if the system is isolated, that is, no external forces are acting on it, then by the law of the conservation of energy, at each point of the set $\Phi$ of states of the system the function $E$ will have the same value $E_{0} \in \mathbb{R}$. This is neither an injective nor surjective function. 
 
 ---
 # Composite Functions
@@ -120,7 +121,7 @@ $$
 h \circ (g \circ f) = (h \circ g) \circ f
 \end{gather}
 $$
-(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 4/Proof of Theorem 1\|proof]])
+(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of the Associative Property of Composite Functions\|proof]])
 
 ---
 # Set Cardinality and Cantor's Framework
@@ -150,9 +151,9 @@ Using the natural numbers $\mathbb{N} := \{1,2,3, \dots \}$ as a reference, sets
 
 An important implication is *Cantor's Theorem*, which establishes that there's no maximum cardinal number; The cardinality of any power set is strictly greater than the cardinality of its parent set: 
 $$
-\begin{gather} \textbf{Theorem: Cantor's Theorem} \\[5mm] \text{For any arbitrary set } X, \text{ the cardinality of } X \text{ is strictly less than the} \\ \text{cardinality of its power set } \mathcal{P}(X). \text{ Symbolically: } |X| < |\mathcal{P}(X)| \end{gather}
+\begin{gather} \textbf{Cantor's Theorem: } \\[5mm] \text{For any arbitrary set } X, \text{ the cardinality of } X \text{ is strictly less than the} \\ \text{cardinality of its power set } \mathcal{P}(X). \text{ Symbolically: } |X| < |\mathcal{P}(X)| \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 4/Proof of Theorem 2\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Cantor's Theorem\|proof]])
 
 ---
 # Useful Facts about Functions
@@ -162,22 +163,22 @@ $$
 \begin{gather}
 \textbf{Proposition: } \\[5mm]
 \text{1. } A \subset B \implies f(A) \subset f(B) \neq A \subset B \\
-\text{2. } A \neq \emptyset \implies f(A) \implies \emptyset \\
+\text{2. } A \neq \emptyset \implies f(A) \ne \emptyset \\
 \text{3. } f(A \cap B) \subset f(A) \cap f(B) \\
 \text{4. } f(A \cup B) = f(A) \cup f(B)
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 4/Proof of Proposition 1\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Proposition 1 of Useful Facts about Functions\|proof]])
 $$
 \begin{gather} 
 \textbf{Lemma: } \\[5mm]
 \text{If } A' \text{ and } B' \text{ are subsets of } Y, \text{ then } \\[2.5mm]
-\text{1. } A' \subset B' \implies f^{-1}(A') \subset f^{-1}(B) \\
+\text{1. } A' \subset B' \implies f^{-1}(A') \subset f^{-1}(B') \\
 \text{2. } f^{-1} (A' \cap B') = f^{-1} (A') \cap f^{-1} (B) \\
 \text{3. } f^{-1} (A' \cup B') = f^{-1}(A') \cup f^{-1}(B')
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 4/Proof of Lemma 1\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Lemma of Useful Facts about Functions\|proof]])
 $$
 \begin{gather}
 \textbf{Proposition: } \\[5mm]
@@ -186,7 +187,7 @@ $$
 \text{2. } f^{-1} (C_{Y}A') = C_{X}f^{-1}(A')
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 4/Proof of Proposition 2\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Proposition 2 of Useful Facts about Functions\|proof]])
 $$
 \begin{gather}
 \textbf{Proposition: } \\[5mm]
@@ -195,7 +196,7 @@ $$
 \text{2. } f(f^{-1}(B')) \subset B'   
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 4/Proof of Proposition 3\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Proposition 3 of Useful Facts about Functions\|proof]])
 $$
 \begin{gather}
 \textbf{Proposition: } \\[5mm]
@@ -203,18 +204,19 @@ $$
 \text{2. Bijective if and only if } f^{-1}(f(A)) = A \wedge f(f^{-1}(B')) = B' 
 \end{gather}
 $$
-(see [[Proof of Proposition 4\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Proposition 4 of Useful Facts about Functions\|proof]])
 $$
 \begin{gather}
 \textbf{Proposition: } \\[5mm]
 \text{The following statements about }  f:X \rightarrow Y \text{ are equivalent: }  \\[2.5mm]
 \text{1. } f \text{ is injective} \\
-\text{2. } f^{-1}(f(A)) = A \text{ for every } A \subset X \\
+\text{2. } f^{-1}(f(A)) = A \text{ for every } A \subset X \\[2.5mm] \\
+\text{The three propositions below only hold if } f \text{ is injective: } \\[2.5mm]
 \text{3. } f(A \cap B) = f(A) \cap f(B) \text{ for any two subsets } A \text{ and } B \text{ of } X.  \\
 \text{4. } f(A) \cap f(B) = \emptyset \iff A \cap B = \emptyset \\
 \text{5. }  f(A \ \backslash \ B) = f(A) \ \backslash  \ f(B) \text{ whenever } B \subset A \subset X
 \end{gather}
 $$
-(see [[Proof of Proposition 5\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Proposition 5 of Useful Facts about Functions\|proof]])
 
 

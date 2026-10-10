@@ -4,7 +4,7 @@
 
 # Proposition 1
 
-### LHS ($\implies$)
+### Necessity
 Assume $A \subseteq B$ and let $y \in f(A)$ be an arbitrary element. By definition of the direct image under $f$, there exists at least one element $x \in A$ such that
 $$f(x) = y \tag{1}$$
 Since $A \subseteq B$,
@@ -12,14 +12,14 @@ $$x \in A \implies x \in B \tag{2}$$
 Since $x \in B$ and $y = f(x)$, it follows from the definition of the direct image that
 $$y \in f(B) \tag{3}$$
 Since $y \in f(A) \implies y \in f(B)$, it can be concluded that
-$$f(A) \subseteq f(B) \tag{4}$$
+$$f(A) \subset f(B) \tag{4}$$
 
-### RHS ($\impliedby$)
-To demonstrate that $f(A) \subseteq f(B)$ does not imply $A \subseteq B$, it suffices to provide a counterexample. Let $X = \{1, 2\}$, $Y = \{0\}$, and let $f: X \to Y$ be the constant mapping $f(1) = 0$ and $f(2) = 0$. Now, suppose that $A = \{ 1 \}$ and $B = \{ 2 \}$. Evaluating the images yields
+### Sufficiency
+To demonstrate that $f(A) \subset f(B)$ does not imply $A \subset B$, it suffices to provide a counterexample. Let $X = \{1, 2\}$, $Y = \{0\}$, and let $f: X \to Y$ be the constant mapping $f(1) = 0$ and $f(2) = 0$. Now, suppose that $A = \{ 1 \}$ and $B = \{ 2 \}$. Evaluating the images yields
 $$
 f(A) = \{0\} \text{ and } f(B) = \{0\} \tag{5}
 $$
-Here, $f(A) = f(B)$, so $f(A) \subseteq f(B)$ holds trivially. However, $A = \{1\} \nsubseteq \{2\} = B$ because $1 \notin \{2\}$. herefore, $f(A) \subseteq f(B)$ does not imply $A \subseteq B$ in general. 
+Here, $f(A) = f(B)$, so $f(A) \subset f(B)$ holds trivially. However, $A = \{1\} \not\subset \{2\} = B$ because $1 \notin \{2\}$. herefore, $f(A) \subset f(B)$ does not imply $A \subset B$ in general. 
 
 ---
 # Proposition 2
@@ -36,12 +36,12 @@ $$x \in A \cap B \implies (x \in A) \wedge (x \in B \tag{7})$$
 Since $x \in A$ and $y = f(x)$, $y \in f(A)$, and since $x \in B$ and $y = f(x)$, $y \in f(B)$. Combining these statements yields $(y \in f(A)) \land (y \in f(B))$, which by definition of set intersection implies:
 $$y \in f(A) \cap f(B) \tag{8}$$
 Therefore, 
-$$f(A \cap B) \subseteq f(A) \cap f(B) \tag{9}$$
+$$f(A \cap B) \subset f(A) \cap f(B) \tag{9}$$
 
 ---
 # Proposition 4
 
-### LHS: $f(A \cup B) \subseteq f(A) \cup f(B)$
+### Necessity
 Let $y \in f(A \cup B)$ be an arbitrary element. - By definition of direct image, there exists an element $x \in A \cup B$ such that $f(x) = y$. By definition of set union,
 $$x \in A \cup B \implies (x \in A) \lor (x \in B) \tag{10}$$
 This leads to two cases: 
@@ -54,15 +54,15 @@ $$
 In both cases, 
 $$y \in f(A) \cup f(B) \tag{12}$$
 Therefore, 
-$$f(A \cup B) \subseteq f(A) \cup f(B) \tag{13}$$
+$$f(A \cup B) \subset f(A) \cup f(B) \tag{13}$$
 
-### RHS: $f(A \cup B) \supseteq f(A) \cup f(B)$
+### Sufficiency
 By definition of union, $A \subseteq A \cup B$. Applying fact 1, 
-$$A \subseteq B \implies f(A) \subseteq f(B) \tag{14}$$
+$$A \subset A \cup B \implies f(A) \subset f(A \cup B) \tag{14}$$
 gives the result 
-$$f(A) \subseteq f(A \cup B) \tag{15}$$
+$$f(A) \subset f(A \cup B) \tag{15}$$
 Combining these two subset inclusions yields:
-$$f(A) \cup f(B) \subseteq f(A \cup B) \tag{16}$$
+$$f(A) \cup f(B) \subset f(A \cup B) \tag{16}$$
 
 Combining both proofs establishes
 $$ f(A \cup B) = f(A) \cup f(B) \tag{17}$$

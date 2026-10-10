@@ -5,9 +5,9 @@
 Let $X, Y, X', Y'$ be arbitrary sets. 
 
 ---
-# Proposition 1
+# Theorem 1
 
-### Part 1: $(X \times Y) \cap (X' \times Y') \subseteq (X \cap X') \times (Y \cap Y')$
+### Necessity
 Let $(a, b) \in (X \times Y) \cap (X' \times Y')$ be an arbitrary element. By definition of set intersection,
 $$(a, b) \in (X \times Y) \cap (X' \times Y') \implies (a, b) \in X \times Y \wedge (a, b) \in X' \times Y' \tag{1}$$
 By definition of the Cartesian product,
@@ -31,8 +31,7 @@ $$
 (X \times Y) \cap (X' \times Y') \subseteq (X \cap X') \times (Y \cap Y') \tag{7}
 $$
 
----
-# Proposition 2
+### Sufficiency
 Let $(a, b) \in (X \cap X') \times (Y \cap Y')$ be an arbitrary element. By definition of the Cartesian product,
 $$(a, b) \in (X \cap X') \times (Y \cap Y') \implies (a \in X \cap X') \land (b \in Y \cap Y') \tag{8}$$
 By definition of set intersection, 
@@ -52,7 +51,8 @@ Therefore,
 $$(X \cap X') \times (Y \cap Y') \subseteq (X \times Y) \cap (X' \times Y') \tag{13}$$
 $$\textbf{Q.E.D}$$
 
-### Alternative Proof
+---
+# Alternative Proof
 The equality can also be proven directly through a continuous chain of logical equivalences:
 $$\begin{aligned}
 (a, b) \in (X \times Y) \cap (X' \times Y') &\iff ((a, b) \in X \times Y) \land ((a, b) \in X' \times Y') & \text{(Definition of } \cap\text{)} \\ &\iff (a \in X \land b \in Y) \land (a \in X' \land b \in Y') & \text{(Definition of } \times\text{)} \\ &\iff (a \in X \land a \in X') \land (b \in Y \land b \in Y') & \text{(Associativity/Commutativity of } \land\text{)} \\ &\iff (a \in X \cap X') \land (b \in Y \cap Y') & \text{(Definition of } \cap\text{)} \\ &\iff (a, b) \in (X \cap X') \times (Y \cap Y') & \text{(Definition of } \times\text{)} \\

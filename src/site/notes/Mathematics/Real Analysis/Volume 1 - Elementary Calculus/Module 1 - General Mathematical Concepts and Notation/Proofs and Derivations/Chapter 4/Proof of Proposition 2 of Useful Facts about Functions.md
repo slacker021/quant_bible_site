@@ -11,7 +11,7 @@ Because every step is a logical equivalence ($\iff$), the set identity $f^{-1}(A
 ---
 #  Proposition 2
 
-### Proof Method 1: Direct Application of Set Difference (Part 1)
+### Proof Method 1: Direct Application of Set Difference 
 Since $f: X \to Y$ is a well-defined mapping from domain $X$ to codomain $Y$, every element $x \in X$ maps into $Y$. Thus, the inverse image of the total codomain is the total domain:
 $$f^{-1}(Y) = X \tag{2}$$
 

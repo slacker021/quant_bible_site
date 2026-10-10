@@ -13,13 +13,13 @@ Both composite functions $h \circ (g \circ f)$ and $(h \circ g) \circ f$ map fro
 #  Proposition 2
 Let $x \in X$ be an arbitrary element of the domain.
 
-### LHS
+### Sufficiency
 Evaluating the left-hand side at $x$ yields
 $$\begin{aligned}
 (h \circ (g \circ f))(x) &= h\big((g \circ f)(x)\big) & \text{(Definition of function composition)} \\ &= h\big(g(f(x))\big) & \text{(Definition of function composition)}  \\
 & &\text{(3)}
 \end{aligned}$$
-### RHS
+### Necessity
 Evaluating the right-hand side at $x$ yields
 $$
 \begin{aligned} 

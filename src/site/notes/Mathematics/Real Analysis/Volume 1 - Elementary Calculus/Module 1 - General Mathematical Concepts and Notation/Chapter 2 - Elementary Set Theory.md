@@ -12,19 +12,19 @@ $$
 \text{where any property defines the set of objects having that property.}
 \end{gather}
 $$
-If $x$ is an object, $P$ is a *property*, and $P(x)$ denotes the assertion that $x$ has property $P$, then the class of objects having the property $P$ is denoted $\{x \ | \ P(x) \}$ . The objects that belong to a set are called *elements* $x_{1} \dots x_{n}$ and is denoted as $\{x_{1}\dots x_{n}\}$. Synonyms for set include but are not limited to
+If $x$ is an object, $P$ is a *property*, and $P(x)$ denotes the assertion that $x$ has property $P$, then the class of objects having the property $P$ is denoted $\{x \ | \ P(x) \}$ . The objects that belong to a set are called *elements* $x_{1} \dots x_{n}$ and is denoted as $\{x_{1}\dots x_{n}\}$. Synonyms for a set include but are not limited to
 - *family*
 - *totality*
 - *collection*
 - *class*
 ### The Inclusion Relation
-When it comes to defining sets, the notation below serve as the primary notation used: 
+When it comes to defining sets, the notation below serves as the primary notation used: 
 - The statement $x \in X$ is used to denote that $x$ is an element of the set $X$ while $x \notin X$ denotes that it is not an element of the set $X$. 
 - When statements about sets are written, the two most frequent logical operators used are $\exists$, which means "there exists" or "there is", and $\forall$, which means "every, for all, or each."
 - If two sets $A$ and $B$ have exactly the same elements, then they are equivalent, which is denoted as $A = B$.  In symbolic form, this translates to $\forall x((x \in A) \iff (x \in B))$. If two sets have exactly the same elements, then the sets $A$ and $B$ are considered to be the same sets. 
 - If every element of $A$ is an element of $B$, then $A$ is a subset of $B$, which is denoted as $A \subset B$. If $A \subset B$ but $A \neq B$, then the inclusion of $A \subset B$ is *strict* or that $A$ is a *proper subset* of B, which can be abbreviated as $A \subsetneq B$. Therefore, it can be concluded that $(A = B) \iff (A \subset B) \wedge (B \subset A)$. Additionally, $B$ is said to be the *superset* of $A$. 
 - If $M$ is a set, any property $P$ distinguishes $P$ in $M$ the subset $\{x \in M |P(x) \}$. 
-- If $P$ is taken as a property that no elements of the set $M$ has, for example, $P(x):=(x \neq x)$, then the set $\emptyset = \{x \in M | x \neq x \}$ is used to denote a set with no elements. This serves as the *empty subset* of $M$. 
+- If $P$ is taken as a property that no elements of the set $M$ have, for example, $P(x):=(x \neq x)$, then the set $\emptyset = \{x \in M | x \neq x \}$ is used to denote a set with no elements. This serves as the *empty subset* of $M$. 
 ---
 # Basic Set Operations
 There are three basic operations that can be performed on sets are the *union, intersection, and difference.* These three operations can be used on two or more sets to form an entirely new set. If $A$ and $B$ are subsets of a set $M$, then
@@ -85,7 +85,7 @@ $$
 \text{If } X \text{ is any set and } \emptyset \text{ is an empty set, then } \emptyset \text{ is a subset of } X. 
 \end{gather}
 $$
-(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 2/Proof of Proposition 1\|proof]]) In addition to **proposition 1**, **axioms 1 and 2** that the object that results from set operations is also a set. 
+(See [[Proof that the Empty Set is a Subset of Any Set\|proof]]) In addition to **proposition 1**, **axioms 1 and 2** that the object that results from set operations is also a set. 
 $$
 \begin{gather}
 \textbf{Axiom: Union of a Set} \\[5mm]
@@ -143,7 +143,7 @@ $$
 \end{gather}
 $$
 > [!info]+ Remark: 
-> This axiom is not typically used in the construction of real analysis.
+> This axiom of replacement is not used in the construction of real analysis, but may see uses elsewhere. 
 
 **Axioms 1 to 7** constitute the *Zermelo-Frankael* axioms that underpin formal set theory. In addition to the seven foundational axioms of set theory, an additional axiom (which happens to be independent from the previous seven) is added. The following axiom, as opposed to **axiom 7**, is used frequently in real analysis:
 $$
@@ -166,17 +166,17 @@ C_{M}(A \cup B) = C_{M}(A) \cap C_{M}(B) \\
 C_{M}(A \cap B) = C_{M}(A) \cup C_{M}(B)
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 2/Proof of Proposition 2\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 2/Proof of de Morgan's Laws of Set Complements\|proof]])
 Another useful law refers to the *distributive nature of set operations:*
 $$
 \begin{gather}
 \textbf{Proposition: Distributive Laws of Intersection and Union: } \\[5mm]
 \text{For any subsets } A,B,C \subset M:  \\[2.5mm]
-A \cap (B \cup C) = (A \cap B) \cup (A \cup C) \\
+A \cap (B \cup C) = (A \cap B) \cup (A \cap C) \\
 A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 2/Proof of Proposition 3\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 2/Proof of the Distributive Laws of Intersection and Union\|proof]])
 Last but not the least, the complement in particular has a unique set of rules:
 $$
 \begin{gather}
@@ -187,4 +187,4 @@ $$
 C_{M}(C_{M}A) = A
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 2/Proof of Lemma 1\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 2/Proof of Elementary Lemma of Set Complementation\|proof]])

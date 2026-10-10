@@ -26,7 +26,7 @@ $$
 (x, y) = (u,v) \iff (x = u) \wedge (y = v)
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 3/Proof of Theorem 1\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 3/Proof of the Fundamental Contract of Ordered Coordinates\|proof]])
 
 Once the internal structure of an individual pair is formalized, the master universal set comprising all possible coordinate pairs can be constructed: 
 $$
@@ -57,7 +57,7 @@ $$X \times Y = \{ z \in \mathcal{P}(\mathcal{P}(X \cup Y)) \mid \exists x \in X,
 
 >[!example]- Example: Geometric Interpretations of Different Types of Cartesian Products
 >The following are geometric interpretations based on Cartesian Products. If $X \times Y$ is the set of all ordered pairs $(x,y)$ such that $x \in X \wedge y \in Y$, then these structures can be visualized through classic spatial dimensions: 
->**1. The product of two line segments:** The product of two line segments: Let $I_1 = [a, b]$ and $I_2 = [c, d]$ represent two bounded intervals on the real line $\mathbb{R}$. Their Cartesian product $I_1 \times I_2$ defines a bounded, solid rectangle embedded in the 2D plane $\mathbb{R}^2$, bounded by the vertical lines $x=a, x=b$ and horizontal lines $y=c, y=d$.
+>The product of two line segments: Let $I_1 = [a, b]$ and $I_2 = [c, d]$ represent two bounded intervals on the real line $\mathbb{R}$. Their Cartesian product $I_1 \times I_2$ defines a bounded, solid rectangle embedded in the 2D plane $\mathbb{R}^2$, bounded by the vertical lines $x=a, x=b$ and horizontal lines $y=c, y=d$.
 >**2. The product of two lines:** The Cartesian product $\mathbb{R} \times \mathbb{R}$ maps every pair of real numbers across two infinite dimensions. This yields the entire infinite 2D continuous space known as the Cartesian plane $\mathbb{R}^2$. 
 >**3. The product of a line and a circle:** Let the line be represented by $\mathbb{R}$ and the circle by the 1-sphere $S^1$. The product $\mathbb{R} \times S^1$ matches each point along an infinite axis to a periodic circular path. Geometrically, this forms an infinitely long hollow cylindrical surface in 3D space.
 >**4. The product of a line and a disk:** Replacing the hollow circle from the previous part with a filled 2D closed disk $D$, the product $\mathbb{R} \times D$ extends this filled circular area infinitely along a linear path. This creates an infinite solid cylinder.
@@ -162,14 +162,14 @@ $$
 \text{If } X \text{ and } Y \text{ are two sets, then } X \times Y = \emptyset \iff X = \emptyset \lor Y = \emptyset
 \end{gather}
 $$
-(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Proofs and Derivations/Module 1 - Some General Mathematical Concepts and Notation/Chapter 3/Proof of Theorem 2\|proof]])
+(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 3/Proof of the First Useful Property of Cartesian Products\|proof]])
 $$
 \begin{gather}
 \textbf{Theorem:} \\
 \text{If } X \times Y \neq \emptyset, \text{ then } A \times B \subset X \times Y \iff A \subset X \wedge B \subset Y
 \end{gather}
 $$
-(See [[Proof of Theorem 3\|proof]])
+(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 3/Proof of the Second Useful Property of Cartesian Products\|proof]])
 $$
 \begin{gather}
 \textbf{Theorem:} \\[5mm]
@@ -177,11 +177,11 @@ $$
 (X \times Y) \cup (Z \times Y) = (X \cup Z) \times Y
 \end{gather}
 $$
-(See [[Proof of Theorem 4\|proof]])
+(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 3/Proof of the Third Useful Property of Cartesian Products\|proof]])
 $$
 \begin{gather}
 \textbf{Theorem: } \\[5mm]
 (X \times Y) \cap (X' \times Y') = (X \cap X') \times (Y \cap Y')
 \end{gather}
 $$
-(See [[Proof of Theorem 5\|proof]])
+(See [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 3/Proof of the Fourth Useful Property of Cartesian Products\|proof]])

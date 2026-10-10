@@ -2,9 +2,7 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-1-general-mathematical-concepts-and-notation/proofs-and-derivations/chapter-4/proof-of-proposition-5-of-useful-facts-about-functions/","dg-note-properties":{}}
 ---
 
-
 This proof is unique because the equivalence of these five statements is established via a circular chain of implications: 
-
 #  Proposition 1
 Assume $f$ is injective. Let $A \subseteq X$ be an arbitrary subset. By [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4/Proof of Proposition 3 of Useful Facts about Functions\|proposition 3]], the containment $A \subseteq f^{-1}(f(A))$ holds for any mapping $f$. To establish the reverse inclusion $f^{-1}(f(A)) \subseteq A$, let $x \in f^{-1}(f(A))$ be an arbitrary element. By definition of the inverse image,
 $$x \in f^{-1}(f(A)) \implies f(x) \in f(A) \tag{1}$$
@@ -43,12 +41,12 @@ $$f(A \cap B) = f(A) \cap f(B) \tag{12}$$
 ---
 #  Proposition 3
 
-### LHS ($\implies$) 
+### Necessity
 Assume $f(A \cap B) = f(A) \cap f(B)$ for all $A, B \subseteq X$. By this premise, 
 $$f(A \cap B) = f(A) \cap f(B) = \emptyset \tag{13}$$
 If $A \cap B \neq \emptyset$, then by Proposition 1 (Fact 2), $f(A \cap B) \neq \emptyset$, which contradicts $f(A \cap B) = \emptyset$. Therefore, 
 $$A \cap B = \emptyset \tag{14}$$
-### RHS ($\impliedby$)
+### Sufficiency
 Applying the assumption of **LHS** directly:
 $$f(A) \cap f(B) = f(A \cap B) = f(\emptyset) = \emptyset \tag{15}$$
 Therefore,
@@ -58,7 +56,7 @@ $$f(A) \cap f(B) = \emptyset \iff A \cap B = \emptyset \tag{16}$$
 #  Proposition 4
 Assume $f(A) \cap f(B) = \emptyset \iff A \cap B = \emptyset$ for all $A, B \subseteq X$. Let $B \subseteq A \subseteq X$. 
 
-### LHS (Forward Inclusion)
+### Necessity
 Since $A \setminus B \subseteq A$, taking direct images gives $f(A \setminus B) \subseteq f(A)$. By definition of set difference,
 $$(A \setminus B) \cap B = \emptyset \tag{17}$$
 Applying the forward direction of part 4 yields
@@ -66,7 +64,7 @@ $$f(A \setminus B) \cap f(B) = \emptyset \tag{18}$$
 Since $f(A \setminus B)$ is contained in $f(A)$ and disjoint from $f(B)$, it must be contained in the difference:
 $$f(A \setminus B) \subseteq f(A) \setminus f(B) \tag{19}$$
 
-### RHS (Reverse Inclusion)
+### Sufficiency
 Let $y \in f(A) \setminus f(B)$. By definition, $y \in f(A)$ and $y \notin f(B)$. Since $y \in f(A)$, there exists $x \in A$ such that $f(x) = y$. If $x \in B$, then $f(x) = y \in f(B)$, which contradicts $y \notin f(B)$. Hence, $x \notin B$, which implies $x \in A \setminus B$. Taking the direct image gives
 $$
 f(x) = y \in f(A \setminus B) \tag{20}

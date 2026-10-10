@@ -24,7 +24,7 @@ $$
 \text{Case 1: Assume } d \in D. \text{By definition of the set } D, d \in D \implies d \not\in g(d).  \\
 \text{Since } g(d) = D, \text{ this yields } d \not\in D. \text{This is a contradiction.} \\[2.5mm]
 \text{Case 2: Assume } d \not\in D. \text{ Since } g(d) = D, \text{ this means } d\not\in g(d). \\
- \text{By definition of the set } D, d \not\in g(D) \implies d \in d. \text{This is also a contradiction.} \tag{7}
+ \text{By definition of the set } D, d \not\in g(d) \implies d \in D. \text{This is also a contradiction.} \tag{7}
 \end{gather}
 $$
 In both cases, a logical contradiction is derived ($d \in D \iff d \notin D$). Therefore, the assumption that $g(d) = D$ for some $d \in X$ must be false. The set $D$ has no pre-image under $g$, meaning $g$ cannot be surjective.

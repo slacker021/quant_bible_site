@@ -4,7 +4,7 @@
 
 # Proof Method 1: Mutual Subset Containment
 
-### Part 1: $(X \times Y) \cup (Z \times Y) \subseteq (X \cup Z) \times Y$
+### Necessity
 Let $(a, b) \in (X \times Y) \cup (Z \times Y)$ be an arbitrary element. By definition of the set union, 
 $$(a, b) \in (X \times Y) \lor (a, b) \in (Z \times Y) \tag{1}$$
 This leads to two cases: 
@@ -28,7 +28,7 @@ $$
 (X \times Y) \cup (Z \times Y) \subseteq (X \cup Z) \times Y \tag{3}
 $$
 
-### Part 2: $(X \times Y) \cup (Z \times Y) \supseteq (X \cup Z) \times Y$
+### Sufficiency
 Let $(a, b) \in (X \cup Z) \times Y$ be an arbitrary element. By definition of set union,
 $$a \in X \cup Z \implies (a \in X) \lor (a \in Z) \tag{4}$$
 This leads to two cases:
@@ -38,7 +38,7 @@ $$
 \text{Since } b \in Y \text{, the pair satisfies } (a,b) \in X \times Y.  \\
 \text{By definition of the set union, } (a,b) \in (X \times Y) \cup (Z \times Y).  \\[2.5mm]
 
-\text{Case 2: Assume } (a,b) \in Z \times Y. \\
+\text{Case 2: Assume } a \in X.  \\
 \text{Since } b \in Y \text{, the pair satisfies } (a,b) \in Z \times Y.  \\
 \text{By definition of the set union, } (a,b) \in (X \times Y) \cup (Z \times Y). \tag{5}
 \end{gather}
@@ -58,4 +58,4 @@ $$
 & & \text{(7)}
 \end{aligned}
 $$
-$$\text{Q.E.D}$$
+$$\textbf{Q.E.D}$$
