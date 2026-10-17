@@ -64,7 +64,7 @@ In other words, the utility function takes in two or more arguments, which are t
 > - $B:$ The investor can opt to save nothing and consume $20,000$ of income and $50,000$ of their initial capital, in the first period. By the second period, the investor earns $20,000$ in income. In total, the investor spends $90,000$
 > - $C:$ The investor can opt to consume $20,000$ of income and $50,000$ of initial capital in the first period. Furthermore, the investor decides to borrow $20,000$ at a cost of $5 \%$ interest at the same period. By the first period's end, the investor'll have consumed $89,047.6191$. Because they borrowed against the future, they have nothing to spend in the second period. 
 >   The opportunity set can be visualized as
-![figure_1.png](/img/user/Finance/Portfolio%20Management/Volume%201%20-%20Modern%20Portfolio%20Theory/Figures/Chapter%202/figure_1.png)
+![figure_1.png](/img/user/Finance/Portfolio%20Management/Volume%201%20-%20Modern%20Portfolio%20Theory/Figures/Chapter%201/figure_1.png)
 > In the figure above, the utility function takes the form of the function $u(x_{1},x_{2}) = -1.05x + 93.5$, which shows the whole range of possible combinations of consumption the investor can make. 
 
 ### Indifference Curves
