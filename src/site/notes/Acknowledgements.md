@@ -31,6 +31,15 @@ These are the sources that various volumes and their respective modules are base
 - *Numerical Analysis: Third Edition* by *Timothy Sauer*, published by *Pearson*
 - *Numerical Recipes: The Art of Scientific Computing (Third Edition)*, published by *Cambridge University Press*
 
+##### Partial Differential Equations
+- **Volume 1 - Basic Theory:** *Partial Differential Equations 1: Basic Theory (Third Edition)* by *Michael E. Taylor*, published by Springer as part of *Applied Mathematics Series*
+- **Volume 2 - Linear Equations:** *Partial Differential Equations 2: Qualitative Studies of Linear Equations (Third Edition)* by *Michael E. Taylor*, published by Springer as part of *Applied Mathematics Series*
+- **Volume 3 - Nonlinear Equations:** *Partial Differential Equations 3: Nonlinear Equations (Third Edition)* by *Michael E. Taylor*, published by Springer as part of *Applied Mathematics Series*
+**Supplementary Literature:**
+- *Handbook of Linear Partial Differential Equations for Engineers and Scientists: Second Edition* by *Polyanin* and *Nazaikinskii*, published by *CRC Press* as part of *Handbooks of Mathematical Equations*
+- *Handbook of Nonlinear Partial Differential Equations: Second Edition* by *Polyanin* and *Zaitsev*, published by *CRC Press* as part of *Handbooks of Mathematical Equations*
+- *Handbook of Integral Equations: Second Edition* by *Polyanin* and *Manzhirov*, published by *CRC Press* as part of *Handbooks of Mathematical Equations*
+
 ### Computer Science 
 ##### Data Structures and Algorithms
 - **Volume 1 - Foundational Computer Science:** *Introduction to Algorithms: Fourth Edition* by *Cormen, Leierson, Rivest*, and *Stein*, published by *Massachusetts Institute of Technology Press*
