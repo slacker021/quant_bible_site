@@ -1,13 +1,64 @@
 body {
-    /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+
+// 1. Secondary Text & Backlinks
+// We use a high-visibility neon yellow to distinguish navigational links from primary content.
+.backlink, .secondary-text, a[href^="#"] {
+    color: #ccff00 !important; // Neon Yellow
+    font-weight: 500;
+    text-decoration: none;
+    transition: text-shadow 0.2s ease-in-out;
+
+    &:hover {
+        text-shadow: 0 0 8px rgba(204, 255, 0, 0.6);
+    }
+}
+
+// Layout Architecture
+// We assume a flexbox-based container for the three-column structure.
+.app-container, .main-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+// 2. Left Sidebar (File Tree)
+// Pushing to the absolute left while ensuring the title remains anchored.
+.sidebar-left, .file-tree {
+    margin-left: 0 !important;
+    padding-left: 10px;
+    flex: 0 0 auto; // Prevents shrinking/growing
+    border-right: 1px solid var(--background-secondary);
+
+    .sidebar-title, .header-title {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 20px 0;
+        background: var(--background-primary);
+    }
+}
+
+// 3. Table of Contents (Right)
+// Pushing to the absolute right to create a balanced "sandwich" layout.
+.toc-right, .table-of-contents {
+    margin-right: 0 !important;
+    flex: 0 0 auto; // Prevents shrinking/growing
+    border-left: 1px solid var(--background-secondary);
+    padding-left: 20px;
+}
+
+// 4. Main Body (Content Area)
+// The "Signal" area: consuming the majority of the screen.
+.main-content, .body-container {
+    flex: 1; // Forces this element to expand and fill all available space
+    margin: 0 auto;
+    padding: 40px;
+    overflow-y: auto;
+    max-width: 95%; // Prevents extreme stretching on ultra-wide displays
+    display: flex;
+    flex-direction: column;
+}
+
 }
