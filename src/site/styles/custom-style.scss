@@ -1,64 +1,77 @@
-body {
+/* ==========================================================================
+   Noir Void Theme - Chromatic Mapping Only
+   Base Background: #090A0C
+   ========================================================================== */
 
-// 1. Secondary Text & Backlinks
-// We use a high-visibility neon yellow to distinguish navigational links from primary content.
-.backlink, .secondary-text, a[href^="#"] {
-    color: #ccff00 !important; // Neon Yellow
-    font-weight: 500;
-    text-decoration: none;
-    transition: text-shadow 0.2s ease-in-out;
+.theme-dark {
+  /* Core Canvas & Surfaces */
+  --background-primary: #090A0C;
+  --background-primary-alt: #0D0E12;
+  --background-secondary: #0D0E12;
+  --background-secondary-alt: #12141A;
+  --background-modifier-border: #1E222B;
+  --background-modifier-form-field: #0D0E12;
 
-    &:hover {
-        text-shadow: 0 0 8px rgba(204, 255, 0, 0.6);
-    }
+  /* Typography & Text Channels */
+  --text-normal: #DCE1E8;
+  --text-muted: #7A8494;
+  --text-faint: #48505E;
+  --text-accent: #E2E8F0;
+  --text-accent-hover: #FFFFFF;
+
+  /* Interactive Elements, Selection & Highlights */
+  --text-highlight-bg: rgba(255, 255, 255, 0.08);
+  --text-selection: rgba(255, 255, 255, 0.12);
+  --interactive-normal: #12141A;
+  --interactive-hover: #1A1D26;
+  --interactive-accent: #2A303C;
+
+  /* Code Blocks, Callouts & Inline Pre */
+  --code-background: #060708;
+  --code-normal: #C8D1DE;
+  --pre-code: #060708;
+
+  /* Graph View & Plugin Nodes */
+  --graph-node: #48505E;
+  --graph-line: #1E222B;
 }
 
-// Layout Architecture
-// We assume a flexbox-based container for the three-column structure.
-.app-container, .main-wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+/* Ensure background color cascade applies cleanly without touching box models */
+body.theme-dark,
+html.theme-dark {
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal) !important;
 }
 
-// 2. Left Sidebar (File Tree)
-// Pushing to the absolute left while ensuring the title remains anchored.
-.sidebar-left, .file-tree {
-    margin-left: 0 !important;
-    padding-left: 10px;
-    flex: 0 0 auto; // Prevents shrinking/growing
-    border-right: 1px solid var(--background-secondary);
+/* ==========================================================================
+   Layout Preservation Safeguards
+   ========================================================================== */
 
-    .sidebar-title, .header-title {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        padding: 20px 0;
-        background: var(--background-primary);
-    }
+/* Maintain standard Digital Garden flex/grid layout bounds */
+.workspace,
+.app-container {
+  min-height: 100vh;
+  background-color: var(--background-primary);
 }
 
-// 3. Table of Contents (Right)
-// Pushing to the absolute right to create a balanced "sandwich" layout.
-.toc-right, .table-of-contents {
-    margin-right: 0 !important;
-    flex: 0 0 auto; // Prevents shrinking/growing
-    border-left: 1px solid var(--background-secondary);
-    padding-left: 20px;
+/* Sidebars: Lock width and prevent theme styling from collapsing containers */
+.sidebar,
+#sidebar,
+.filetree-sidebar {
+  background-color: var(--background-secondary) !important;
+  border-right: 1px solid var(--background-modifier-border) !important;
+  box-sizing: border-box;
 }
 
-// 4. Main Body (Content Area)
-// The "Signal" area: consuming the majority of the screen.
-.main-content, .body-container {
-    flex: 1; // Forces this element to expand and fill all available space
-    margin: 0 auto;
-    padding: 40px;
-    overflow-y: auto;
-    max-width: 95%; // Prevents extreme stretching on ultra-wide displays
-    display: flex;
-    flex-direction: column;
+/* Main Body / Content Pane: Prevent horizontal clamping or collapse */
+.content,
+main,
+.markdown-rendered {
+  background-color: var(--background-primary) !important;
+  box-sizing: border-box;
 }
 
+/* Retain standard max-width bounds for prose reading */
+.markdown-preview-view {
+  background-color: transparent !important;
 }
