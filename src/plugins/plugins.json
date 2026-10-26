@@ -172,45 +172,6 @@
       ],
       "order": 80
     },
-    "share-qr": {
-      "repo": "palol/garden-plugin-share-qr",
-      "installedVersion": "1.0.2",
-      "installedRef": "v1.0.2",
-      "installedAt": "2026-10-26T09:16:44.426Z",
-      "enabled": true,
-      "files": [
-        "src/plugins/share-qr/LICENSE",
-        "src/plugins/share-qr/README.md",
-        "src/plugins/share-qr/build.js",
-        "src/plugins/share-qr/dialog.js",
-        "src/plugins/share-qr/garden-plugin.json",
-        "src/plugins/share-qr/index.js",
-        "src/plugins/share-qr/package-lock.json",
-        "src/plugins/share-qr/package.json",
-        "src/plugins/share-qr/screenshot.png",
-        "src/plugins/share-qr/styles.css",
-        "src/plugins/share-qr/templates/dialog.njk",
-        "src/plugins/share-qr/templates/trigger.njk",
-        "src/plugins/share-qr/test/plugin.test.js",
-        "src/plugins/share-qr/test/ui.test.js",
-        "src/plugins/share-qr/vendor/LICENSE.qrcode-generator",
-        "src/plugins/share-qr/vendor/qrcode-generator.js",
-        "src/plugins/share-qr/vitest.config.js"
-      ],
-      "order": 120,
-      "settings": {
-        "targetUrl": "",
-        "label": "Scan to Visit This Site",
-        "filename": "site-qr",
-        "svg": true,
-        "png": true,
-        "triggerLabel": "",
-        "triggerIcon": "qr",
-        "maxSize": 360,
-        "accentToken": "--interactive-accent",
-        "externalTrigger": false
-      }
-    },
     "dg-link-preview": {
       "order": 40,
       "enabled": false
