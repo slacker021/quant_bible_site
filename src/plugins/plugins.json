@@ -175,7 +175,7 @@
       "order": 120,
       "settings": {
         "targetUrl": "",
-        "label": "Scan to visit this site",
+        "label": "Scan to Visit This Site",
         "filename": "site-qr",
         "svg": true,
         "png": true,
