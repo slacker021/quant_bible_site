@@ -142,7 +142,16 @@
         "src/plugins/reading-progress/tests/progress.test.cjs",
         "src/plugins/reading-progress/tests/upstream-smoke.cjs"
       ],
-      "order": 100
+      "order": 100,
+      "settings": {
+        "height": 3,
+        "bottom": false,
+        "showTrack": true,
+        "hideOnShortNotes": true,
+        "showReadingTime": true,
+        "resumeReading": false,
+        "wordsPerMinute": 220
+      }
     },
     "giscus-comments": {
       "repo": "oleeskild/garden-plugin-giscus-comments",
