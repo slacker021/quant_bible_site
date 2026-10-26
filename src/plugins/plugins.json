@@ -58,7 +58,17 @@
         "src/plugins/resizable-panes/tests/fixtures/page-panel.css",
         "src/plugins/resizable-panes/tests/runtime.test.cjs"
       ],
-      "order": 110
+      "order": 110,
+      "settings": {
+        "enabled": true,
+        "defaultLeftWidth": 260,
+        "defaultRightWidth": 300,
+        "minPaneWidth": 200,
+        "maxViewportPercent": 40,
+        "mainMinWidth": 560,
+        "paneGap": 24,
+        "persistWidths": true
+      }
     },
     "sidebar-controls": {
       "repo": "oleeskild/garden-plugin-sidebar-controls",
