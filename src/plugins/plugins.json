@@ -28,7 +28,7 @@
       ]
     },
     "dg-filetree": {
-      "enabled": false
+      "enabled": true
     },
     "resizable-panes": {
       "repo": "koltensaccount/garden-plugin-resizable-panes",
