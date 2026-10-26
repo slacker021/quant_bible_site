@@ -75,3 +75,40 @@ main,
 .markdown-preview-view {
   background-color: transparent !important;
 }
+
+/* ==========================================================================
+   Typography Configuration: Playfair Display Integration
+   ========================================================================== */
+
+/* Import Playfair Display from Google Fonts */
+@import url('[https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap](https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap)');
+
+:root {
+  /* Core typography variables utilized across Digital Garden base styles */
+  --header-font: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+  --title-font: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+}
+
+/* Explicit heading overrides across notes, page headers, and home templates */
+h1, h2, h3, h4, h5, h6,
+.page-title,
+.header-title,
+.note-title,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif !important;
+  font-feature-settings: "kern" 1, "liga" 1;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+/* Specific styling for the document title and major section dividers */
+.header-title,
+.content h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
