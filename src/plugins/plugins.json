@@ -117,7 +117,13 @@
         "src/plugins/clean-print/templates/config.njk",
         "src/plugins/clean-print/tests/browser.test.cjs"
       ],
-      "order": 20
+      "order": 20,
+      "settings": {
+        "includeTitle": true,
+        "pageNumbers": true,
+        "rememberOptions": true,
+        "defaultPreset": "Standard"
+      }
     },
     "reading-progress": {
       "repo": "koltensaccount/garden-plugin-reading-progress",
