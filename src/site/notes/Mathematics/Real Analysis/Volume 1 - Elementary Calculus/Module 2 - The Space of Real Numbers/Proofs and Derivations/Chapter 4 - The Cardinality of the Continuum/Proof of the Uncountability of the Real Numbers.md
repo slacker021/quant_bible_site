@@ -2,30 +2,51 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-4-the-cardinality-of-the-continuum/proof-of-the-uncountability-of-the-real-numbers/","dg-note-properties":{}}
 ---
 
-Assume, for the sake of contradiction, that the set of real numbers $\mathbb{R}$ is countable. If $\mathbb{R}$ is countable, then any subset of $\mathbb{R}$, including the open interval $(0, 1)$, must also be at most countable.
+Assume, for the sake of contradiction, that the open unit interval $]0, 1[ \subset \mathbb{R}$ is countable (since $]0, 1[$ contains the infinite subset $\{1/(n + 1) \mid n \in \mathbb{N}\}$, it cannot be finite). Under this assumption, there exists a bijection $f: \mathbb{N} \to ]0, 1[$, allowing every real number in $]0, 1[$ to be listed in a sequence $x_1, x_2, x_3, \dots, x_n, \dots$.
 
-If $(0,1)$ is countable, there exists a bijection with the natural numbers, allowing every real number in this interval to be listed in a sequential enumeration: $x_1, x_2, x_3, \dots, x_n, \dots$. Every real number in this interval can be represented by an infinite decimal expansion. The enumerated list can be written as a grid of digits:
+By the canonical $q$-ary representation established in [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers\|Module 1, Chapter 2]], every real number $x \in ]0, 1[$ possesses a unique infinite decimal expansion (base $q = 10$) once representations ending in an infinite tail of nines ($d_k = 9$ for all $k \ge K$, such as $0.4999\dots = 0.5000\dots$) are prohibited. Furthermore, because $x > 0$, no $x \in ]0, 1[$ has an expansion consisting entirely of zeros. Writing each term $x_i$ in its unique canonical decimal expansion produces an infinite two-dimensional grid of digits:
 $$
-\begin{gather} x_1 = 0.d_{11} d_{12} d_{13} d_{14} \dots \ x_2 = 0.d_{21} d_{22} d_{23} d_{24} \dots \ x_3 = 0.d_{31} d_{32} d_{33} d_{34} \dots \ \vdots \tag{1} \end{gather}
-$$
-Here, $d_{ij} \in \{0, 1, \dots, 9\}$ represents the $j$-th decimal digit of the $i$-th number in the sequence. To avoid ambiguity caused by dual representations (e.g., $0.4999\dots = 0.5000\dots$), one specifies that representations ending in an infinite sequence of nines are prohibited. 
-
-A new real number $y \in (0,1)$ is now constructed digit by digit: 
-$$
-\begin{gather} y = 0.y_1 y_2 y_3 y_4 \dots \tag{2}  \\
+\begin{gather}
+x_1 = 0.d_{11} d_{12} d_{13} d_{14} \dots \\[2mm]
+x_2 = 0.d_{21} d_{22} d_{23} d_{24} \dots \\[2mm]
+x_3 = 0.d_{31} d_{32} d_{33} d_{34} \dots \\[2mm]
+\vdots \tag{1}
 \end{gather}
 $$
-The value of the $n$-th digit of $y$, denoted as $y_n$, is determined exclusively by examining the $n$-th digit of the $n$-th number in the list ($d_{nn}$) on the main diagonal of the grid. The construction rule is defined as follows:
-$$
-\begin{gather} y_n = \begin{cases} 1 & \text{if } d_{nn} \neq 1 \ 2 & \text{if } d_{nn} = 1 \end{cases} \tag{3} \end{gather}
-$$
-By this definition, $y_n \in \{1, 2\}$, ensuring that $y$ is a valid real number strictly between 0 and 1, and averting the dual representation issue.
+where $d_{ij} \in \{0, 1, \dots, 9\}$ denotes the $j$-th decimal digit of the $i$-th real number $x_i$ in the enumeration.
 
-By hypothesis, the list contains _every_ real number in $(0,1)$. Therefore, $y$ must appear somewhere in the sequence, meaning there exists some integer $k \in \mathbb{N}$ such that $y = x_k$.
+A real number $y$ is now constructed digit by digit via its infinite decimal expansion:
+$$
+\begin{gather}
+y := 0.y_1 y_2 y_3 y_4 \dots = \sum_{n=1}^\infty \frac{y_n}{10^n} \tag{2}
+\end{gather}
+$$
+The $n$-th decimal digit $y_n$ is defined by inspecting the $n$-th diagonal digit $d_{nn}$ of the $n$-th number $x_n$ in step 1 according to the rule:
+$$
+\begin{gather}
+y_n := \begin{cases}
+1 & \text{if } d_{nn} \neq 1 \\[2mm]
+2 & \text{if } d_{nn} = 1
+\end{cases} \tag{3}
+\end{gather}
+$$
+Because $y_n \in \{1, 2\}$ for every $n \in \mathbb{N}$, the series in step 2 satisfies $\frac{1}{9} = \sum_{n=1}^\infty 10^{-n} \le y \le \sum_{n=1}^\infty 2 \cdot 10^{-n} = \frac{2}{9}$, ensuring that $y \in ]0, 1[$. Moreover, because no digit of $y$ is $0$ or $9$, the expansion $0.y_1 y_2 y_3 \dots$ is the unique canonical decimal representation of $y$.
 
-If $y = x_k$, then the $k$-th decimal digit of $y$ must perfectly match the $k$-th decimal digit of $x_k$, requiring $y_k = d_{kk}$. However, the construction rule in Step 3 explicitly defined $y_k$ such that it inherently differs from $d_{kk}$. This yields the contradiction:
+By the assumption that the sequence $(x_n)_{n \in \mathbb{N}}$ enumerates all of $]0, 1[$, there must exist some index $k \in \mathbb{N}$ such that $y = x_k$. By the uniqueness of canonical decimal expansions, equality $y = x_k$ requires their decimal digits to coincide at every position, and in particular at the $k$-th position ($y_k = d_{kk}$). However, the construction rule in step 3 guarantees that $y_k \neq d_{kk}$ for every $k \in \mathbb{N}$:
 $$
-\begin{gather} y_k \neq d_{kk} \implies y \neq x_k \quad \forall k \in \mathbb{N} \tag{4} \end{gather}
+\begin{gather}
+\forall k \in \mathbb{N}, \quad y_k \neq d_{kk} \implies y \neq x_k \tag{4}
+\end{gather}
 $$
-The number $y$ cannot exist in the presumed complete enumeration. Thus, the assumption that the interval $(0,1)$ can be listed sequentially is false. Consequently, the set of real numbers $\mathbb{R}$ cannot be placed in a one-to-one correspondence with the natural numbers and is therefore uncountable.
-$$\textbf{Q.E.D}$$
+Step 4 contradicts the assumption that $y$ appears in the enumeration. Therefore, $]0, 1[$ is uncountable. Because $]0, 1[ \subset [0, 1] \subset \mathbb{R}$, the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 4 - The Cardinality of the Continuum/Proof of First Proposition for Countable Sets\|First Proposition for Countable Sets]] dictates that neither $[0, 1]$ nor $\mathbb{R}$ can be countable, as any subset of a countable set must be at most countable.
+
+Finally, note that $]0, 1[$, $[0, 1]$, and $\mathbb{R}$ are mutually equipotent:
+1. Defining $g: [0, 1] \to ]0, 1[$ by $g(0) := \frac{1}{2}$, $g(1) := \frac{1}{3}$, $g\left(\frac{1}{n}\right) := \frac{1}{n + 2}$ for $n \in \mathbb{N} \setminus \{1\}$, and $g(x) := x$ for all $x \in [0, 1] \setminus \left\{0, 1, \frac{1}{2}, \frac{1}{3}, \dots\right\}$ yields an explicit bijection between $[0, 1]$ and $]0, 1[$.
+2. Defining $h: ]0, 1[ \to \mathbb{R}$ by $h(x) := \frac{2x - 1}{x(1 - x)}$ provides a strictly increasing, surjective bijection from $]0, 1[$ onto $\mathbb{R}$ (since for any $y \in \mathbb{R}$, the quadratic equation $y x^2 - (y - 2)x - 1 = 0$ has a unique root $x \in ]0, 1[$).
+
+Thus, $]0, 1[ \sim [0, 1] \sim \mathbb{R}$, confirming that all three sets are uncountable and share the cardinality of the continuum $\mathfrak{c}$.
+$$
+\begin{gather}
+\textbf{Q.E.D}
+\end{gather}
+$$

@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-1-general-mathematical-concepts-and-notation/proofs-and-derivations/chapter-4/proof-of-proposition-3-of-useful-facts-about-functions/","dg-note-properties":{}}
 ---
 
-# Part 1: $A \subseteq f^{-1}(f(A))$
+#  Proposition 1
 Let $x \in A$ be an arbitrary element. By definition of the direct image under $f$,
 $$
 x \in A \implies f(x) \in f(A) \tag{1}
@@ -16,7 +16,8 @@ $$x \in f^{-1}(f(A)) \tag{4}$$
 Because $x \in A \implies x \in f^{-1}(f(A))$ for all $x \in A$, it follows that 
 $$A \subseteq f^{-1}(f(A)) \tag{5}$$
 
-# Part 2: $f(f^{-1}(B')) \subseteq B'$
+---
+#  Proposition 2
 Let $y \in f(f^{-1}(B'))$ be an arbitrary element. By definition of the direct image, $y \in f(f^{-1}(B'))$ implies that there exists at least one element $x \in f^{-1}(B')$ such that $f(x) = y$. By definition of the inverse image, 
 $$
 x \in f^{-1}(B') \implies f(x) \in B' \tag{6}

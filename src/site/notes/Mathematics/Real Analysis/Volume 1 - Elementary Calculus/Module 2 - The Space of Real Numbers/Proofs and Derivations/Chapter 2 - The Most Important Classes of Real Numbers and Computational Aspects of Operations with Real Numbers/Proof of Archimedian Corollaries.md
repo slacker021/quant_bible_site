@@ -3,31 +3,73 @@
 ---
 
 # Proposition 1
-By the principle of Archimedes, there's a $n \in \mathbb{Z}$ such that $1 < \varepsilon \cdot n$. Since $0 < 1$ and $0 < \varepsilon$, the result is $0 < n$. Therefore, $n \in \mathbb{N}$ and $0 < \frac{1}{n} < \varepsilon$. 
+Let $\varepsilon > 0$ be an arbitrary positive real number. Applying the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Principle of Archimedes\|Principle of Archimedes]] with step size $h = \varepsilon > 0$ and target value $x = 1$ guarantees the existence of an integer $n \in \mathbb{Z}$ such that
+$$
+\begin{gather}
+(n - 1)\varepsilon \le 1 < n\varepsilon \tag{1}
+\end{gather}
+$$
+
+Because $1 > 0$ and $\varepsilon > 0$, the inequality $n\varepsilon > 1 > 0$ implies $n > 0$. Since $n \in \mathbb{Z}$ and $n > 0$, it follows that $n \in \mathbb{N}$. Dividing $0 < 1 < n\varepsilon$ by $n > 0$ yields
+$$
+\begin{gather}
+0 < \frac{1}{n} < \varepsilon \tag{2}
+\end{gather}
+$$
 
 ---
 # Proposition 2
-The relation $0 < x$ is impossible due to previous proposition. 
+Let $x \in \mathbb{R}$ satisfy $x \ge 0$ and $x < 1/n$ for all $n \in \mathbb{N}$. Suppose, for the sake of contradiction, that $x > 0$. Applying Proposition 1 with $\varepsilon = x > 0$ guarantees the existence of a natural number $n_0 \in \mathbb{N}$ such that
+$$
+\begin{gather}
+0 < \frac{1}{n_0} < x \tag{3}
+\end{gather}
+$$
+
+Equation 3 directly contradicts the hypothesis that $x < 1/n$ for all $n \in \mathbb{N}$. Since $x \ge 0$ and $x > 0$ is impossible, it follows that $x = 0$.
 
 ---
 # Proposition 3
-Taking account of the first proposition, choose $n \in \mathbb{N}$ such that $0 < \frac{1}{n} < b - a$. By the principle of Archimedes, a number $m \in \mathbb{Z}$ can be found that such that
+Let $a, b \in \mathbb{R}$ satisfy $a < b$, so that the interval length $b - a > 0$ is strictly positive. By Proposition 1 applied to $\varepsilon = b - a > 0$, there exists a natural number $n \in \mathbb{N}$ such that
 $$
-\frac{m-1}{n} \le a < \frac{m}{n} \tag{1}
+\begin{gather}
+0 < \frac{1}{n} < b - a \tag{4}
+\end{gather}
 $$
-Then $\frac{m}{n} < b$, since otherwise there would be
+
+Next, applying the Principle of Archimedes with step size $h = \frac{1}{n} > 0$ to the real number $a$ yields a unique integer $m \in \mathbb{Z}$ satisfying
 $$
-\frac{m-1}{n} \le a < b \le \frac{m}{n}, \tag{2}
+\begin{gather}
+\frac{m - 1}{n} \le a < \frac{m}{n} \tag{5}
+\end{gather}
 $$
-from which it would follow that $\frac{1}{n} \ge b - a$. Therefore, 
+
+To verify that the rational number $r := \frac{m}{n} \in \mathbb{Q}$ also satisfies $r < b$, observe from the left-hand inequality of step 5 and the step bound in step 4 that
 $$
-r = \frac{m}{n} \in \mathbb{Q} \text{ and } a < \frac{m}{n} < b. \tag{3}
+\begin{gather}
+\frac{m}{n} = \frac{m - 1}{n} + \frac{1}{n} \le a + \frac{1}{n} < a + (b - a) = b \tag{6}
+\end{gather}
 $$
+Combining step 5 and step 6 confirms that $r = \frac{m}{n} \in \mathbb{Q}$ satisfies $a < r < b$.
 
 ---
 # Proposition 4
-The number $k$ just mentioned is denoted $[x]$ and is called the integer part of $x$. The quantity $\{x  \}: = x - [x]$ is the fractional part of $x$. Thus, $x = [x] + \{x  \}$, and $\{ x \} \ge 0$. 
+Let $x \in \mathbb{R}$ be arbitrary. Applying the Principle of Archimedes with unit step size $h = 1 > 0$ yields a unique integer $m \in \mathbb{Z}$ such that
 $$
-\textbf{Q.E.D}
+\begin{gather}
+m - 1 \le x < m \tag{7}
+\end{gather}
 $$
 
+Defining $k := m - 1 \in \mathbb{Z}$ transforms step 7 into the unique bracket
+$$
+\begin{gather}
+k \le x < k + 1 \tag{8}
+\end{gather}
+$$
+Denoting this unique integer by $[x] := k$ (the integer part of $x$) and setting $\{x\} := x - [x]$ (the fractional part of $x$), subtracting $k = [x]$ across step 8 yields $0 \le \{x\} < 1$ with $x = [x] + \{x\}$.
+$$
+\begin{gather}
+\textbf{Q.E.D}
+\end{gather}
+$$

@@ -2,38 +2,69 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-of-von-neumann-ordinal-embeddings/","dg-note-properties":{}}
 ---
 
-Let $x$ and $y$ be von Neumann ordinals such that
-$$x^+ = y^+ \iff x \cup \{x\} = y \cup \{y\} \tag{1}$$
+# Injectivity of the Von Neumann Successor Operation
+Let $x$ and $y$ be Von Neumann ordinals satisfying the successor equality
 
-Assume, for the purpose of contradiction, that $x \ne y$. From the identity established in the first step, because $x \in x \cup \{x\}$, it must be that
-$$x \in y \cup \{y\} \tag{2}$$
-The condition in the preceding step implies that either $x \in y$ or $x \in \{y\}$. Since $x \ne y$ by assumption, $x \in \{y\}$ is impossible ($x \ne y$). Therefore:
-$$x \in y \tag{3}$$
-By exact symmetric reasoning, because $y \in y \cup \{y\} = x \cup \{x\}$ and $y \ne x$:  
-$$y \in x \tag{4}$$
+$$
+\begin{gather}
+x^+ = y^+ \iff x \cup \{x\} = y \cup \{y\} \tag{1}
+\end{gather}
+$$
 
-Combining steps 3 and 4 yields the set-membership cycle:  
-$$(x \in y) \wedge (y \in x) \tag{5}$$
-Now consider the set formed by the pair axiom:  
-$$S = \{x, y\} \tag{6}$$
-The *Axiom of Regularity* states that every non-empty set $A$ contains an element $z \in A$ such that $A \cap z = \emptyset$. Applying this axiom to $S$:
-- If $z = x$, then $y \in x \implies y \in S \cap x \ne \emptyset$.
-- If $z = y$, then $x \in y \implies x \in S \cap y \ne \emptyset$.
+Suppose, for the sake of contradiction, that $x \ne y$. Because $x \in x \cup \{x\}$, step 1 requires that
+$$
+\begin{gather}
+x \in y \cup \{y\} \implies (x \in y) \vee (x \in \{y\}) \tag{2}
+\end{gather}
+$$
 
-Thus, $S \cap z \ne \emptyset$ for all $z \in S$, which directly contradicts the Axiom of Regularity. Therefore, the initial assumption $x \ne y$ is false, which proves:  
-$$x^+ = y^+ \implies x = y \tag{7}$$
+Since $x \ne y$ by assumption, $x \in \{y\}$ is impossible, which forces
+$$
+\begin{gather}
+x \in y \tag{3}
+\end{gather}
+$$
 
-In the von Neumann construction, the ordering relation is defined by set membership:  
-$$x < y \iff x \in y \tag{8}$$
-Because every element of an ordinal is also an ordinal (transitive set property), $x \in y$ is equivalent to $x \subsetneq y$. For any successor $x^+ = x \cup \{x\}$, $x \subset x^+$ and $x \in x^+$, which guarantees that
-$$x < x^+ \tag{9}$$
-Furthermore, there is no element $z$ such that $x < z < x^+$, because $z \in x \cup \{x\}$ implies $z \in x$ (so $z < x$) or $z = x$. Thus, $x^+$ is the immediate successor of $x$.
+By symmetric reasoning, since $y \in y \cup \{y\} = x \cup \{x\}$ and $y \ne x$, it follows that
+$$
+\begin{gather}
+y \in x \tag{4}
+\end{gather}
+$$
 
-Last but not the least, let $X \subset \mathbb{N}_0$ be any non-empty subset of ordinals. By the Axiom of Regularity, there exists an element $x_m \in X$ such that:  
-$$X \cap x_m = \emptyset \tag{10}$$
-Suppose there exists an element $x \in X$ such that $x < x_m$. By the ordinal order definition, as seen in step 10, this means that  
+Combining step 3 and step 4 produces the mutual membership cycle $(x \in y) \wedge (y \in x)$. In Zermelo-Fraenkel set theory (ZF), consider the pair set
+$$
+\begin{gather}
+S := \{x, y\} \tag{5}
+\end{gather}
+$$
 
-$$x \in x_m \tag{11}$$
-Since $x \in X$ and $x \in x_m$, it follows that $x \in X \cap x_m$, which contradicts equation (11). Hence, no element of $X$ is strictly smaller than $x_m$:  
-$$\forall x \in X \ (x_m \le x) \tag{12}$$
-Thus, $x_m$ is the minimal element of $X$, proving that $\mathbb{N}_0$ is well-ordered under inclusion.
+The *Axiom of Regularity* (Axiom of Foundation) dictates that every nonempty set $A$ contains an element $z \in A$ disjoint from $A$ ($A \cap z = \emptyset$). Evaluating the two elements of $S$:
+* If $z = x$, then $y \in x$ and $y \in S$ imply $y \in S \cap x \ne \emptyset$.
+* If $z = y$, then $x \in y$ and $x \in S$ imply $x \in S \cap y \ne \emptyset$.
+
+Thus, no element of $S$ is disjoint from $S$, violating the Axiom of Regularity. Therefore, the assumption $x \ne y$ is false, establishing that $x^+ = y^+ \implies x = y$.
+
+---
+# Immediate Successor and Well-Ordering Properties
+On Von Neumann ordinals, every ordinal is a transitive set (if $u \in v$ and $v \in w$, then $u \in w$), and the strict order relation is defined by set membership (or proper inclusion):
+$$
+\begin{gather}
+x < y \iff x \in y \iff x \subsetneq y \tag{6}
+\end{gather}
+$$
+
+For any ordinal $x$, since $x \in x \cup \{x\} = x^+$, there is a $x < x^+$. Moreover, for any ordinal $z < x^+$, the relation $z \in x \cup \{x\}$ implies either $z \in x$ (so $z < x$) or $z = x$, meaning no ordinal lies strictly between $x$ and $x^+$.
+
+Finally, let $X$ be any nonempty subset of Von Neumann ordinals. Applying the Axiom of Regularity directly to the nonempty set $X$ guarantees the existence of an element $x_{\min} \in X$ such that
+$$
+\begin{gather}
+X \cap x_{\min} = \emptyset \tag{7}
+\end{gather}
+$$
+If there existed any element $x \in X$ satisfying $x < x_{\min}$, then by step 6 there would be a $x \in x_{\min}$, which implies $x \in X \cap x_{\min}$, contradicting step 7. Because trichotomy holds between any two ordinals, every $x \in X$ must satisfy $x_{\min} \le x$, proving that $x_{\min}$ is the minimal element of $X$.
+$$
+\begin{gather}
+\textbf{Q.E.D}
+\end{gather}
+$$

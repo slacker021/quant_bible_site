@@ -3,44 +3,57 @@
 ---
 
 # Proposition 1
-If $E \subset \mathbb{N}$ is the subset in question, then by the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|least-upper-bound lemma]], $\exists!\text{sup}E = s \in \mathbb{R}$. By definition of the least upper bound, there's a natural number $n \in E$ satisfying the condition $s − 1 < n ≤ s$. But then, $n = \text{max} \ E$, since a natural number that is larger than $n$ must be at least $n + 1$, and $n + 1 > s$. 
+Let $E \subset \mathbb{N}$ be a nonempty subset of the natural numbers that is bounded above in $\mathbb{R}$. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|Least Upper Bound Principle]], $E$ possesses a unique supremum $s := \sup E \in \mathbb{R}$. 
+
+Because $s$ is the *least* upper bound of $E$, the smaller quantity $s - 1 < s$ cannot be an upper bound for $E$. Consequently, there exists at least one element $n \in E$ satisfying
+$$
+\begin{gather}
+s - 1 < n \le s \tag{1}
+\end{gather}
+$$
+
+Adding $1$ to the left-hand inequality of step 1 gives $s < n + 1$. If there existed any element $m \in E$ strictly greater than $n$, then [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Properties of Natural Numbers\|Proposition 4 of the Properties of Natural Numbers]] would require $m \ge n + 1 > s$, contradicting the fact that $s$ is an upper bound for $E$. Thus, $m \le n$ for all $m \in E$, confirming that $n = \max E$.
 
 ---
 # Proposition 2
-This is a corollary of proposition 1. Otherwise, there would be a maximal natural number. However, it's known that $n < n + 1$. 
+Suppose, for the sake of contradiction, that $\mathbb{N}$ were bounded above in $\mathbb{R}$. Since $\mathbb{N} \subset \mathbb{N}$ is nonempty, Proposition 1 would guarantee the existence of a maximal natural number $n = \max \mathbb{N}$. However, because $\mathbb{N}$ is an inductive set, $n + 1 \in \mathbb{N}$ and $n + 1 > n$, contradicting the maximality of $n$. Therefore, $\mathbb{N}$ is not bounded above in $\mathbb{R}$.
 
 ---
 # Proposition 3
-If $E \subset \mathbb{Z}$ is the subset in question, then by the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|least-upper-bound lemma]], $\exists!\text{sup}E = s \in \mathbb{R}$. By definition of the least upper bound, there's a natural number $n \in E$ satisfying the condition $s − 1 < n ≤ s$. But then, $n = \text{max} \ E$, since a natural number that is larger than $n$ must be at least $n + 1$, and $n + 1 > s$. 
+First, observe that for any two integers $m, n \in \mathbb{Z}$, the implication $n < m \implies n + 1 \le m$ holds: indeed, $n < m \iff m - n > 0$, and since $\mathbb{Z}$ is closed under subtraction ([[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof that Integer Operations Yield Integers\|Algebraic Closure of the Integers]]), the positive integer $m - n$ must belong to $\mathbb{N}$, which satisfies $m - n \ge 1 \iff n + 1 \le m$.
+
+Now let $E \subset \mathbb{Z}$ be a nonempty subset of integers bounded above in $\mathbb{R}$, and let $s := \sup E \in \mathbb{R}$. Because $s - 1$ is not an upper bound for $E$, there exists an integer $n \in E$ such that
+$$
+\begin{gather}
+s - 1 < n \le s \implies n + 1 > s \tag{2}
+\end{gather}
+$$
+
+Any integer $m \in E$ satisfies $m \le s < n + 1$; by the discrete spacing of $\mathbb{Z}$ established above, $m < n + 1$ implies $m \le n$. Thus, $n = \max E$.
 
 ---
 # Proposition 4
-Let $A$ be a subset of $\mathbb{Z}$, and that there's a Now, suppose that $A$ has no minimum. Then for every $n \in \mathbb{Z}$ there must be some $a \in A$ such that $a < s$, which is a contradiction. 
+Let $E \subset \mathbb{Z}$ be a nonempty subset of integers that is bounded below in $\mathbb{R}$ by some lower bound $b \in \mathbb{R}$ ($b \le x$ for all $x \in E$). Consider the reflected set of additive inverses:
+$$
+\begin{gather}
+-E := \{-x \mid x \in E\} \subset \mathbb{Z} \tag{3}
+\end{gather}
+$$
 
->[!remark]+ Remark: Other (Less Efficient) Means of Proving
->This can be proven by repeating the proof for the first proposition and replacing $\mathbb{N}$ by $\mathbb{Z}$ and using the greatest-lower-bound principle. Alternatively, one can pass to the negatives of the numbers ("changing signs") and use what's been proven in proposition 3. 
+Because $E$ is nonempty, $-E$ is nonempty, and because $b \le x$ for all $x \in E$, the inequality $-x \le -b$ holds for all $-x \in -E$. Thus, $-E$ is a nonempty subset of $\mathbb{Z}$ bounded above by $-b$. By Proposition 3, $-E$ possesses a maximal element $m^* = \max(-E) \in -E$. Setting $n^* := -m^* \in E$, shows that
+$$
+\begin{gather}
+\forall x \in E \ (-x \le m^* = -n^*) \implies \forall x \in E \ (n^* \le x) \tag{4}
+\end{gather}
+$$
+
+Therefore, $n^* = \min E$ is the minimal element of $E$.
 
 ---
 # Proposition 5
-This proposition follows from proposition 3 and 4, or directly from 2. 
-
-### Proof that $\mathbb{Z}$ is Unbounded Above
-Assume that the set of integers $\mathbb{Z}$ is bounded above. By definition, this implies there exists a least upper bound (supremum), $\varepsilon$, such that for every $z \in \mathbb{Z}, z \le \varepsilon$. According to the third proposition, if there's a subset of integers bounded by $\varepsilon$, there's a natural number (and thus an integer) $n$ such that: 
+Because $\mathbb{N} \subset \mathbb{Z}$ and $\mathbb{N}$ is not bounded above in $\mathbb{R}$ (Proposition 2), the superset $\mathbb{Z}$ cannot be bounded above in $\mathbb{R}$. Similarly, if $\mathbb{Z}$ were bounded below in $\mathbb{R}$, then Proposition 4 would guarantee a minimal integer $n_{\min} = \min \mathbb{Z}$; however, $n_{\min} - 1 \in \mathbb{Z}$ satisfies $n_{\min} - 1 < n_{\min}$, a contradiction. Thus, $\mathbb{Z}$ is unbounded both above and below in $\mathbb{R}$.
 $$
-\varepsilon - 1 < n < \varepsilon \tag{1}
-$$
-In this context, $n$ represents the maximal integer in the set. Because $n$ is an integer and the fact that the successor property of integers, as noted in the second proposition, the next consecutive integer is $n + 1$. From the inequality $\varepsilon - 1 < n$, $1$ can be added to both sides: 
-$$
-\varepsilon < n + 1 \tag{2}
-$$
-This is a contradiction because by the initial assumption, $n + 1$ must be less than or equal to $\varepsilon$ because $\varepsilon$ is the upper bound. Since $n + 1$ cannot be both less than or equal to $\varepsilon$ and strictly greater than $\varepsilon$, the initial assumption that $\mathbb{Z}$ is bounded above must be false. Therefore, the integers are unbounded above. 
-
-### Proof that $\mathbb{Z}$ is Unbounded Below
-Firstly, assume that the set of integers has a smallest integer. This smallest integer is to be denoted as $n$. Now, consider $n - 1$, which is also an integer. By definition, $n - 1$ is less than $n$, contradicting the assumption that $n$ is the smallest integer. Therefore, there is no smallest integer. 
-
-Secondly, the fourth proposition states that if a set $A \subset \mathbb{Z}$ has no minimum, then for every $n \in \mathbb{Z}$ there must be some $a \in A$ such that $a < n$. Since the set of integers has no minimum, proposition 4 would show that there'll always be another integer $a$ such that $a < n$. This confirms that no matter how small an integer is chosen, there'll always be a preceding integer that's less. Therefore, it must be that the integers are unbounded below. 
-$$
+\begin{gather}
 \textbf{Q.E.D}
+\end{gather}
 $$
-
-

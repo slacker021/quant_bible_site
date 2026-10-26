@@ -2,20 +2,39 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-that-induction-works/","dg-note-properties":{}}
 ---
 
-# Reworded Theorem Statement
-For this proof, the original theorem statement is reworded: 
-For each positive integer $n$, let $P(n)$ be a statement. Now, assume that $P(1)$ is true—namely that $P(1)$ exists because it has a corresponding mapping for the domain element $1$—and that the implication
+Let $E$ be a subset of the natural numbers $\mathbb{N}$ satisfying the two hypotheses of the theorem:
 $$
-\text{If } P(x), \text{ then } P(x + 1) \text{ is true for every positive integer } x \tag{1}
+\begin{gather}
+E \subset \mathbb{N} \\[2mm]
+1 \in E \quad \wedge \quad \forall x \in \mathbb{R} \ (x \in E \implies (x + 1) \in E) \tag{1}
+\end{gather}
 $$
-then $P(n)$ is true for every positive integer $n$. 
+By the definition of an [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers\|inductive set]], the second condition in step 1 establishes that $E$ is itself an inductive subset of $\mathbb{R}$ containing the element $1$.
 
----
-# Actual Proof
-Assume, to the contrary, that the theorem is false. Further assume that $P(1)$ is true and that the implication of step $1$ is also true. However, there's some positive integers $n$ for which $P(n)$ is a false statement. Let 
+Recall that the set of natural numbers $\mathbb{N}$ is defined as the *smallest* inductive set containing $1$—that is, the intersection of the family $\mathcal{I}_1$ of all inductive subsets of $\mathbb{R}$ that contain $1$:
 $$
-S = \{n \in \mathbb{N} \ | \ P(n) \text{ is false }  \}. \tag{2}
+\begin{gather}
+\mathbb{N} := \bigcap_{X \in \mathcal{I}_1} X \tag{2}
+\end{gather}
 $$
-Since $S$ is a nonempty subset of $\mathbb{N}$, it follows by the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|well-ordering principle]] that $S$ contains at a least a element $s$. Since $P(1)$ is true, $1 \not\in S$. Thus, $s \geq 2$ and $s - 1 \in \mathbb{N}$. Therefore, $s - 1 \not\in S$ and so $P(s - 1)$ is a true statement. By the implication of step $1$, $P(s)$ is also true and so $s \not\in S$. However, this contradicts the premise that $s \in S$. This is because $s$ is the least element in the set $S$. 
-$$\textbf{Q.E.D}$$
+Because $E$ is an inductive set containing $1$, $E$ is a member of the family $\mathcal{I}_1$. Since the intersection of a family of sets is a subset of every individual set in that family, it follows from step 2 that
+$$
+\begin{gather}
+\mathbb{N} \subset E \tag{3}
+\end{gather}
+$$
+Combining the initial hypothesis $E \subset \mathbb{N}$ from step 1 with the reverse inclusion $\mathbb{N} \subset E$ from step 3 yields, by the axiom of set extensionality,
+$$
+\begin{gather}
+E = \mathbb{N} \tag{4}
+\end{gather}
+$$
 
+>[!info]+ Remark: Predicate Formulation of Induction
+>When the Principle of Induction is applied to a logical predicate $P(n)$ defined for $n \in \mathbb{N}$, one defines the truth set $E := \{n \in \mathbb{N} \mid P(n) \text{ is true}\}$. Verifying the base case $P(1)$ establishes $1 \in E$, and verifying the inductive step $P(k) \implies P(k + 1)$ establishes $k \in E \implies (k + 1) \in E$. By step 4, $E = \mathbb{N}$, confirming that $P(n)$ holds for all $n \in \mathbb{N}$.
+
+$$
+\begin{gather}
+\textbf{Q.E.D}
+\end{gather}
+$$

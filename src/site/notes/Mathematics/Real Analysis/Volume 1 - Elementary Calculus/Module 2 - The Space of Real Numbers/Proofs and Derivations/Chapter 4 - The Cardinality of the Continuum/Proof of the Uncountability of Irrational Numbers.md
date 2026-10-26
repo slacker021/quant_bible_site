@@ -2,21 +2,35 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-4-the-cardinality-of-the-continuum/proof-of-the-uncountability-of-irrational-numbers/","dg-note-properties":{}}
 ---
 
-Let $\mathbb{R}$ represent the set of all real numbers, and let $\mathbb{Q}$ represent the set of all rational numbers. The set of irrational numbers is defined as the set difference $\mathbb{R} \setminus \mathbb{Q}$.
-
-By definition, the entire real number line can be partitioned into the union of rational numbers and irrational numbers:
+Let $\mathbb{R}$ denote the set of all real numbers and $\mathbb{Q}$ denote the set of all rational numbers. By definition, the set of irrational numbers is the complement $\mathbb{R} \setminus \mathbb{Q}$, so the real line partitions into the disjoint union:
 $$
-\begin{gather} \mathbb{R} = \mathbb{Q} \cup (\mathbb{R} \setminus \mathbb{Q}) \tag{1} \end{gather}
+\begin{gather}
+\mathbb{R} = \mathbb{Q} \cup (\mathbb{R} \setminus \mathbb{Q}) \tag{1}
+\end{gather}
 $$
-Assume, for the sake of contradiction, that the set of irrational numbers $\mathbb{R} \setminus \mathbb{Q}$ is countable.
-
-It has been rigorously established in prior theorems that the set of rational numbers $\mathbb{Q}$ is a countable set. Furthermore, operating under the established algebraic properties of cardinality, the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 4 - The Cardinality of the Continuum/Proof of Proposition 2 for Countable Sets\|union of a finite or countable family of countable sets is itself a countable set]].
-
-Under the assumption that $\mathbb{R} \setminus \mathbb{Q}$ is countable, the equation of step 1 represents the union of two countable sets. This logical sequence forces the conclusion that the universal set of real numbers $\mathbb{R}$ is countable.
-
-However, Cantor's Diagonalization proof has decisively proven that the set of real numbers $\mathbb{R}$ is uncountable. This creates an irreconcilable contradiction:
+First, to prove that $\mathbb{R} \setminus \mathbb{Q}$ is uncountable, assume for the sake of contradiction that $\mathbb{R} \setminus \mathbb{Q}$ is at most countable. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 4 - The Cardinality of the Continuum/Proof of the Countability of Rational Numbers\|Countability of Rational Numbers]], the set $\mathbb{Q}$ is countable. Under the assumption that $\mathbb{R} \setminus \mathbb{Q}$ is at most countable, step 1 expresses $\mathbb{R}$ as the union of two at most countable sets. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 4 - The Cardinality of the Continuum/Proof of Proposition 2 for Countable Sets\|Proposition on the Union of Countable Sets]], this forces $\mathbb{R}$ to be countable, which directly contradicts [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 4 - The Cardinality of the Continuum/Proof of the Uncountability of the Real Numbers\|Cantor's Theorem on the Uncountability of the Real Numbers]]:
 $$
-\begin{gather} \text{If } (\mathbb{R} \setminus \mathbb{Q}) \text{ is countable} \implies \mathbb{R} \text{ is countable (Contradiction)} \tag{2} \end{gather}
+\begin{gather}
+(\mathbb{R} \setminus \mathbb{Q} \text{ is at most countable}) \implies (\mathbb{R} \text{ is countable}) \quad (\text{Contradiction}) \tag{2}
+\end{gather}
 $$
-To preserve the uncountability of $\mathbb{R}$, the assumption must be false. The set of irrational numbers cannot be countable. Because the uncountable "bulk" of $\mathbb{R}$ is not composed of the countable set $\mathbb{Q}$, it must be contained entirely within the irrational partition. Therefore, the set of irrational numbers has the cardinality of the continuum and is uncountable.
-$$\textbf{Q.E.D}$$
+Therefore, the set of irrational numbers $\mathbb{R} \setminus \mathbb{Q}$ is uncountable.
+
+Second, to prove that $\mathbb{R} \setminus \mathbb{Q}$ possesses the exact cardinality of the continuum $\mathfrak{c}$ (that is, $\mathbb{R} \setminus \mathbb{Q} \sim \mathbb{R}$), one constructs an explicit bijection $h: \mathbb{R} \to \mathbb{R} \setminus \mathbb{Q}$. Because $\mathbb{Q}$ is countable, its elements can be enumerated as a sequence of distinct terms $\mathbb{Q} = \{q_1, q_2, q_3, \dots\}$. Similarly, select a countably infinite sequence of distinct irrational numbers $S := \{s_1, s_2, s_3, \dots\} \subset \mathbb{R} \setminus \mathbb{Q}$; for example, since $\sqrt{2} \in \mathbb{R} \setminus \mathbb{Q}$ (as proven in [[Proof of the Existence of the Square Root of 2\|Module 1, Chapter 2]]), setting $s_n := n\sqrt{2}$ for each $n \in \mathbb{N}$ yields a sequence of distinct irrational numbers (as $n\sqrt{2} \in \mathbb{Q} \implies \sqrt{2} \in \mathbb{Q}$, a contradiction).
+
+Now define the mapping $h: \mathbb{R} \to \mathbb{R} \setminus \mathbb{Q}$ by shifting $\mathbb{Q}$ and $S$ into the odd- and even-indexed terms of $S$, respectively, while leaving all remaining irrational numbers fixed:
+$$
+\begin{gather}
+h(x) := \begin{cases}
+s_{2n - 1} & \text{if } x = q_n \in \mathbb{Q} \ \ (n \in \mathbb{N}) \\[2mm]
+s_{2n} & \text{if } x = s_n \in S \ \ (n \in \mathbb{N}) \\[2mm]
+x & \text{if } x \in (\mathbb{R} \setminus \mathbb{Q}) \setminus S
+\end{cases} \tag{3}
+\end{gather}
+$$
+Because $\mathbb{Q}$, $S$, and $(\mathbb{R} \setminus \mathbb{Q}) \setminus S$ form a partition of $\mathbb{R}$, and their images $\{s_{2n-1} \mid n \in \mathbb{N}\}$, $\{s_{2n} \mid n \in \mathbb{N}\}$, and $(\mathbb{R} \setminus \mathbb{Q}) \setminus S$ form a partition of $\mathbb{R} \setminus \mathbb{Q}$ onto which each branch of step 3 is bijective, $h: \mathbb{R} \to \mathbb{R} \setminus \mathbb{Q}$ is a bijection. Thus, $\mathbb{R} \setminus \mathbb{Q}$ is equipotent to $\mathbb{R}$ and has the cardinality of the continuum $\mathfrak{c}$.
+$$
+\begin{gather}
+\textbf{Q.E.D}
+\end{gather}
+$$

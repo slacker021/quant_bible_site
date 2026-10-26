@@ -2,11 +2,41 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-3-basic-lemmas-connected-with-the-completeness-of-the-real-numbers/proof-of-the-cauchy-cantor-principle/","dg-note-properties":{}}
 ---
 
-For any two closed intervals $I_{m} = [a_{m}, b_{m}]$ and $I_{n} = [a_{n}, b_{n}$ ] of the sequence, it's inferred that $a_{m} \le b_{m}$. Otherwise, there would be a $a_{n} \le b_{n} < a_{m} \le b_{m}$, that is, the intervals $I_{m}$ and $I_{n}$ would be mutually disjoint, while one of them—which is the one with the larger index—is contained in the other. 
-
-Thus, the numerical sets $A = \{a_{m} \ | \ m \in \mathbb{N} \  \}$ and $B = \{b_{n} \in \ | \ n \in \mathbb{N} \}$ satisfy the hypotheses of the axiom of the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|completeness]], because there's a number $c \in \mathbb{R}$ such that $a_{m} \le c \le b_{n}$ for all $a_{m} \in A$ and all $b_{n} \in B$. In particular $a_{n} \le c \le b_{n}$ for all $n \in \mathbb{N}$. But that would mean point $c$ belongs to all the intervals $I_{n}$. 
-
-Lastly, let $c_{1}$ and $c_{2}$ be two points with this property. If they're different, say $c_{1} < c_{2}$, then for any $n \in \mathbb{N}$, there is $a_{n} \le c_{1} < c_{2} \le b$, and therefore $0 < c_{2} - c_{1} < b_{n} - a_{n}$, so that the length of an interval in the sequence cannot be less than $c_{2} - c_{1}$. Hence if there're intervals of arbitrarily small length in the sequence, their common point is unique. 
+Let $I_1 \supset I_2 \supset \dots \supset I_n \supset \dots$ be a sequence of nested closed intervals, where $I_n = [a_n, b_n]$ for each $n \in \mathbb{N}$. For any two intervals $I_m = [a_m, b_m]$ and $I_n = [a_n, b_n]$ in the sequence, their endpoints satisfy
 $$
+\begin{gather}
+a_m \le b_n \quad \forall m, n \in \mathbb{N} \tag{1}
+\end{gather}
+$$
+To verify step 1, suppose to the contrary that $b_n < a_m$ for some indices $m, n \in \mathbb{N}$. Then $a_n \le b_n < a_m \le b_m$, which implies that the intervals $I_n = [a_n, b_n]$ and $I_m = [a_m, b_m]$ are mutually disjoint ($I_m \cap I_n = \emptyset$). However, setting $k := \max\{m, n\}$, the nesting property dictates that $I_k \subset I_m$ and $I_k \subset I_n$, so $I_k \subset I_m \cap I_n$ cannot be empty, yielding a contradiction.
+
+Now define the two nonempty numerical sets consisting of all left endpoints and all right endpoints of the sequence:
+$$
+\begin{gather}
+A := \{a_m \in \mathbb{R} \mid m \in \mathbb{N}\} \quad \text{and} \quad B := \{b_n \in \mathbb{R} \mid n \in \mathbb{N}\} \tag{2}
+\end{gather}
+$$
+By step 1, every element $a_m \in A$ and every element $b_n \in B$ satisfies $a_m \le b_n$. Thus, $A$ and $B$ satisfy the hypotheses of the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|Axiom of Completeness]], which guarantees the existence of at least one real number $c \in \mathbb{R}$ such that
+$$
+\begin{gather}
+a_m \le c \le b_n \quad \forall m, n \in \mathbb{N} \tag{3}
+\end{gather}
+$$
+In particular, setting $m = n$ in step 3 yields $a_n \le c \le b_n$, meaning $c \in [a_n, b_n] = I_n$ for all $n \in \mathbb{N}$. Consequently, the intersection of the nested sequence is nonempty:
+$$
+\begin{gather}
+c \in \bigcap_{n=1}^\infty I_n \neq \emptyset \tag{4}
+\end{gather}
+$$
+Finally, suppose that for every $\varepsilon > 0$ there exists an interval $I_n$ of length $|I_n| = b_n - a_n < \varepsilon$. Let $c_1, c_2 \in \bigcap_{n=1}^\infty I_n$ be two points belonging to all intervals of the sequence. If $c_1 \ne c_2$ (without loss of generality, suppose $c_1 < c_2$), then for every $n \in \mathbb{N}$:
+$$
+\begin{gather}
+a_n \le c_1 < c_2 \le b_n \implies 0 < c_2 - c_1 \le b_n - a_n = |I_n| \tag{5}
+\end{gather}
+$$
+Choosing $\varepsilon := c_2 - c_1 > 0$, step 5 states that $|I_n| \ge \varepsilon$ for all $n \in \mathbb{N}$, which directly contradicts the hypothesis that there exists an interval $I_n$ with $|I_n| < \varepsilon$. Therefore, $c_1 = c_2$, and the common point $c$ is unique.
+$$
+\begin{gather}
 \textbf{Q.E.D}
+\end{gather}
 $$

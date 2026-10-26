@@ -2,7 +2,33 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-3-basic-lemmas-connected-with-the-completeness-of-the-real-numbers/proof-of-the-bolzano-weierstrass-principle/","dg-note-properties":{}}
 ---
 
-If such weren't the case, then each point $X \in I$ would've a neighborhood $U(x)$ containing either no points of $X$ or at most, a finite number. The totality of such neighborhoods $\{U(x)\}$ constructed for the points $x \in I$ forms a covering of $I$ by open intervals $U(x)$. By the finite covering lemma, which was derived prior to the theorem trying to be proven here, a system $U(x_{1}), \dots, U(x_{2})$ of open intervals that cover $I$ can be extracted. But, since $X \subset I$, this same system also covers $X$. However, there're only finitely many points of $X$ in $U(x_{i})$, and hence only finitely many in their union. That is, $X$ is a finite set. This contradiction shows that the lemma holds true. 
+Let $X \subset \mathbb{R}$ be a bounded infinite subset of the real numbers. Because $X$ is bounded both from below and from above, there exist real numbers $a, b \in \mathbb{R}$ with $a < b$ such that $X$ is entirely contained within the closed and bounded interval $I := [a, b]$:
 $$
+\begin{gather}
+X \subset I = [a, b] \tag{1}
+\end{gather}
+$$
+Suppose, for the sake of contradiction, that $X$ possesses no limit point in $\mathbb{R}$. Under this assumption, no point $x \in I$ can be a limit point of $X$. By the definition of a limit point, for every point $x \in I$, there exists an open neighborhood $U(x)$ of $x$ that contains at most finitely many points of $X$:
+$$
+\begin{gather}
+\forall x \in I, \quad \exists U(x) = ]x - \varepsilon_x, x + \varepsilon_x[ \quad \text{such that} \quad |U(x) \cap X| < \infty \tag{2}
+\end{gather}
+$$
+Because each point $x \in I$ belongs to its own neighborhood $U(x)$, the collection of all such open intervals $\{U(x)\}_{x \in I}$ forms an open cover of the closed and bounded interval $I$:
+$$
+\begin{gather}
+I = [a, b] \subset \bigcup_{x \in I} U(x) \tag{3}
+\end{gather}
+$$
+By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers/Proof of the Borel-Lebesgue Principle\|Borel-Lebesgue Principle]], the open cover in step 3 contains a finite subcover. That is, there exists a finite set of points $\{x_1, x_2, \dots, x_n\} \subset I$ whose corresponding open neighborhoods cover $I$. Combining step 1 with this finite subcover yields
+$$
+\begin{gather}
+X \subset I \subset \bigcup_{i=1}^n U(x_i) \implies X = X \cap \left(\bigcup_{i=1}^n U(x_i)\right) = \bigcup_{i=1}^n \left(U(x_i) \cap X\right) \tag{4}
+\end{gather}
+$$
+By step 2, each intersection $U(x_i) \cap X$ for $i \in \{1, 2, \dots, n\}$ contains at most finitely many elements of $X$. Because a finite union of finite sets is necessarily finite, step 4 implies that $X$ is a finite set. This directly contradicts the initial hypothesis that $X$ is an infinite subset of $\mathbb{R}$. Therefore, $X$ must possess at least one limit point in $I \subset \mathbb{R}$.
+$$
+\begin{gather}
 \textbf{Q.E.D}
+\end{gather}
 $$

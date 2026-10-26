@@ -2,35 +2,61 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-of-dedekind-s-cut-theorem-and-complete-equivalence/","dg-note-properties":{}}
 ---
 
-It is assumed that the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|Axiom of Completeness holds]]. Let $X$ and $Y$ be non-empty subsets of the real numbers encompassing the entire real line. Additionally, let the following assumptions be declared:
-$$\begin{gather} X \cup Y = \mathbb{R}, \quad X \neq \emptyset, \quad Y \neq \emptyset \tag{1} \end{gather}$$
-It is established by hypothesis that every element of the first set is less than or equal to every element of the second set: 
-$$\begin{gather} x \le y \quad \forall x \in X, \forall y \in Y \tag{2} \end{gather}$$
-By the Axiom of Completeness, there exists a separating real number $c$ lying between the two sets:
-$$\begin{gather} \exists c \in \mathbb{R} \text{ such that } x \le c \le y \quad \forall x \in X, \forall y \in Y \tag{3} \end{gather}$$
-Since the union of the two sets exhausts the entire real line ($X \cup Y = \mathbb{R}$), the element $c$ must uniquely belong to either $X$ or $Y$. The two mutually exclusive cases are evaluated below: 
-$$\begin{gather} c \in X \implies \forall x \in X \ (x \le c) \implies c = \max X  \\
-c \in Y \implies \forall y \in Y \ (c \le y) \implies c = \min Y 
-\tag{4} \end{gather}$$
-It is impossible for both a maximal element of $X$ and a minimal element of $Y$ to exist simultaneously without intersecting at a single point. However, the theorem only requires that either condition is met, thereby establishing the forward implication: 
-$$\begin{gather} (c = \max X) \lor (c = \min Y) \tag{5} \end{gather}$$
+Let $\mathbb{F}$ be a linearly ordered field. It must be shown that the Least Upper Bound Axiom (every nonempty subset bounded above has a supremum) is logically equivalent to Dedekind's Cut Principle (every partition of $\mathbb{F}$ into nonempty disjoint sets $X, Y$ with $x \le y$ for all $x \in X, y \in Y$ admits a unique cut element $c \in \mathbb{F}$ satisfying $x \le c \le y$, so that either $c = \max X$ or $c = \min Y$).
 
-It is now assumed that Dedekind's Theorem, which was proven in steps 1 through 5, holds. It must be shown that for any two non-empty subsets $A, B \subset \mathbb{R}$ where $a \le b$ for all $a \in A$ and $b \in B$, there exists a real number $c \in \mathbb{R}$ separating them: 
-$$\begin{gather} \exists c \in \mathbb{R} \text{ such that } a \le c \le b \quad \forall a \in A, \forall b \in B \tag{6} \end{gather}$$
-A Dedekind cut $(X, Y)$ on the real line is constructed. Let $Y$ be defined as the set of all strict upper bounds of $A$: 
-$$\begin{gather} Y = \{ y \in \mathbb{R} \mid \forall a \in A \ (a < y) \} \tag{7} \end{gather}$$
+---
+# Forward Implication: Least Upper Bound Axiom Implies Dedekind's Cut Principle
+Assume the Least Upper Bound Axiom holds in $\mathbb{F}$. Let $X, Y \subset \mathbb{F}$ form a Dedekind cut:
+$$
+\begin{gather}
+X \cup Y = \mathbb{F}, \quad X \cap Y = \emptyset, \quad X \ne \emptyset, \quad Y \ne \emptyset \\[2mm]
+\forall x \in X, \ \forall y \in Y \ (x \le y) \tag{1}
+\end{gather}
+$$
 
-Let $X$ be defined as the complement of $Y$ in $\mathbb{R}$: 
-$$\begin{gather} X = \mathbb{R} \setminus Y = \{ x \in \mathbb{R} \mid \exists a \in A \text{ such that } x \le a \} \tag{8} \end{gather}$$
-The properties of the cut $(X, Y)$ are verified to be exhaustive, ordered, and non-empty. Since $A$ is non-empty, choosing any $a_0 \in A$ gives $a_0 \in X$, ensuring $X \neq \emptyset$. Any $b \in B$ acts as an upper bound for $A$. If $b \notin Y$, then $b \in X$, meaning $b \le a'$ for some $a' \in A$. Since $a \le b$ for all $a \in A$, this forces $b = a'$. In this boundary scenario, $b+1$ is strictly greater than all elements in $A$, ensuring $Y \neq \emptyset$:
-$$\begin{gather} X \cup Y = \mathbb{R}, \quad X \cap Y = \emptyset \\
-\forall x \in X, \forall y \in Y \implies x < y
- \tag{9} \end{gather}$$
+Pick any element $y_0 \in Y$. By step 1, $x \le y_0$ for all $x \in X$, meaning $X$ is nonempty and bounded above by $y_0$. By the Least Upper Bound Axiom, $X$ possesses a supremum $c := \sup X \in \mathbb{F}$. By definition of $\sup X$,
+$$
+\begin{gather}
+\forall x \in X \ (x \le c) \tag{2}
+\end{gather}
+$$
 
-The sets $X$ and $Y$ satisfy the hypotheses of Dedekind's Theorem. Therefore, a distinguished separating element $c$ must exist: $$\begin{gather} \exists c \in \mathbb{R} \text{ such that } (c = \max X) \lor (c = \min Y) \tag{10} \end{gather}$$$$\begin{gather} x \le c \le y \quad \forall x \in X, \forall y \in Y \tag{11} \end{gather}$$
-Because $A \subset X$, it naturally follows that $c$ bounds $A$ from above:
-$$\begin{gather} \forall a \in A \implies a \le c \tag{12} \end{gather}$$
-For any element $b \in B$, $b$ is an upper bound for $A$. If $b \in Y$, then $c \le b$. If $b \notin Y$, then $b \in X$, which requires $b = \max A$. In this boundary case, $c = b$, meaning $c \le b$ still holds:
+Furthermore, because every $y \in Y$ is an upper bound for $X$ and $c = \sup X$ is the *least* upper bound of $X$,
+$$
+\begin{gather}
+\forall y \in Y \ (c \le y) \tag{3}
+\end{gather}
+$$
 
-$$\begin{gather} \forall b \in B \implies c \le b \tag{13} \end{gather}$$
-This establishes that $c$ separates the original sets $A$ and $B$, perfectly satisfying the Axiom of Completeness:$$\begin{gather} a \le c \le b \quad \forall a \in A, \forall b \in B \tag{14} \end{gather}$$$$\begin{gather} \textbf{Q.E.D} \end{gather}$$
+Combining steps 2 and 3 yields $x \le c \le y$ for all $x \in X$ and $y \in Y$. Because $X \cup Y = \mathbb{F}$ and $X \cap Y = \emptyset$, the element $c$ belongs to exactly one of the two sets:
+* If $c \in X$, then step 2 implies $c = \max X$.
+* If $c \in Y$, then step 3 implies $c = \min Y$.
+
+To verify uniqueness of $c$, suppose $c_1, c_2 \in \mathbb{F}$ both satisfy $x \le c_i \le y$ for all $x \in X, y \in Y$ with $c_1 < c_2$. Then the midpoint $m := \frac{c_1 + c_2}{2} \in \mathbb{F}$ satisfies $c_1 < m < c_2$, meaning $m$ cannot belong to $X$ (since $x \le c_1 < m$) and cannot belong to $Y$ (since $m < c_2 \le y$), contradicting $X \cup Y = \mathbb{F}$. Thus, $c_1 = c_2$.
+
+---
+# Reverse Implication: Dedekind's Cut Principle Implies the Least Upper Bound Axiom
+Assume Dedekind's Cut Principle holds in $\mathbb{F}$. Let $A \subset \mathbb{F}$ be an arbitrary nonempty subset that is bounded above by some element $b_0 \in \mathbb{F}$. Define $Y$ as the set of all strict upper bounds of $A$, and let $X$ be its complement in $\mathbb{F}$:
+$$
+\begin{gather}
+Y := \{y \in \mathbb{F} \mid \forall a \in A \ (a < y)\} \\[2mm]
+X := \mathbb{F} \setminus Y = \{x \in \mathbb{F} \mid \exists a \in A \text{ such that } x \le a\} \tag{4}
+\end{gather}
+$$
+
+Verify that $(X, Y)$ forms a valid Dedekind cut of $\mathbb{F}$:
+1. **Non-emptiness:** Since $A \ne \emptyset$, any $a_0 \in A$ satisfies $a_0 \le a_0$, so $A \subset X$ and $X \ne \emptyset$. Since $b_0$ is an upper bound for $A$, every $a \in A$ satisfies $a \le b_0 < b_0 + 1$, so $(b_0 + 1) \in Y$ and $Y \ne \emptyset$.
+2. **Disjoint Partition and Ordering:** By construction, $X \cup Y = \mathbb{F}$ and $X \cap Y = \emptyset$. For any $x \in X$ and $y \in Y$, there exists $a \in A$ such that $x \le a$, while $a < y$ by definition of $Y$; by transitivity, $x < y$.
+
+By Dedekind's Cut Principle, there exists a unique element $c \in \mathbb{F}$ such that
+$$
+\begin{gather}
+x \le c \le y \quad \forall x \in X, \ \forall y \in Y \tag{5}
+\end{gather}
+$$
+Because $A \subset X$, step 5 guarantees that $a \le c$ for all $a \in A$, so $c$ is an upper bound for $A$. Now let $u \in \mathbb{F}$ be any upper bound for $A$. For every $\varepsilon > 0$ in $\mathbb{F}$, the element $u + \varepsilon$ satisfies $a \le u < u + \varepsilon$ for all $a \in A$, meaning $(u + \varepsilon) \in Y$. By step 5, $c \le u + \varepsilon$ for all $\varepsilon > 0$, which forces $c \le u$ (for if $c > u$, setting $\varepsilon = \frac{c - u}{2} > 0$ would yield $c \le \frac{c + u}{2} < c$, a contradiction). Therefore, $c = \sup A$.
+$$
+\begin{gather}
+\textbf{Q.E.D}
+\end{gather}
+$$

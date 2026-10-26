@@ -3,128 +3,73 @@
 ---
 
 # Proposition 1
-Let $m$ and $n$ be natural numbers, and let $E$ be the set of natural numbers $n$ for which $(m + n) \in \mathbb{N}$ for all $m \in \mathbb{N}$. Then by definition, $1$ is in $E$ since 
-$$
-(m \in \mathbb{N}) \implies ((m + 1) \in \mathbb{N}) \ \forall m \in N. \tag{1}
-$$
-If $n \in E$, that is $(m + n) \in \mathbb{N}$, then $(n + 1) \in E$ also, since 
-$$
-(m + (n + 1)) = ((m + n) + 1) ∈ N. \tag{2}
-$$
-By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof that Induction Works\|principle of induction]], $E = \mathbb{N}$. Therefore, the addition of two or more natural numbers doesn't lead to a sum that isn't a natural number. 
+Fix an arbitrary natural number $m \in \mathbb{N}$, and define the subset $E_+ \subset \mathbb{N}$ consisting of all $n \in \mathbb{N}$ for which the sum $m + n$ belongs to $\mathbb{N}$:
+$$\begin{gather} E_+ := \{n \in \mathbb{N} \mid (m + n) \in \mathbb{N}\} \tag{1} \end{gather}$$
 
-Similarly, taking $E$ to be the set of natural numbers $n$ for which $(m \cdot n) \in \mathbb{N}$ for all $m \in \mathbb{N}$, it can be found that $1 \in E$, since $m \cdot 1 = m$, and if $n \in E$, that is, $m \cdot n \in \mathbb{N}$, then $(m \cdot (n + 1)) = mn + m$ is the sum of two natural numbers, which belongs to $\mathbb{N}$ by what was just proved above. Thus, 
-$$
-(n \in E) \implies ((n + 1) \in E) \tag{3}
-$$
-and so by the principle of induction, $E = \mathbb{N}$. 
+Because $\mathbb{N}$ is an inductive set and $m \in \mathbb{N}$, the successor $m + 1$ belongs to $\mathbb{N}$, which confirms that $1 \in E_+$. Next, assume $n \in E_+$, meaning $(m + n) \in \mathbb{N}$. By the associativity of addition in $\mathbb{R}$ and the inductive property of $\mathbb{N}$,
+$$\begin{gather} m + (n + 1) = (m + n) + 1 \in \mathbb{N} \tag{2} \end{gather}$$
+
+Thus, $n \in E_+ \implies (n + 1) \in E_+$. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof that Induction Works\|Principle of Induction]], $E_+ = \mathbb{N}$, establishing that $m + n \in \mathbb{N}$ for all $m, n \in \mathbb{N}$.
+
+To establish closure under multiplication, fix $m \in \mathbb{N}$ and define the subset
+$$\begin{gather} E_\cdot := \{n \in \mathbb{N} \mid (m \cdot n) \in \mathbb{N}\} \tag{3} \end{gather}$$
+
+Since $m \cdot 1 = m \in \mathbb{N}$, the base element $1$ belongs to $E_\cdot$. Assume $n \in E_\cdot$, so that $m \cdot n \in \mathbb{N}$. By the distributive law of $\mathbb{R}$,
+$$\begin{gather} m \cdot (n + 1) = m \cdot n + m \cdot 1 = (m \cdot n) + m \tag{4} \end{gather}$$
+
+Since $m \cdot n \in \mathbb{N}$ and $m \in \mathbb{N}$, the additive closure proven in step 2 guarantees that $(m \cdot n) + m \in \mathbb{N}$. Hence, $(n + 1) \in E_\cdot$, and by the Principle of Induction, $E_\cdot = \mathbb{N}$.
 
 ---
 # Proposition 2
-Let $E$ be the set consisting of all real numbers of the form $n - 1$, where $n$ is a natural number different from $1$. Since $1$'s a natural number, it follows that 
-$$
-2:= (1 + 1) \in \mathbb{N} \text{ and hence } 1 = (2 -1) \in E. \tag{4}
-$$
-If $m \in E$, then $m = n - 1$, where $n \in \mathbb{N}$; then $m + 1 = (n + 1) -1$, and since $n + 1 \in \mathbb{N}$, it can be inferred that $(m + 1) \in E$. By the principle of induction, it can be concluded that $E = \mathbb{N}$. 
+Define the set $E \subset \mathbb{N}$ consisting of $1$ together with all natural numbers whose predecessors belong to $\mathbb{N}$:
+$$\begin{gather} E := \{n \in \mathbb{N} \mid (n = 1) \vee ((n - 1) \in \mathbb{N})\} \tag{5} \end{gather}$$
+By construction, $1 \in E$. Suppose $n \in E$. Since $n \in \mathbb{N}$, the identity $(n + 1) - 1 = n \in \mathbb{N}$ holds immediately, which demonstrates that $(n + 1)$ satisfies the second condition in step 5. Therefore, $(n + 1) \in E$. By the Principle of Induction, $E = \mathbb{N}$, proving that every $n \in \mathbb{N}$ with $n \ne 1$ satisfies $(n - 1) \in \mathbb{N}$.
 
 ---
 # Proposition 3
-Let
-$$
-M = \{x ∈ \mathbb{N} \ | \  (x = 1) ∨ (2 ≤ x) \}.\tag{5}
-$$
-By definition of $M$, $1 \in M$. Then if $x \in M$, either $x = 1$, in which case $x + 1 = 2 \in M$, or else $2 \leq x$, and then $2 \le (x + 1)$, and once again $(x + 1) \in M$. Thus, $M = \mathbb{N}$, and hence if $(x = 1) ∧ (x ∈ \mathbb{N})$, then $2 \le x$, that is, $\text{min}\{ x \in \mathbb{N} \ | \ 1 < x\} = 2$.  
+First, consider the base case $n = 1$ by defining the set
 
-Now, if 
-$$
-x \in \{x \in \mathbb{N} \ | \ n + 1 < x  \} \tag{6}
-$$
-then
-$$
-(x - 1) = y \in \{ y \in \mathbb{N} \ | \ n < y \}. \tag{7}
-$$
-For, by what's already been proven, every natural number is at least as large as $1$; therefore
-$$
-(n + 1 < x) \implies (1 < x) \implies (x \ne 1) \tag{8}
-$$
-and consequently, 
-$$
-\text{min}\{ y \in \mathbb{N} \ | \ n < y \} = n + 1. \tag{9}
-$$
-Then, $x - 1 \ge y \ge n + 1$ and $x \ge n + 1$. Hence, 
-$$
-(x ∈ \{x ∈ \mathbb{N} \  | \  n + 1 < x \}) \implies (x ≥ n + 2) \tag{10}
-$$
-and consequently,
-$$
-\text{min}\{ x \in \mathbb{N} \ | \ n + 1 < x \} = n + 2, \tag{11}
-$$
-that is, $n + 1 \in E$. By the principle of induction $E = \mathbb{N}$ and this proposition has been proven. 
+$$\begin{gather} M := \{x \in \mathbb{N} \mid (x = 1) \vee (x \ge 2)\} \tag{6} \end{gather}$$
+
+where $2 := 1 + 1$. By definition, $1 \in M$. If $x \in M$, then either $x = 1$ (in which case $x + 1 = 2 \in M$) or $x \ge 2$ (in which case $x + 1 > x \ge 2$, so $x + 1 \in M$). By the Principle of Induction, $M = \mathbb{N}$. Consequently, every natural number $x \in \mathbb{N}$ satisfies $x \ge 1$, and any $x \in \mathbb{N}$ with $x > 1$ (so $x \ne 1$) satisfies $x \ge 2 = 1 + 1$. Since $2 \in \{x \in \mathbb{N} \mid 1 < x\}$, it follows that $\min\{x \in \mathbb{N} \mid 1 < x\} = 2$.
+
+Now, consider the subset $E \subset \mathbb{N}$ of all $n \in \mathbb{N}$ for which the proposition holds:
+$$\begin{gather} E := \{n \in \mathbb{N} \mid \min\{x \in \mathbb{N} \mid n < x\} = n + 1\} \tag{7} \end{gather}$$
+
+From the base case above, $1 \in E$. Assume $n \in E$, and let $x \in \mathbb{N}$ satisfy $n + 1 < x$. Because $n \ge 1$, the inequality $x > n + 1 \ge 2 > 1$ ensures $x \ne 1$. By Proposition 2, $y := x - 1$ belongs to $\mathbb{N}$, and subtracting $1$ from $n + 1 < x$ yields $n < y$. Because $n \in E$, the element $y$ belongs to $\{y \in \mathbb{N} \mid n < y\}$, which has minimal element $n + 1$:
+$$\begin{gather} y = x - 1 \ge n + 1 \implies x \ge (n + 1) + 1 = n + 2 \tag{8} \end{gather}$$
+
+Since $n + 2 \in \{x \in \mathbb{N} \mid n + 1 < x\}$ and every element $x$ of this set satisfies $x \ge n + 2$, it follows that $\min\{x \in \mathbb{N} \mid n + 1 < x\} = n + 2$. Thus, $(n + 1) \in E$, and by the Principle of Mathematical Induction, $E = \mathbb{N}$.
 
 ---
 # Proposition 4
-Let $m$ and $n$ be natural numbers, where $n$ is less than $m$.  
+Let $m, n \in \mathbb{N}$ satisfy $n < m$. Then $m$ is an element of the set $\{x \in \mathbb{N} \mid n < x\}$. By Proposition 3, the minimal element of this set is $n + 1$. Because every element of a set is greater than or equal to the set's minimal element,
 
-### Direct Proof
-By definition of [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|"less than"]], the statement $n < m$ is equivalent to stating that $m - n$ is a positive integer. By definition, definition of the natural numbers, the smallest positive integer is $1$. Therefore, $m - n \ge 1$. Adding $n$ to both sides of this inequality yields
-$$
-(m - n) + n \ge 1 + n \implies m \ge n + 1 \tag{12}
-$$
-The terms can be rearranged such that $n + 1 \le m$. 
-
-### Contradiction
-Suppose that $n < m$ is true but the conclusion is false, where the negation of $n+1≤m$ is
-$𝑛+1 > m$. In the context of natural numbers, if $n + 1$ is greater than $m$, then it must be that $n + 1$ must be at least $m + 1$. (Note: If it were $m$ or less, then it would contradict the assumption.). Thus, 
-$$
-n+1≥m+1 \tag{13}
-$$
-Subtracting $1$ from both sides of the inequality yields 
-$$
-(n+1)−1≥(m+1)−1 \implies n≥m \tag{14}
-$$
-This concludes that $n≥m$, which contradicts the premise stated that $n < m$. An integer cannot be simultaneously less than and greater than (or equal to) another integer. Therefore, the original statement that $n + 1 \le m$ must be true. 
+$$\begin{gather} n + 1 = \min\{x \in \mathbb{N} \mid n < x\} \le m \tag{9} \end{gather}$$
 
 ---
-
 # Proposition 5
-By definition of the natural numbers, every natural number except $1$ is the successor of a natural number. This statement is vacuously true for $1$ and if it holds for $n$, then it holds for $n + 1$. Furthermore, every natural number is greater than or equal to $1$. By the principle of induction, this holds true for $1$ and if $n \ge 1$, then
-$$
-n + 1 \ge 1 + 2 > 1 \tag{15} 
-$$
-Now, suppose $q$ is a natural number strictly between $1$ and $2$. Since $q$ isn't $1$, it's the successor of some natural number $q'$ that's greater than or equal to $1$. But $q' \ge 0$ implies that 
-$$
-q = q' + 1 \ge 1 + 2 = 1 \tag{16}
-$$
-which contradicts the assumption that $q < 2$. Therefore, there is no natural number between $1$ and $2$. This is the base case of this proof.  
+Suppose, for the sake of contradiction, that for some $n \in \mathbb{N}$ there exists a natural number $x \in \mathbb{N}$ lying strictly between $n$ and $n + 1$:
+$$\begin{gather} n < x < n + 1 \tag{10} \end{gather}$$
 
-Now that the base case has been completed, the inductive step can now be taken. 
-For any natural number $n$, there's no natural number between $n$ and $n + 1$, which was shown in the base case. If there was a natural number $q$ between $n + 1$ and $n + 2$, then it would be the successor of some $q'$, and that $q'$ would have to lie between $n$ and $n + 1$, because if $q' \le n$ then $q = q' + 1 \ge n + 2$. Therefore, if the statement holds for $n$, then it holds for $n + 1$. 
+Applying Proposition 4 to the left-hand inequality $n < x$ (with $x, n \in \mathbb{N}$) dictates that $n + 1 \le x$, which directly contradicts the right-hand inequality $x < n + 1$ in step 10. Thus, no natural number lies strictly between $n$ and $n + 1$, confirming that $n + 1$ is the immediate successor of $n$.
 
 ---
 # Proposition 6
-Let $n$ be a natural number such that $n \ne 1$. Now, assume that there's a natural number $x$ such that 
-$$
-n - 1 < x < n \tag{17}
-$$
-Since $x$ and $n$ are natural numbers, the following property can be used:
-$$
-a < b \implies b - a \ge 1 \tag{18}
-$$
-This leads to two separate inequalities: 
-1. From $n - 1 < x$, it follows that $x - (n + 1)$. Simplifying this yields the inequality $x - n + 1 \ge 1$. 
-2. From $x < n$, it follows that $n - x \ge 1$. 
-The two inequalities can then be added together:
-$$
-(x−n+1)+(n−x)≥1+1 \tag{19}
-$$
-Simplifying the left side, the $x$ and $-x$ terns cancel out, and the $-n$ and $n$ terms also cancel out. This leaves the result that $1 \ge 2$. This is a contradiction because it's impossible for $1 \ge 2$. Therefore, it must be that if $n \ne 1$, then $n - 1$ is the immediate predecessor of $n$.
+Let $n \in \mathbb{N}$ with $n \ne 1$. By Proposition 2, the predecessor $m := n - 1$ belongs to $\mathbb{N}$. Suppose there exists $x \in \mathbb{N}$ such that
+
+$$\begin{gather} n - 1 < x < n \iff m < x < m + 1 \tag{11} \end{gather}$$
+
+By Proposition 5, no natural number $x \in \mathbb{N}$ can satisfy $m < x < m + 1$. Consequently, no natural number lies strictly between $n - 1$ and $n$, proving that $n - 1$ is the immediate predecessor of $n$ in $\mathbb{N}$.
 
 ---
 # Proposition 7
-Let $M \subset \mathbb{N}$. If $1 \in M$, then $\text{min} M = 1$, since $\forall n \in \mathbb{N} (1 \le n)$. Now, suppose that $1$ isn't an element of $M$, where $1 \in E = \mathbb{N} \setminus M$. The set $E$ must contain a natural number $n$ such that all natural numbers aren't larger than $n \in E$ but $n + 1 \in M$. If there wasn't such an $n$, the set $E \subset \mathbb{N}$, which contains $1$, would contain along with each of its elements $n$, the number $(n + 1)$ also; by the principle of induction, it would therefore equal $\mathbb{N}$. However, the latter is impossible because $\mathbb{N} \setminus E = M \ne \emptyset$. The number $(n + 1)$ so found must be the smallest element of $M$, since there're no natural numbers between $n$ and $n + 1$, which has been proven true by the fifth proposition. 
+Let $M \subset \mathbb{N}$ be a nonempty subset of natural numbers. If $1 \in M$, then because $1 \le x$ for all $x \in \mathbb{N}$ (established in the proof of Proposition 3), $1$ is the minimal element of $M$ ($\min M = 1$).
 
-$$
-\textbf{Q.E.D}
-$$
+Suppose instead that $1 \notin M$, and consider the complement $E := \mathbb{N} \setminus M$, which consequently contains $1$. Assume, for the sake of contradiction, that for every $n \in E$, its successor $n + 1$ also belongs to $E$. Then $E \subset \mathbb{N}$ satisfies $1 \in E$ and $(n \in E \implies (n + 1) \in E)$, which by the Principle of Mathematical Induction forces $E = \mathbb{N}$. However, $E = \mathbb{N}$ implies $M = \mathbb{N} \setminus E = \emptyset$, contradicting the premise that $M$ is nonempty.
 
+Therefore, there must be at least one element $n \in E$ such that $(n + 1) \notin E$, meaning $(n + 1) \in M$. In fact, define the set of all natural numbers $k$ whose predecessors up to $k$ all reside in $E$:
+$$\begin{gather} S := \{k \in \mathbb{N} \mid \forall x \in \mathbb{N} \ (x \le k \implies x \in E)\} \tag{12} \end{gather}$$
 
+Since $1 \in E$ and no natural number is smaller than $1$, $1 \in S$. If $S$ were inductive, then $S = \mathbb{N}$, which would again force $E = \mathbb{N}$ and $M = \emptyset$. Thus, there exists $n \in S$ such that $(n + 1) \notin S$. Because $n \in S$, every $x \in \mathbb{N}$ with $x \le n$ belongs to $E = \mathbb{N} \setminus M$, so no element of $M$ can satisfy $x \le n$. Meanwhile, because $(n + 1) \notin S$, it must be that $(n + 1) \notin E$, so $(n + 1) \in M$. Since every $x \in M$ fails $x \le n$ (meaning $x > n$), Proposition 4 guarantees $x \ge n + 1$ for all $x \in M$. Thus, $\min M = n + 1$.
+$$\begin{gather} \textbf{Q.E.D} \end{gather}$$

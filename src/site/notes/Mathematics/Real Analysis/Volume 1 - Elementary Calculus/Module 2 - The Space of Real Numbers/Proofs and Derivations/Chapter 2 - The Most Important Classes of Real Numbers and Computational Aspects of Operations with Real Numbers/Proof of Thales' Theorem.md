@@ -2,21 +2,40 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-of-thales-theorem/","dg-note-properties":{}}
 ---
 
-Let $\Delta ABC$ be a triangle, where $\overline{BC}$ is the base of the triangle, while $\overline{AB}$ is the left reg and $\overline{AC}$ is the right leg. Now, suppose that parallel to $\overline{BC}$ (more specifically, on top of $\overline{BC}$), there is another line that's shorter, which is denoted as $\overline{DE}$. Thus, it can be said that $BDEC$ form a trapezoid, where $D$ is a point on $\overline{AB}$ and $E$ is a point on $\overline{AC}$. Lastly, let $N$ be some point on $\overline{AD}$ and $M$ be some point on $\overline{AE}$. Thus, it can be said that $\Delta DEM$ forms a right triangle—where $M$ is the right angle—$\Delta EDN$ also forms a right triangle—where $N$ is the right angle. The entire figure needed for this proof is now complete. 
+Consider a triangle $\triangle ABC$ with base $\overline{BC}$ and sides $\overline{AB}$ and $\overline{AC}$. Suppose a line segment $\overline{DE}$ is drawn parallel to the base $\overline{BC}$ such that it intersects $\overline{AB}$ at a distinct interior point $D$ and $\overline{AC}$ at a distinct interior point $E$.
 
-Now, suppose that the area of the triangle is to be defined as $\frac{1}{2} \cdot b \cdot h$, where $b$ is the base of the triangle and $h$ is the height. Thus, the ratio between the length of side $\overline{AD}$ and $\overline{BD}$ is
+Drop a perpendicular altitude $\overline{EN}$ from vertex $E$ onto the line containing $\overline{AB}$ (with foot $N$), and drop a perpendicular altitude $\overline{DM}$ from vertex $D$ onto the line containing $\overline{AC}$ (with foot $M$).
+
+Recall from Euclidean geometry that the area of a triangle is equal to half the product of its base length and its corresponding altitude. Because triangles $\triangle ADE$ and $\triangle BDE$ share the common altitude $\overline{EN}$ perpendicular to the collinear bases $\overline{AD}$ and $\overline{DB}$, the ratio of their areas equals the ratio of their base lengths:
 $$
-\frac{\text{area of } \Delta ADE}{\text{area of } \Delta BDE} = \frac{\frac{1}{2} \cdot \text{ length of } \overline{AD} \cdot \text{ length of } \overline{EN}}{\frac{1}{2} \cdot \text{length of } \overline{BD} \cdot \text{ length of } \overline{EN}} = \frac{\text{length of } \overline{AD}}{\text{length of } \overline{BD}} \tag{1}
+\begin{gather}
+\frac{\operatorname{Area}(\triangle ADE)}{\operatorname{Area}(\triangle BDE)} = \frac{\frac{1}{2} \cdot |\overline{AD}| \cdot |\overline{EN}|}{\frac{1}{2} \cdot |\overline{DB}| \cdot |\overline{EN}|} = \frac{|\overline{AD}|}{|\overline{DB}|} \tag{1}
+\end{gather}
 $$
-while the ratio between the length of side $\overline{AE}$ and $\overline{EC}$ is
+
+Similarly, because triangles $\triangle ADE$ and $\triangle CDE$ share the common altitude $\overline{DM}$ perpendicular to the collinear bases $\overline{AE}$ and $\overline{EC}$, the ratio of their areas is given by
 $$
-\frac{\text{area of } \Delta ADE}{\text{area of } \Delta CDE} = \frac{\frac{1}{2} \cdot \text{ length of } \overline{AE} \cdot \text{ length of } \overline{DM}}{\frac{1}{2} \cdot \text{length of } \overline{EC} \cdot \text{ length of } \overline{DM}} = \frac{\text{length of } \overline{AE}}{\text{length of } \overline{EC}} \tag{2}
+\begin{gather}
+\frac{\operatorname{Area}(\triangle ADE)}{\operatorname{Area}(\triangle CDE)} = \frac{\frac{1}{2} \cdot |\overline{AE}| \cdot |\overline{DM}|}{\frac{1}{2} \cdot |\overline{EC}| \cdot |\overline{DM}|} = \frac{|\overline{AE}|}{|\overline{EC}|} \tag{2}
+\end{gather}
 $$
-However, the area of $\Delta BDE$ and $\Delta CED$ are equal with one anther because both share the same base and the same parallel line from steps 1 and 2. Therefore, steps 1 and 2 are a contradiction. Therefore, 
+
+Now compare the denominators $\operatorname{Area}(\triangle BDE)$ and $\operatorname{Area}(\triangle CDE)$. Both triangles $\triangle BDE$ and $\triangle CDE$ share the exact same base segment $\overline{DE}$, and their opposite vertices $B$ and $C$ lie on the line $\overline{BC}$, which is parallel to $\overline{DE}$ by hypothesis. Because the perpendicular distance between two parallel lines is constant, $\triangle BDE$ and $\triangle CDE$ possess equal altitudes relative to base $\overline{DE}$, which implies
 $$
-\frac{\overline{AD}}{\overline{DB}} = \frac{\overline{AE}}{\overline{EC}} \tag{3}
+\begin{gather}
+\operatorname{Area}(\triangle BDE) = \operatorname{Area}(\triangle CDE) \tag{3}
+\end{gather}
 $$
-Which means that $\frac{\overline{AD}}{\overline{DB}}$ and $\frac{\overline{AE}}{\overline{EC}}$ are divided into the same ratio. 
+
+Substituting step 3 into the left-hand sides of steps 1 and 2 equates the two area ratios, establishing by transitivity that
 $$
+\begin{gather}
+\frac{|\overline{AD}|}{|\overline{DB}|} = \frac{|\overline{AE}|}{|\overline{EC}|} \tag{4}
+\end{gather}
+$$
+Thus, the parallel line $\overline{DE}$ divides the two sides $\overline{AB}$ and $\overline{AC}$ in the exact same ratio.
+$$
+\begin{gather}
 \textbf{Q.E.D}
+\end{gather}
 $$
