@@ -75,7 +75,14 @@
         "src/plugins/sidebar-controls/templates/footer.njk",
         "src/plugins/sidebar-controls/templates/head.njk"
       ],
-      "order": 130
+      "order": 130,
+      "settings": {
+        "toggleFileTree": true,
+        "toggleSidebar": true,
+        "buttonPosition": "corners",
+        "sidebarPosition": "content",
+        "remember": true
+      }
     },
     "clean-print": {
       "repo": "koltensaccount/garden-plugin-clean-print",
