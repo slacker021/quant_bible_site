@@ -118,7 +118,4 @@ An indifference curve that crosses the utility line twice suboptimal because the
 > $C:$ Patrick orders four Krabby Patties for ten dollars but have no pizza to consume. This means all ten dollars he came with are consumed. 
 > This can be graphically modeled as
 >![patrick_orders.png](/img/user/Finance/Portfolio%20Management/Volume%201%20-%20Modern%20Portfolio%20Theory/Figures/Chapter%201/patrick_orders.png)
-<<<<<<< HEAD
-=======
 
->>>>>>> RA1M3C2

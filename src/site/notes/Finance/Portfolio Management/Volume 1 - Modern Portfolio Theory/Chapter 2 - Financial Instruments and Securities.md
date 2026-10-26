@@ -313,10 +313,6 @@ While there're many collective investment vehicles, below are currently the most
 # Return Characteristics of Assets
 One of the core tenets of portfolio management are risk and return, where investors like high return but dislike high risk. The tradeoff between risk and return is complex, requiring a rigorous and un-ambiguous definition of both terms, but a simple way to visualize the relationship with risk and return is through the following diagram:
 ![risk_return_matrix.png](/img/user/Finance/Portfolio%20Management/Volume%201%20-%20Modern%20Portfolio%20Theory/Figures/Chapter%202/risk_return_matrix.png)
-<<<<<<< HEAD
-
-=======
->>>>>>> RA1M3C2
 When discussing the tradeoff between potential risk and return, it's important to understand what is meant by "return." There are many ways to measure return but in most cases, the following definition of return will be used: 
 $$
 \begin{gather}
