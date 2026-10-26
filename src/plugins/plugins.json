@@ -168,7 +168,8 @@
       "order": 120
     },
     "dg-link-preview": {
-      "order": 40
+      "order": 40,
+      "enabled": false
     },
     "dg-math": {
       "order": 50
