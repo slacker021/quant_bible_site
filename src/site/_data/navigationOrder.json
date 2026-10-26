@@ -1,0 +1,207 @@
+{
+  "/": [
+    "Computer Science",
+    "Finance",
+    "Mathematics",
+    "Acknowledgements",
+    "API and Data Sources",
+    "Publications and Journals",
+    "The Quant's Bible"
+  ],
+  "/Computer Science": [
+    "Appendix (Quick References)",
+    "Julia Programming"
+  ],
+  "/Computer Science/Appendix (Quick References)": [
+    "Git Quick Reference",
+    "Powershell Quick Reference"
+  ],
+  "/Computer Science/Appendix (Quick References)/Git Quick Reference": [
+    "Merging",
+    "Navigation",
+    "Pulling and Fetching",
+    "Repository Setups",
+    "Rewriting Commit History",
+    "Stashing"
+  ],
+  "/Computer Science/Julia Programming": [
+    "Design Patterns",
+    "Utilities and Troubleshooting"
+  ],
+  "/Computer Science/Julia Programming/Design Patterns": [
+    "Chapter 1 - Modules, Packages, and Data Types",
+    "Chapter 2 - Designing Functions and Interfaces",
+    "Chapter 3 - Macros and Metaprogramming"
+  ],
+  "/Computer Science/Julia Programming/Utilities and Troubleshooting": [
+    "Application Control Policy and Code Integrity Errors",
+    "Bad Image Error",
+    "Environment Management",
+    "Juliaup"
+  ],
+  "/Finance": [
+    "Portfolio Management"
+  ],
+  "/Finance/Portfolio Management": [
+    "Volume 1 - Modern Portfolio Theory"
+  ],
+  "/Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory": [
+    "Proofs and Derivations",
+    "Chapter 1 - The Theory of Choices",
+    "Chapter 2 - Financial Instruments and Securities",
+    "Chapter 3 - Financial Markets"
+  ],
+  "/Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Proofs and Derivations": [
+    "Chapter 2"
+  ],
+  "/Finance/Portfolio Management/Volume 1 - Modern Portfolio Theory/Proofs and Derivations/Chapter 2": [
+    "Proof of the Fundamental Theorem of Asset Pricing (Part 1)"
+  ],
+  "/Mathematics": [
+    "Real Analysis"
+  ],
+  "/Mathematics/Real Analysis": [
+    "Volume 1 - Elementary Calculus"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus": [
+    "Module 1 - General Mathematical Concepts and Notation",
+    "Module 2 - The Space of Real Numbers",
+    "Module 3 - Limits"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation": [
+    "Proofs and Derivations",
+    "Chapter 1 - Basic Rules of Logic",
+    "Chapter 2 - Elementary Set Theory",
+    "Chapter 3 - Cartesian Products and Relations",
+    "Chapter 4 - Functions and Cardinality"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations": [
+    "Chapter 2",
+    "Chapter 3",
+    "Chapter 4"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 2": [
+    "Proof of de Morgan's Laws of Set Complements",
+    "Proof of Elementary Lemma of Set Complementation",
+    "Proof of the Distributive Laws of Intersection and Union",
+    "Proof that the Empty Set is the Subset of Any Set"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 3": [
+    "Proof of the First Useful Property of Cartesian Products",
+    "Proof of the Fourth Useful Property of Cartesian Products",
+    "Proof of the Fundamental Contract of Ordered Coordinates",
+    "Proof of the Second Useful Property of Cartesian Products",
+    "Proof of the Third Useful Property of Cartesian Products"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Proofs and Derivations/Chapter 4": [
+    "Proof of Cantor's Theorem",
+    "Proof of Lemma of Useful Facts about Functions",
+    "Proof of Proposition 1 of Useful Facts about Functions",
+    "Proof of Proposition 2 of Useful Facts about Functions",
+    "Proof of Proposition 3 of Useful Facts about Functions",
+    "Proof of Proposition 4 of Useful Facts about Functions",
+    "Proof of Proposition 5 of Useful Facts about Functions",
+    "Proof of the Associative Property of Composite Functions",
+    "Proof of the Existence of Inverse Mappings"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers": [
+    "Proofs and Derivations",
+    "Chapter 1 - Basic Properties of Real Numbers",
+    "Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers",
+    "Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers",
+    "Chapter 4 - The Cardinality of the Continuum"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations": [
+    "Chapter 1 - Basic Properties of Real Numbers",
+    "Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers",
+    "Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers",
+    "Chapter 4 - The Cardinality of the Continuum"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 1 - Basic Properties of Real Numbers": [
+    "Proof of Consequences of Addition Axioms",
+    "Proof of Consequences of Multiplication Axioms",
+    "Proof of Consequences of Order Axioms",
+    "Proof of Consequences of Order with Addition and Multiplication",
+    "Proof of Greatest Lower Bound Principle",
+    "Proof of Least Upper Bound Principle",
+    "Proof the Consequences of Connection Axioms"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers": [
+    "Proof of Archimedian Corollaries",
+    "Proof of Bernoulli's Inequality",
+    "Proof of Dedekind's Cut Theorem and Complete Equivalence",
+    "Proof of Error Propagation Methods",
+    "Proof of Isomorphism and Categoricity in the Real Numbers",
+    "Proof of Monotonicity and Ordering of Extrema",
+    "Proof of Non-Archimedean Ordering Fields",
+    "Proof of Positional Computational System",
+    "Proof of Properties of Order-Preserving Homomorphisms",
+    "Proof of Step 11",
+    "Proof of Thales' Theorem",
+    "Proof of the Bounds in the Natural Numbers and Integers",
+    "Proof of the Fundamental Theorem of Arithmetic",
+    "Proof of the Principle of Archimedes",
+    "Proof of the Properties of Natural Numbers",
+    "Proof of the Rules of Rational Expressions",
+    "Proof of the Triangle Inequality",
+    "Proof of Von-Neumann Ordinal Embeddings",
+    "Proof of When Integers are Abelian",
+    "Proof that Euclid's Algorithm Works",
+    "Proof that Induction Works",
+    "Proof that Integer Operations Yield Integers",
+    "Proof that the Square Root of 2 is Irrational"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers": [
+    "Proof of the Bolzano-Weierstrass Principle",
+    "Proof of the Borel-Lebesgue Principle",
+    "Proof of the Cauchy-Cantor Principle",
+    "Proof of the First Useful Lemma",
+    "Proof that Different Axioms Can be Used"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 4 - The Cardinality of the Continuum": [
+    "Proof of First Proposition for Countable Sets",
+    "Proof of Proposition 2 for Countable Sets",
+    "Proof of the Countability of Rational Numbers",
+    "Proof of the Existence of Transcendental Numbers",
+    "Proof of the Uncountability of Irrational Numbers",
+    "Proof of the Uncountability of the Real Numbers"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits": [
+    "Proofs and Derivations",
+    "Chapter 1 - Limits of Sequences"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations": [
+    "Chapter 1 - Limits of Sequences"
+  ],
+  "/Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences": [
+    "Derivation of Euler's Constant",
+    "Derivation of Faulhaber's Formulae",
+    "Proof of Alternating Series Test",
+    "Proof of Arithmetic Operations Involving Limits",
+    "Proof of Arithmetic Properties of Series",
+    "Proof of Corollary for Standard Convergence Test",
+    "Proof of Corollary of the Weierstrass Theorem",
+    "Proof of Inequalities Involving Limits",
+    "Proof of q-ary Representation Theorem",
+    "Proof of Standard Convergence Tests",
+    "Proof of the Basic Properties of Limits",
+    "Proof of the Binomial Theorem",
+    "Proof of the Bolzano-Weierstrass Lemma",
+    "Proof of the Cauchy Condensation Test",
+    "Proof of the Cauchy Convergence Criterion for a Series",
+    "Proof of the Cauchy Criterion for Sequences",
+    "Proof of the Corollary for Limit Inequalities",
+    "Proof of the Corollary for the Squeeze Theorem of Limits",
+    "Proof of the Corollary of Partial Limits Proposition",
+    "Proof of the Pigeonhole Principle",
+    "Proof of the Series Rearrangement Proposition",
+    "Proof of the Squeeze Theorem",
+    "Proof of the Standard Comparison Test",
+    "Proof of Theorem About r and n",
+    "Proof of Theorem Involving Odd and Even-Indexed Sequences",
+    "Proof of Theorem of Absolute Convergence",
+    "Proof of Weierstrass Theorem on Monotonic Sequences",
+    "Proof that a Convergent Subsequence or Subsequence Tending to Infinity Can be Constructed From a Sequence of Real Numbers",
+    "Proof that the Inferior (Superior) Limit is the Smallest (Largest) of its Partial Limits"
+  ]
+}
