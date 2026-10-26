@@ -172,7 +172,19 @@
         "src/plugins/share-qr/vendor/qrcode-generator.js",
         "src/plugins/share-qr/vitest.config.js"
       ],
-      "order": 120
+      "order": 120,
+      "settings": {
+        "targetUrl": "",
+        "label": "Scan to visit this site",
+        "filename": "site-qr",
+        "svg": true,
+        "png": true,
+        "triggerLabel": "",
+        "triggerIcon": "qr",
+        "maxSize": 360,
+        "accentToken": "--interactive-accent",
+        "externalTrigger": false
+      }
     },
     "dg-link-preview": {
       "order": 40,
