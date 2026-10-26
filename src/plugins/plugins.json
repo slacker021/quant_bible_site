@@ -12,7 +12,8 @@
         "src/plugins/copy-code-button/garden-plugin.json",
         "src/plugins/copy-code-button/styles/copy.scss",
         "src/plugins/copy-code-button/templates/copy.njk"
-      ]
+      ],
+      "order": 10
     },
     "image-lightbox": {
       "repo": "oleeskild/garden-plugin-image-lightbox",
@@ -25,10 +26,12 @@
         "src/plugins/image-lightbox/garden-plugin.json",
         "src/plugins/image-lightbox/styles/lightbox.scss",
         "src/plugins/image-lightbox/templates/lightbox.njk"
-      ]
+      ],
+      "order": 90
     },
     "dg-filetree": {
-      "enabled": true
+      "enabled": true,
+      "order": 30
     },
     "resizable-panes": {
       "repo": "koltensaccount/garden-plugin-resizable-panes",
@@ -54,7 +57,8 @@
         "src/plugins/resizable-panes/tests/browser.test.cjs",
         "src/plugins/resizable-panes/tests/fixtures/page-panel.css",
         "src/plugins/resizable-panes/tests/runtime.test.cjs"
-      ]
+      ],
+      "order": 110
     },
     "sidebar-controls": {
       "repo": "oleeskild/garden-plugin-sidebar-controls",
@@ -70,7 +74,8 @@
         "src/plugins/sidebar-controls/templates/floating.njk",
         "src/plugins/sidebar-controls/templates/footer.njk",
         "src/plugins/sidebar-controls/templates/head.njk"
-      ]
+      ],
+      "order": 130
     },
     "clean-print": {
       "repo": "koltensaccount/garden-plugin-clean-print",
@@ -94,7 +99,8 @@
         "src/plugins/clean-print/styles/nav-tools.css",
         "src/plugins/clean-print/templates/config.njk",
         "src/plugins/clean-print/tests/browser.test.cjs"
-      ]
+      ],
+      "order": 20
     },
     "reading-progress": {
       "repo": "koltensaccount/garden-plugin-reading-progress",
@@ -118,7 +124,8 @@
         "src/plugins/reading-progress/tests/browser.test.cjs",
         "src/plugins/reading-progress/tests/progress.test.cjs",
         "src/plugins/reading-progress/tests/upstream-smoke.cjs"
-      ]
+      ],
+      "order": 100
     },
     "giscus-comments": {
       "repo": "oleeskild/garden-plugin-giscus-comments",
@@ -130,7 +137,8 @@
         "src/plugins/giscus-comments/README.md",
         "src/plugins/giscus-comments/garden-plugin.json",
         "src/plugins/giscus-comments/templates/comments.njk"
-      ]
+      ],
+      "order": 80
     },
     "share-qr": {
       "repo": "palol/garden-plugin-share-qr",
@@ -156,7 +164,20 @@
         "src/plugins/share-qr/vendor/LICENSE.qrcode-generator",
         "src/plugins/share-qr/vendor/qrcode-generator.js",
         "src/plugins/share-qr/vitest.config.js"
-      ]
+      ],
+      "order": 120
+    },
+    "dg-link-preview": {
+      "order": 40
+    },
+    "dg-math": {
+      "order": 50
+    },
+    "dg-search": {
+      "order": 60
+    },
+    "dg-timestamps": {
+      "order": 70
     }
   }
 }
