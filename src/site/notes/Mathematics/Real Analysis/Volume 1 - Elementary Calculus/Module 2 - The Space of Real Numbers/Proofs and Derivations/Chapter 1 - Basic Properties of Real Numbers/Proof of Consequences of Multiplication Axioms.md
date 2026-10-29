@@ -2,25 +2,77 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-1-basic-properties-of-real-numbers/proof-of-consequences-of-multiplication-axioms/","dg-note-properties":{}}
 ---
 
-The proofs for these propositions merely repeat the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 1 - Basic Properties of Real Numbers/Proof of Consequences of Addition Axioms\|proofs for the consequences of the addition axioms]], except for a change in the symbol and name of the operation. 
+Let $a, b, x \in \mathbb{R}$ be elements of the multiplicative group structure of the field $(\mathbb{R}, +, \cdot)$.
 
+--------------------------------------------------------------------------------
 # Proposition 1
-Let $1_{1}, 1_{2} \in \mathbb{R} \setminus \{0\}$ both satisfy the axiom of the multiplicative identity. Because $1_{1}$ and $1_{2}$ are multiplicative identities: $$ 1_{1} \cdot 1_{2} = 1_{1} \text{ and } 1_{2} \cdot 1_{1} = 1_{2} \tag{1} $$ By the commutativity of multiplication, $$ 1_{1} \cdot 1_{2} = 1_{2} \cdot 1_{1} \tag{2} $$ Equating the expressions yields$$ 1_{1} = 1_{1} \cdot 1_{2} = 1_{2} \cdot 1_{1} = 1_{2} \tag{3} $$ Therefore, the multiplicative identity element is unique and denoted by $1$.
+Let $1_1, 1_2 \in \mathbb{R} \setminus \{0\}$ both satisfy the axiom of the multiplicative identity. 
+
+Because $1_2$ is a multiplicative identity element:
+$$
+1_1 \cdot 1_2 = 1_1 \tag{1}
+$$
+Because $1_1$ is a multiplicative identity element:
+$$
+1_2 \cdot 1_1 = 1_2 \tag{2}
+$$
+By the commutativity of multiplication: 
+$$
+1_1 \cdot 1_2 = 1_2 \cdot 1_1 \tag{3}
+$$
+Combining step 1, step 2, and step 3 yields: 
+$$
+1_1 = 1_1 \cdot 1_2 = 1_2 \cdot 1_1 = 1_2 \tag{4}
+$$
+Therefore, the multiplicative identity element is unique and denoted unambiguously by $1$.
+
+--------------------------------------------------------------------------------
+# Proposition 2
+Let $x \in \mathbb{R} \setminus \{0\}$, and suppose that $x_1, x_2 \in \mathbb{R}$ both satisfy the condition of being a multiplicative inverse of $x$:
+$$
+x \cdot x_1 = x_1 \cdot x = 1 \quad \wedge \quad x \cdot x_2 = x_2 \cdot x = 1 \tag{5}
+$$
+Beginning with $x_1$ and successively applying the multiplicative identity axiom, the definition of $x_2$ as an inverse, associativity, the definition of $x_1$ as an inverse, and the multiplicative identity axiom:
+$$
+\begin{align}
+x_1 &= x_1 \cdot 1 \\[2mm]
+&= x_1 \cdot (x \cdot x_2) \\[2mm]
+&= (x_1 \cdot x) \cdot x_2 \\[2mm]
+&= 1 \cdot x_2 \\[2mm]
+&= x_2 \tag{6}
+\end{align}
+$$
+Therefore, the multiplicative inverse of $x$ is unique and denoted unambiguously by $x^{-1}$ (or $\frac{1}{x}$).
+
+--------------------------------------------------------------------------------
+# Proposition 3
+Let $a \in \mathbb{R} \setminus \{0\}$ and $b \in \mathbb{R}$.
+
+### Existence
+Substitute the candidate value $x = b \cdot a^{-1}$ into the left-hand side of the linear equation $a \cdot x = b$. Utilizing the commutativity and associativity of multiplication:
+$$
+\begin{align}
+a \cdot (b \cdot a^{-1}) &= a \cdot (a^{-1} \cdot b) \\[2mm]
+&= (a \cdot a^{-1}) \cdot b \\[2mm]
+&= 1 \cdot b \\[2mm]
+&= b \tag{7}
+\end{align}
+$$
+Thus, $x = b \cdot a^{-1} =: \frac{b}{a}$ satisfies the equation, establishing existence.
+
+### Uniqueness
+Let $x \in \mathbb{R}$ be an arbitrary element satisfying $a \cdot x = b$. Because $a \neq 0$, the unique reciprocal $a^{-1}$ exists. Multiplying both sides by $a^{-1}$:
+$$
+\begin{align}
+a \cdot x = b &\implies a^{-1} \cdot (a \cdot x) = a^{-1} \cdot b \\[2mm]
+&= (a^{-1} \cdot a) \cdot x = b \cdot a^{-1} \\[2mm]
+&= 1 \cdot x = b \cdot a^{-1} \\[2mm]
+&= x = b \cdot a^{-1} \tag{8}
+\end{align}
+$$
+Because any candidate solution $x$ is uniquely determined as $b \cdot a^{-1}$, the solution is unique.
 $$
 \begin{gather}
-1_{1} = 1_{1} \cdot 1_{2} = 1_{2} \cdot 1_{1} = 1_{2} \tag{4}
+\textbf{Q.E.D.}
 \end{gather}
-$$
-
----
-# Proposition 2
-Let $x \in \mathbb{R} \setminus \{0\}$, and suppose that $x_{1}, x_{2} \in \mathbb{R}$ both satisfy the conditions of being a multiplicative inverse of $x$, that is: $$ x \cdot x_{1} = x_{1} \cdot x = 1 \quad \text{and} \quad x \cdot x_{2} = x_{2} \cdot x = 1 \tag{5}$$ Beginning with $x_{1}$ and applying successively the identity axiom, the definition of $x_{2}$ as an inverse, associativity, the definition of $x_{1}$ as an inverse, and the identity axiom: $$ \begin{align} x_{1} &= x_{1} \cdot 1 \\[2mm] &= x_{1} \cdot (x \cdot x_{2}) \\[2mm] &= (x_{1} \cdot x) \cdot x_{2} \\[2mm] &= 1 \cdot x_{2} \\[2mm] &= x_{2} \tag{6} \end{align} $$ Therefore, the reciprocal is unique and is denoted unambiguously by $x^{-1}$ (or $\frac{1}{x}$).
-
----
-# Proposition 3
-Let $a \in \mathbb{R}\setminus \{ 0 \}$ and $b \in \mathbb{R}$ such that $a \cdot x = b$, with $x$ being some real number. Substitute the candidate value $x = b \cdot a^{-1}$ into the left-hand side of the equation. Utilizing the commutativity and associativity of multiplication: $$ \begin{align} a \cdot (b \cdot a^{-1}) &= a \cdot (a^{-1} \cdot b) \\[2mm] &= (a \cdot a^{-1}) \cdot b \\[2mm] &= 1 \cdot b \\[2mm] &= b \tag{7} \end{align} $$ Thus, $x = b \cdot a^{-1}$ satisfies the equation. 
-
-Because $a \ne 0$, the inverse $a^{-1}$ exists. Multiplying both sides of the equation by $a^{-1}$: $$ \begin{align} a \cdot x = b &\implies a^{-1} \cdot (a \cdot x) = a^{-1} \cdot b \\[2mm] &\implies (a^{-1} \cdot a) \cdot x = b \cdot a^{-1} \\[2mm] &\implies 1 \cdot x = b \cdot a^{-1} \\[2mm] &\implies x = b \cdot a^{-1} \tag{8} \end{align} $$ Because this implication is reversible via multiplication by $a$, the solution is unique.
-$$
-\textbf{Q.E.D}
 $$

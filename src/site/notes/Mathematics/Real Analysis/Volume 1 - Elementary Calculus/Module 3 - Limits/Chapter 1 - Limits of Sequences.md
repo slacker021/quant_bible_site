@@ -25,7 +25,7 @@ The convergence of a sequence is determined by whether its terms approach a spec
 $$
 \begin{gather}
 \textbf{Definition: Limit of a Sequence and Convergence} \\[5mm]
-\text{A real number } A \text{ is the limit of a sequence } \{x_n\} \text{ if for every } \varepsilon > 0, \\[2mm]
+\text{A real number } A \in \mathbb{R} \text{ is the limit of a sequence } \{x_n\} \text{ if for every } \varepsilon > 0, \\[2mm]
 \text{there exists a natural number } N \in \mathbb{N} \text{ such that for all } n > N, \\[2mm]
 \text{the inequality } |x_n - A| < \varepsilon \text{ holds.} \\[3.5mm]
 \lim_{n \to \infty} x_n = A := \forall \varepsilon > 0 \ \exists N \in \mathbb{N} \ \forall n > N \ (|x_n - A| < \varepsilon) \\[3.5mm]
@@ -38,7 +38,7 @@ $$
 > [!danger]+ Intuition: Error Tolerance
 > In the rigorous definition of a limit, the quantity $\varepsilon > 0$ acts as an arbitrary error tolerance constraint. Regardless of how stringent a level of precision $\varepsilon > 0$ is prescribed, there exists a threshold index $N \in \mathbb{N}$ such that the absolute error $|x_n - A|$ in approximating the exact limit $A$ by the terms $x_n$ of the sequence remains strictly less than $\varepsilon$ for all indices $n > N$. Notably, the definition of the limit does not provide an algorithm to compute the candidate value $A$ a priori; rather, it serves as the formal criterion to verify that a proposed value $A$ is indeed the limit.
 > 
-> The definition of the limit of a sequence when used in the context of proving its existence only works when one proposes a candidate limit value, which is a real number. 
+> The definition of the limit of a sequence when used in the context of proving its existence only works when one proposes a candidate limit value, which is a real number.
 
 Broadly speaking, two structural classifications of sequences frequently emerge during asymptotic analysis:
 $$
@@ -52,7 +52,7 @@ $$
 $$
 
 ### Basic Properties of Limits
-With the formal definitions established, fundamental properties governing the topological and algebraic behavior of limits can be deduced:
+With the formal definitions established, fundamental properties regarding the behavior and algebra of limits can be deduced.  
 $$
 \begin{gather}
 \textbf{Theorem: Basic Properties of Limits} \\[5mm]
@@ -60,28 +60,27 @@ $$
 \text{2. Any neighborhood of the limit of a sequence contains all but a finite number} \\[2mm]
 \text{of terms of the sequence.} \\[2mm]
 \text{3. A convergent sequence has a unique limit.} \\[2mm]
-\text{4. Every convergent sequence is bounded.}
+\text{4. A convergent sequence is bounded.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Basic Properties of Limits\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Basic Properties of Limits\|Proof of the Basic Properties of Limits]]) 
 
 > [!warning]+ Warning: Convergence vs. Boundedness
-> While convergence strictly implies boundedness, the converse is false. A bounded sequence can oscillate indefinitely—such as $x_n = (-1)^n$—without ever settling toward a single real value. To guarantee convergence in a bounded sequence, additional structural constraints, such as monotonicity, are required.
+> While convergence strictly implies boundedness, the converse is false. A bounded sequence can oscillate indefinitely—such as $x_n = (-1)^n$—without settling toward a single real value. To guarantee convergence in a bounded sequence, additional structural constraints, such as monotonicity, are required.
 
-Because limits of real sequences are real numbers, standard arithmetic operations defined by the field axioms of addition and multiplication apply directly to convergent sequences:
+Given that existent limits are real numbers, it naturally follows that standard arithmetic operations defined by the axioms of addition and multiplication apply directly to limits:  
 $$
 \begin{gather}
 \textbf{Theorem: Arithmetic Properties of Limits} \\[5mm]
 \text{If } \lim_{n \to \infty} x_{n} = A \text{ and } \lim_{n \to \infty} y_{n} = B, \text{ then:} \\[3.5mm]
-\text{1. } \lim_{n \to \infty} (x_{n} + y_{n}) = A + B \\[2mm]
-\text{2. } \lim_{n \to \infty} (x_{n} \cdot y_{n}) = A \cdot B \\[2mm]
-\text{3. } \lim_{n \to \infty} \frac{x_n}{y_n} = \frac{A}{B}, \text{ provided } B \neq 0 \text{ and } y_{n} \neq 0 \text{ for all } n \in \mathbb{N}. \\[2mm]
-\text{4. } \lim_{n \to \infty} (c x_{n}) = c A, \text{ where } c \in \mathbb{R} \text{ is a real-valued constant.} \\[2mm]
-\text{5. } \lim_{n \to \infty} x_{n}^p = A^p, \text{ where } p \in \mathbb{R} \text{ is a real exponent, } x_{n} > 0, \text{ and } A > 0 \\[2mm]
-\text{(or } x_n \ge 0 \text{ and } A \ge 0 \text{ when } p > 0\text{).}
+\text{1. } \lim_{n \to \infty}(x_{n} + y_{n}) = A + B \\[2mm]
+\text{2. } \lim_{n \to \infty}(x_{n} \cdot y_{n}) = A \cdot B \\[2mm]
+\text{3. } \lim_{n \to \infty} \frac{x_n}{y_n} = \frac{A}{B}, \quad \text{provided } B \neq 0 \text{ and } y_{n} \neq 0 \text{ for all } n > N \ (N \in \mathbb{N}) \\[2mm]
+\text{4. } \lim_{n \to \infty} (c \cdot x_{n}) = c \cdot A, \quad \text{where } c \in \mathbb{R} \text{ is a constant} \\[2mm]
+\text{5. } \lim_{n \to \infty} x_{n}^p = A^p, \quad \text{where } p \in \mathbb{R}, \text{ with } A > 0 \text{ and } x_n > 0 \text{ for all } n \in \mathbb{N}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Operations Involving Limits\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Operations Involving Limits\|Proof of Arithmetic Operations Involving Limits]])
 
 Another consequence of sequence limits residing in $\mathbb{R}$ is that the order axioms can be applied to them, enabling bounded comparisons across sequences:
 $$
@@ -95,7 +94,7 @@ x_{n} < y_{n} \text{ for all } n > N. \\[3.5mm]
 \text{then the intermediate sequence } \{y_{n}\} \text{ also converges to } A \text{ (The Squeeze Theorem).}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Inequalities Involving Limits\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Inequalities Involving Limits\|Proof of Inequalities Involving Limits]])
 
 This ordered structure yields the following corollary governing the passage to the limit in strict and non-strict inequalities:
 $$
@@ -109,36 +108,36 @@ $$
 \text{4. } (\forall n > N, \ x_{n} \ge b) \implies A \ge b
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Corollary for Limit Inequalities\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Corollary for Limit Inequalities\|Proof of the Corollary for Limit Inequalities]])
 
-> [!info]+ Remark: Strict Inequalities in Limits
-> A strict inequality between sequence terms generally relaxes into a non-strict inequality in the limit. For instance, the strict inequality $\frac{1}{n} > 0$ holds for every $n \in \mathbb{N}$, yet $\lim_{n \to \infty} \frac{1}{n} = 0$.
+> [!info]+ Remark: Strict Inequalities in Limits 
+> It is worth noting that a strict inequality between sequence terms may degrade into an equality in the limit. For example, $\frac{1}{n} > 0$ for all $n \in \mathbb{N}$, yet the limit as $n \to \infty$ of $\frac{1}{n}$ is exactly $0$.
 
-The following theorem characterizes the convergence and limiting value of the geometric sequence $\{r^n\}$ across all possible real bases $r \in \mathbb{R}$:
+The asymptotic behavior of geometric progressions represents an essential benchmark in analysis:
 $$
 \begin{gather}
-\textbf{Theorem: Convergence of the Geometric Sequence} \\[5mm]
-\text{The geometric sequence } \{r^n\}_{n=1}^\infty \text{ converges if } -1 < r \le 1 \text{ and} \\[2mm]
-\text{diverges for all other real values of } r \text{ (namely, } r \le -1 \text{ or } r > 1\text{). Furthermore:} \\[3.5mm]
+\textbf{Theorem: Convergence of Geometric Sequences} \\[5mm]
+\text{The geometric sequence } \{r^n\}_{n=0}^\infty \text{ converges if and only if } -1 < r \le 1. \\[2mm]
+\text{Specifically, its limit satisfies:} \\[3.5mm]
 \lim_{n \to \infty} r^n = \begin{cases}
-0 & \text{if } -1 < r < 1 \\[2mm]
-1 & \text{if } r = 1
-\end{cases}
+0, & \text{if } -1 < r < 1 \\[2mm]
+1, & \text{if } r = 1
+\end{cases} \\[3.5mm]
+\text{For all other values of } r \ (r > 1 \text{ or } r \le -1), \text{ the sequence diverges.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem About r and n\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem About r and n\|Proof of Theorem About r and n]])
 
-Furthermore, the convergence of a sequence can be determined by partitioning its terms into even-indexed and odd-indexed progressions:
+Decomposing a parent sequence into complementary subsequences provides a useful reduction technique:
 $$
 \begin{gather}
-\textbf{Theorem: Convergence via Even and Odd-Indexed Terms} \\[5mm]
-\text{A sequence } \{x_{n}\} \text{ converges to a limit } A \in \mathbb{R} \text{ if and only if both} \\[2mm]
-\lim_{n \to \infty} x_{2n} = A \quad \text{and} \quad \lim_{n \to \infty} x_{2n+1} = A.
+\textbf{Theorem: Convergence via Complementary Parity Subsequences} \\[5mm]
+\text{A sequence } \{x_n\} \text{ converges to a limit } A \in \mathbb{R} \text{ if and only if its even-indexed subsequence } \{x_{2n}\} \\[2mm]
+\text{and its odd-indexed subsequence } \{x_{2n+1}\} \text{ both converge to } A\text{:} \\[3.5mm]
+\lim_{n \to \infty} x_n = A \iff \left(\lim_{n \to \infty} x_{2n} = A \quad \wedge \quad \lim_{n \to \infty} x_{2n+1} = A\right)
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem Involving Odd and Even-Indexed Sequences\|proof]])
-
-This theorem provides a necessary and sufficient condition for the convergence of a sequence: the parent sequence $\{x_n\}$ converges to $A$ if and only if its even-indexed terms $\{x_{2n}\}$ and odd-indexed terms $\{x_{2n+1}\}$ both converge to the common limit $A$. This technique is particularly effective for decomposing an oscillating or piecewise-defined sequence into two simpler progressions.
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem Involving Odd and Even-Indexed Sequences\|Proof of Theorem Involving Odd and Even-Indexed Sequences]])
 
 ### Existence of Limits
 Relying on an external candidate value $A$ to verify convergence is frequently impractical when the exact limit is unknown a priori. A purely internal criterion is therefore necessary—one that examines how the terms of the sequence behave relative to one another rather than comparing them against a predefined target:
@@ -146,7 +145,9 @@ $$
 \begin{gather}
 \textbf{Definition: Cauchy Sequence} \\[5mm]
 \text{A sequence } \{x_{n}\} \text{ is called a fundamental sequence (or Cauchy sequence) if for every } \varepsilon > 0, \\[2mm]
-\text{there exists an index } N \in \mathbb{N} \text{ such that } |x_{m} - x_{n}| < \varepsilon \text{ whenever } n > N \text{ and } m > N.
+\text{there exists an index } N \in \mathbb{N} \text{ such that for all } n > N \text{ and all } m > N, \\[2mm]
+\text{the inequality } |x_{m} - x_{n}| < \varepsilon \text{ holds.} \\[3.5mm]
+(\{x_n\} \text{ is Cauchy}) := \forall \varepsilon > 0 \ \exists N \in \mathbb{N} \ \forall n > N \ \forall m > N \ (|x_m - x_n| < \varepsilon)
 \end{gather}
 $$
 
@@ -157,43 +158,31 @@ $$
 \text{A sequence of real numbers converges if and only if it is a Cauchy sequence.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Cauchy Criterion for Sequences\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Cauchy Criterion for Sequences\|Proof of the Cauchy Criterion for Sequences]])
 
-The Cauchy Criterion is one of the most profound principles in mathematical analysis. It supplies an intrinsic test for convergence that depends solely on the mutual distances between terms of the sequence, eliminating the need to identify the limiting value beforehand.
+The Cauchy Criterion supplies an intrinsic test for convergence that depends solely on the mutual distances between terms of the sequence, eliminating the need to identify the limiting value beforehand.
 
-A particularly important class of sequences arises when the terms consistently progress in a single direction as the index increases:
+When combined with the concept of boundedness, monotonic sequences display a guaranteed convergence behavior:  
 $$
 \begin{gather}
-\textbf{Definition: Monotonic Sequences} \\[5mm]
-\text{1. A sequence } \{x_{n}\} \text{ is increasing (strictly increasing) if } x_{n} < x_{n+1} \text{ for all } n \in \mathbb{N}. \\[2mm]
-\text{2. A sequence } \{x_{n}\} \text{ is nondecreasing if } x_{n} \le x_{n+1} \text{ for all } n \in \mathbb{N}. \\[2mm]
-\text{3. A sequence } \{x_{n}\} \text{ is decreasing (strictly decreasing) if } x_{n} > x_{n+1} \text{ for all } n \in \mathbb{N}. \\[2mm]
-\text{4. A sequence } \{x_{n}\} \text{ is nonincreasing if } x_{n} \ge x_{n+1} \text{ for all } n \in \mathbb{N}. \\[3.5mm]
-\text{Sequences satisfying any of these four conditions are called monotonic.}
+\textbf{Theorem: Weierstrass Monotone Convergence Theorem} \\[5mm]
+\text{1. A nondecreasing sequence } \{x_n\} \text{ converges if and only if it is bounded above.} \\[2mm]
+\text{In this case, its limit coincides with its supremum: } \lim_{n \to \infty} x_n = \sup_{n \in \mathbb{N}} x_n. \\[3.5mm]
+\text{2. A nonincreasing sequence } \{x_n\} \text{ converges if and only if it is bounded below.} \\[2mm]
+\text{In this case, its limit coincides with its infimum: } \lim_{n \to \infty} x_n = \inf_{n \in \mathbb{N}} x_n.
 \end{gather}
 $$
-
-When paired with boundedness, monotonic sequences exhibit guaranteed convergence:
-$$
-\begin{gather}
-\textbf{Theorem: Weierstrass Theorem on Monotonic Sequences} \\[5mm]
-\text{1. A nondecreasing sequence } \{x_n\} \text{ converges if and only if it is bounded above,} \\[2mm]
-\text{in which case } \lim_{n \to \infty} x_n = \sup_{n \in \mathbb{N}} x_n. \\[3.5mm]
-\text{2. A nonincreasing sequence } \{x_n\} \text{ converges if and only if it is bounded below,} \\[2mm]
-\text{in which case } \lim_{n \to \infty} x_n = \inf_{n \in \mathbb{N}} x_n.
-\end{gather}
-$$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Weierstrass Theorem on Monotonic Sequences\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Weierstrass Theorem on Monotonic Sequences\|Proof of Weierstrass Theorem on Monotonic Sequences]])
 
 This theorem directly facilitates the evaluation of fundamental root limits:
 $$
 \begin{gather}
 \textbf{Corollary: Asymptotics of } n\textbf{-th Roots} \\[5mm]
 \text{1. } \lim_{n \to \infty} \sqrt[n]{n} = 1 \\[2mm]
-\text{2. } \lim_{n \to \infty} \sqrt[n]{a} = 1 \text{ for any constant } a > 0
+\text{2. } \lim_{n \to \infty} \sqrt[n]{a} = 1 \quad \text{for any constant } a > 0
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Corollary of the Weierstrass Theorem\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Corollary of the Weierstrass Theorem\|Proof of Corollary of the Weierstrass Theorem]])
 
 Another critical application of the Weierstrass Theorem establishes the convergence of the sequence $\left\{\left(1 + \frac{1}{n}\right)^n\right\}$, which is strictly increasing and bounded above, thereby defining the foundational constant governing continuous compounding, growth, and decay:
 $$
@@ -204,7 +193,7 @@ $$
 e := \lim_{n \to \infty} \left(1 + \frac{1}{n} \right)^n
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Derivation of Euler's Constant\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Derivation of Euler's Number e\|Derivation of Euler's Number e]])
 
 ### Subsequences and Partial Limits
 Analogous to extracting subsets in set theory, one can construct subsequences from a parent sequence by selecting an infinite progression of terms while strictly preserving their original index ordering:
@@ -223,25 +212,25 @@ $$
 Combining boundedness with the extraction of subsequences yields one of the most vital lemmas in real analysis:
 $$
 \begin{gather}
-\textbf{Lemma: Bolzano-Weierstrass} \\[5mm]
+\textbf{Lemma: Bolzano-Weierstrass for Sequences} \\[5mm]
 \text{Every bounded sequence of real numbers contains a convergent subsequence.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Bolzano-Weierstrass Lemma\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Bolzano-Weierstrass Lemma\|Proof of the Bolzano-Weierstrass Lemma]])
 
 While an unbounded sequence may fail to converge to a finite real number, its asymptotic trajectory can still be rigorously classified if it escapes toward infinity:
 $$
 \begin{gather}
-\textbf{Definition: Trending Towards Infinity} \\[5mm]
+\textbf{Definition: Sequences Tending to Infinity} \\[5mm]
 \text{1. A sequence } \{ x_{n} \} \text{ tends to positive infinity if for every real number } c \in \mathbb{R}, \text{ there exists } N \in \mathbb{N} \\[2mm]
 \text{such that } x_{n} > c \text{ for all } n > N. \text{ Symbolically:} \\[3.5mm]
-x_{n} \rightarrow +\infty := \forall c \in \mathbb{R} \ \exists N \in \mathbb{N} \ \forall n > N \ (x_{n} > c) \\[3.5mm]
+x_{n} \to +\infty := \forall c \in \mathbb{R} \ \exists N \in \mathbb{N} \ \forall n > N \ (x_{n} > c) \\[3.5mm]
 \text{2. A sequence } \{ x_{n} \} \text{ tends to negative infinity if for every real number } c \in \mathbb{R}, \text{ there exists } N \in \mathbb{N} \\[2mm]
 \text{such that } x_{n} < c \text{ for all } n > N. \text{ Symbolically:} \\[3.5mm]
-x_{n} \rightarrow -\infty := \forall c \in \mathbb{R} \ \exists N \in \mathbb{N} \ \forall n > N \ (x_{n} < c) \\[3.5mm]
+x_{n} \to -\infty := \forall c \in \mathbb{R} \ \exists N \in \mathbb{N} \ \forall n > N \ (x_{n} < c) \\[3.5mm]
 \text{3. A sequence } \{ x_{n} \} \text{ tends to unsigned infinity if for every real number } c \in \mathbb{R}, \text{ there exists } N \in \mathbb{N} \\[2mm]
 \text{such that } |x_{n}| > c \text{ for all } n > N. \text{ Symbolically:} \\[3.5mm]
-x_{n} \rightarrow \infty := \forall c \in \mathbb{R} \ \exists N \in \mathbb{N} \ \forall n > N \ (|x_{n}| > c)
+x_{n} \to \infty := \forall c \in \mathbb{R} \ \exists N \in \mathbb{N} \ \forall n > N \ (|x_{n}| > c)
 \end{gather}
 $$
 
@@ -256,17 +245,17 @@ $$
 \text{a convergent subsequence or a subsequence that tends to infinity.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof that a Convergent Subsequence or Subsequence Tending to Infinity Can be Constructed From a Sequence of Real Numbers\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof that a Convergent Subsequence or Subsequence Tending to Infinity Can be Constructed From a Sequence of Real Numbers\|Proof that a Convergent Subsequence or Subsequence Tending to Infinity Can be Constructed From a Sequence of Real Numbers]])
 
-Suppose that $\{x_{k}\}$ is a sequence of real numbers bounded below. For each $n \in \mathbb{N}$, one may define the tail infimum $i_{n} := \inf_{k \ge n} x_{k}$. Because taking the infimum over a progressively smaller set of indices cannot decrease its value, the sequence $\{i_n\}$ is nondecreasing ($i_{n} \le i_{n+1}$ for all $n \in \mathbb{N}$). Consequently, either $\{ i_{n} \}$ converges to a finite limit $\lim_{n \to \infty} i_{n} = l \in \mathbb{R}$ or $i_{n} \rightarrow +\infty$. Applying the dual reasoning to the tail supremum $s_n := \sup_{k \ge n} x_k$ motivates the definitions of the inferior and superior limits:
+Suppose that $\{x_{k}\}$ is a sequence of real numbers bounded below. For each $n \in \mathbb{N}$, one may define the tail infimum $i_{n} := \inf_{k \ge n} x_{k}$. Because taking the infimum over a progressively smaller set of indices cannot decrease its value, the sequence $\{i_n\}$ is nondecreasing ($i_{n} \le i_{n+1}$ for all $n \in \mathbb{N}$). Consequently, either $\{ i_{n} \}$ converges to a finite limit $\lim_{n \to \infty} i_{n} = l \in \mathbb{R}$ or $i_{n} \to +\infty$. Applying the dual reasoning to the tail supremum $s_n := \sup_{k \ge n} x_k$ motivates the definitions of the inferior and superior limits:
 $$
 \begin{gather}
 \textbf{Definition: Inferior and Superior Limits} \\[5mm]
 \text{1. The quantity } l = \lim_{n \to \infty} \left(\inf_{k \ge n} x_{k}\right) \text{ is called the inferior limit (or limit inferior) of } \{ x_{k} \}, \\[2mm]
-\text{denoted by } \liminf_{k \to \infty} x_{k} \text{ or } \underline{\lim}_{k \to \infty} x_k. \text{ If } i_{n} = \inf_{k \ge n} x_k \rightarrow +\infty, \text{ then } \liminf_{k \to \infty} x_k := +\infty. \\[2mm]
+\text{denoted by } \liminf_{k \to \infty} x_{k} \text{ or } \underline{\lim}_{k \to \infty} x_k. \text{ If } i_{n} = \inf_{k \ge n} x_k \to +\infty, \text{ then } \liminf_{k \to \infty} x_k := +\infty. \\[2mm]
 \text{If } \{ x_{k} \} \text{ is unbounded below, then } i_{n} = -\infty \text{ for all } n \in \mathbb{N}, \text{ and } \liminf_{k \to \infty} x_k := -\infty. \\[3.5mm]
 \text{2. The quantity } L = \lim_{n \to \infty} \left(\sup_{k \ge n} x_{k}\right) \text{ is called the superior limit (or limit superior) of } \{ x_{k} \}, \\[2mm]
-\text{denoted by } \limsup_{k \to \infty} x_{k} \text{ or } \overline{\lim}_{k \to \infty} x_k. \text{ If } s_{n} = \sup_{k \ge n} x_{k} \rightarrow -\infty, \text{ then } \limsup_{k \to \infty} x_k := -\infty. \\[2mm]
+\text{denoted by } \limsup_{k \to \infty} x_{k} \text{ or } \overline{\lim}_{k \to \infty} x_k. \text{ If } s_{n} = \sup_{k \ge n} x_{k} \to -\infty, \text{ then } \limsup_{k \to \infty} x_k := -\infty. \\[2mm]
 \text{If } \{ x_{k} \} \text{ is unbounded above, then } s_{n} = +\infty \text{ for all } n \in \mathbb{N}, \text{ and } \limsup_{k \to \infty} x_k := +\infty.
 \end{gather}
 $$
@@ -290,7 +279,7 @@ $$
 \text{and the superior limit is the largest of its partial limits.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof that the Inferior (Superior) Limit is the Smallest (Largest) of its Partial Limits\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof that the Inferior (Superior) Limit is the Smallest (Largest) of its Partial Limits\|Proof that the Inferior (Superior) Limit is the Smallest (Largest) of its Partial Limits]])
 
 From this proposition, essential corollaries governing overall sequence convergence emerge:
 $$
@@ -299,11 +288,11 @@ $$
 \text{1. A sequence } \{x_n\} \text{ converges to a finite limit } A \in \mathbb{R} \text{ (or tends to } -\infty \text{ or } +\infty\text{) if and only if} \\[2mm]
 \text{its inferior and superior limits coincide: } \liminf_{n \to \infty} x_n = \limsup_{n \to \infty} x_n = A. \\[3.5mm]
 \text{2. A sequence converges to } A \text{ if and only if every subsequence of it converges to } A. \\[3.5mm]
-\text{3. The Bolzano-Weierstrass Lemma (both restricted and general forms)} \\[2mm]
-\text{follows directly from the existence of the inferior and superior partial limits.}
+\text{3. The Bolzano-Weierstrass Lemma follows directly from the existence} \\[2mm]
+\text{of finite inferior and superior partial limits for bounded sequences.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Corollary of Partial Limits Proposition\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Corollary of Partial Limits Proposition\|Proof of the Corollary of Partial Limits Proposition]])
 
 ---
 # Elementary Facts About Series
@@ -335,12 +324,13 @@ $$
 \textbf{Theorem: Cauchy Convergence Criterion for a Series} \\[5mm]
 \text{The series } \sum_{n=1}^\infty a_n \text{ converges if and only if for every } \varepsilon > 0, \text{ there exists an index } N \in \mathbb{N} \\[2mm]
 \text{such that for all } m \ge n > N, \text{ the inequality } \left| \sum_{k=n}^m a_k \right| < \varepsilon \text{ holds.} \\[5mm]
-\textbf{Corollary: Necessary Condition for Series Convergence} \\[5mm]
+\textbf{Corollary: Necessary Condition for Series Convergence (Divergence Test)} \\[5mm]
 \text{A necessary condition for the convergence of the series } \sum_{n=1}^\infty a_n \text{ is that} \\[2mm]
-\text{its individual terms tend to zero as } n \to \infty\text{: } \lim_{n \to \infty} a_n = 0.
+\text{its terms tend to zero as } n \to \infty\text{: } \lim_{n \to \infty} a_n = 0. \\[2mm]
+\text{Consequently, if } \lim_{n \to \infty} a_n \neq 0 \text{ or if the limit does not exist, the series diverges.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Cauchy Convergence Criterion for a Series\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Cauchy Convergence Criterion for a Series\|Proof of the Cauchy Convergence Criterion for a Series]])
 
 ### Absolute Convergence and Comparison Tests
 While the vanishing of terms ($\lim_{n \to \infty} a_n = 0$) is a necessary condition for convergence, it is not sufficient (as exemplified by the harmonic series $\sum_{n=1}^\infty \frac{1}{n}$). Furthermore, analyzing series whose terms alternate or vary arbitrarily in sign can be delicate. To address this, a stricter mode of convergence based on term magnitudes is introduced:
@@ -352,37 +342,37 @@ $$
 \end{gather}
 $$
 
-By virtue of the triangle inequality $\left| \sum_{k=n}^m a_k \right| \le \sum_{k=n}^m |a_k|$ and the Cauchy Criterion, every absolutely convergent series is guaranteed to converge in the ordinary sense:
+Because of the triangle inequality $\left| \sum_{k=n}^m a_k \right| \le \sum_{k=n}^m |a_k|$, any absolutely convergent series is mathematically guaranteed to be convergent in the ordinary sense:
 $$
 \begin{gather}
-\textbf{Theorem: Absolute Convergence Implies Convergence} \\[5mm]
-\text{If the series } \sum_{n=1}^\infty a_{n} \text{ is absolutely convergent, then it is also convergent.}
+\textbf{Theorem: Absolute Convergence Principle} \\[5mm]
+\text{If a series } \sum_{n=1}^\infty a_n \text{ converges absolutely, then it converges in the ordinary sense.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem of Absolute Convergence\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem of Absolute Convergence\|Proof of Theorem of Absolute Convergence]])
 
-This theorem serves as a bridge between the behavior of the magnitudes of the terms in a series and the convergence of the series itself. Consequently, to establish absolute convergence, one need only analyze series with non-negative terms. Because the partial sums $s_n = \sum_{k=1}^n a_k$ of a series with $a_n \ge 0$ form a nondecreasing sequence, the Weierstrass Theorem immediately yields:
+This principle establishes a rigorous bridge between the behavior of term magnitudes and the convergence of the original series. Testing for absolute convergence allows analysts to study series constructed with non-negative terms:
 $$
 \begin{gather}
-\textbf{Theorem: Convergence Criterion for Series with Non-Negative Terms} \\[5mm]
-\text{A series } \sum_{n=1}^\infty a_n \text{ with non-negative terms } (a_n \ge 0 \text{ for all } n \in \mathbb{N}) \text{ converges} \\[2mm]
-\text{if and only if its sequence of partial sums is bounded above.}
+\textbf{Theorem: Convergence Criterion for Series with Non-negative Terms} \\[5mm]
+\text{A series } \sum_{n=1}^\infty a_n \text{ with } a_n \ge 0 \text{ converges if and only if} \\[2mm]
+\text{its sequence of partial sums } \{s_n\} \text{ is bounded above in } \mathbb{R}.
 \end{gather}
 $$
 
-This bounding principle leads directly to the standard comparison test, wherein an unknown series is benchmarked against a series of known behavior:
+This bounding principle leads directly to the standard comparison method:
 $$
 \begin{gather}
 \textbf{Theorem: Standard Comparison Test} \\[5mm]
-\text{Let } \sum_{n=1}^\infty a_n \text{ and } \sum_{n=1}^\infty b_n \text{ be two series with non-negative terms.} \\[2mm]
-\text{If there exists an index } N \in \mathbb{N} \text{ such that } a_n \le b_n \text{ for all } n > N, \text{ then:} \\[3.5mm]
+\text{Let } \sum_{n=1}^\infty a_n \text{ and } \sum_{n=1}^\infty b_n \text{ be two series with non-negative terms satisfying} \\[2mm]
+a_n \le b_n \text{ for all } n > N \ (N \in \mathbb{N}). \text{ Then:} \\[3.5mm]
 \text{1. The convergence of } \sum_{n=1}^\infty b_n \text{ implies the convergence of } \sum_{n=1}^\infty a_n. \\[2mm]
 \text{2. The divergence of } \sum_{n=1}^\infty a_n \text{ implies the divergence of } \sum_{n=1}^\infty b_n.
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Standard Comparison Test\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Standard Comparison Test\|Proof of the Standard Comparison Test]])
 
-An asymptotic formulation of the comparison principle compares the limiting ratio of the terms of two positive series:
+An asymptotic formulation compares the limiting ratio of terms across two strictly positive series:
 $$
 \begin{gather}
 \textbf{Theorem: Limit Comparison Test} \\[5mm]
@@ -391,25 +381,26 @@ $$
 \text{both series converge simultaneously or both series diverge simultaneously.}
 \end{gather}
 $$
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Limit Comparison Test\|Proof of the Limit Comparison Test]])
 
-Comparing an arbitrary series against a geometric series via the Standard Comparison Theorem yields the classical operational tests for series convergence:
+Comparing an arbitrary series against a geometric progression yields the classical operational tests:
 $$
 \begin{gather}
-\textbf{Corollary: Standard Convergence Tests} \\[5mm]
+\textbf{Corollary: Standard Operational Convergence Tests} \\[5mm]
 \text{1. \textbf{Comparison Test for Absolute Convergence}: If } |x_n| \le y_n \text{ for all } n > N \text{ and } \sum_{n=1}^\infty y_n \text{ converges,} \\[2mm]
 \text{then the series } \sum_{n=1}^\infty x_n \text{ converges absolutely.} \\[3.5mm]
 \text{2. \textbf{Cauchy's Root Test}: Let } \alpha = \limsup_{n \to \infty} \sqrt[n]{|x_n|}. \text{ If } \alpha < 1, \text{ the series } \sum_{n=1}^\infty x_n \\[2mm]
 \text{converges absolutely; if } \alpha > 1, \text{ the series } \sum_{n=1}^\infty x_n \text{ diverges.} \\[3.5mm]
 \text{3. \textbf{d'Alembert's Ratio Test}: Suppose } x_n \neq 0 \text{ for all } n > N, \text{ and let } \alpha = \lim_{n \to \infty} \left| \frac{x_{n+1}}{x_n} \right|. \\[2mm]
 \text{If } \alpha < 1, \text{ the series } \sum_{n=1}^\infty x_n \text{ converges absolutely; if } \alpha > 1, \text{ the series } \sum_{n=1}^\infty x_n \text{ diverges.} \\[3.5mm]
-\text{4. \textbf{Divergence Test (n-th Term Test)}: If } \lim_{n \to \infty} x_{n} \text{ does not exist or } \lim_{n \to \infty} x_{n} \neq 0, \\[2mm]
+\text{4. \textbf{Divergence Test}: If } \lim_{n \to \infty} x_{n} \text{ does not exist or } \lim_{n \to \infty} x_{n} \neq 0, \\[2mm]
 \text{then the series } \sum_{n=1}^\infty x_{n} \text{ diverges.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Corollary for Standard Convergence Test\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Corollary for Standard Convergence Test\|Proof of Corollary for Standard Convergence Test]])
 
 > [!warning]+ Warning: Inconclusiveness When $\alpha = 1$
-> If $\alpha = 1$ in either Cauchy's Root Test or d'Alembert's Ratio Test, the test yields no information: a series with $\alpha = 1$ may either converge (such as $\sum_{n=1}^\infty \frac{1}{n^2}$) or diverge (such as $\sum_{n=1}^\infty \frac{1}{n}$), necessitating more refined convergence tests.
+> If $\alpha = 1$ in either Cauchy's Root Test or d'Alembert's Ratio Test, the test yields no conclusive information: a series with $\alpha = 1$ may either converge (such as $\sum_{n=1}^\infty \frac{1}{n^2}$) or diverge (such as $\sum_{n=1}^\infty \frac{1}{n}$), necessitating more refined convergence tests.
 
 For series whose terms are non-negative and monotonically nonincreasing, Cauchy's condensation technique reduces convergence analysis to an exponentially condensed sub-series:
 $$
@@ -417,54 +408,57 @@ $$
 \textbf{Proposition: Cauchy Condensation Test} \\[5mm]
 \text{If } a_1 \ge a_2 \ge \dots \ge a_n \ge \dots \ge 0, \text{ then the series } \sum_{n=1}^\infty a_n \text{ converges if and only if} \\[2mm]
 \text{the exponentially condensed series } \sum_{k=0}^\infty 2^k a_{2^k} \text{ converges.} \\[5mm]
-\textbf{Corollary: Convergence of the p-Series} \\[5mm]
+\textbf{Corollary: Convergence of the Dirichlet p-Series} \\[5mm]
 \text{The Dirichlet } p\text{-series } \sum_{n=1}^\infty \frac{1}{n^p} \text{ converges for } p > 1 \text{ and diverges for } p \le 1.
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Cauchy Condensation Test\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Cauchy Condensation Test\|Proof of the Cauchy Condensation Test]])
 
 ### Arithmetic Properties of Series
-Because the sum of a convergent series is the finite limit of its sequence of partial sums, convergent series obey linearity under termwise scalar multiplication and addition:
+Because limits of convergent series are real numbers, the field operations of $\mathbb{R}$ apply directly to convergent series:
 $$
 \begin{gather}
 \textbf{Proposition: Arithmetic Properties of Series} \\[5mm]
-\text{If } \sum_{n=1}^\infty x_{n} \text{ and } \sum_{n=1}^\infty y_{n} \text{ are convergent series, then for any real constant } c \in \mathbb{R}\text{:} \\[3.5mm]
-\text{1. } \sum_{n=1}^\infty (c x_{n}) = c \sum_{n=1}^\infty x_{n} \\[2mm]
-\text{2. } \sum_{n=1}^\infty (x_{n} \pm y_{n}) = \sum_{n=1}^\infty x_{n} \pm \sum_{n=1}^\infty y_{n}
+\text{If } \sum_{n=1}^\infty x_{n} = X \text{ and } \sum_{n=1}^\infty y_{n} = Y \text{ are convergent series, then for any constant } c \in \mathbb{R}\text{:} \\[3.5mm]
+\text{1. } \sum_{n=1}^\infty (c \cdot x_{n}) = c \sum_{n=1}^\infty x_{n} = c \cdot X \\[2mm]
+\text{2. } \sum_{n=1}^\infty (x_{n} \pm y_{n}) = \sum_{n=1}^\infty x_{n} \pm \sum_{n=1}^\infty y_{n} = X \pm Y
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Properties of Series\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Properties of Series\|Proof of Arithmetic Properties of Series]])
 
 ### Series Rearrangement
-If $\sigma : \mathbb{N} \rightarrow \mathbb{N}$ is a bijection of the set of natural numbers onto itself, the series $\sum_{n=1}^\infty x_{\sigma(n)}$ is called a _rearrangement_ of the original series $\sum_{n=1}^\infty x_n$. Whether the sum of a series remains invariant under arbitrary permutations of its terms depends entirely on whether the series converges absolutely or conditionally:
+The order of summation profoundly affects the convergence and sum of an infinite series:
 $$
 \begin{gather}
 \textbf{Proposition: Rearrangement of Series} \\[5mm]
-\text{1. \textbf{Dirichlet's Theorem}: If } \sum_{n=1}^\infty x_{n} \text{ is absolutely convergent with sum } x, \text{ then every} \\[2mm]
-\text{rearrangement } \sum_{n=1}^\infty x_{\sigma(n)} \text{ also converges absolutely and has the same sum } x. \\[3.5mm]
-\text{2. \textbf{Riemann's Rearrangement Theorem}: If } \sum_{n=1}^\infty x_{n} \text{ is conditionally convergent and } y \in \mathbb{R} \\[2mm]
-\text{is any prescribed real number, then there exists a rearrangement } \sum_{n=1}^\infty x_{\sigma(n)} \text{ that converges to } y.
+\text{1. \textbf{Absolute Invariance}: If a series } \sum_{n=1}^\infty x_{n} \text{ converges absolutely to the sum } S \in \mathbb{R}, \\[2mm]
+\text{then every rearrangement of the series also converges absolutely to the same sum } S. \\[3.5mm]
+\text{2. \textbf{Riemann's Rearrangement Theorem}: If a series } \sum_{n=1}^\infty x_{n} \text{ is conditionally convergent,} \\[2mm]
+\text{then for any extended real value } M \in \mathbb{R} \cup \{-\infty, +\infty\}, \text{ there exists a rearrangement} \\[2mm]
+\text{of the series that converges to } M \text{ (or oscillates without tending to any limit).}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Series Rearrangement Proposition\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Series Rearrangement Proposition\|Proof of the Series Rearrangement Proposition]])
 
 ### Alternating Series Test
-When the terms of a series alternate in sign between positive and negative values, the series may converge even when the sum of the absolute values of its terms diverges. Before attempting to evaluate the exact sum of such a series, one can verify its convergence via Leibniz's criterion:
+When the terms of a series alternate strictly in sign, convergence can be established via monotonicity without computing the exact limit value:
 $$
 \begin{gather}
-\textbf{Theorem: Alternating Series Test (Leibniz's Test)} \\[5mm]
-\text{Let } \sum_{n=1}^\infty x_{n} \text{ be an alternating series of the form } x_{n} = (-1)^n y_{n} \text{ or } x_{n} = (-1)^{n+1}y_{n}, \\[2mm]
-\text{where } y_{n} \ge 0 \text{ for all } n \in \mathbb{N}. \text{ If } \{y_{n}\} \text{ is a nonincreasing sequence } (y_n \ge y_{n+1} \text{ for all } n \in \mathbb{N}) \\[2mm]
-\text{and } \lim_{n \to \infty} y_{n} = 0, \text{ then the alternating series } \sum_{n=1}^\infty x_{n} \text{ converges.}
+\textbf{Theorem: Alternating Series Test (Leibniz's Criterion)} \\[5mm]
+\text{Let } \{y_n\} \text{ be a monotonically decreasing sequence of non-negative real numbers} \\[2mm]
+(y_1 \ge y_2 \ge \dots \ge y_n \ge \dots \ge 0) \text{ such that } \lim_{n \to \infty} y_n = 0. \\[2mm]
+\text{Then the alternating series } \sum_{n=1}^\infty (-1)^{n+1} y_n \text{ converges to a finite sum } s \in \mathbb{R}. \\[3.5mm]
+\text{Furthermore, for every } n \in \mathbb{N}, \text{ the remainder } r_n := s - s_n \text{ satisfies the error bound:} \\[3.5mm]
+|s - s_n| \le y_{n+1}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Alternating Series Test\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Alternating Series Test\|Proof of Alternating Series Test]])
 
 ---
 # Additional Useful Facts
 
 ### Binomial Theorem
-A foundational algebraic identity utilized extensively in the analysis of sequences and series (such as proving the convergence of Euler's number $e$) is the *Binomial Theorem*. Known variously in the mathematical literature as the *binomial formula*, *binomial expansion*, or *binomial identity*, its finite algebraic formulation is given as follows:
+A foundational algebraic identity utilized extensively in the analysis of sequences and series (such as proving the convergence of Euler's number $e$) is the *Binomial Theorem*:
 $$
 \begin{gather}
 \textbf{Theorem: Binomial Theorem} \\[5mm]
@@ -472,28 +466,17 @@ $$
 (x + y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} y^k, \quad \text{where } \binom{n}{k} := \frac{n!}{k!(n - k)!}.
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Binomial Theorem\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Binomial Theorem\|Proof of the Binomial Theorem]])
 
-### Squeeze Theorem and Absolute Value Convergence
-Restating the bounding principle established in the second part of the Theorem on Inequalities Involving Limits provides the standalone formulation of the Squeeze Theorem:
-$$
-\begin{gather}
-\textbf{Theorem: Squeeze Theorem} \\[5mm]
-\text{Let } \{ a_{n} \}, \{ b_{n} \}, \text{ and } \{ x_{n} \} \text{ be sequences such that } a_{n} \le x_{n} \le b_{n} \text{ for all } n \in \mathbb{N} \text{ (or all } n > N\text{).} \\[2mm]
-\text{If } \{ a_{n} \} \text{ and } \{ b_{n} \} \text{ converge to the same limit } \lim_{n \to \infty} a_{n} = \lim_{n \to \infty} b_{n} = x, \\[2mm]
-\text{then } \{ x_{n} \} \text{ also converges and } \lim_{n \to \infty} x_{n} = x.
-\end{gather}
-$$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Squeeze Theorem\|proof]])
-
-Applying the Squeeze Theorem to the inequality $-|x_n| \le x_n \le |x_n|$ yields a frequently used corollary characterizing sequences that converge to zero:
+### Absolute Value Vanishing Criterion
+The Squeeze Theorem yields an immediate, practical test for establishing convergence to zero:
 $$
 \begin{gather}
 \textbf{Corollary: Vanishing of Absolute Values} \\[5mm]
-\text{For any sequence } \{x_n\}, \quad \lim_{n \to \infty} |x_{n}| = 0 \iff \lim_{n \to \infty} x_{n} = 0.
+\text{For any sequence of real numbers } \{x_n\}, \quad \lim_{n \to \infty} |x_{n}| = 0 \iff \lim_{n \to \infty} x_{n} = 0.
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Corollary for the Squeeze Theorem of Limits\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Corollary for the Squeeze Theorem of Limits\|Proof of the Corollary for the Squeeze Theorem of Limits]])
 
 ### Representing Values in Computational Bases
 The following theorem is fundamental for distinguishing between rational and irrational quantities within positional numeral systems, characterizing how real numbers are represented in arbitrary computational bases:
@@ -504,7 +487,7 @@ $$
 \text{in any integer base } q \ge 2 \text{ is eventually periodic.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of q-ary Representation Theorem\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of q-ary Representation Theorem\|Proof of q-ary Representation Theorem]])
 
 ### The Pigeonhole Principle
 A critical step in many existence and periodicity proofs (including the proof of the $q$-ary expansion theorem above) consists of demonstrating that two indices in a finite state space must yield the same value. The *Pigeonhole Principle* (Dirichlet's Box Principle) formalizes this combinatorially:
@@ -515,13 +498,13 @@ $$
 \text{then at least one box must contain at least two objects.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Pigeonhole Principle\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Pigeonhole Principle\|Proof of the Pigeonhole Principle]])
 
 > [!danger]+ Intuition: The Pigeonhole Principle
 > In analytical proofs, the strategy is to define the "boxes" as equivalence classes or possible remainders (such as the $q$ possible remainders modulo $q$ in long division) and the "objects" as successive steps of an iterative process. Once the number of steps exceeds the number of available states, a repetition is guaranteed.
 
 ### Power Sums of the First $n$ Integers
-In combinatorics, number theory, discrete calculus, and the evaluation of Riemann sums of polynomials, closed-form expressions for the power sums of the first $n$ positive integers are known as *Faulhaber's Formulae*. Formulating this theorem first requires defining a univariate polynomial:
+In combinatorics, discrete calculus, and the evaluation of Riemann sums of polynomials, closed-form expressions for the power sums of the first $n$ positive integers are known as *Faulhaber's Formulae*. Formulating this theorem first requires defining a univariate polynomial:
 $$
 \begin{gather}
 \textbf{Definition: Univariate Polynomial} \\[5mm]
@@ -542,4 +525,4 @@ $$
 S_{k}(n) = \frac{1}{k + 1}n^{k+1} + a_{k}n^{k} + \dots + a_{1}n
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Derivation of Faulhaber's Formulae\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Derivation of Faulhaber's Formulae\|Derivation of Faulhaber's Formulae]])

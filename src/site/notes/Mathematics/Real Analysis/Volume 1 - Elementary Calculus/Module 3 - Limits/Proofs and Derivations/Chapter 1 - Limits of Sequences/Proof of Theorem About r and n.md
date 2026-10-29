@@ -2,32 +2,57 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-3-limits/proofs-and-derivations/chapter-1-limits-of-sequences/proof-of-theorem-about-r-and-n/","dg-note-properties":{}}
 ---
 
-Let $\sum_{n=1}^\infty a_n$ and $\sum_{n=1}^\infty b_n$ be two series with non-negative terms ($a_n \ge 0$ and $b_n \ge 0$ for all $n \in \mathbb{N}$), and suppose there exists an index $N \in \mathbb{N}$ such that $a_n \le b_n$ for all $n > N$. Denote the $n$-th partial sums of the two series by $S_n := \sum_{k=1}^n a_k$ and $T_n := \sum_{k=1}^n b_k$. Because $a_n \ge 0$ and $b_n \ge 0$ for all $n \in \mathbb{N}$, both $\{S_n\}$ and $\{T_n\}$ are nondecreasing sequences.
+Let $r \in \mathbb{R}$ be a real number, and consider the geometric sequence $\{r^n\}_{n=0}^\infty$.
 
-# Theorem 1
-Assume the dominating series $\sum_{n=1}^\infty b_n$ converges. By the convergence criterion for series with non-negative terms, its sequence of partial sums $\{T_n\}$ is bounded above by some finite constant $M := \sum_{n=1}^\infty b_n \in \mathbb{R}$, so $T_n \le M$ for all $n \in \mathbb{N}$.
+**Case 1 ($0 < r < 1$):**
+Because $0 < r < 1$, multiplying by $r^n > 0$ yields $r^{n+1} < r^n$ for all $n \in \mathbb{N} \cup \{0\}$, proving that $\{r^n\}$ is strictly decreasing. Furthermore, $r^n > 0$ holds for all $n$, so the sequence is bounded below by $0$. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Weierstrass Theorem on Monotonic Sequences\|Weierstrass Theorem on Monotonic Sequences]], $\{r^n\}$ converges to a finite real limit $A := \lim_{n \to \infty} r^n \ge 0$.
 
-For every index $n > N$, summing the inequality $a_k \le b_k$ from $k = N + 1$ to $n$ and adding $S_N$ yields
+By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Operations Involving Limits\|scalar multiple rule for limits]], the sequence $\{r^{n+1}\}$ satisfies:
 $$
 \begin{gather}
-S_n = S_N + \sum_{k=N+1}^n a_k \le S_N + \sum_{k=N+1}^n b_k = S_N + (T_n - T_N) \le S_N - T_N + M \tag{1}
+\lim_{n \to \infty} r^{n+1} = \lim_{n \to \infty} (r \cdot r^n) = r \lim_{n \to \infty} r^n = r A \tag{1}
 \end{gather}
 $$
-Because $\{S_n\}$ is nondecreasing, $S_n \le S_N \le S_N + M$ for $1 \le n \le N$ as well. Consequently, $\{S_n\}$ is nondecreasing and bounded above by the finite real constant $S_N - T_N + M$ (or $S_N + M$). By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Weierstrass Theorem on Monotonic Sequences\|Weierstrass Theorem on Monotonic Sequences]], the sequence of partial sums $\{S_n\}$ converges, proving that $\sum_{n=1}^\infty a_n$ converges.
-
----
-# Theorem 2
-Assume the minorant series $\sum_{n=1}^\infty a_n$ diverges. Suppose, for the sake of contradiction, that the dominating series $\sum_{n=1}^\infty b_n$ converges. By Theorem 1 established above, the convergence of $\sum_{n=1}^\infty b_n$ implies the convergence of $\sum_{n=1}^\infty a_n$, which directly contradicts the premise that $\sum_{n=1}^\infty a_n$ diverges.
-
-Equivalently, because $a_n \ge 0$ and $\sum_{n=1}^\infty a_n$ diverges, the nondecreasing sequence $\{S_n\}$ is unbounded above ($S_n \to +\infty$). Rearranging step 1 for all $n > N$ gives
+Because $\{r^{n+1}\}$ is a subsequence of $\{r^n\}$, it must converge to the identical limit $A$. Equating both limits in step 1 yields:
 $$
 \begin{gather}
-T_n \ge S_n - (S_N - T_N) \quad \forall n > N \tag{2}
+A = r A \iff A(1 - r) = 0 \tag{2}
 \end{gather}
 $$
-Because $S_n \to +\infty$, step 2 forces $T_n \to +\infty$. Therefore, $\{T_n\}$ diverges, proving that $\sum_{n=1}^\infty b_n$ diverges.
+Because $r \neq 1$, step 2 requires that $A = 0$. Thus, $\lim_{n \to \infty} r^n = 0$ for all $0 < r < 1$.
+
+**Case 2 ($r = 0$):**
+For $r = 0$, $r^0 = 1$ and $r^n = 0$ for all $n \ge 1$. The sequence is ultimately constant, so by the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Basic Properties of Limits\|basic properties of limits]], $\lim_{n \to \infty} r^n = 0$.
+
+**Case 3 ($-1 < r < 0$):**
+Here $0 < |r| < 1$. Applying Case 1 to the absolute value sequence yields $\lim_{n \to \infty} |r^n| = \lim_{n \to \infty} |r|^n = 0$. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Corollary for the Squeeze Theorem of Limits\|Vanishing of Absolute Values Corollary]], $\lim_{n \to \infty} |r^n| = 0 \iff \lim_{n \to \infty} r^n = 0$. Thus, $\lim_{n \to \infty} r^n = 0$ for all $-1 < r < 0$.
+
+**Case 4 ($r = 1$):**
+For $r = 1$, $r^n = 1^n = 1$ for all $n \in \mathbb{N} \cup \{0\}$. Because this is a constant sequence, $\lim_{n \to \infty} 1^n = 1$.
+
+**Case 5 ($r > 1$):**
+Define the positive constant $h := r - 1 > 0$, so that $r = 1 + h$. By [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of Bernoulli's Inequality\|Bernoulli's Inequality]], for all $n \in \mathbb{N}$:
 $$
 \begin{gather}
-\textbf{Q.E.D}
+r^n = (1 + h)^n \ge 1 + n h \tag{3}
+\end{gather}
+$$
+Let $c \in \mathbb{R}$ be an arbitrary real number. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of Archimedian Corollaries\|Principle of Archimedes]], there exists an index $N \in \mathbb{N}$ such that $N > \frac{c - 1}{h}$. For all $n > N$, step 3 yields:
+$$
+\begin{gather}
+r^n \ge 1 + n h > 1 + N h > 1 + \left(\frac{c - 1}{h}\right) h = c \tag{4}
+\end{gather}
+$$
+Step 4 proves that $r^n \to +\infty$ as $n \to \infty$. Thus, the sequence diverges.
+
+**Case 6 ($r \le -1$):**
+If $r = -1$, the sequence evaluates to $x_n = (-1)^n$, oscillating between $1$ and $-1$. The even-indexed subsequence satisfies $\lim_{n \to \infty} x_{2n} = \lim_{n \to \infty} 1 = 1$, whereas the odd-indexed subsequence satisfies $\lim_{n \to \infty} x_{2n+1} = \lim_{n \to \infty} (-1) = -1$. Because these two subsequences converge to distinct limits ($1 \neq -1$), the sequence diverges.
+
+If $r < -1$, then $|r| > 1$. By Case 5, $|r^n| = |r|^n \to +\infty$. Because $\{r^n\}$ is unbounded, it cannot converge to any finite real limit by the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Basic Properties of Limits\|boundedness property of convergent sequences]].
+
+Combining all cases establishes that $\{r^n\}$ converges if and only if $-1 < r \le 1$.
+$$
+\begin{gather}
+\textbf{Q.E.D.}
 \end{gather}
 $$

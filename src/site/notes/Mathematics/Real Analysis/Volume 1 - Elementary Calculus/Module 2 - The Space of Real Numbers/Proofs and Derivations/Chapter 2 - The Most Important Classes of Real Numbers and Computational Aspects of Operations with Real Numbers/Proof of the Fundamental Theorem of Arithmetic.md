@@ -2,56 +2,91 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-of-the-fundamental-theorem-of-arithmetic/","dg-note-properties":{}}
 ---
 
-Establishing the Fundamental Theorem of Arithmetic requires first proving two foundational divisibility lemmas: 
+Let $\mathbb{N}$ denote the set of natural numbers. An integer $p \in \mathbb{N} \setminus \{1\}$ is prime if its only divisors in $\mathbb{N}$ are $1$ and $p$.
 
-# Prelude
-### Lemma 1
-$$\begin{gather} \textbf{Lemma: Coprime Divisibility} \\ \text{For integers } m, a, b \in \mathbb{Z} \text{ with } m \ne 0, \text{ if } m \mid (a \cdot b) \text{ and } \gcd(m, a) = 1, \text{ then } m \mid b. \end{gather}$$
+--------------------------------------------------------------------------------
+# Lemma 1
+Let $m, a, b \in \mathbb{Z}$ with $m \ne 0$. If $m \mid (a \cdot b)$ and $\gcd(m, a) = 1$, then $m \mid b$.
 
->[!info]+ Remark: Greatest Common Divisor and Divisibility Notation
->The notation $\gcd(m, a) = 1$ (frequently abbreviated as $(m, a) = 1$ in classical number theory) signifies that $m$ and $a$ are relatively prime—their only common divisors in $\mathbb{Z}$ are $1$ and $-1$. The notation $m \mid b$ signifies that $m$ divides $b$, meaning there exists an integer $k \in \mathbb{Z}$ such that $b = k \cdot m$.
+By Bézout's Identity, because $\gcd(m, a) = 1$, there exist integers $u, v \in \mathbb{Z}$ such that:
+$$
+u m + v a = 1 \tag{1}
+$$
+Multiplying step 1 across by $b$ yields:
+$$
+u m b + v a b = b \tag{2}
+$$
+Because $m \mid (a \cdot b)$, there exists an integer $k \in \mathbb{Z}$ such that $a b = k m$. Substituting this expression into step 2:
+$$
+u m b + v (k m) = b \implies m(u b + v k) = b \tag{3}
+$$
+Because $u, b, v, k \in \mathbb{Z}$, the quantity $u b + v k$ is an integer. Consequently, step 3 demonstrates that $m \mid b$.
 
-By [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof that Euclid's Algorithm Works\|Bézout's Identity]], because $\gcd(m, a) = 1$, there exist integers $u, v \in \mathbb{Z}$ such that
-$$\begin{gather} u m + v a = 1 \tag{1} \end{gather}$$
-Multiplying both sides of step 1 by $b$ yields
-$$\begin{gather} u m b + v (a b) = b \tag{2} \end{gather}$$
-By hypothesis, $m \mid (ab)$, so there exists an integer $k \in \mathbb{Z}$ such that $ab = k m$. Substituting $ab = k m$ into step 2 produces
-$$\begin{gather} b = u m b + v k m = m(u b + v k) \tag{3} \end{gather}$$
-Since $\mathbb{Z}$ is closed under addition and multiplication, $(u b + v k) \in \mathbb{Z}$, which proves that $m \mid b$.
+--------------------------------------------------------------------------------
+# Lemma 2
+Let $p \in \mathbb{N}$ be a prime number, and let $a_1, a_2, \dots, a_r \in \mathbb{Z}$. If $p \mid \prod_{j=1}^r a_j$, then $p \mid a_i$ for at least one index $i \in \{1, \dots, r\}$.
 
----
-### Lemma 2
-$$\begin{gather} \textbf{Lemma: Generalized Euclid's Lemma} \\ \text{If } p \text{ is a prime number and } p \mid (a_1 a_2 \cdots a_r) \text{ for integers } a_1, \dots, a_r \in \mathbb{Z}, \\ \text{then } p \mid a_i \text{ for at least one index } i \in \{1, \dots, r\}. \end{gather}$$
+Proceed by mathematical induction on the number of factors $r \ge 2$.
 
-Begin with the base case $r = 2$, where $p \mid (a_1 a_2)$. If $p \mid a_1$, the claim holds immediately. Suppose instead that $p \nmid a_1$. Because $p$ is prime, its only positive divisors are $1$ and $p$. Since $p$ does not divide $a_1$, the greatest common divisor of $p$ and $a_1$ cannot be $p$, forcing $\gcd(p, a_1) = 1$. Applying Lemma 1 with $m = p$, $a = a_1$, and $b = a_2$ yields $p \mid a_2$. This establishes the base case $r = 2$.
+### Base Step ($r = 2$)
+Assume that $p \mid (a_1 a_2)$. If $p \mid a_1$, the claim holds. Suppose instead that $p \nmid a_1$. Because $p$ is prime, its only positive divisors are $1$ and $p$. Because $p \nmid a_1$, it follows that $\gcd(p, a_1) = 1$. Applying Lemma 1 with $m = p$, $a = a_1$, and $b = a_2$ establishes that $p \mid a_2$.
 
-Now proceed by induction on $r$. Assume the lemma holds for any product of $r - 1$ factors ($r > 2$), and suppose $p \mid (a_1 a_2 \cdots a_r)$. Grouping the first $r - 1$ factors gives
-$$\begin{gather} p \mid \left( (a_1 a_2 \cdots a_{r-1}) \cdot a_r \right) \tag{4} \end{gather}$$
+### Inductive Step
+Assume as the inductive hypothesis that the claim holds for any product of $k$ factors ($k \ge 2$). Consider a product of $k + 1$ factors such that $p \mid (a_1 a_2 \cdots a_k a_{k+1})$. Regrouping the product:
+$$
+p \mid \left( \left(\prod_{j=1}^k a_j\right) \cdot a_{k+1} \right) \tag{4}
+$$
+Applying the base step ($r = 2$) to step 4 demonstrates that either $p \mid a_{k+1}$ or $p \mid \prod_{j=1}^k a_j$. If $p \mid a_{k+1}$, the condition is satisfied. If $p \mid \prod_{j=1}^k a_j$, the inductive hypothesis ensures that $p \mid a_i$ for some $i \in \{1, \dots, k\}$. 
 
-By the two-factor base case applied to step 4, either $p \mid a_r$ or $p \mid (a_1 a_2 \cdots a_{r-1})$. If $p \mid a_r$, the claim is satisfied; if $p \mid (a_1 a_2 \cdots a_{r-1})$, the inductive hypothesis guarantees that $p \mid a_i$ for some $i \in \{1, \dots, r - 1\}$. Thus, by the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof that Induction Works\|Principle of Mathematical Induction]], Euclid's Lemma holds for any finite number of factors $r$.
+By the Principle of Mathematical Induction, Lemma 2 holds for all $r \ge 2$.
 
----
-# Actual Proof
+--------------------------------------------------------------------------------
+# Theorem 
+### Existence of Prime Factorization
+Let $E \subseteq \mathbb{N}$ be the set of natural numbers defined by:
+$$
+E := \{ n \in \mathbb{N} \mid n = 1 \lor (\forall m \in \mathbb{N}, \, 2 \le m \le n \implies m \text{ is a product of primes}) \} \tag{5}
+$$
+Clearly $1 \in E$. Since $2$ is prime, $2$ is a product of a single prime factor, so $2 \in E$. 
 
-### Existence of a Prime Factorization
-Let $E \subset \mathbb{N}$ be the set of natural numbers $n$ such that either $n = 1$ or every natural number $m$ satisfying $2 \le m \le n$ can be expressed as a product of prime numbers. Clearly $1 \in E$, and since $2$ is prime, $2 \in E$. 
+Assume as the inductive hypothesis that $n \in E$ for some $n \ge 2$. Consider the integer $n + 1$:
+* If $n + 1$ is prime, it is trivially a product of a single prime factor.
+* If $n + 1$ is composite, there exist integers $a, b \in \mathbb{N}$ such that $n + 1 = a \cdot b$ with $2 \le a \le n$ and $2 \le b \le n$. Because $n \in E$, both $a$ and $b$ admit representations as products of primes: $a = \prod_{i=1}^s p_i$ and $b = \prod_{j=1}^t q_j$. Consequently:
+$$
+n + 1 = \left(\prod_{i=1}^s p_i\right)\left(\prod_{j=1}^t q_j\right) \tag{6}
+$$
+which is a product of primes.
 
-Suppose $n \in E$ for some $n \ge 2$, and consider $n + 1$. If $n + 1$ is prime, it is already a product of a single prime factor. If $n + 1$ is composite, then by definition there exist natural numbers $a, b \in \mathbb{N}$ satisfying
-$$\begin{gather} n + 1 = a \cdot b \quad \text{with} \quad 2 \le a \le n \quad \text{and} \quad 2 \le b \le n \tag{5} \end{gather}$$
+In both cases, $n + 1$ is a product of primes, which implies that $(n + 1) \in E$. By the Principle of Mathematical Induction, $E = \mathbb{N}$, establishing that every integer $n > 1$ admits a prime factorization.
 
-Because $n \in E$, both $a$ and $b$ can be written as products of primes: $a = p_1 \cdots p_s$ and $b = q_1 \cdots q_t$. Multiplying these representations gives $n + 1 = p_1 \cdots p_s q_1 \cdots q_t$, confirming that $(n + 1) \in E$. By the Principle of Mathematical Induction, every natural number $n > 1$ admits a prime factorization.
+### Uniqueness of Prime Factorization
+Suppose an integer $n > 1$ admits two prime factorizations:
+$$
+n = \prod_{i=1}^k p_i = \prod_{j=1}^l q_j \tag{7}
+$$
+where $p_1 \le p_2 \le \dots \le p_k$ and $q_1 \le q_2 \le \dots \le q_l$ are prime numbers. 
 
-### Uniqueness of the Prime Factorization
-Suppose a natural number $n > 1$ admits two prime factorizations:
-$$\begin{gather} n = p_1 p_2 \cdots p_k = q_1 q_2 \cdots q_l \tag{6} \end{gather}$$
+Because $p_1$ divides the left-hand side of step 7, $p_1 \mid \prod_{j=1}^l q_j$. By Lemma 2, $p_1 \mid q_m$ for some index $m \in \{1, \dots, l\}$. Because $q_m$ is prime and $p_1 > 1$, its only divisors are $1$ and $q_m$, forcing $p_1 = q_m \ge q_1$.
 
-where $p_1 \le p_2 \le \dots \le p_k$ and $q_1 \le q_2 \le \dots \le q_l$ are prime numbers. Because $p_1$ divides the left-hand side of step 6, $p_1$ divides the product $q_1 q_2 \cdots q_l$. By Lemma 2, $p_1 \mid q_i$ for some index $i \in \{1, \dots, l\}$. Since $q_i$ is prime and $p_1 > 1$, the only divisor of $q_i$ greater than $1$ is $q_i$ itself, forcing $p_1 = q_i \ge q_1$.
+By symmetric reasoning, $q_1 \mid \prod_{i=1}^k p_i$, so $q_1 = p_r \ge p_1$ for some $r \in \{1, \dots, k\}$. Combining $p_1 \ge q_1$ and $q_1 \ge p_1$ via antisymmetry yields:
+$$
+p_1 = q_1 \tag{8}
+$$
+Dividing both sides of step 7 by $p_1 = q_1$:
+$$
+\prod_{i=2}^k p_i = \prod_{j=2}^l q_j \tag{9}
+$$
+Repeating this cancellation process inductively pairs each prime factor $p_r$ with $q_r$ such that $p_r = q_r$. 
 
-By a completely symmetric argument, $q_1$ divides $p_1 p_2 \cdots p_k$, so $q_1 = p_j \ge p_1$ for some $j \in \{1, \dots, k\}$. Combining $p_1 \ge q_1$ and $q_1 \ge p_1$ yields
-$$\begin{gather} p_1 = q_1 \tag{7} \end{gather}$$
+If $k \ne l$, assuming without loss of generality that $k < l$, cancelling all $k$ factors would leave:
+$$
+1 = \prod_{j=k+1}^l q_j \tag{10}
+$$
+Because every prime satisfies $q_j \ge 2$, the right-hand product in step 10 is at least $2$, producing the contradiction $1 \ge 2$. 
 
-Dividing both sides of step 6 by $p_1 = q_1$ yields
-$$\begin{gather} p_2 \cdots p_k = q_2 \cdots q_l \tag{8} \end{gather}$$
-
-Repeating this cancellation inductively pairs each $p_r$ with $q_r$ such that $p_r = q_r$. If $k \ne l$ (say, $k < l$), cancelling all $k$ prime factors would leave $1 = q_{k+1} \cdots q_l$, which is impossible since every prime satisfies $q_i \ge 2 > 1$. Therefore, $k = l$ and $p_r = q_r$ for all $r \in \{1, \dots, k\}$, proving that the prime factorization is unique up to the ordering of the factors.
-$$\begin{gather} \textbf{Q.E.D} \end{gather}$$
+Therefore, $k = l$ and $p_i = q_i$ for all $i \in \{1, \dots, k\}$, proving that the prime factorization is unique up to the ordering of the factors.
+$$
+\begin{gather}
+\textbf{Q.E.D.}
+\end{gather}
+$$

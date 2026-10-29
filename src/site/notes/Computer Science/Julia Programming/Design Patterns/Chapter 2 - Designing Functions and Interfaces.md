@@ -44,7 +44,7 @@ The compiler uses its internal world-age tracking system to allow developers to 
 This allows tools like `Revise.jl` (version 3.13) to automatically track and apply changes to structs and constants in the background, eliminating compile-time latency during iterative development.
 
 ### Defining and Documenting Functions
-Julia provides two primary syntaxes for declaring functions: the single-line assignment form and the [[Chapter 1 - Modules, Packages, and Data Types|long block form]]. Single-line assignment functions are typically used for simple calculations and accessor functions, whereas multi-line functions are declared using the block syntax.
+Julia provides two primary syntaxes for declaring functions: the single-line assignment form and the [[Computer Science/Julia Programming/Design Patterns/Chapter 1 - Modules, Packages, and Data Types\|long block form]]. Single-line assignment functions are typically used for simple calculations and accessor functions, whereas multi-line functions are declared using the block syntax.
 
 Below is an example of a module that provides objects within the space game the ability to change positions on a 2D-plane: 
 ```julia

@@ -2,74 +2,76 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-3-limits/proofs-and-derivations/chapter-1-limits-of-sequences/proof-of-alternating-series-test/","dg-note-properties":{}}
 ---
 
-Let $\sum_{n=1}^\infty x_n$ be an alternating series of the form $x_n = (-1)^{n+1} y_n$ (the case $x_n = (-1)^n y_n$ follows identically by multiplying the series by $-1$), where $\{y_n\}$ is a nonincreasing sequence of non-negative real numbers ($y_n \ge y_{n+1} \ge 0$ for all $n \in \mathbb{N}$) satisfying $\lim_{n \to \infty} y_n = 0$. Let $S_n := \sum_{k=1}^n (-1)^{k+1} y_k$ denote the $n$-th partial sum of the series:
-$$
-\begin{gather}
-S_1 = y_1 \\[2mm]
-S_2 = y_1 - y_2 \\[2mm]
-S_3 = y_1 - y_2 + y_3 \\[2mm]
-S_4 = y_1 - y_2 + y_3 - y_4 \\[2mm]
-\vdots \tag{1}
-\end{gather}
-$$
-Because $\{y_n\}$ is nonincreasing, the difference $y_{k} - y_{k+1} \ge 0$ is non-negative for every $k \in \mathbb{N}$. This structural property governs the behavior of the even-indexed and odd-indexed subsequences of $\{S_n\}$:
-- **Even Partial Sums ($n = 2m$):** Grouping consecutive pairs of terms in $S_{2m}$ yields
-$$
-\begin{gather}
-S_{2m} = (y_1 - y_2) + (y_3 - y_4) + \dots + (y_{2m-1} - y_{2m}) \tag{2}
-\end{gather}
-$$
-Because each grouped difference satisfies $y_{2i-1} - y_{2i} \ge 0$, it follows that $S_{2m} \ge 0$ and $S_{2m+2} - S_{2m} = y_{2m+1} - y_{2m+2} \ge 0$ for all $m \in \mathbb{N}$.
-- **Odd Partial Sums ($n = 2m + 1$):** For any $m \in \mathbb{N}$, the $(2m+1)$-th partial sum satisfies both
-$$
-\begin{gather}
-S_{2m+1} = S_{2m} + y_{2m+1} \quad \text{and} \quad S_{2m+1} = S_{2m-1} - (y_{2m} - y_{2m+1}) \tag{3}
-\end{gather}
-$$
-Since $y_{2m} - y_{2m+1} \ge 0$, the second relation in step 3 implies $S_{2m+1} \le S_{2m-1}$ for all $m \in \mathbb{N}$.
+Let $\{y_n\}_{n=1}^\infty$ be a sequence of non-negative real numbers that is monotonically nonincreasing ($y_n \ge y_{n+1} \ge 0$ for all $n \in \mathbb{N}$) and satisfies $\lim_{n \to \infty} y_n = 0$. Consider the alternating series $\sum_{n=1}^\infty (-1)^{n+1} y_n$, and let $s_n := \sum_{k=1}^n (-1)^{k+1} y_k$ denote its $n$-th partial sum.
 
-Consequently, the two subsequences of partial sums exhibit opposite monotonicity:
-1. The subsequence of even partial sums $\{S_{2m}\}$ is nondecreasing:
+For any index $m \in \mathbb{N}$, the even-indexed partial sum $s_{2m}$ can be grouped as: 
 $$
 \begin{gather}
-S_2 \le S_4 \le S_6 \le \dots \le S_{2m} \le S_{2m+2} \le \dots \tag{4}
+s_{2m} = (y_1 - y_2) + (y_3 - y_4) + \dots + (y_{2m-1} - y_{2m}) = \sum_{k=1}^m (y_{2k-1} - y_{2k}) \tag{1}
 \end{gather}
 $$
-2. The subsequence of odd partial sums $\{S_{2m-1}\}$ is nonincreasing:
+Because $\{y_n\}$ is nonincreasing, each difference satisfies $y_{2k-1} - y_{2k} \ge 0$. Consequently, the sequence of even partial sums is monotonically nondecreasing:
 $$
 \begin{gather}
-S_1 \ge S_3 \ge S_5 \ge \dots \ge S_{2m-1} \ge S_{2m+1} \ge \dots \tag{5}
+s_{2m+2} - s_{2m} = y_{2m+1} - y_{2m+2} \ge 0 \implies s_{2m} \le s_{2m+2} \tag{2}
 \end{gather}
 $$
-Moreover, because $y_{2m+1} \ge 0$, the first relation in step 3 guarantees that $S_{2m} \le S_{2m+1}$ for every $m \in \mathbb{N}$. Combining steps 4 and 5 produces the nested chain of inequalities:
+Concurrently, the odd-indexed partial sum $s_{2m+1}$ can be rewritten as: 
 $$
 \begin{gather}
-S_2 \le S_4 \le \dots \le S_{2m} \le S_{2m+2} \le \dots \le S_{2m+1} \le S_{2m-1} \le \dots \le S_3 \le S_1 \tag{6}
+s_{2m+1} = y_1 - (y_2 - y_3) - (y_4 - y_5) - \dots - (y_{2m} - y_{2m+1}) = y_1 - \sum_{k=1}^m (y_{2k} - y_{2k+1}) \tag{3}
 \end{gather}
 $$
-Step 6 demonstrates that $\{S_{2m}\}$ is nondecreasing and bounded above by $S_1$, while $\{S_{2m+1}\}$ is nonincreasing and bounded below by $S_2$. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Weierstrass Theorem on Monotonic Sequences\|Weierstrass Theorem on Monotonic Sequences]], both subsequences converge to finite real limits:
+Because $y_{2k} - y_{2k+1} \ge 0$, subtracting additional non-negative terms ensures that the sequence of odd partial sums is monotonically nonincreasing:
 $$
 \begin{gather}
-\lim_{m \to \infty} S_{2m} = L_e \quad \text{and} \quad \lim_{m \to \infty} S_{2m+1} = L_o \tag{7}
+s_{2m+1} - s_{2m-1} = -(y_{2m} - y_{2m+1}) \le 0 \implies s_{2m+1} \le s_{2m-1} \tag{4}
 \end{gather}
 $$
-
-### Equality of Subsequential Limits
-From step 3, the difference between consecutive odd and even partial sums is
+Furthermore, because $y_{2m+1} \ge 0$, the relationship between consecutive partial sums satisfies: 
 $$
 \begin{gather}
-S_{2m+1} - S_{2m} = y_{2m+1} \tag{8}
+s_{2m+1} = s_{2m} + y_{2m+1} \ge s_{2m} \tag{5}
 \end{gather}
 $$
-Because $\lim_{n \to \infty} y_n = 0$, the subsequence $\{y_{2m+1}\}$ also converges to $0$. Taking the limit as $m \to \infty$ across step 8 yields
+Combining step 2, step 4, and step 5 yields the nested inequality chain valid for all $m \in \mathbb{N}$:
 $$
 \begin{gather}
-L_o - L_e = \lim_{m \to \infty} (S_{2m+1} - S_{2m}) = \lim_{m \to \infty} y_{2m+1} = 0 \implies L_o = L_e =: L \tag{9}
+s_2 \le s_4 \le \dots \le s_{2m} \le s_{2m+1} \le \dots \le s_5 \le s_3 \le s_1 \tag{6}
 \end{gather}
 $$
-Because both the even-indexed subsequence $\{S_{2m}\}$ and the odd-indexed subsequence $\{S_{2m+1}\}$ converge to the common limit $L$, the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem Involving Odd and Even-Indexed Sequences\|theorem on even and odd-indexed sequences]] guarantees that the full sequence of partial sums $\{S_n\}$ converges to $L$. Therefore, the alternating series $\sum_{n=1}^\infty x_n$ converges.
+Step 6 establishes that the nondecreasing sequence $\{s_{2m}\}$ is bounded above by $s_1$, and the nonincreasing sequence $\{s_{2m+1}\}$ is bounded below by $s_2$. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Weierstrass Theorem on Monotonic Sequences\|Weierstrass Theorem on Monotonic Sequences]], both subsequences converge to finite real limits:
 $$
 \begin{gather}
-\textbf{Q.E.D}
+\lim_{m \to \infty} s_{2m} = L_e \quad \text{and} \quad \lim_{m \to \infty} s_{2m+1} = L_o \tag{7}
+\end{gather}
+$$
+Evaluating the difference between these limits via step 5 and using the hypothesis $\lim_{n \to \infty} y_n = 0$:
+$$
+\begin{gather}
+L_o - L_e = \lim_{m \to \infty} (s_{2m+1} - s_{2m}) = \lim_{m \to \infty} y_{2m+1} = 0 \implies L_o = L_e =: s \tag{8}
+\end{gather}
+$$
+Because the even-indexed and odd-indexed subsequences converge to the identical real limit $s$, the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Theorem Involving Odd and Even-Indexed Sequences\|parity decomposition theorem]] guarantees that the entire sequence of partial sums converges:
+$$
+\begin{gather}
+\lim_{n \to \infty} s_n = s = \sum_{n=1}^\infty (-1)^{n+1} y_n \tag{9}
+\end{gather}
+$$
+Finally, by virtue of the monotonic nesting in step 6, the limit $s$ lies between any two consecutive partial sums:
+$$
+\begin{gather}
+s_{2m} \le s \le s_{2m+1} \quad \text{and} \quad s_{2m+2} \le s \le s_{2m+1} \tag{10}
+\end{gather}
+$$
+For an even index $n = 2m$, step 10 implies $0 \le s - s_{2m} \le s_{2m+1} - s_{2m} = y_{2m+1}$. For an odd index $n = 2m - 1$, step 10 implies $0 \le s_{2m-1} - s \le s_{2m-1} - s_{2m} = y_{2m}$. In both cases, the remainder $r_n := s - s_n$ satisfies the truncation bound: 
+$$
+\begin{gather}
+|s - s_n| \le y_{n+1} \quad \forall n \in \mathbb{N} \tag{11}
+\end{gather}
+$$
+$$
+\begin{gather}
+\textbf{Q.E.D.}
 \end{gather}
 $$

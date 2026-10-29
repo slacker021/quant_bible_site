@@ -2,33 +2,33 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-3-basic-lemmas-connected-with-the-completeness-of-the-real-numbers/proof-of-the-bolzano-weierstrass-principle/","dg-note-properties":{}}
 ---
 
-Let $X \subset \mathbb{R}$ be a bounded infinite subset of the real numbers. Because $X$ is bounded both from below and from above, there exist real numbers $a, b \in \mathbb{R}$ with $a < b$ such that $X$ is entirely contained within the closed and bounded interval $I := [a, b]$:
+Let $X \subseteq \mathbb{R}$ be a bounded infinite subset of the real numbers. Because $X$ is bounded both from below and from above, there exist real numbers $a, b \in \mathbb{R}$ with $a < b$ such that $X$ is entirely contained within the closed and bounded interval $I := [a, b]$:
 $$
 \begin{gather}
-X \subset I = [a, b] \tag{1}
+X \subseteq I = [a, b] \tag{1}
 \end{gather}
 $$
 Suppose, for the sake of contradiction, that $X$ possesses no limit point in $\mathbb{R}$. Under this assumption, no point $x \in I$ can be a limit point of $X$. By the definition of a limit point, for every point $x \in I$, there exists an open neighborhood $U(x)$ of $x$ that contains at most finitely many points of $X$:
 $$
 \begin{gather}
-\forall x \in I, \quad \exists U(x) = ]x - \varepsilon_x, x + \varepsilon_x[ \quad \text{such that} \quad |U(x) \cap X| < \infty \tag{2}
+\forall x \in I, \quad \exists U(x) = (x - \varepsilon_x, x + \varepsilon_x) \quad \text{such that} \quad |U(x) \cap X| < \infty \tag{2}
 \end{gather}
 $$
 Because each point $x \in I$ belongs to its own neighborhood $U(x)$, the collection of all such open intervals $\{U(x)\}_{x \in I}$ forms an open cover of the closed and bounded interval $I$:
 $$
 \begin{gather}
-I = [a, b] \subset \bigcup_{x \in I} U(x) \tag{3}
+I = [a, b] \subseteq \bigcup_{x \in I} U(x) \tag{3}
 \end{gather}
 $$
-By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers/Proof of the Borel-Lebesgue Principle\|Borel-Lebesgue Principle]], the open cover in step 3 contains a finite subcover. That is, there exists a finite set of points $\{x_1, x_2, \dots, x_n\} \subset I$ whose corresponding open neighborhoods cover $I$. Combining step 1 with this finite subcover yields
+By the Borel-Lebesgue Principle (see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers/Proof of the Borel-Lebesgue Principle\|Proof of the Borel-Lebesgue Principle]]), the open cover in step 3 contains a finite subcover. That is, there exists a finite subset of points $\{x_1, x_2, \dots, x_n\} \subseteq I$ whose corresponding open neighborhoods cover $I$. Combining step 1 with this finite subcover yields:
 $$
 \begin{gather}
-X \subset I \subset \bigcup_{i=1}^n U(x_i) \implies X = X \cap \left(\bigcup_{i=1}^n U(x_i)\right) = \bigcup_{i=1}^n \left(U(x_i) \cap X\right) \tag{4}
+X \subseteq I \subseteq \bigcup_{i=1}^n U(x_i) \implies X = X \cap \left(\bigcup_{i=1}^n U(x_i)\right) = \bigcup_{i=1}^n \left(U(x_i) \cap X\right) \tag{4}
 \end{gather}
 $$
-By step 2, each intersection $U(x_i) \cap X$ for $i \in \{1, 2, \dots, n\}$ contains at most finitely many elements of $X$. Because a finite union of finite sets is necessarily finite, step 4 implies that $X$ is a finite set. This directly contradicts the initial hypothesis that $X$ is an infinite subset of $\mathbb{R}$. Therefore, $X$ must possess at least one limit point in $I \subset \mathbb{R}$.
+By step 2, each intersection $U(x_i) \cap X$ for $i \in \{1, 2, \dots, n\}$ contains at most finitely many elements of $X$. Because a finite union of finite sets is necessarily finite, step 4 implies that $X$ is a finite set. This directly contradicts the initial hypothesis that $X$ is an infinite subset of $\mathbb{R}$. Therefore, $X$ must possess at least one limit point in $I \subseteq \mathbb{R}$.
 $$
 \begin{gather}
-\textbf{Q.E.D}
+\textbf{Q.E.D.}
 \end{gather}
 $$

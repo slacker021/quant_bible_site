@@ -2,63 +2,68 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-that-the-square-root-of-2-is-irrational/","dg-note-properties":{}}
 ---
 
-# Existence and Uniqueness
-Define two subsets $X$ and $Y$ of the positive real numbers $\mathbb{R}_+$ as follows:
+Let $(\mathbb{R}, +, \cdot, \le)$ be the complete ordered field of real numbers, and let $\mathbb{R}_{>0} := \{ x \in \mathbb{R} \mid x > 0 \}$.
+# Existence and Uniqueness of the Square Root of Two
+Define two subsets $X, Y \subset \mathbb{R}_{>0}$ by:
 $$
-\begin{gather}
-X := \{x \in \mathbb{R}_+ \mid x^2 < 2\} \quad \text{and} \quad Y := \{y \in \mathbb{R}_+ \mid 2 < y^2\} \tag{1}
-\end{gather}
+X := \{ x \in \mathbb{R}_{>0} \mid x^2 < 2 \} \quad \wedge \quad Y := \{ y \in \mathbb{R}_{>0} \mid y^2 > 2 \} \tag{1}
 $$
+Because $1^2 = 1 < 2$ and $2^2 = 4 > 2$, the memberships $1 \in X$ and $2 \in Y$ confirm that both $X$ and $Y$ are non-empty. 
 
-Because $1^2 = 1 < 2$ and $2^2 = 4 > 2$, we have $1 \in X$ and $2 \in Y$, ensuring that both $X$ and $Y$ are nonempty. Furthermore, for any $x, y \in \mathbb{R}_+$, the identity $y^2 - x^2 = (y - x)(y + x)$ with $y + x > 0$ implies
+For any $x, y \in \mathbb{R}_{>0}$, the algebraic identity $y^2 - x^2 = (y - x)(y + x)$ with $x + y > 0$ establishes that:
 $$
-\begin{gather}
-(x < y) \iff (x^2 < y^2) \tag{2}
-\end{gather}
+x < y \iff x^2 < y^2 \tag{2}
 $$
+Consequently, for every $x \in X$ and every $y \in Y$, the chain $x^2 < 2 < y^2$ implies that $x < y$. By the Axiom of Completeness (Dedekind Continuity), there exists an element $s \in \mathbb{R}$ such that:
+$$
+x \le s \le y \quad \forall x \in X, \, \forall y \in Y \tag{3}
+$$
+Because $1 \in X$ and $2 \in Y$, step 3 establishes that $1 \le s \le 2$, ensuring $s > 0$. 
 
-Consequently, for every $x \in X$ and every $y \in Y$, the inequality $x^2 < 2 < y^2$ forces $x < y$. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 1 - Basic Properties of Real Numbers\|Axiom of Completeness]], there exists a separating real number $s \in \mathbb{R}$ such that
+Evaluate the relationship between $s^2$ and $2$ via trichotomy:
+* Case 1: Assume $s^2 < 2$. Define $\Delta := 2 - s^2 > 0$. Because $s \ge 1$, $3s \ge 3$ and $\Delta \le 1$, which ensures $0 < \frac{\Delta}{3s} < 1$. Consider the perturbed element $s + \frac{\Delta}{3s} > s$. Squaring this quantity and using $\frac{\Delta}{3s} < 1$ and $\frac{1}{3s} \le \frac{1}{3}$:
 $$
-\begin{gather}
-x \le s \le y \quad \forall x \in X, \ \forall y \in Y \tag{3}
-\end{gather}
+\left(s + \frac{\Delta}{3s}\right)^2 = s^2 + \frac{2\Delta}{3} + \left(\frac{\Delta}{3s}\right)^2 < s^2 + \frac{2\Delta}{3} + \frac{\Delta}{3s} \le s^2 + \frac{2\Delta}{3} + \frac{\Delta}{3} = s^2 + \Delta = 2 \tag{4}
 $$
+Step 4 implies that $\left(s + \frac{\Delta}{3s}\right) \in X$. This contradicts step 3 because $s + \frac{\Delta}{3s} > s$, whereas $x \le s$ holds for all $x \in X$.
+* Case 2: Assume $s^2 > 2$. Define $\Delta := s^2 - 2 > 0$. Because $1 \le s \le 2$, $0 < \frac{\Delta}{3s} < s$, ensuring $s - \frac{\Delta}{3s} > 0$. Squaring this quantity:
+$$
+\left(s - \frac{\Delta}{3s}\right)^2 = s^2 - \frac{2\Delta}{3} + \left(\frac{\Delta}{3s}\right)^2 > s^2 - \frac{2\Delta}{3} > s^2 - \Delta = 2 \tag{5}
+$$
+Step 5 implies that $\left(s - \frac{\Delta}{3s}\right) \in Y$. This contradicts step 3 because $s - \frac{\Delta}{3s} < s$, whereas $s \le y$ holds for all $y \in Y$.
 
-Since $1 \in X$ and $2 \in Y$, it follows that $1 \le s \le 2$, so $s > 0$. By trichotomy, either $s^2 < 2$, $s^2 > 2$, or $s^2 = 2$:
-1. **Suppose $s^2 < 2$:** Define $\Delta := 2 - s^2 > 0$. Since $s \ge 1$,  $3s \ge 3$ and $\Delta = 2 - s^2 \le 1$, which implies $0 < \frac{\Delta}{3s} < 1$. Consider the perturbed value $s + \frac{\Delta}{3s} > s$. Squaring this quantity and using the bounds $\frac{\Delta}{3s} < 1$ and $s \ge 1$ (so $\frac{1}{3s} \le \frac{1}{3}$) yields
-   $$
-   \begin{gather}
-   \left(s + \frac{\Delta}{3s}\right)^2 = s^2 + \frac{2\Delta}{3} + \left(\frac{\Delta}{3s}\right)^2 < s^2 + \frac{2\Delta}{3} + \frac{\Delta}{3s} \le s^2 + \frac{2\Delta}{3} + \frac{\Delta}{3} = s^2 + \Delta = 2 \tag{4}
-   \end{gather}
-   $$
-   Thus, $s + \frac{\Delta}{3s} \in X$, which contradicts step 3 because $s + \frac{\Delta}{3s} > s$ whereas $x \le s$ for all $x \in X$.
-2. **Suppose $s^2 > 2$:** Define $\Delta := s^2 - 2 > 0$. Since $1 \le s \le 2$, one should have $0 < \frac{\Delta}{3s} < s$, so $s - \frac{\Delta}{3s} > 0$. Squaring $s - \frac{\Delta}{3s}$ and dropping the positive squared term $\left(\frac{\Delta}{3s}\right)^2 > 0$ yields
-   $$
-   \begin{gather}
-   \left(s - \frac{\Delta}{3s}\right)^2 = s^2 - \frac{2\Delta}{3} + \left(\frac{\Delta}{3s}\right)^2 > s^2 - \frac{2\Delta}{3} > s^2 - \Delta = 2 \tag{5}
-   \end{gather}
-   $$
-   Thus, $s - \frac{\Delta}{3s} \in Y$, which contradicts step 3 because $s - \frac{\Delta}{3s} < s$ whereas $s \le y$ for all $y \in Y$.
+By trichotomy, the only remaining relation is $s^2 = 2$. Uniqueness on $\mathbb{R}_{>0}$ follows directly from step 2, as $0 < s_1 < s_2 \implies s_1^2 < s_2^2$. This unique positive scalar is denoted by $\sqrt{2}$.
 
-By trichotomy, the only remaining possibility is $s^2 = 2$. Uniqueness in $\mathbb{R}_+$ follows immediately from step 2, as $0 < s_1 < s_2 \implies s_1^2 < s_2^2$. This unique positive real number is denoted $\sqrt{2}$.
+# Irrationality of the Square Root of Two
+Assume for the purpose of contradiction that $\sqrt{2} \in \mathbb{Q}$. 
 
----
-# Irrationality of $\sqrt{2}$
-Suppose, for the sake of contradiction, that $s = \sqrt{2} \in \mathbb{Q}$. Then $s$ can be represented as a reduced fraction $s = m/n$, where $m, n \in \mathbb{N}$ are relatively prime ($\gcd(m, n) = 1$). Squaring both sides of $s = m/n$ gives
+Under this assumption, $\sqrt{2}$ admits a representation as a canonical reduced fraction:
+$$
+\sqrt{2} = \frac{m}{n}, \quad \text{where } m, n \in \mathbb{N} \text{ and } \gcd(m, n) = 1 \tag{6}
+$$
+Squaring both sides of step 6 yields:
+$$
+2 = \frac{m^2}{n^2} \implies m^2 = 2 n^2 \tag{7}
+$$
+Step 7 demonstrates that $2 \mid m^2$. By Euclid's Lemma, because $2$ is a prime number:
+$$
+2 \mid (m \cdot m) \implies 2 \mid m \tag{8}
+$$
+Because $2 \mid m$, there exists an integer $k \in \mathbb{N}$ such that $m = 2k$. Substituting this equality into step 7:
+$$
+(2k)^2 = 2 n^2 \implies 4k^2 = 2 n^2 \implies n^2 = 2 k^2 \tag{9}
+$$
+Step 9 demonstrates that $2 \mid n^2$. Applying Euclid's Lemma once more:
+$$
+2 \mid (n \cdot n) \implies 2 \mid n \tag{10}
+$$
+Step 8 and step 10 establish that $2 \mid m$ and $2 \mid n$. Consequently, $2$ is a common divisor of $m$ and $n$, which implies:
+$$
+\gcd(m, n) \ge 2 \tag{11}
+$$
+Step 11 directly contradicts the premise in step 6 that $\gcd(m, n) = 1$. Therefore, the assumption that $\sqrt{2} \in \mathbb{Q}$ is false, confirming that $\sqrt{2} \in \mathbb{R} \setminus \mathbb{Q}$.
 $$
 \begin{gather}
-s^2 = \frac{m^2}{n^2} = 2 \implies m^2 = 2 n^2 \tag{6}
-\end{gather}
-$$
-Equation 6 demonstrates that the prime number $2$ divides $m^2 = m \cdot m$. By [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Fundamental Theorem of Arithmetic\|Euclid's Lemma]], $2$ must divide $m$, so there exists a natural number $k \in \mathbb{N}$ such that $m = 2k$. Substituting $m = 2k$ into step 6 yields
-$$
-\begin{gather}
-(2k)^2 = 4k^2 = 2n^2 \implies n^2 = 2k^2 \tag{7}
-\end{gather}
-$$
-By the same reasoning applied to step 7, the prime $2$ divides $n^2$, which by Euclid's Lemma forces $2 \mid n$. However, having $2 \mid m$ and $2 \mid n$ means $2$ is a common divisor of $m$ and $n$, contradicting the premise that $\gcd(m, n) = 1$. Therefore, $\sqrt{2} \notin \mathbb{Q}$.
-$$
-\begin{gather}
-\textbf{Q.E.D}
+\textbf{Q.E.D.}
 \end{gather}
 $$

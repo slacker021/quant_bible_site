@@ -3,71 +3,93 @@
 ---
 
 # Corollary 1
-Suppose there exists an index $N_0 \in \mathbb{N}$ such that $|x_n| \le y_n$ for all $n > N_0$, and assume that $\sum_{n=1}^\infty y_n$ converges to a finite sum $B := \sum_{n=1}^\infty y_n$. Because $y_n \ge |x_n| \ge 0$ for all $n > N_0$, the partial sums $Y_m := \sum_{n=1}^m y_n$ satisfy $\sum_{n=N_0+1}^m y_n = Y_m - Y_{N_0} \le B - Y_{N_0}$ for all $m > N_0$.
+Let $\sum_{n=1}^\infty x_n$ and $\sum_{n=1}^\infty y_n$ be two series such that $\sum_{n=1}^\infty y_n$ converges and there exists an index $N_0 \in \mathbb{N}$ such that $|x_n| \le y_n$ for all $n > N_0$.
 
-Consequently, for any $m > N_0$, the $m$-th partial sum $X_m := \sum_{n=1}^m |x_n|$ of the series of absolute values satisfies
+Because $y_n \ge |x_n| \ge 0$ for all $n > N_0$, the terms of $\sum_{n=1}^\infty y_n$ are non-negative for all $n > N_0$. Let $Y := \sum_{n=1}^\infty y_n < \infty$ denote its finite sum. For any integer $n > N_0$, consider the partial sums of the series of absolute values:
 $$
 \begin{gather}
-X_{m} = X_{N_0} + \sum_{n=N_0+1}^m |x_{n}| \le X_{N_0} + \sum_{n=N_0+1}^m y_{n} \le X_{N_0} + (B - Y_{N_0}) \tag{1}
+S_{|x|, n} := \sum_{k=1}^n |x_k| = \sum_{k=1}^{N_0} |x_k| + \sum_{k=N_0+1}^n |x_k| \tag{1}
 \end{gather}
 $$
-Because $|x_n| \ge 0$ for all $n \in \mathbb{N}$, the sequence of partial sums $\{X_m\}$ is nondecreasing and bounded above by the constant $M := X_{N_0} + B - Y_{N_0}$. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Weierstrass Theorem on Monotonic Sequences\|Weierstrass Theorem on Monotonic Sequences]], $\{X_m\}$ converges to a finite limit $X \le M$. Therefore, $\sum_{n=1}^\infty |x_n|$ converges, establishing that $\sum_{n=1}^\infty x_n$ converges absolutely.
+Because $|x_k| \le y_k$ for each $k > N_0$, step 1 is bounded above by: 
+$$
+\begin{gather}
+S_{|x|, n} \le \sum_{k=1}^{N_0} |x_k| + \sum_{k=N_0+1}^n y_k \le \sum_{k=1}^{N_0} |x_k| + Y =: M < \infty \tag{2}
+\end{gather}
+$$
+Because $|x_k| \ge 0$, the sequence of partial sums $\{S_{|x|, n}\}$ is monotonically nondecreasing. Furthermore, by step 2, it is bounded above by the constant $M \in \mathbb{R}$. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Weierstrass Theorem on Monotonic Sequences\|Weierstrass Theorem on Monotonic Sequences]], the sequence $\{S_{|x|, n}\}$ converges to a finite limit. Therefore, $\sum_{n=1}^\infty |x_n|$ converges, which proves that the series $\sum_{n=1}^\infty x_n$ converges absolutely.
 
 ---
 # Corollary 2
-Let $\alpha := \limsup_{n \to \infty} \sqrt[n]{|x_n|} \ge 0$.
+Let $\sum_{n=1}^\infty x_n$ be an infinite series of real numbers, and let $\alpha := \limsup_{n \to \infty} \sqrt[n]{|x_n|}$.
 
-### Case 1
-Suppose $\alpha < 1$. Because $\alpha \ge 0$, there exists a real constant $r$ satisfying $0 \le \alpha < r < 1$. By the definition of the superior limit, there exists an index $N \in \mathbb{N}$ such that for all $n > N$:
+First, suppose $\alpha < 1$. Choose a real number $r$ such that $\alpha < r < 1$. By the definition of the limit superior as the largest partial limit, there exists an index $N \in \mathbb{N}$ such that for all $n > N$:
 $$
 \begin{gather}
-\sqrt[n]{|x_{n}|} < r \implies |x_{n}| < r^n \tag{2}
+\sqrt[n]{|x_n|} \le r \implies |x_n| \le r^n \tag{3}
 \end{gather}
 $$
-Because $0 < r < 1$, the geometric series $\sum_{n=1}^\infty r^n$ converges. By Corollary 1 (or the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Standard Comparison Test\|Standard Comparison Test]]), the bound $|x_n| < r^n$ for all $n > N$ guarantees that $\sum_{n=1}^\infty x_n$ converges absolutely.
+Because $0 < r < 1$, the geometric series $\sum_{n=1}^\infty r^n$ converges. By Corollary 1, the bound $|x_n| \le r^n$ ensures that $\sum_{n=1}^\infty |x_n|$ converges, so $\sum_{n=1}^\infty x_n$ converges absolutely.
 
-### Case 2
-Suppose $\alpha > 1$. Because $\alpha = \limsup_{n \to \infty} \sqrt[n]{|x_n|} > 1$ is the largest partial limit of $\left\{\sqrt[n]{|x_n|}\right\}$, there exists a subsequence $\left\{x_{n_k}\right\}$ such that $\sqrt[n_k]{|x_{n_k}|} > 1$, and thus $|x_{n_k}| > 1$, for all $k \in \mathbb{N}$. Consequently, $x_n$ does not converge to $0$ as $n \to \infty$. By Corollary 4 below, the series $\sum_{n=1}^\infty x_n$ diverges.
+Next, suppose $\alpha > 1$. By definition of the limit superior, there exists a subsequence $\{x_{n_k}\}$ such that: 
+$$
+\begin{gather}
+\lim_{k \to \infty} \sqrt[n_k]{|x_{n_k}|} = \alpha > 1 \tag{4}
+\end{gather}
+$$
+Consequently, there exists an index $K \in \mathbb{N}$ such that for all $k > K$, $\sqrt[n_k]{|x_{n_k}|} > 1$, which implies $|x_{n_k}| > 1$. Because infinitely many terms of the sequence $\{x_n\}$ have absolute value exceeding $1$, the sequence of terms cannot converge to zero ($\lim_{n \to \infty} x_n \neq 0$). By Corollary 4, the failure of the terms to vanish guarantees that $\sum_{n=1}^\infty x_n$ diverges.
 
 ---
 # Corollary 3
-Suppose $x_n \neq 0$ for all sufficiently large $n$, and let $\alpha := \lim_{n \to \infty} \left| \frac{x_{n+1}}{x_n} \right| \ge 0$.
+Let $\sum_{n=1}^\infty x_n$ be an infinite series with $x_n \neq 0$ for all $n > N_0$, and suppose that the limit $\alpha := \lim_{n \to \infty} \left| \frac{x_{n+1}}{x_n} \right|$ exists.
 
-### Case 1
-Suppose $\alpha < 1$. Choose a real number $r$ such that $0 \le \alpha < r < 1$. By the definition of the limit, there exists an index $N \in \mathbb{N}$ such that for all $n \ge N$:
+First, suppose $\alpha < 1$. Choose a real constant $r$ such that $\alpha < r < 1$, and set $\varepsilon := r - \alpha > 0$. By definition of the limit, there exists an index $N \ge N_0$ such that for all $n \ge N$:
 $$
 \begin{gather}
-\left| \frac{x_{n+1}}{x_n} \right| < r \implies |x_{n+1}| < r|x_{n}| \tag{3}
+\left| \frac{x_{n+1}}{x_n} \right| < \alpha + \varepsilon = r \implies |x_{n+1}| < r |x_n| \tag{5}
 \end{gather}
 $$
-Applying step 3 inductively for $n > N$ yields
+Applying step 5 recursively for any index $n > N$ yields: 
 $$
 \begin{gather}
-|x_n| < r |x_{n-1}| < r^2 |x_{n-2}| < \dots < r^{n-N} |x_N| = \left(\frac{|x_N|}{r^N}\right) r^n \tag{4}
+|x_n| < r |x_{n-1}| < r^2 |x_{n-2}| < \dots < r^{n - N} |x_N| = \left( \frac{|x_N|}{r^N} \right) r^n \tag{6}
 \end{gather}
 $$
-Setting the positive constant $C := \frac{|x_N|}{r^N} > 0$, the geometric series $\sum_{n=1}^\infty C r^n = C \sum_{n=1}^\infty r^n$ converges because $0 < r < 1$. By Corollary 1, since $|x_n| < C r^n$ for all $n > N$, the series $\sum_{n=1}^\infty x_n$ converges absolutely.
+Defining the constant $C := \frac{|x_N|}{r^N} > 0$, step 6 provides the upper bound $|x_n| < C r^n$ for all $n > N$. Because $0 < r < 1$, the geometric series $\sum_{n=1}^\infty C r^n = C \sum_{n=1}^\infty r^n$ converges. By Corollary 1, the series $\sum_{n=1}^\infty x_n$ converges absolutely.
 
-### Case 2
-Suppose $\alpha > 1$. By the definition of the limit $\lim_{n \to \infty} \left|\frac{x_{n+1}}{x_n}\right| = \alpha > 1$, there exists an index $N \in \mathbb{N}$ such that for all $n \ge N$:
+Next, suppose $\alpha > 1$. Setting $\varepsilon := \alpha - 1 > 0$, there exists an index $N \ge N_0$ such that for all $n \ge N$:
 $$
 \begin{gather}
-\left| \frac{x_{n+1}}{x_n} \right| > 1 \implies |x_{n+1}| > |x_n| > 0 \tag{5}
+\left| \frac{x_{n+1}}{x_n} \right| > \alpha - \varepsilon = 1 \implies |x_{n+1}| > |x_n| \tag{7}
 \end{gather}
 $$
-By induction, $|x_n| > |x_N| > 0$ for all $n > N$, which prevents $\{x_n\}$ from converging to $0$. By Corollary 4 below, the series $\sum_{n=1}^\infty x_n$ diverges.
+Step 7 implies that for all $n > N$, $|x_n| > |x_N| > 0$. Because the sequence of terms does not approach zero, Corollary 4 guarantees that the series $\sum_{n=1}^\infty x_n$ diverges.
 
 ---
 # Corollary 4
-Assume that $\lim_{n \to \infty} x_n$ either does not exist or satisfies $\lim_{n \to \infty} x_n \neq 0$. Suppose, for the sake of contradiction, that the series $\sum_{n=1}^\infty x_n$ converges. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Cauchy Convergence Criterion for a Series\|Necessary Condition for Series Convergence]] (since the partial sums $s_n = \sum_{k=1}^n x_k$ converge to a finite sum $s$, forcing $\lim_{n \to \infty} x_n = \lim_{n \to \infty} (s_n - s_{n-1}) = s - s = 0$), the convergence of $\sum_{n=1}^\infty x_n$ requires that
+To establish the Divergence Test, consider the contrapositive statement: if the series $\sum_{n=1}^\infty x_n$ converges to a finite sum $s \in \mathbb{R}$, then its sequence of terms must converge to zero ($\lim_{n \to \infty} x_n = 0$).
+
+Assume that $\sum_{n=1}^\infty x_n$ converges. By definition, the sequence of partial sums $s_n := \sum_{k=1}^n x_k$ converges to $s$:
 $$
 \begin{gather}
-\lim_{n \to \infty} x_n = 0 \tag{6}
+\lim_{n \to \infty} s_n = s \quad \text{and} \quad \lim_{n \to \infty} s_{n-1} = s \tag{8}
 \end{gather}
 $$
-Step 6 directly contradicts the hypothesis that $\lim_{n \to \infty} x_n \neq 0$ (or does not exist). Therefore, the series $\sum_{n=1}^\infty x_n$ must diverge.
+For every $n \ge 2$, the $n$-th term of the series can be expressed as the difference of consecutive partial sums:
 $$
 \begin{gather}
-\textbf{Q.E.D}
+x_n = s_n - s_{n-1} \tag{9}
+\end{gather}
+$$
+Passing to the limit as $n \to \infty$ on both sides of step 9 and applying the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Operations Involving Limits\|difference rule for sequence limits]] yields: 
+$$
+\begin{gather}
+\lim_{n \to \infty} x_n = \lim_{n \to \infty} (s_n - s_{n-1}) = \lim_{n \to \infty} s_n - \lim_{n \to \infty} s_{n-1} = s - s = 0 \tag{10}
+\end{gather}
+$$
+Because the implication $(\sum_{n=1}^\infty x_n \text{ converges}) \implies (\lim_{n \to \infty} x_n = 0)$ holds universally, its logical contrapositive is necessarily true: if $\lim_{n \to \infty} x_n$ does not exist or if $\lim_{n \to \infty} x_n \neq 0$, the series $\sum_{n=1}^\infty x_n$ diverges.
+$$
+\begin{gather}
+\textbf{Q.E.D.}
 \end{gather}
 $$

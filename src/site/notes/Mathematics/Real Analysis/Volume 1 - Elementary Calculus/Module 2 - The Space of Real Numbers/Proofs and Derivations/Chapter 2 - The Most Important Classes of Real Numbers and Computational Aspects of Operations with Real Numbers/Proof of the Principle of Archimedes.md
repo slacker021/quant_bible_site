@@ -2,32 +2,56 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-of-the-principle-of-archimedes/","dg-note-properties":{}}
 ---
 
-Let $h > 0$ be a fixed positive real number and $x \in \mathbb{R}$ be an arbitrary real number. Dividing the target inequality $(k - 1)h \le x < kh$ by $h > 0$ yields the equivalent condition
+Let $h \in \mathbb{R}_{>0}$ be a fixed strictly positive step size, and let $x \in \mathbb{R}$ be an arbitrary real number.
+
+# Equivalent Reformulation
+Dividing the target inequality $(k - 1)h \le x < kh$ by the positive scalar $h > 0$ yields the equivalent condition:
 $$
-\begin{gather}
 k - 1 \le \frac{x}{h} < k \tag{1}
-\end{gather}
+$$
+It therefore suffices to demonstrate the existence and uniqueness of an integer $k \in \mathbb{Z}$ satisfying step 1.
+
+# Existence
+Define the subset $E \subset \mathbb{Z}$ consisting of all integers that strictly exceed the ratio $x/h$:
+$$
+E := \left\{ n \in \mathbb{Z} \ \middle|\ \frac{x}{h} < n \right\} \tag{2}
+$$
+Because the set of integers $\mathbb{Z}$ is not bounded above in $\mathbb{R}$, the scalar $x/h$ cannot serve as an upper bound for $\mathbb{Z}$. Therefore, there exists at least one integer strictly greater than $x/h$, proving that $E \ne \emptyset$. 
+
+Concurrently, by the defining condition in step 2, every element $n \in E$ satisfies $n > x/h$. Consequently, $E$ is bounded below in $\mathbb{R}$ by the minorant $x/h$.
+
+Because $E$ is a non-empty subset of $\mathbb{Z}$ bounded below, it possesses a unique minimal element:
+$$
+k := \min E \in \mathbb{Z} \tag{3}
+$$
+Because $k \in E$, the defining condition of $E$ requires that:
+$$
+\frac{x}{h} < k \tag{4}
+$$
+Furthermore, because $k$ is the minimal element of $E$, its immediate predecessor $k - 1$ cannot belong to $E$:
+$$
+k - 1 \notin E \implies k - 1 \le \frac{x}{h} \tag{5}
+$$
+Combining step 4 and step 5 yields:
+$$
+k - 1 \le \frac{x}{h} < k \tag{6}
+$$
+Multiplying step 6 across by $h > 0$ recovers the target inequality:
+$$
+(k - 1)h \le x < kh \tag{7}
 $$
 
-Define the subset $E \subset \mathbb{Z}$ of all integers strictly exceeding the ratio $x/h$:
+# Uniqueness
+Suppose that $k_1, k_2 \in \mathbb{Z}$ both satisfy step 6 with $k_1 < k_2$. Because $k_1$ and $k_2$ are integers, $k_1 < k_2 \implies k_1 \le k_2 - 1$. 
+
+Combining this with the bracketing bounds requires:
+$$
+k_2 - 1 \le \frac{x}{h} < k_1 \le k_2 - 1 \implies k_2 - 1 < k_2 - 1 \tag{8}
+$$
+Step 8 is an impossible contradiction. Therefore, $k_1 = k_2$, confirming that the integer $k \in \mathbb{Z}$ is uniquely determined.
+
 $$
 \begin{gather}
-E := \left\{ n \in \mathbb{Z} \ \middle| \ \frac{x}{h} < n \right\} \tag{2}
-\end{gather}
-$$
-
-By [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Bounds in the Natural Numbers and Integers\|Proposition 5 of Bounds in the Natural Numbers and Integers]], the set of integers $\mathbb{Z}$ is not bounded above in $\mathbb{R}$, which guarantees that $x/h$ is not an upper bound for $\mathbb{Z}$ and therefore $E$ is nonempty. Simultaneously, by definition of $E$, every element $n \in E$ satisfies $n > x/h$, meaning $E$ is bounded below in $\mathbb{R}$ by $x/h$.
-
-By [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Bounds in the Natural Numbers and Integers\|Proposition 4 of Bounds in the Natural Numbers and Integers]], every nonempty subset of $\mathbb{Z}$ that is bounded below possesses a unique minimal element. Let $k := \min E \in \mathbb{Z}$. Because $k \in E$, it cannot be that $x/h < k$, and because $k$ is the minimal element of $E$, the preceding integer $k - 1 \in \mathbb{Z}$ cannot belong to $E$, forcing $k - 1 \le x/h$. Thus,
-$$
-\begin{gather}
-k - 1 \le \frac{x}{h} < k \iff (k - 1)h \le x < kh \tag{3}
-\end{gather}
-$$
-
-Finally, to verify uniqueness, suppose $k_1, k_2 \in \mathbb{Z}$ both satisfy step 3. Then $k_1 - 1 \le x/h < k_2$ implies $k_1 - 1 < k_2 \implies k_1 \le k_2$, and symmetrically $k_2 - 1 \le x/h < k_1$ implies $k_2 \le k_1$, which forces $k_1 = k_2$.
-$$
-\begin{gather}
-\textbf{Q.E.D}
+\textbf{Q.E.D.}
 \end{gather}
 $$

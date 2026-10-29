@@ -2,42 +2,51 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-that-integer-operations-yield-integers/","dg-note-properties":{}}
 ---
 
-Let $m, n \in \mathbb{Z}$. By definition, $\mathbb{Z} = \mathbb{N} \cup \{0\} \cup (-\mathbb{N})$, where $-\mathbb{N} = \{-k \mid k \in \mathbb{N}\}$.
-# Closure Under Addition and Subtraction
-First, observe that for any $z \in \mathbb{Z}$, its additive inverse $-z$ also belongs to $\mathbb{Z}$: 
-1. If $z = 0$, then $-0 = 0 \in \mathbb{Z}$; if $z \in \mathbb{N}$, then $-z \in -\mathbb{N} \subset \mathbb{Z}$; and if $z = -k \in -\mathbb{N}$ with $k \in \mathbb{N}$, then $-z = -(-k) = k \in \mathbb{N} \subset \mathbb{Z}$. Because $m - n = m + (-n)$, closure under subtraction follows immediately once closure under addition is established.
+Let $\mathbb{R}$ be the ordered field of real numbers, and let $\mathbb{Z} = (-\mathbb{N}) \cup \{0\} \cup \mathbb{N}$ denote the set of integers, where $-\mathbb{N} := \{ -k \mid k \in \mathbb{N} \}$.
 
-To verify $m + n \in \mathbb{Z}$, consider the possible sign cases for $m$ and $n$:
-1. **At least one summand is zero:** If $m = 0$, then $m + n = n \in \mathbb{Z}$; if $n = 0$, then $m + n = m \in \mathbb{Z}$.
-2. **Both summands have the same sign:**
-   * If $m, n \in \mathbb{N}$, then $m + n \in \mathbb{N} \subset \mathbb{Z}$ by [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Properties of Natural Numbers\|Proposition 1 of the Properties of Natural Numbers]].
-   * If $m, n \in -\mathbb{N}$, then $a := -m \in \mathbb{N}$ and $b := -n \in \mathbb{N}$. Thus, $a + b \in \mathbb{N}$, which implies $m + n = -(a + b) \in -\mathbb{N} \subset \mathbb{Z}$.
-3. **Summands have opposite signs:** Without loss of generality (by commutativity of addition), suppose $m \in \mathbb{N}$ and $n \in -\mathbb{N}$, so that $b := -n \in \mathbb{N}$ and $m + n = m - b$. By trichotomy on $\mathbb{N}$, either $m = b$, $m > b$, or $m < b$:
-   * If $m = b$, then $m - b = 0 \in \mathbb{Z}$.
-   * If $m > b$, consider the set $S := \{x \in \mathbb{N} \mid b + x \le m\}$. Since $b < m$, [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Properties of Natural Numbers\|Proposition 4 of the Properties of Natural Numbers]] gives $b + 1 \le m$, so $1 \in S \ne \emptyset$. Furthermore, every $x \in S$ satisfies $x < b + x \le m$, so choosing the maximal such $x \in \mathbb{N}$ (or by induction on $m$) yields $b + k = m$ for some $k \in \mathbb{N}$, meaning $m - b = k \in \mathbb{N} \subset \mathbb{Z}$.
-   * If $m < b$, the symmetric argument yields $b - m = k \in \mathbb{N}$, so $m - b = -(b - m) = -k \in -\mathbb{N} \subset \mathbb{Z}$.
+--------------------------------------------------------------------------------
+# Proposition 1
+### Inversion and Subtraction Equivalence
+For any $z \in \mathbb{Z}$, the additive inverse $-z$ belongs to $\mathbb{Z}$:
+* If $z = 0$, then $-0 = 0 \in \mathbb{Z}$.
+* If $z \in \mathbb{N}$, then $-z \in -\mathbb{N} \subset \mathbb{Z}$.
+* If $z \in -\mathbb{N}$, then $z = -k$ for some $k \in \mathbb{N}$, so $-z = -(-k) = k \in \mathbb{N} \subset \mathbb{Z}$.
 
----
-# Closure Under Multiplication
-To verify $m \cdot n \in \mathbb{Z}$, evaluate the exhaustive cases for $m$ and $n$:
-1. **At least one factor is zero:** If $m = 0$ or $n = 0$, then $m \cdot n = 0 \in \mathbb{Z}$.
-2. **Both factors are non-zero:**
-   * If $m, n \in \mathbb{N}$, then $m \cdot n \in \mathbb{N} \subset \mathbb{Z}$ by [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Properties of Natural Numbers\|Proposition 1 of the Properties of Natural Numbers]].
-   * If $m, n \in -\mathbb{N}$, then $(-m) \in \mathbb{N}$ and $(-n) \in \mathbb{N}$, so the field axioms yield
-     $$
-     \begin{gather}
-     m \cdot n = (-m) \cdot (-n) \in \mathbb{N} \subset \mathbb{Z} \tag{1}
-     \end{gather}
-     $$
-   * If one factor belongs to $\mathbb{N}$ and the other belongs to $-\mathbb{N}$ (say, $m \in \mathbb{N}$ and $-n \in \mathbb{N}$), then $m \cdot (-n) \in \mathbb{N}$, which implies
-     $$
-     \begin{gather}
-     m \cdot n = -(m \cdot (-n)) \in -\mathbb{N} \subset \mathbb{Z} \tag{2}
-     \end{gather}
-     $$
-Thus, $\mathbb{Z}$ is closed under addition, subtraction, and multiplication.
+Because subtraction is defined as $m - n := m + (-n)$, closure under subtraction follows directly from closure under addition and inversion.
+
+### Closure under Addition
+Let $m, n \in \mathbb{Z}$. Evaluate the sign cases for $m$ and $n$:
+* Case 1: Assume $m = 0$ or $n = 0$. If $m = 0$, $m + n = 0 + n = n \in \mathbb{Z}$. If $n = 0$, $m + n = m + 0 = m \in \mathbb{Z}$.
+* Case 2: Assume $m$ and $n$ share the same sign.
+  * If $m, n \in \mathbb{N}$, then $m + n \in \mathbb{N} \subset \mathbb{Z}$ by the additive closure of natural numbers.
+  * If $m, n \in -\mathbb{N}$, then $a := -m \in \mathbb{N}$ and $b := -n \in \mathbb{N}$. By additive closure in $\mathbb{N}$, $a + b \in \mathbb{N}$. Therefore, $m + n = -(a + b) \in -\mathbb{N} \subset \mathbb{Z}$.
+* Case 3: Assume $m$ and $n$ possess opposite signs. Without loss of generality, let $m \in \mathbb{N}$ and $n \in -\mathbb{N}$, so that $b := -n \in \mathbb{N}$ and $m + n = m - b$. By trichotomy on $\mathbb{N}$:
+  * If $m = b$, then $m - b = 0 \in \mathbb{Z}$.
+  * If $m > b$, define the set $S := \{ x \in \mathbb{N} \mid b + x \le m \}$. Because $b < m$, the discrete gap property ensures $b + 1 \le m$, so $1 \in S \ne \emptyset$. Furthermore, every $x \in S$ satisfies $x < b + x \le m$, meaning $S$ is bounded above by $m$. By the Well-Ordering Principle, $S$ possesses a maximal element $k := \max S \in \mathbb{N}$. 
+  
+    If $b + k < m$, then $(b + k) + 1 \le m$, which implies $b + (k + 1) \le m$, requiring $(k + 1) \in S$. This contradicts the maximality of $k$. Therefore, $b + k = m$, which implies $m - b = k \in \mathbb{N} \subset \mathbb{Z}$.
+  * If $m < b$, then $b > m$. By the preceding argument, there exists $k \in \mathbb{N}$ such that $b - m = k$. Consequently, $m - b = -(b - m) = -k \in -\mathbb{N} \subset \mathbb{Z}$.
+
+In all cases, $m + n \in \mathbb{Z}$ and $m - n \in \mathbb{Z}$.
+
+--------------------------------------------------------------------------------
+# Proposition 2
+### Closure under Multiplication
+Let $m, n \in \mathbb{Z}$. Evaluate the sign cases for $m$ and $n$:
+* Case 1: Assume $m = 0$ or $n = 0$. By the connection axioms, $m \cdot n = 0 \in \mathbb{Z}$.
+* Case 2: Assume $m, n \in \mathbb{N}$. By the multiplicative closure of natural numbers, $m \cdot n \in \mathbb{N} \subset \mathbb{Z}$.
+* Case 3: Assume $m, n \in -\mathbb{N}$. Then $-m \in \mathbb{N}$ and $-n \in \mathbb{N}$. By the connection axioms and multiplicative closure in $\mathbb{N}$:
+$$
+m \cdot n = (-m) \cdot (-n) \in \mathbb{N} \subset \mathbb{Z} \tag{1}
+$$
+* Case 4: Assume $m$ and $n$ possess opposite signs. Without loss of generality, let $m \in \mathbb{N}$ and $n \in -\mathbb{N}$, so that $-n \in \mathbb{N}$. By multiplicative closure in $\mathbb{N}$, $m \cdot (-n) \in \mathbb{N}$. Applying the connection axioms:
+$$
+m \cdot n = -(m \cdot (-n)) \in -\mathbb{N} \subset \mathbb{Z} \tag{2}
+$$
+
+In all cases, $m \cdot n \in \mathbb{Z}$. Therefore, $\mathbb{Z}$ is closed under addition, subtraction, and multiplication.
 $$
 \begin{gather}
-\textbf{Q.E.D}
+\textbf{Q.E.D.}
 \end{gather}
 $$

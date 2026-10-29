@@ -2,61 +2,68 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-of-dedekind-s-cut-theorem-and-complete-equivalence/","dg-note-properties":{}}
 ---
 
-Let $\mathbb{F}$ be a linearly ordered field. It must be shown that the Least Upper Bound Axiom (every nonempty subset bounded above has a supremum) is logically equivalent to Dedekind's Cut Principle (every partition of $\mathbb{F}$ into nonempty disjoint sets $X, Y$ with $x \le y$ for all $x \in X, y \in Y$ admits a unique cut element $c \in \mathbb{F}$ satisfying $x \le c \le y$, so that either $c = \max X$ or $c = \min Y$).
+Let $(\mathbb{F}, +, \cdot, \le)$ be a linearly ordered field. The following propositions establish the logical equivalence between the Least Upper Bound Axiom and Dedekind's Cut Principle.
 
----
-# Forward Implication: Least Upper Bound Axiom Implies Dedekind's Cut Principle
-Assume the Least Upper Bound Axiom holds in $\mathbb{F}$. Let $X, Y \subset \mathbb{F}$ form a Dedekind cut:
+--------------------------------------------------------------------------------
+# Proposition 1
+Assume that the Least Upper Bound Axiom holds in $\mathbb{F}$. Let $(X, Y)$ be an arbitrary Dedekind cut of $\mathbb{F}$, satisfying: 
+$$
+X \cup Y = \mathbb{F}, \quad X \cap Y = \emptyset, \quad X \ne \emptyset, \quad Y \ne \emptyset \tag{1}
+$$
+$$
+\forall x \in X, \, \forall y \in Y, \quad x \le y \tag{2}
+$$
+Let $y_0 \in Y$ be an arbitrary element. By step 2, $x \le y_0$ for all $x \in X$, which establishes that $X$ is a non-empty subset of $\mathbb{F}$ bounded above by $y_0$. 
+
+By the Least Upper Bound Axiom, $X$ possesses a unique supremum in $\mathbb{F}$, denoted by $c := \sup X$. By the defining properties of the supremum: 
+$$
+\forall x \in X, \quad x \le c \tag{3}
+$$
+Furthermore, because every $y \in Y$ serves as an upper bound for $X$ by step 2, and $c$ is the least upper bound:
+$$
+\forall y \in Y, \quad c \le y \tag{4}
+$$
+Combining step 3 and step 4 establishes that $x \le c \le y$ for all $x \in X$ and all $y \in Y$. Because $X \cup Y = \mathbb{F}$ and $X \cap Y = \emptyset$, the cut element $c$ belongs to exactly one of the two sets:
+* If $c \in X$, then step 3 confirms that $c = \max X$.
+* If $c \in Y$, then step 4 confirms that $c = \min Y$.
+
+To verify uniqueness, suppose $c_1, c_2 \in \mathbb{F}$ both satisfy $x \le c_i \le y$ for all $x \in X$ and $y \in Y$, with $c_1 < c_2$. The midpoint:
+$$
+m := \frac{c_1 + c_2}{2} \tag{5}
+$$
+satisfies $c_1 < m < c_2$. Because $m > c_1 \ge x$ for all $x \in X$, $m \notin X$. Concurrently, because $m < c_2 \le y$ for all $y \in Y$, $m \notin Y$. Consequently, $m \notin X \cup Y = \mathbb{F}$, which contradicts the totality of the field. Therefore, $c_1 = c_2$, establishing the existence of a unique cut element.
+
+--------------------------------------------------------------------------------
+# Proposition 2
+Assume that Dedekind's Cut Principle holds in $\mathbb{F}$. Let $A \subset \mathbb{F}$ be an arbitrary non-empty subset bounded above by some majorant $b_0 \in \mathbb{F}$. 
+
+Define $Y \subset \mathbb{F}$ as the set of all strict upper bounds of $A$, and define $X$ as its relative complement:
+$$
+Y := \{ y \in \mathbb{F} \mid \forall a \in A, \, a < y \} \tag{6}
+$$
+$$
+X := \mathbb{F} \setminus Y = \{ x \in \mathbb{F} \mid \exists a \in A \text{ such that } x \le a \} \tag{7}
+$$
+
+### Verification of Dedekind Cut Conditions
+1. **Non-emptiness:** Because $A \ne \emptyset$, choosing $a_0 \in A$ gives $a_0 \le a_0$, so $a_0 \in X$, proving $X \ne \emptyset$. Because $b_0$ is an upper bound of $A$, $a \le b_0 < b_0 + 1$ for all $a \in A$, ensuring $(b_0 + 1) \in Y$, so $Y \ne \emptyset$.
+2. **Disjoint Exhaustive Partition:** By construction, $X \cup Y = \mathbb{F}$ and $X \cap Y = \emptyset$.
+3. **Order Separation:** For any $x \in X$ and $y \in Y$, there exists $a \in A$ such that $x \le a$. Because $y \in Y$, $a < y$. By transitivity, $x < y$.
+
+### Supremum Identification
+By Dedekind's Cut Principle, there exists a unique element $c \in \mathbb{F}$ such that:
+$$
+x \le c \le y \quad \forall x \in X, \, \forall y \in Y \tag{8}
+$$
+Because $A \subseteq X$, step 8 establishes that $a \le c$ for all $a \in A$, confirming that $c$ is an upper bound for $A$. 
+
+Now let $u \in \mathbb{F}$ be an arbitrary upper bound of $A$. For any $\varepsilon > 0$, the element $u + \varepsilon$ satisfies $a \le u < u + \varepsilon$ for all $a \in A$, which implies $(u + \varepsilon) \in Y$. By step 8: 
+$$
+c \le u + \varepsilon \quad \forall \varepsilon > 0 \tag{9}
+$$
+If $c > u$, setting $\varepsilon = \frac{c - u}{2} > 0$ would require $c \le u + \frac{c - u}{2} = \frac{c + u}{2} < c$, producing a contradiction. Therefore, $c \le u$, confirming that $c$ is the least upper bound of $A$. Thus, $c = \sup A$.
 $$
 \begin{gather}
-X \cup Y = \mathbb{F}, \quad X \cap Y = \emptyset, \quad X \ne \emptyset, \quad Y \ne \emptyset \\[2mm]
-\forall x \in X, \ \forall y \in Y \ (x \le y) \tag{1}
-\end{gather}
-$$
-
-Pick any element $y_0 \in Y$. By step 1, $x \le y_0$ for all $x \in X$, meaning $X$ is nonempty and bounded above by $y_0$. By the Least Upper Bound Axiom, $X$ possesses a supremum $c := \sup X \in \mathbb{F}$. By definition of $\sup X$,
-$$
-\begin{gather}
-\forall x \in X \ (x \le c) \tag{2}
-\end{gather}
-$$
-
-Furthermore, because every $y \in Y$ is an upper bound for $X$ and $c = \sup X$ is the *least* upper bound of $X$,
-$$
-\begin{gather}
-\forall y \in Y \ (c \le y) \tag{3}
-\end{gather}
-$$
-
-Combining steps 2 and 3 yields $x \le c \le y$ for all $x \in X$ and $y \in Y$. Because $X \cup Y = \mathbb{F}$ and $X \cap Y = \emptyset$, the element $c$ belongs to exactly one of the two sets:
-* If $c \in X$, then step 2 implies $c = \max X$.
-* If $c \in Y$, then step 3 implies $c = \min Y$.
-
-To verify uniqueness of $c$, suppose $c_1, c_2 \in \mathbb{F}$ both satisfy $x \le c_i \le y$ for all $x \in X, y \in Y$ with $c_1 < c_2$. Then the midpoint $m := \frac{c_1 + c_2}{2} \in \mathbb{F}$ satisfies $c_1 < m < c_2$, meaning $m$ cannot belong to $X$ (since $x \le c_1 < m$) and cannot belong to $Y$ (since $m < c_2 \le y$), contradicting $X \cup Y = \mathbb{F}$. Thus, $c_1 = c_2$.
-
----
-# Reverse Implication: Dedekind's Cut Principle Implies the Least Upper Bound Axiom
-Assume Dedekind's Cut Principle holds in $\mathbb{F}$. Let $A \subset \mathbb{F}$ be an arbitrary nonempty subset that is bounded above by some element $b_0 \in \mathbb{F}$. Define $Y$ as the set of all strict upper bounds of $A$, and let $X$ be its complement in $\mathbb{F}$:
-$$
-\begin{gather}
-Y := \{y \in \mathbb{F} \mid \forall a \in A \ (a < y)\} \\[2mm]
-X := \mathbb{F} \setminus Y = \{x \in \mathbb{F} \mid \exists a \in A \text{ such that } x \le a\} \tag{4}
-\end{gather}
-$$
-
-Verify that $(X, Y)$ forms a valid Dedekind cut of $\mathbb{F}$:
-1. **Non-emptiness:** Since $A \ne \emptyset$, any $a_0 \in A$ satisfies $a_0 \le a_0$, so $A \subset X$ and $X \ne \emptyset$. Since $b_0$ is an upper bound for $A$, every $a \in A$ satisfies $a \le b_0 < b_0 + 1$, so $(b_0 + 1) \in Y$ and $Y \ne \emptyset$.
-2. **Disjoint Partition and Ordering:** By construction, $X \cup Y = \mathbb{F}$ and $X \cap Y = \emptyset$. For any $x \in X$ and $y \in Y$, there exists $a \in A$ such that $x \le a$, while $a < y$ by definition of $Y$; by transitivity, $x < y$.
-
-By Dedekind's Cut Principle, there exists a unique element $c \in \mathbb{F}$ such that
-$$
-\begin{gather}
-x \le c \le y \quad \forall x \in X, \ \forall y \in Y \tag{5}
-\end{gather}
-$$
-Because $A \subset X$, step 5 guarantees that $a \le c$ for all $a \in A$, so $c$ is an upper bound for $A$. Now let $u \in \mathbb{F}$ be any upper bound for $A$. For every $\varepsilon > 0$ in $\mathbb{F}$, the element $u + \varepsilon$ satisfies $a \le u < u + \varepsilon$ for all $a \in A$, meaning $(u + \varepsilon) \in Y$. By step 5, $c \le u + \varepsilon$ for all $\varepsilon > 0$, which forces $c \le u$ (for if $c > u$, setting $\varepsilon = \frac{c - u}{2} > 0$ would yield $c \le \frac{c + u}{2} < c$, a contradiction). Therefore, $c = \sup A$.
-$$
-\begin{gather}
-\textbf{Q.E.D}
+\textbf{Q.E.D.}
 \end{gather}
 $$

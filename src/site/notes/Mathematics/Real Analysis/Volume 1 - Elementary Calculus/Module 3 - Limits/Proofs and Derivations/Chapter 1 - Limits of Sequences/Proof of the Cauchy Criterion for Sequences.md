@@ -2,47 +2,71 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-3-limits/proofs-and-derivations/chapter-1-limits-of-sequences/proof-of-the-cauchy-criterion-for-sequences/","dg-note-properties":{}}
 ---
 
-# Necessity
-Assume the sequence $\{x_n\}$ converges to a finite limit $A \in \mathbb{R}$, and let $\varepsilon > 0$ be arbitrary. By the definition of convergence applied to the tolerance $\frac{\varepsilon}{2} > 0$, there exists an index $N \in \mathbb{N}$ such that $|x_n - A| < \frac{\varepsilon}{2}$ for all $n > N$.
+Let $\{x_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
-For any two indices $n > N$ and $m > N$, applying the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Triangle Inequality\|Triangle Inequality]] by inserting and subtracting $A$ yields
+**Necessity ($\implies$):**
+Assume that the sequence $\{x_n\}$ converges to a finite limit $A \in \mathbb{R}$, and let $\varepsilon > 0$ be arbitrary.
+
+By the definition of convergence applied to the positive tolerance $\frac{\varepsilon}{2} > 0$, there exists an index $N \in \mathbb{N}$ such that $|x_n - A| < \frac{\varepsilon}{2}$ for all $n > N$. For any two indices $n > N$ and $m > N$, adding and subtracting $A$ within the absolute difference and applying the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Triangle Inequality\|Triangle Inequality]] yields:
 $$
 \begin{gather}
-|x_n - x_m| = |(x_n - A) + (A - x_m)| \le |x_n - A| + |x_m - A| \\[2mm]
-|x_n - x_m| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon \tag{1}
+|x_n - x_m| = |(x_n - A) + (A - x_m)| \le |x_n - A| + |x_m - A| \tag{1}
 \end{gather}
 $$
-Thus, $\{x_n\}$ is a Cauchy sequence.
-
----
-# Sufficiency
-Conversely, assume $\{x_n\}$ is a Cauchy sequence. First, verify that $\{x_n\}$ is bounded. Instantiating the Cauchy definition with $\varepsilon = 1 > 0$ yields an index $N_0 \in \mathbb{N}$ such that $|x_n - x_m| < 1$ for all $m, n > N_0$. Fixing $m = N_0 + 1 > N_0$, the Triangle Inequality implies that for all $n > N_0$:
+Substituting the convergence bounds into step 1 gives: 
 $$
 \begin{gather}
-|x_n| = |(x_n - x_{N_0+1}) + x_{N_0+1}| \le |x_n - x_{N_0+1}| + |x_{N_0+1}| < 1 + |x_{N_0+1}| \tag{2}
+|x_n - x_m| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon \quad \forall n, m > N \tag{2}
 \end{gather}
 $$
-Defining $M := \max(|x_1|, |x_2|, \dots, |x_{N_0}|, |x_{N_0+1}| + 1) + 1$, it follows that $|x_n| < M$ for all $n \in \mathbb{N}$, so $\{x_n\}$ is bounded.
+Therefore, $\{x_n\}$ is a Cauchy sequence.
 
-By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Bolzano-Weierstrass Lemma\|Bolzano-Weierstrass Lemma]], the bounded real sequence $\{x_n\}$ contains a convergent subsequence $\{x_{n_k}\}$ that converges to some finite real limit $L \in \mathbb{R}$.
+**Sufficiency ($\impliedby$):**
+Conversely, assume that $\{x_n\}$ is a Cauchy sequence. First, it is established that $\{x_n\}$ is bounded in $\mathbb{R}$.
 
-To demonstrate that the entire sequence $\{x_n\}$ converges to $L$, let $\varepsilon > 0$ be arbitrary. Because $\{x_n\}$ is a Cauchy sequence, there exists an index $N \in \mathbb{N}$ such that $|x_n - x_m| < \frac{\varepsilon}{2}$ for all $m, n > N$. Furthermore, because $\lim_{k \to \infty} x_{n_k} = L$, there exists an index $K \in \mathbb{N}$ such that $|x_{n_k} - L| < \frac{\varepsilon}{2}$ for all $k > K$.
-
-Select a fixed index $k > \max(K, N)$. Because $n_1 < n_2 < \dots < n_k$ is a strictly increasing sequence of natural numbers, $n_k \ge k > N$. For any index $n > N$, applying the Triangle Inequality with the anchor term $x_{n_k}$ gives
+Instantiating the Cauchy definition with $\varepsilon = 1 > 0$ guarantees the existence of an index $N_0 \in \mathbb{N}$ such that $|x_n - x_m| < 1$ for all $n, m > N_0$. Fixing $m = N_0 + 1 > N_0$, the Triangle Inequality reveals that for all $n > N_0$:
 $$
 \begin{gather}
-|x_n - L| = |(x_n - x_{n_k}) + (x_{n_k} - L)| \le |x_n - x_{n_k}| + |x_{n_k} - L| \tag{3}
+|x_n| = |(x_n - x_{N_0+1}) + x_{N_0+1}| \le |x_n - x_{N_0+1}| + |x_{N_0+1}| < 1 + |x_{N_0+1}| \tag{3}
 \end{gather}
 $$
-Because both $n > N$ and $n_k > N$, the Cauchy bound gives $|x_n - x_{n_k}| < \frac{\varepsilon}{2}$; because $k > K$, the subsequence convergence bound gives $|x_{n_k} - L| < \frac{\varepsilon}{2}$. Substituting both bounds into step 3 yields
+Defining the positive real constant: 
 $$
 \begin{gather}
-|x_n - L| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon \quad \forall n > N \tag{4}
+M := \max(|x_1|, |x_2|, \dots, |x_{N_0}|, |x_{N_0+1}| + 1) > 0 \tag{4}
+\end{gather}
+$$
+it follows from step 3 and step 4 that $|x_n| \le M$ for all $n \in \mathbb{N}$. Thus, $\{x_n\}$ is bounded.
+
+By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Bolzano-Weierstrass Lemma\|Bolzano-Weierstrass Lemma]], the bounded sequence $\{x_n\}$ contains a subsequence $\{x_{n_k}\}_{k=1}^\infty$ that converges to some finite real limit $L \in \mathbb{R}$.
+
+To prove that the parent sequence $\{x_n\}$ converges to $L$, let $\varepsilon > 0$ be arbitrary. Because $\{x_n\}$ is Cauchy, there exists an index $N_1 \in \mathbb{N}$ such that: 
+$$
+\begin{gather}
+|x_n - x_m| < \frac{\varepsilon}{2} \quad \forall n, m > N_1 \tag{5}
+\end{gather}
+$$
+Furthermore, because $\lim_{k \to \infty} x_{n_k} = L$, there exists an index $K \in \mathbb{N}$ such that: 
+$$
+\begin{gather}
+|x_{n_k} - L| < \frac{\varepsilon}{2} \quad \forall k > K \tag{6}
+\end{gather}
+$$
+Choose a fixed index $k > \max(K, N_1)$. Because $n_1 < n_2 < \dots < n_k$ is a strictly increasing sequence of natural numbers, induction establishes that $n_k \ge k > N_1$. For any index $n > N_1$, adding and subtracting the anchor term $x_{n_k}$ and applying the Triangle Inequality yields:
+$$
+\begin{gather}
+|x_n - L| = |(x_n - x_{n_k}) + (x_{n_k} - L)| \le |x_n - x_{n_k}| + |x_{n_k} - L| \tag{7}
+\end{gather}
+$$
+Because both $n > N_1$ and $n_k > N_1$, step 5 implies that $|x_n - x_{n_k}| < \frac{\varepsilon}{2}$. Because $k > K$, step 6 implies that $|x_{n_k} - L| < \frac{\varepsilon}{2}$. Substituting these bounds into step 7 produces:
+$$
+\begin{gather}
+|x_n - L| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon \quad \forall n > N_1 \tag{8}
 \end{gather}
 $$
 Therefore, the sequence $\{x_n\}$ converges to $L$.
 $$
 \begin{gather}
-\textbf{Q.E.D}
+\textbf{Q.E.D.}
 \end{gather}
 $$

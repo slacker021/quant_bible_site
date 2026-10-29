@@ -2,40 +2,59 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-3-limits/proofs-and-derivations/chapter-1-limits-of-sequences/proof-of-the-corollary-for-the-squeeze-theorem-of-limits/","dg-note-properties":{}}
 ---
 
-Let $\{x_n\}$ be a sequence of real numbers.
+Let $\{x_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
-# Necessity
-Assume that $\lim_{n \to \infty} |x_n| = 0$. By the definition of the absolute value on $\mathbb{R}$, every term $x_n$ is bounded below by $-|x_n|$ and bounded above by $|x_n|$:
+**Forward Direction ($\implies$):**
+Assume that $\lim_{n \to \infty} |x_n| = 0$. By definition of the absolute value on $\mathbb{R}$, every term $x_n$ satisfies the double inequality: 
 $$
 \begin{gather}
--|x_{n}| \le x_{n} \le |x_{n}| \quad \forall n \in \mathbb{N} \tag{1}
+-|x_n| \le x_n \le |x_n| \quad \forall n \in \mathbb{N} \tag{1}
 \end{gather}
 $$
-By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Operations Involving Limits\|scalar multiplication property of limits]], multiplying the convergent sequence $\{|x_n|\}$ by $c = -1$ yields
+By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Operations Involving Limits\|scalar multiple rule for limits]], the limit of the lower bound evaluates to: 
 $$
 \begin{gather}
-\lim_{n \to \infty} (-|x_{n}|) = -\lim_{n \to \infty} |x_{n}| = -0 = 0 \tag{2}
+\lim_{n \to \infty} (-|x_n|) = -1 \cdot \lim_{n \to \infty} |x_n| = -1 \cdot 0 = 0 \tag{2}
 \end{gather}
 $$
-Consequently, both bounding sequences $\{-|x_n|\}$ and $\{|x_n|\}$ converge to the same limit $0$:
+Because both the lower bounding sequence $\{-|x_n|\}$ and the upper bounding sequence $\{|x_n|\}$ converge to $0$, the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Inequalities Involving Limits\|Squeeze Theorem]] applied to step 1 establishes that:
 $$
 \begin{gather}
-\lim_{n \to \infty} (-|x_{n}|) = \lim_{n \to \infty} |x_{n}| = 0 \tag{3}
+\lim_{n \to \infty} x_n = 0 \tag{3}
 \end{gather}
 $$
-Applying the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Squeeze Theorem\|Squeeze Theorem]] to step 1 and step 3 establishes that $\lim_{n \to \infty} x_n = 0$.
 
----
-# Sufficiency
-Conversely, assume that $\lim_{n \to \infty} x_n = 0$, and let $\varepsilon > 0$ be arbitrary. By the definition of convergence, there exists an index $N \in \mathbb{N}$ such that $|x_n - 0| < \varepsilon$ for all $n > N$. Because $||x_n| - 0| = |x_n| = |x_n - 0|$, it follows that
+**Reverse Direction ($\impliedby$):**
+Conversely, assume that $\lim_{n \to \infty} x_n = 0$. Let $\varepsilon > 0$ be arbitrary.
+
+By definition of sequence convergence, there exists an index $N \in \mathbb{N}$ such that for all $n > N$:
 $$
 \begin{gather}
-||x_n| - 0| = |x_n - 0| < \varepsilon \quad \forall n > N \tag{4}
+|x_n - 0| < \varepsilon \iff |x_n| < \varepsilon \tag{4}
 \end{gather}
 $$
-Therefore, $\lim_{n \to \infty} |x_n| = 0$.
+Evaluating the distance between $|x_n|$ and $0$ yields: 
 $$
 \begin{gather}
-\textbf{Q.E.D}
+||x_n| - 0| = ||x_n|| = |x_n| \tag{5}
+\end{gather}
+$$
+Combining step 4 and step 5 demonstrates that for all $n > N$:
+$$
+\begin{gather}
+||x_n| - 0| < \varepsilon \tag{6}
+\end{gather}
+$$
+Because $\varepsilon > 0$ was arbitrary, step 6 proves that $\lim_{n \to \infty} |x_n| = 0$.
+
+Combining both directions establishes the logical equivalence:
+$$
+\begin{gather}
+\lim_{n \to \infty} |x_n| = 0 \iff \lim_{n \to \infty} x_n = 0 \tag{7}
+\end{gather}
+$$
+$$
+\begin{gather}
+\textbf{Q.E.D.}
 \end{gather}
 $$

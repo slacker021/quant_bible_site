@@ -2,60 +2,41 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-3-limits/proofs-and-derivations/chapter-1-limits-of-sequences/proof-of-weierstrass-theorem-on-monotonic-sequences/","dg-note-properties":{}}
 ---
 
-# Theorem 1
-Let $\{x_n\}$ be a nondecreasing sequence of real numbers, meaning $x_1 \le x_2 \le \dots \le x_n \le x_{n+1} \le \dots$.
+Let $\{x_n\}_{n=1}^\infty$ be an arbitrary sequence of real numbers. By the Law of the Excluded Middle, $\{x_n\}$ is either bounded or unbounded in $\mathbb{R}$.
 
-### Necessity
-Assume the nondecreasing sequence $\{x_n\}$ converges to a finite real limit $L \in \mathbb{R}$. By [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Basic Properties of Limits\|Theorem 4 of the Basic Properties of Limits]], every convergent sequence is bounded. Consequently, $\{x_n\}$ is bounded above.
+**Case 1 (Bounded Sequences):**
+Suppose that $\{x_n\}$ is bounded. By the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Bolzano-Weierstrass Lemma\|Bolzano-Weierstrass Lemma]], every bounded sequence of real numbers contains a convergent subsequence $\{x_{n_k}\}_{k=1}^\infty$, which immediately establishes the claim.
 
-### Sufficiency
-Conversely, assume the nondecreasing sequence $\{x_n\}$ is bounded above. Define the nonempty set of all sequence terms $S := \{x_n \mid n \in \mathbb{N}\} \subset \mathbb{R}$. Because $S$ is nonempty and bounded above, the [[Proof of the Supremum Principle\|Supremum Principle]] (derived from the Axiom of Completeness) guarantees that $S$ possesses a unique finite supremum $L := \sup S \in \mathbb{R}$.
+**Case 2 (Unbounded Sequences):**
+Suppose that $\{x_n\}$ is unbounded. By definition of boundedness, the sequence must fail to be bounded above, fail to be bounded below, or fail both:
 
-Let $\varepsilon > 0$ be arbitrary. Because $L = \sup S$ is the *least* upper bound of $S$, the strictly smaller quantity $L - \varepsilon < L$ cannot be an upper bound of $S$. Consequently, there exists at least one index $N \in \mathbb{N}$ such that
+**Sub-Case 2a ($\{x_n\}$ is unbounded above):** Because $\{x_n\}$ is not bounded above, for every real constant $M \in \mathbb{R}$, there exists at least one index $n \in \mathbb{N}$ such that $x_n > M$. Construct a subsequence $\{x_{n_k}\}$ tending to $+\infty$ inductively as follows:
+1. For $k = 1$, setting $M_0 := 1$ guarantees the existence of an index $n_1 \in \mathbb{N}$ such that $x_{n_1} > 1$.
+2. Suppose indices $n_1 < n_2 < \dots < n_k$ have been selected such that $x_{n_j} > j$ for all $1 \le j \le k$. Define the real constant:
 $$
 \begin{gather}
-x_N > L - \varepsilon \tag{1}
+M_k := \max(x_1, x_2, \dots, x_{n_k}, k + 1) \tag{1}
 \end{gather}
 $$
-Because $\{x_n\}$ is nondecreasing, $x_n \ge x_N$ holds for all $n > N$. Combining this with step 1 by transitivity yields
+Because $\{x_n\}$ is unbounded above, $M_k$ is not an upper bound for $\{x_n\}$. Therefore, there exists an index $n_{k+1} \in \mathbb{N}$ such that $x_{n_{k+1}} > M_k$. By definition of $M_k$ in step 1, $x_j \le M_k$ for all $1 \le j \le n_k$, which forces $n_{k+1} > n_k$ and simultaneously guarantees that
 $$
 \begin{gather}
-x_n \ge x_N > L - \varepsilon \quad \forall n > N \tag{2}
+x_{n_{k+1}} > M_k \ge k + 1 \tag{2}
 \end{gather}
 $$
-Simultaneously, because $L = \sup S$ is an upper bound for $S$, every term of the sequence satisfies $x_n \le L < L + \varepsilon$ for all $n \in \mathbb{N}$. Combining this upper bound with step 2 shows that for all $n > N$:
+This inductive construction produces a strictly increasing sequence of indices $n_1 < n_2 < \dots < n_k < \dots$ whose corresponding subsequence satisfies $x_{n_k} > k$ for all $k \in \mathbb{N}$. For any arbitrary constant $c \in \mathbb{R}$, choosing an integer $K \in \mathbb{N}$ via the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of Archimedian Corollaries\|Principle of Archimedes]] such that $K > c$ ensures that $x_{n_k} > k > K > c$ for all $k > K$. Thus, $x_{n_k} \to +\infty$ (and consequently $x_{n_k} \to \infty$).
+
+**Sub-Case 2b ($\{x_n\}$ is unbounded below):** By symmetric reasoning, for every real constant $m \in \mathbb{R}$, there exists at least one index $n \in \mathbb{N}$ such that $x_n < m$. Choose $n_1 \in \mathbb{N}$ such that $x_{n_1} < -1$. Given $n_1 < n_2 < \dots < n_k$, define the real constant:
 $$
 \begin{gather}
-L - \varepsilon < x_n \le L < L + \varepsilon \implies |x_n - L| < \varepsilon \tag{3}
+m_k := \min(x_1, x_2, \dots, x_{n_k}, -(k + 1)) \tag{3}
 \end{gather}
 $$
-Thus, $\{x_n\}$ converges to its supremum $L = \sup_{n \in \mathbb{N}} x_n$.
+Because $\{x_n\}$ is unbounded below, there exists an index $n_{k+1} \in \mathbb{N}$ such that $x_{n_{k+1}} < m_k$. Because $x_j \ge m_k$ for all $1 \le j \le n_k$, it follows that $n_{k+1} > n_k$ and $x_{n_{k+1}} < -(k + 1)$. This construction produces a subsequence satisfying $x_{n_k} < -k$ and $|x_{n_k}| > k$ for all $k \in \mathbb{N}$, which proves that $x_{n_k} \to -\infty$ (and consequently $x_{n_k} \to \infty$).
 
----
-# Theorem 2
-Let $\{y_n\}$ be a nonincreasing sequence of real numbers, meaning $y_1 \ge y_2 \ge \dots \ge y_n \ge y_{n+1} \ge \dots$.
-
-### Necessity
-Assume the nonincreasing sequence $\{y_n\}$ converges. By [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Basic Properties of Limits\|Theorem 4 of the Basic Properties of Limits]], $\{y_n\}$ is bounded, and is therefore bounded below.
-
-### Sufficiency
-Conversely, assume the nonincreasing sequence $\{y_n\}$ is bounded below by $m \in \mathbb{R}$, so $y_n \ge m$ for all $n \in \mathbb{N}$. Define the reflected sequence $z_n := -y_n$ for each $n \in \mathbb{N}$, and let $Y := \{y_n \mid n \in \mathbb{N}\}$ and $Z := \{-y_n \mid n \in \mathbb{N}\} = -Y$. Multiplying $y_n \ge y_{n+1} \ge m$ by $-1$ reverses the inequalities:
+In all cases, from any sequence of real numbers one can extract either a convergent subsequence or a subsequence that tends to infinity.
 $$
 \begin{gather}
-z_n = -y_n \le -y_{n+1} = z_{n+1} \le -m \quad \forall n \in \mathbb{N} \tag{4}
-\end{gather}
-$$
-Step 4 demonstrates that $\{z_n\}$ is a nondecreasing sequence bounded above by $-m$. By Theorem 1 established above, $\{z_n\}$ converges to its supremum $\lim_{n \to \infty} z_n = \sup Z = \sup(-Y)$.
-
-By the reflection identity $\sup(-Y) = -\inf Y$ established in the [[Proof of the Infimum Principle\|Infimum Principle]] and the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of Arithmetic Operations Involving Limits\|scalar multiplication property of limits]],
-$$
-\begin{gather}
-\lim_{n \to \infty} y_n = \lim_{n \to \infty} (-z_n) = -\lim_{n \to \infty} z_n = -\sup(-Y) = \inf Y = \inf_{n \in \mathbb{N}} y_n \tag{5}
-\end{gather}
-$$
-Thus, $\{y_n\}$ converges to its infimum $\inf_{n \in \mathbb{N}} y_n$.
-$$
-\begin{gather}
-\textbf{Q.E.D}
+\textbf{Q.E.D.}
 \end{gather}
 $$

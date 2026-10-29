@@ -108,7 +108,7 @@ $$
 [\alpha, \beta] = \bigcap_{[a, b] \in I} [a, b]
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers/Proof of the First Useful Lemma\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers/Proof of the Intersection of Nested Closed Intervals\|Proof of the Intersection of Nested Closed Intervals]])
 
 $$
 \begin{align}
@@ -121,4 +121,21 @@ $$
 & \hspace{0.5 in} 4. \ \text{The Bolzano-Weierstrass Principle.}
 \end{align}
 $$
-(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers/Proof that Different Axioms Can be Used\|proof]])
+(see [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers/Proof that Different Axioms Can be Used\|Proof that Different Axioms Can be Used]])
+
+>[!info]+ Remark: Different Paradigms
+>It was mentioned in the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 1 - General Mathematical Concepts and Notation/Chapter 1 - Basic Rules of Logic\|prelude of the very first chapter of Real Analysis]] that it is possible to construct a coherent and harmonious mathematical universe with different frameworks that lead to mostly the same conclusion. While the different approaches offered by various mathematicians throughout history would be too much to list in this single page, a good example of something being considered a theorem versus it being a self-evident axiom is the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof that Induction Works\|principle of induction]]. 
+>
+>- In standard first-order Peano Arithmetic, induction is an axiom that is provided for the [[Mathematics/Real Analysis/Volume 1 - Elementary Calculus/Module 2 - The Space of Real Numbers/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers\|natural numbers]]. This is evident in a branch such as *Number Theory*, where it provides a simple justification for why numerical sequences seemingly go on forever. 
+>- In the case of these notes, which uses a simpler and watered-down version of Zermelo-Frankel set theory, the principle of induction must be proven to work by:
+>	- The axiom claiming that inductive sets exist.
+>	- The axiom of infinity. 
+>	- The well-ordering principle
+>
+>On the surface, the reader may feel that such a detail is useless. After all, researchers within the mathematical sciences remain collaborative in their efforts—with new knowledge being built on already-existing information. This is a valid remark to make, but the reader must also recognize that differing assumptions can lead to different ways of getting the same answer that makes using multiple differing paradigms difficult. 
+>
+>It it this problem that these notes are attempting to alleviate by having it operate within the same framework. While the notes do not claim to present any novel discoveries, the author and his AI agents still need to synthesize the existing knowledge to fit the framework because failure to do so will easily lead to contradictions and inconsistent notation. Anyone who has gone through a standard university course—whether undergraduate or postgraduate—or anyone who has attempted to teach themselves a mathematical science with disparate textbooks written by different authors will understand the trouble that comes with conflicting frameworks and assumptions. 
+
+
+
+

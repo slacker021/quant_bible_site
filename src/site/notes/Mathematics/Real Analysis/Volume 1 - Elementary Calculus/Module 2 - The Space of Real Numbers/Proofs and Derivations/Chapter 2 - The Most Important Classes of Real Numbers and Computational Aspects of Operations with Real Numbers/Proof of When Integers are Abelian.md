@@ -11,7 +11,6 @@ To verify that $(\mathbb{Z}, +)$ forms an abelian group, one checks the group ax
 
 Thus, $(\mathbb{Z}, +)$ is an abelian group.
 
----
 # Failure of Multiplicative Group Structure on $\mathbb{Z}$ and $\mathbb{Z} \setminus \{0\}$
 For $(\mathbb{Z}, \cdot)$ or $(\mathbb{Z} \setminus \{0\}, \cdot)$ to form a group, every element $m$ of the set would need to possess a multiplicative inverse $m^{-1}$ within that same set. In $\mathbb{R}$, the number $0$ has no multiplicative inverse, immediately disqualifying $\mathbb{Z}$.
 

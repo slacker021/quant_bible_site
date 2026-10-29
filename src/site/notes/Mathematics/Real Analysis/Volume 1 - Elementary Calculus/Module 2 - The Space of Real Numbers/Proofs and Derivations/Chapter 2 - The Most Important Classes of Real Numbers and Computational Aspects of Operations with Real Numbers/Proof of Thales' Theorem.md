@@ -2,40 +2,44 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-of-thales-theorem/","dg-note-properties":{}}
 ---
 
-Consider a triangle $\triangle ABC$ with base $\overline{BC}$ and sides $\overline{AB}$ and $\overline{AC}$. Suppose a line segment $\overline{DE}$ is drawn parallel to the base $\overline{BC}$ such that it intersects $\overline{AB}$ at a distinct interior point $D$ and $\overline{AC}$ at a distinct interior point $E$.
+Let $\triangle ABC$ be a non-degenerate triangle in the Euclidean plane. Let $D$ be an interior point on the side segment $\overline{AB}$, and let $E$ be an interior point on the side segment $\overline{AC}$, such that the line segment $\overline{DE}$ is parallel to the base $\overline{BC}$.
 
-Drop a perpendicular altitude $\overline{EN}$ from vertex $E$ onto the line containing $\overline{AB}$ (with foot $N$), and drop a perpendicular altitude $\overline{DM}$ from vertex $D$ onto the line containing $\overline{AC}$ (with foot $M$).
+# Ratio of Triangle Areas with Shared Altitudes
+Construct the line segments $\overline{BE}$ and $\overline{CD}$. Drop a perpendicular altitude from vertex $E$ to the line containing $\overline{AB}$, denoting its foot by $N$, such that $h_E = |\overline{EN}|$. Concurrently, drop a perpendicular altitude from vertex $D$ to the line containing $\overline{AC}$, denoting its foot by $M$, such that $h_D = |\overline{DM}|$.
 
-Recall from Euclidean geometry that the area of a triangle is equal to half the product of its base length and its corresponding altitude. Because triangles $\triangle ADE$ and $\triangle BDE$ share the common altitude $\overline{EN}$ perpendicular to the collinear bases $\overline{AD}$ and $\overline{DB}$, the ratio of their areas equals the ratio of their base lengths:
+Because triangles $\triangle ADE$ and $\triangle BDE$ share the common altitude $h_E$ perpendicular to the collinear base segments $\overline{AD}$ and $\overline{DB}$:
 $$
-\begin{gather}
-\frac{\operatorname{Area}(\triangle ADE)}{\operatorname{Area}(\triangle BDE)} = \frac{\frac{1}{2} \cdot |\overline{AD}| \cdot |\overline{EN}|}{\frac{1}{2} \cdot |\overline{DB}| \cdot |\overline{EN}|} = \frac{|\overline{AD}|}{|\overline{DB}|} \tag{1}
-\end{gather}
+\frac{\operatorname{Area}(\triangle ADE)}{\operatorname{Area}(\triangle BDE)} = \frac{\frac{1}{2} |\overline{AD}| \cdot h_E}{\frac{1}{2} |\overline{DB}| \cdot h_E} = \frac{|\overline{AD}|}{|\overline{DB}|} \tag{1}
 $$
-
-Similarly, because triangles $\triangle ADE$ and $\triangle CDE$ share the common altitude $\overline{DM}$ perpendicular to the collinear bases $\overline{AE}$ and $\overline{EC}$, the ratio of their areas is given by
+Similarly, because triangles $\triangle ADE$ and $\triangle CDE$ share the common altitude $h_D$ perpendicular to the collinear base segments $\overline{AE}$ and $\overline{EC}$:
 $$
-\begin{gather}
-\frac{\operatorname{Area}(\triangle ADE)}{\operatorname{Area}(\triangle CDE)} = \frac{\frac{1}{2} \cdot |\overline{AE}| \cdot |\overline{DM}|}{\frac{1}{2} \cdot |\overline{EC}| \cdot |\overline{DM}|} = \frac{|\overline{AE}|}{|\overline{EC}|} \tag{2}
-\end{gather}
+\frac{\operatorname{Area}(\triangle ADE)}{\operatorname{Area}(\triangle CDE)} = \frac{\frac{1}{2} |\overline{AE}| \cdot h_D}{\frac{1}{2} |\overline{EC}| \cdot h_D} = \frac{|\overline{AE}|}{|\overline{EC}|} \tag{2}
 $$
 
-Now compare the denominators $\operatorname{Area}(\triangle BDE)$ and $\operatorname{Area}(\triangle CDE)$. Both triangles $\triangle BDE$ and $\triangle CDE$ share the exact same base segment $\overline{DE}$, and their opposite vertices $B$ and $C$ lie on the line $\overline{BC}$, which is parallel to $\overline{DE}$ by hypothesis. Because the perpendicular distance between two parallel lines is constant, $\triangle BDE$ and $\triangle CDE$ possess equal altitudes relative to base $\overline{DE}$, which implies
+# Equivalence of Base Triangles
+Consider triangles $\triangle BDE$ and $\triangle CDE$. Both triangles share the identical base segment $\overline{DE}$. Because the segment $\overline{DE}$ is parallel to the line $\overline{BC}$, the perpendicular distance from vertex $B$ to the line containing $\overline{DE}$ equals the perpendicular distance from vertex $C$ to the line containing $\overline{DE}$. 
+
+Consequently, both triangles possess identical altitudes relative to the common base $\overline{DE}$:
 $$
-\begin{gather}
 \operatorname{Area}(\triangle BDE) = \operatorname{Area}(\triangle CDE) \tag{3}
-\end{gather}
 $$
 
-Substituting step 3 into the left-hand sides of steps 1 and 2 equates the two area ratios, establishing by transitivity that
+# Ratio Synthesis
+Substituting step 3 into step 1 and step 2 equates the denominators of the left-hand ratios:
 $$
-\begin{gather}
 \frac{|\overline{AD}|}{|\overline{DB}|} = \frac{|\overline{AE}|}{|\overline{EC}|} \tag{4}
-\end{gather}
 $$
-Thus, the parallel line $\overline{DE}$ divides the two sides $\overline{AB}$ and $\overline{AC}$ in the exact same ratio.
+Adding unity to both sides of step 4 yields:
+$$
+\frac{|\overline{AD}| + |\overline{DB}|}{|\overline{DB}|} = \frac{|\overline{AE}| + |\overline{EC}|}{|\overline{EC}|} \implies \frac{|\overline{AB}|}{|\overline{DB}|} = \frac{|\overline{AC}|}{|\overline{EC}|} \tag{5}
+$$
+Inverting the ratios in step 4 and adding unity demonstrates that:
+$$
+\frac{|\overline{AB}|}{|\overline{AD}|} = \frac{|\overline{AC}|}{|\overline{AE}|} \tag{6}
+$$
+Therefore, a line parallel to one side of a triangle divides the remaining two sides in the identical ratio.
 $$
 \begin{gather}
-\textbf{Q.E.D}
+\textbf{Q.E.D.}
 \end{gather}
 $$

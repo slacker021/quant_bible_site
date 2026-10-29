@@ -2,42 +2,73 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-2-the-space-of-real-numbers/proofs-and-derivations/chapter-2-the-most-important-classes-of-real-numbers-and-computational-aspects-of-operations-with-real-numbers/proof-of-the-triangle-inequality/","dg-note-properties":{}}
 ---
 
-1. **Case 1 (Both $x$ and $y$ are non-negative: $x \ge 0$ and $y \ge 0$):**
-   By the order axioms of $\mathbb{R}$, the sum satisfies $x + y \ge 0$. Applying the definition of absolute value yields $|x| = x$, $|y| = y$, and
-   $$
-   \begin{gather}
-   |x + y| = x + y = |x| + |y| \tag{1}
-   \end{gather}
-   $$
-   Thus, equality holds whenever both $x$ and $y$ are non-negative.
+Let $x, y \in \mathbb{R}$ be elements of the ordered field of real numbers.
 
-2. **Case 2 (Both $x$ and $y$ are non-positive: $x \le 0$ and $y \le 0$):**
-   Here, $x + y \le 0$, so $|x| = -x$, $|y| = -y$, and
-   $$
-   \begin{gather}
-   |x + y| = -(x + y) = (-x) + (-y) = |x| + |y| \tag{2}
-   \end{gather}
-   $$
-   Thus, equality also holds whenever both $x$ and $y$ are non-positive.
+--------------------------------------------------------------------------------
+# Proposition 1
+### Standard Triangle Inequality
+By definition of the absolute value, the relations $-|x| \le x \le |x|$ and $-|y| \le y \le |y|$ hold for all $x, y \in \mathbb{R}$. 
 
-3. **Case 3 (One number is strictly negative and the other is strictly positive):**
-   Without loss of generality (by commutativity of addition), suppose $x < 0 < y$, so that $|x| = -x > 0$ and $|y| = y > 0$. By trichotomy on $x + y$, either $x + y \ge 0$ or $x + y < 0$:
-   * If $x + y \ge 0$, then $\vert{}x + y\vert{} = x + y$. Since $x < 0$ and $\vert{}x\vert{} > 0$, it follows that $x < \vert{}x\vert{}$, which implies
-     $$
-     \begin{gather}
-     |x + y| = x + y < y = |y| < |x| + |y| \tag{3}
-     \end{gather}
-     $$
-   * If $x + y < 0$, then $\vert{}x + y\vert{} = -x - y$. Since $y > 0$ and $\vert{}y\vert{} > 0$, it follows that $-y < 0 < \vert{}y\vert{}$, which implies
-     $$
-     \begin{gather}
-     |x + y| = -x - y < -x = |x| < |x| + |y| \tag{4}
-     \end{gather}
-     $$
+Summing these inequalities via additive compatibility yields:
+$$
+-(|x| + |y|) \le x + y \le |x| + |y| \tag{1}
+$$
+For any real numbers $a, c \in \mathbb{R}$ with $c \ge 0$, the double inequality $-c \le a \le c$ is logically equivalent to $|a| \le c$. Instantiating $a = x + y$ and $c = |x| + |y|$ in step 1 yields:
+$$
+|x + y| \le |x| + |y| \tag{2}
+$$
 
-Combining steps 1 through 4 confirms that $|x + y| \le |x| + |y|$ for all $x, y \in \mathbb{R}$, with equality holding if and only if $x$ and $y$ are both non-negative or both non-positive.
+### Equality Condition
+Evaluate the cases of equality based on the signs of $x$ and $y$:
+* Case 1: If $x \ge 0$ and $y \ge 0$, then $x + y \ge 0$. Consequently, $|x + y| = x + y = |x| + |y|$.
+* Case 2: If $x \le 0$ and $y \le 0$, then $x + y \le 0$. Consequently, $|x + y| = -(x + y) = (-x) + (-y) = |x| + |y|$.
+* Case 3: If $x$ and $y$ possess opposite signs, assume without loss of generality that $x < 0 < y$. 
+  * If $x + y \ge 0$, then $|x + y| = x + y < y = |y| < |x| + |y|$.
+  * If $x + y < 0$, then $|x + y| = -(x + y) = -x - y < -x = |x| < |x| + |y|$.
+
+In both sub-cases of Case 3, the inequality is strict. Therefore, $|x + y| = |x| + |y|$ holds if and only if $x \cdot y \ge 0$.
+
+--------------------------------------------------------------------------------
+# Proposition 2
+### Difference Form
+Substituting $-y$ in place of $y$ into Proposition 1:
+$$
+|x - y| = |x + (-y)| \le |x| + |-y| \tag{3}
+$$
+Because $|-y| = |y|$, step 3 immediately yields:
+$$
+|x - y| \le |x| + |y| \tag{4}
+$$
+
+--------------------------------------------------------------------------------
+# Proposition 3
+### Reverse Triangle Inequality
+Expressing $x$ as the sum $x = (x - y) + y$ and applying Proposition 1:
+$$
+|x| = |(x - y) + y| \le |x - y| + |y| \tag{5}
+$$
+Subtracting $|y|$ from both sides yields:
+$$
+|x| - |y| \le |x - y| \tag{6}
+$$
+Similarly, expressing $y$ as $y = (y - x) + x$ and applying Proposition 1:
+$$
+|y| = |(y - x) + x| \le |y - x| + |x| = |x - y| + |x| \tag{7}
+$$
+Subtracting $|x|$ from both sides of step 7 and multiplying by $-1$ reverses the inequality:
+$$
+|y| - |x| \le |x - y| \implies -(|x| - |y|) \le |x - y| \tag{8}
+$$
+Combining step 6 and step 8 yields the double inequality:
+$$
+-|x - y| \le |x| - |y| \le |x - y| \tag{9}
+$$
+Step 9 is logically equivalent to:
+$$
+\big| |x| - |y| \big| \le |x - y| \tag{10}
+$$
 $$
 \begin{gather}
-\textbf{Q.E.D}
+\textbf{Q.E.D.}
 \end{gather}
 $$

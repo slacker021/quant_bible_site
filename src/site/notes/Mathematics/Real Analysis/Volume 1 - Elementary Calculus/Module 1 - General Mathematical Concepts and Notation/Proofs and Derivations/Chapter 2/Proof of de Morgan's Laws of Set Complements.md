@@ -2,93 +2,179 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis/volume-1-elementary-calculus/module-1-general-mathematical-concepts-and-notation/proofs-and-derivations/chapter-2/proof-of-de-morgan-s-laws-of-set-complements/","dg-note-properties":{}}
 ---
 
-Let $A$ and $B$ be both subsets of $M$. 
+Let $M$ be the ambient universal set, and let $A$ and $B$ be arbitrary subsets of $M$.
 
 ---
 # Proposition 1
 
-### Necessity
-Let $x \in C_{M}(A \cup B)$. By definition of the complement, 
-$$x \not\in A \cup B \tag{1}$$which implies that 
+### Forward Inclusion
+Let $x \in C_{M}(A \cup B)$. By the definition of the set complement: 
 $$
-x \not\in A \text{ and } x \not\in B \tag{2}
+\begin{gather}
+x \in M \quad \wedge \quad x \notin (A \cup B) \tag{1}
+\end{gather}
 $$
-and
+By the definition of the set union, the statement $x \in A \cup B$ denotes $(x \in A) \lor (x \in B)$. Applying De Morgan's laws of propositional logic to the negation of this disjunction yields:
 $$
-x \in C_{M}(A) \text{ and } x \in C_{M}(B) \tag{3}
+\begin{gather}
+x \notin A \quad \wedge \quad x \notin B \tag{2}
+\end{gather}
 $$
-By definition of the intersection, 
+Because $x \in M$, step 1 and step 2 imply that:
 $$
-x \in C_{M}(A) \cap C_{M}(B) \tag{4}
+\begin{gather}
+(x \in M \wedge x \notin A) \quad \wedge \quad (x \in M \wedge x \notin B) \tag{3}
+\end{gather}
 $$
-Therefore, 
+Applying the definition of the complement to both conjuncts of step 3 demonstrates that:
 $$
-C_{M}(A \cup B) \subset C_{M}(A) \cap C_{M}(B) \tag{5}
+\begin{gather}
+x \in C_{M}(A) \quad \wedge \quad x \in C_{M}(B) \tag{4}
+\end{gather}
 $$
-### Sufficiency
-Let $x \in C_{M}(A) \cap C_{M}(B)$. By definition of the intersection, 
+By the definition of the set intersection, step 4 gives:
 $$
-x \in C_{M}(A) \text{ and } x \in C_{M}(B) \tag{6}
+\begin{gather}
+x \in C_{M}(A) \cap C_{M}(B) \tag{5}
+\end{gather}
 $$
-By definition of the complement, 
+Because the choice of element $x$ was arbitrary, step 1 through step 5 establish that:
 $$
-x \not\in A \text{ and } x \not\in B \tag{7}
+\begin{gather}
+C_{M}(A \cup B) \subseteq C_{M}(A) \cap C_{M}(B) \tag{6}
+\end{gather}
 $$
-Which would then imply that 
+
+### Reverse Inclusion
+Let $x \in C_{M}(A) \cap C_{M}(B)$. By the definition of the set intersection: 
 $$
-x \not\in A \cup B \tag{8}
+\begin{gather}
+x \in C_{M}(A) \quad \wedge \quad x \in C_{M}(B) \tag{7}
+\end{gather}
 $$
-Again, the definition of the complement shows that
+Applying the definition of the complement to both conjuncts of step 7 gives: 
 $$
-x \in C_{M}(A \cup B) \tag{9}
+\begin{gather}
+(x \in M \wedge x \notin A) \quad \wedge \quad (x \in M \wedge x \notin B) \tag{8}
+\end{gather}
 $$
-Therefore, 
-$$ 
-C_{M}(A \cup B) \supset C_{M}(A) \cap C_{M}(B) \tag{10}
+Factoring the common membership $x \in M$ from step 8 results in
+$$
+\begin{gather}
+x \in M \quad \wedge \quad (x \notin A \wedge x \notin B) \tag{9}
+\end{gather}
+$$
+By De Morgan's laws of propositional logic, the conjunction $(x \notin A \wedge x \notin B)$ is logically equivalent to $\neg((x \in A) \lor (x \in B))$, which by the definition of the set union denotes: 
+$$
+\begin{gather}
+x \notin (A \cup B) \tag{10}
+\end{gather}
+$$
+Combining $x \in M$ with step 10 demonstrates that: 
+$$
+\begin{gather}
+x \in C_{M}(A \cup B) \tag{11}
+\end{gather}
+$$
+Because the choice of element $x$ was arbitrary, step 7 through step 11 establish that: 
+$$
+\begin{gather}
+C_{M}(A) \cap C_{M}(B) \subseteq C_{M}(A \cup B) \tag{12}
+\end{gather}
+$$
+By virtue of mutual inclusion in step 6 and step 12, the Principle of Extensionality confirms that: 
+$$
+\begin{gather}
+C_{M}(A \cup B) = C_{M}(A) \cap C_{M}(B) \tag{13}
+\end{gather}
 $$
 
 ---
 # Proposition 2
 
-### Necessity
-Let $x \in C_{M}(A\cap B)$. By definition of the complement, 
+### Forward Inclusion
+Let $x \in C_{M}(A \cap B)$. By the definition of the set complement: 
 $$
-x \not\in A \cap B \tag{11}
+\begin{gather}
+x \in M \quad \wedge \quad x \notin (A \cap B) \tag{14}
+\end{gather}
 $$
-which implies that
+By the definition of the set intersection, the statement $x \in A \cap B$ denotes $(x \in A) \wedge (x \in B)$. Negating this conjunction yields the disjunction:
 $$
-x \not\in A \text{ or } x \not\in B \tag{12}
+\begin{gather}
+x \notin A \quad \lor \quad x \notin B \tag{15}
+\end{gather}
 $$
-If $x$ isn't in $A$ nor $B$, then 
+Because $x \in M$, step 14 and step 15 can be distributed as: 
 $$
-x \not\in A \cap B \implies x \not\in A \lor x \not\in B \tag{13}
+\begin{gather}
+(x \in M \wedge x \notin A) \quad \lor \quad (x \in M \wedge x \notin B) \tag{16}
+\end{gather}
 $$
-The negation of the conclusion of step 13 would be
+Applying the definition of the set complement to step 16 establishes that: 
 $$
-x \in C_{M}(A) \lor x \in C_{M}(B) \tag{14}
+\begin{gather}
+x \in C_{M}(A) \quad \lor \quad x \in C_{M}(B) \tag{17}
+\end{gather}
 $$
-Therefore, 
+By the definition of the set union, step 17 implies that: 
 $$
-C_{M}(A \cap B) \supset C_{M}(A) \cup C_{M}(B) \tag{15}
+\begin{gather}
+x \in C_{M}(A) \cup C_{M}(B) \tag{18}
+\end{gather}
+$$
+Because the choice of element $x$ was arbitrary, step 14 through step 18 establish that: 
+$$
+\begin{gather}
+C_{M}(A \cap B) \subseteq C_{M}(A) \cup C_{M}(B) \tag{19}
+\end{gather}
 $$
 
-### Sufficiency
-Let $x \in C_{M}(A) \cup C_{M}(B)$. By definition of the union and complement, 
+### Reverse Inclusion
+Let $x \in C_{M}(A) \cup C_{M}(B)$. By the definition of the set union: 
 $$
-x \in C_{M}(A) \cup C_{M}(B) \implies x \not\in A \text{ or } x \not\in B \tag{16}
+\begin{gather}
+x \in C_{M}(A) \quad \lor \quad x \in C_{M}(B) \tag{20}
+\end{gather}
 $$
-and by definition of the intersection, 
+Applying the definition of the set complement to both disjuncts of step 20 gives: 
 $$
-x \not\in A \cap B \tag{17}
+\begin{gather}
+(x \in M \wedge x \notin A) \quad \lor \quad (x \in M \wedge x \notin B) \tag{21}
+\end{gather}
 $$
-Again, definition of the complement again shows that 
+Factoring out the condition $x \in M$ yields: 
 $$
-x \in C_{M}(A \cap B) \tag{18}
+\begin{gather}
+x \in M \quad \wedge \quad (x \notin A \lor x \notin B) \tag{22}
+\end{gather}
 $$
-Therefore, 
+By De Morgan's laws of propositional logic, the disjunction $(x \notin A \lor x \notin B)$ is logically equivalent to $\neg(x \in A \wedge x \in B)$, which by the definition of the set intersection denotes: 
 $$
-C_{M}(A \cap B) \supseteq C_{M}(A) \cup C_{M}(B) \tag{19}
+\begin{gather}
+x \notin (A \cap B) \tag{23}
+\end{gather}
+$$
+Combining $x \in M$ with step 23 demonstrates that: 
+$$
+\begin{gather}
+x \in C_{M}(A \cap B) \tag{24}
+\end{gather}
+$$
+Because the choice of element $x$ was arbitrary, step 20 through step 24 establish that: 
+$$
+\begin{gather}
+C_{M}(A) \cup C_{M}(B) \subseteq C_{M}(A \cap B) \tag{25}
+\end{gather}
+$$
+By virtue of mutual inclusion in step 19 and step 25, the Principle of Extensionality confirms that: 
+$$
+\begin{gather}
+C_{M}(A \cap B) = C_{M}(A) \cup C_{M}(B) \tag{26}
+\end{gather}
 $$
 $$
-\textbf{Q.E.D}
+\begin{gather}
+\textbf{Q.E.D.}
+\end{gather}
 $$

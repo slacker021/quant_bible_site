@@ -30,6 +30,11 @@ Should the reader feel they have something to contribute to this knowledgebase s
 
 The terminal and ever-expanding nature of these notes makes checking for mistakes difficult due to the growing amount of information. Thus, feedback and corrections would be greatly appreciated. Send all concerns to ong.zach13@gmail.com or through Github concern requests. Although the author is the sole arbiter of this repository, it is in his best interest to listen to feedback provided by readers. 
 
+##### Contribution Requests and Feedback
+Should the reader feel that they've something to contribute to this knowledgebase such that it grows, they may reach out to the author via his email. The author is always looking for like-minded individuals who may help him grow this repository. However, interested co-authors should note that the original author reserves holds the final say in any contributions, modifications, or removals done upon this repository. 
+
+The terminal and everexpanding nature of these notes makes checking for mistakes difficult due to the growing amount of information. Thus, feedback and corrections would be greatly appreciated. Send all concerns to ong.zach13@gmail.com or through Github concern requests. Although the author is the sole arbiter of this repository, it's in his best interest to listen to feedback provided by readers. 
+
 ---
 # Technical Information
 - Course content is stored in a [dedicated repository](https://github.com/slacker021/quant_bible) that's updated periodically. 
