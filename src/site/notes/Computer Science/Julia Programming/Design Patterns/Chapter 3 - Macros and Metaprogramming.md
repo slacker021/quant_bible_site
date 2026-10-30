@@ -117,7 +117,7 @@ Every Julia program starts life as a string. However, many of these strings can 
 >	end
 >end
 >```
->Suppose that there's pre-loaded market data that takes the form of a [[dictionary\|dictionary]]: 
+>Suppose that there's pre-loaded market data that takes the form of a [[dictionary]]: 
 >```Julia
 >market_data = Dict(
 >	:Asset_A => Struct([1.0, 2.5, 3.1]), # sample returns
