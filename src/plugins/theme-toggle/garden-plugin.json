@@ -1,0 +1,64 @@
+{
+  "id": "theme-toggle",
+  "name": "Appearance & Reading",
+  "version": "1.3.1",
+  "description": "Theme-aware reading preferences and automatic high-resolution Easy TikZ graph publishing.",
+  "author": "Kolten Bendickson",
+  "hooks": "index.js",
+  "assets": ["lib/easy-tikz-renderer.cjs", "lib/resvg.wasm", "lib/NotoSans-Regular.ttf", "lib/EASY-TIKZ-LICENSE.txt", "lib/NOTO-LICENSE.txt", "lib/RESVG-LICENSE.txt", "lib/THIRD-PARTY.txt", "lib/THIRD-PARTY-LICENSES.txt", "lib/easy-tikz-renderer.cjs.LEGAL.txt"],
+  "slots": {
+    "common.footer": "templates/config.njk"
+  },
+  "styles": [
+    "styles/nav-tools.css",
+    "styles/theme-toggle.css",
+    "styles/callout-references.css",
+    "styles/tikz-graphs.css"
+  ],
+  "scripts": [
+    "assets/nav-tools.js",
+    "assets/color-options.js",
+    "assets/theme-toggle.js"
+  ],
+  "settings": [
+    {
+      "key": "renderEasyTikz",
+      "name": "Publish Easy TikZ graphs automatically",
+      "description": "Render graph blocks to cached PNGs during the garden build. No note changes or export steps. Supports Easy TikZ 4.6 text/JSON and JSON tikz blocks, not raw LaTeX TikZ.",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "tikzScale",
+      "name": "Graph PNG resolution multiplier",
+      "description": "2 to 4; default 4. Higher resolution keeps diagrams sharp when zoomed or printed.",
+      "type": "number",
+      "default": 4
+    },
+    {
+      "key": "supportedModes",
+      "name": "Theme mode support",
+      "description": "Auto reads the installed theme's CSS. Override for themes that do not declare conventional mode selectors.",
+      "type": "select",
+      "options": [
+        "auto",
+        "both",
+        "light",
+        "dark"
+      ],
+      "default": "auto"
+    },
+    {
+      "key": "rememberMode",
+      "name": "Remember visitor mode",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "rememberPreferences",
+      "name": "Remember reading preferences",
+      "type": "boolean",
+      "default": true
+    }
+  ]
+}

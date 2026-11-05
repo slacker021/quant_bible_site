@@ -171,6 +171,61 @@
     "dg-timestamps": {
       "order": 70,
       "enabled": false
+    },
+    "theme-toggle": {
+      "repo": "koltensaccount/garden-plugin-theme-toggle",
+      "installedVersion": "1.3.1",
+      "installedRef": "v1.3.1",
+      "installedAt": "2026-11-05T08:32:33.172Z",
+      "enabled": true,
+      "files": [
+        "src/plugins/theme-toggle/.github/workflows/validate.yml",
+        "src/plugins/theme-toggle/.gitignore",
+        "src/plugins/theme-toggle/AGENTS.md",
+        "src/plugins/theme-toggle/LICENSE",
+        "src/plugins/theme-toggle/README.md",
+        "src/plugins/theme-toggle/VALIDATION.md",
+        "src/plugins/theme-toggle/assets/color-options.js",
+        "src/plugins/theme-toggle/assets/nav-tools.js",
+        "src/plugins/theme-toggle/assets/theme-toggle.js",
+        "src/plugins/theme-toggle/build/tikz-dom.js",
+        "src/plugins/theme-toggle/build/tikz-entry.js",
+        "src/plugins/theme-toggle/build/tikz-math.js",
+        "src/plugins/theme-toggle/compat/easy-tikz-4.6-callout-save.patch",
+        "src/plugins/theme-toggle/garden-plugin.json",
+        "src/plugins/theme-toggle/index.js",
+        "src/plugins/theme-toggle/lib/EASY-TIKZ-LICENSE.txt",
+        "src/plugins/theme-toggle/lib/NOTO-LICENSE.txt",
+        "src/plugins/theme-toggle/lib/NotoSans-Regular.ttf",
+        "src/plugins/theme-toggle/lib/RESVG-LICENSE.txt",
+        "src/plugins/theme-toggle/lib/THIRD-PARTY-LICENSES.txt",
+        "src/plugins/theme-toggle/lib/THIRD-PARTY.txt",
+        "src/plugins/theme-toggle/lib/easy-tikz-renderer.cjs",
+        "src/plugins/theme-toggle/lib/easy-tikz-renderer.cjs.LEGAL.txt",
+        "src/plugins/theme-toggle/lib/resvg.wasm",
+        "src/plugins/theme-toggle/package-lock.json",
+        "src/plugins/theme-toggle/package.json",
+        "src/plugins/theme-toggle/screenshot.png",
+        "src/plugins/theme-toggle/scripts/build-tikz.cjs",
+        "src/plugins/theme-toggle/scripts/check.cjs",
+        "src/plugins/theme-toggle/scripts/install.cjs",
+        "src/plugins/theme-toggle/scripts/verify-tikz-garden.cjs",
+        "src/plugins/theme-toggle/styles/callout-references.css",
+        "src/plugins/theme-toggle/styles/nav-tools.css",
+        "src/plugins/theme-toggle/styles/theme-toggle.css",
+        "src/plugins/theme-toggle/styles/tikz-graphs.css",
+        "src/plugins/theme-toggle/templates/config.njk",
+        "src/plugins/theme-toggle/tests/browser.test.cjs",
+        "src/plugins/theme-toggle/tests/tikz.test.cjs"
+      ],
+      "order": 120,
+      "settings": {
+        "supportedModes": "auto",
+        "rememberMode": true,
+        "rememberPreferences": true,
+        "renderEasyTikz": true,
+        "tikzScale": 4
+      }
     }
   }
 }
