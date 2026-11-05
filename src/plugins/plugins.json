@@ -203,7 +203,13 @@
         "src/plugins/light-dark-mode/templates/button.njk",
         "src/plugins/light-dark-mode/templates/head.njk",
         "src/plugins/light-dark-mode/tests/themeModes.test.cjs"
-      ]
+      ],
+      "settings": {
+        "followSystem": true,
+        "showButton": true,
+        "themeModes": "auto",
+        "buttonLabel": "Day/Evening View"
+      }
     }
   }
 }
