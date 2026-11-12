@@ -1,9 +1,8 @@
 {
   "/": [
-    "Computer Science",
-    "Finance",
-    "Mathematics",
     "The Quant's Bible",
+    "Computer Science",
+    "Mathematics",
     "API and Data Sources",
     "Publications and Journals",
     "Citations",
@@ -42,14 +41,6 @@
     "Environment Management",
     "Juliaup"
   ],
-  "/Finance": [
-    "Portfolio Management 1"
-  ],
-  "/Finance/Portfolio Management 1": [
-    "Chapter 1 - The Theory of Choices",
-    "Chapter 2 - Financial Instruments and Securities",
-    "Chapter 3 - Financial Markets"
-  ],
   "/Mathematics": [
     "Real Analysis 1"
   ],
@@ -57,7 +48,8 @@
     "Module 1 - General Mathematical Concepts and Notation",
     "Module 2 - The Space of Real Numbers",
     "Module 3 - Limits",
-    "Module 4 - Continuity"
+    "Module 4 - Continuity",
+    "Module 5 - Differentiation"
   ],
   "/Mathematics/Real Analysis 1/Module 1 - General Mathematical Concepts and Notation": [
     "Chapter 1 - Basic Rules of Logic",
@@ -260,5 +252,126 @@
     "Proof of the Image of an Interval under Continuous Mappings",
     "Proof of the Weierstrass Extreme Value Theorem",
     "Proof of the Weierstrass Global Boundedness Theorem"
+  ],
+  "/Mathematics/Real Analysis 1/Module 5 - Differentiation": [
+    "Chapter 1 - Differentiable Functions",
+    "Chapter 2 - The Basic Rules of Differentiation",
+    "Chapter 3 - The Basic Theorems of Differential Calculus",
+    "Chapter 4 - The Study of Functions Using Methods of Differential Calculus",
+    "Chapter 5 - Complex Numbers and Elementary Functions",
+    "Chapter 6 - Primitives",
+    "Proofs and Derivations"
+  ],
+  "/Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations": [
+    "Chapter 1 - Differentiable Functions",
+    "Chapter 2 - The Basic Rules of Differentiation",
+    "Chapter 3 - The Basic Theorems of Differential Calculus",
+    "Chapter 4 - The Study of Functions Using Methods of Differential Calculus",
+    "Chapter 5 - Complex Numbers and Elementary Functions",
+    "Chapter 6 - Primitives"
+  ],
+  "/Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 1 - Differentiable Functions": [
+    "Proof of the Caratheodory Differentiability Criterion",
+    "Proof of the Coordinate Invariance of Tangency",
+    "Proof of the Differentiability Properties of the Modulated Sine Functions",
+    "Proof of the Equivalence of Differentiability and Derivative Existence",
+    "Proof of the Master Catalog of Elementary Derivatives",
+    "Proof of the Tangent Line Best Linear Approximation Property",
+    "Proof of the Two-Sided Derivative Equivalence",
+    "Proof of the Uniqueness of the Differential and Derivative",
+    "Proof that Differentiability Implies Continuity"
+  ],
+  "/Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 2 - The Basic Rules of Differentiation": [
+    "Proof of Conservation of Total Mechanical Energy in Gravitational Systems",
+    "Proof of Derivatives of the Inverse Circular Functions",
+    "Proof of Derivatives of the Inverse Hyperbolic Functions",
+    "Proof of Derivatives of the Six Hyperbolic Functions",
+    "Proof of Differentiability Without Derivative Continuity",
+    "Proof of Existence of Compactly Supported Smooth Bump Functions",
+    "Proof of Higher-Order Smoothness of the Carathéodory Factor",
+    "Proof of Parity Alternation Under Differentiation",
+    "Proof of Polynomial Reconstruction from Jet Coordinates",
+    "Proof of The Carathéodory Differentiability Criterion",
+    "Proof of The Cauchy Flatness Theorem",
+    "Proof of The Chain Rule",
+    "Proof of The Derivative of an Inverse Function",
+    "Proof of The General Leibniz Rule",
+    "Proof of The Implicit Derivative Proposition",
+    "Proof of The Inversion Duality Formula",
+    "Proof of The Leibniz Product Rule",
+    "Proof of The Linearity of Differentiation",
+    "Proof of The Quotient Rule of Differentiation"
+  ],
+  "/Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 3 - The Basic Theorems of Differential Calculus": [
+    "Proof of Cauchy's Form of the Taylor Remainder",
+    "Proof of Cauchy's Generalized Finite-Increment Theorem",
+    "Proof of Darboux's Intermediate-Value Theorem for Derivatives",
+    "Proof of Fermat's Interior Extremum Lemma",
+    "Proof of Lagrange's Finite-Increment Theorem",
+    "Proof of Lagrange's Form of the Taylor Remainder",
+    "Proof of Polynomial Root Interlacing and Multiplicity Reduction",
+    "Proof of Rolle's Theorem",
+    "Proof of Taylor's Formula with General Remainder",
+    "Proof of the Asymptotic Limit of the Taylor Intermediate Fraction",
+    "Proof of the Characterization of Constant Functions",
+    "Proof of the Finite Difference Mean Value Representation",
+    "Proof of the Generalized Multi-Point Rolle Theorem",
+    "Proof of the Hermite-Lagrange Interpolation Error Formula",
+    "Proof of the Landau-Kolmogorov Derivative Inequalities",
+    "Proof of the Local Taylor Formula with Peano Remainder",
+    "Proof of the Monotonicity Criterion for Differentiable Functions",
+    "Proof of the Parity Invariance of Taylor Expansions",
+    "Proof of the Uniqueness of Asymptotic Polynomials"
+  ],
+  "/Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus": [
+    "Proof of Asymptotic Rigidity and Boundedness of Convex Functions",
+    "Proof of Differential Criteria for Interval Monotonicity",
+    "Proof of Differential Curvature and Geometric Osculation of Planar Curves",
+    "Proof of First-Derivative Sign-Alternation Criterion",
+    "Proof of First-Order Monotonicity Characterization of Convexity",
+    "Proof of Higher-Order Taylor Jet Criterion for Local Extrema",
+    "Proof of Hölder's Discrete Summation Inequality",
+    "Proof of Jensen's Generalized Convex Inequality",
+    "Proof of Midpoint-Convexity Characterization of Continuous Mappings",
+    "Proof of Minkowski's Norm Triangle Inequality",
+    "Proof of Necessary Condition for an Inflection Point",
+    "Proof of Second-Order Differential Criterion for Convexity",
+    "Proof of Strict Monotonicity Under Isolated Stationary Zeros",
+    "Proof of Supporting Tangent Characterization of Convexity",
+    "Proof of the Adamović-Mitrinović Trigonometric Inequality",
+    "Proof of the Cauchy-L'Hôpital Indeterminate Ratio Rule",
+    "Proof of the Generalized Power-Bernoulli Differential Inequality",
+    "Proof of the Legendre-Fenchel Duality and Conjugate Convexity",
+    "Proof of Unilateral Differential Structure of Convex Functions",
+    "Proof of Young's Conjugate Inequality"
+  ],
+  "/Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions": [
+    "Proof of Abel's Lemma for Power Series",
+    "Proof of Absolute Convergence and Cauchy Product for the Complex Exponential Series",
+    "Proof of Algebraic and Metric Completeness of C",
+    "Proof of Cauchy-Hadamard Derivative Invariance",
+    "Proof of Cauchy-Hadamard Radius Formula and Convergence Disk",
+    "Proof of Cauchy-Schwarz and Triangle Inequalities in C",
+    "Proof of D'Alembert Ratio Test for Complex Series",
+    "Proof of Euler's Formula and Group Homomorphism of Exp",
+    "Proof of Identity Theorem for Analytic Power Series Expansions",
+    "Proof of Term-by-Term Differentiation of Power Series",
+    "Proof of the Fundamental Theorem of Algebra (Minimum Modulus Principle)",
+    "Proof of Trigonometric Addition Formulas via Euler's Homomorphism"
+  ],
+  "/Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives": [
+    "Proof of Change of Variables Formula for Indefinite Integrals",
+    "Proof of Chebyshev's Differential Binomial Theorem",
+    "Proof of Darboux Obstruction and Intermediate Value Theorem for Derivatives",
+    "Proof of Integration by Parts for Primitives",
+    "Proof of Invariance of Primitives under Diffeomorphisms",
+    "Proof of Linearity of Primitives and Method of Decomposition",
+    "Proof of Ostrowsky's Rational Integral Criterion",
+    "Proof of Partial Fraction Decomposition Theorem over the Real Field",
+    "Proof of Primitive Well-Definedness and Properties",
+    "Proof of Recursive Invariant for Quadratic Denominators",
+    "Proof of the Three Euler Substitutions for Quadratic Irrationals",
+    "Proof of Uniqueness of Primitives up to Additive Constants on Connected Domains",
+    "Proof of Weierstrass Universal Substitution Theorem"
   ]
 }
