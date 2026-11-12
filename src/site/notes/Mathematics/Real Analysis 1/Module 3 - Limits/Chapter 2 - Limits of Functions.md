@@ -214,7 +214,6 @@ $$
 (see [[Mathematics/Real Analysis 1/Module 3 - Limits/Proofs and Derivations/Chapter 2 - Limits of Functions/Proof of Fundamental Geometric Trigonometric Identities\|Proof of Fundamental Geometric Trigonometric Identities]])
 
 This geometric construction and the area comparison for $x \in (0, \pi/2)$ are illustrated on the unit circle below:
-
 ```easy-tikz
 title $\text{Geometric Proof of Fundamental Trigonometric Identities}$
 show x from -0.133 to 1.367 and y from -0.131 to 1.269
