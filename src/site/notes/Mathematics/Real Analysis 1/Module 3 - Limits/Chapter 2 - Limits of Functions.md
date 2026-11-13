@@ -262,9 +262,9 @@ $$
 \lim_{x \to 0} \frac{\sin x}{x} = 1.
 \end{gather}
 $$
-(see [[Proof of the First Fundamental Limit]])
+(see [[Mathematics/Real Analysis 1/Module 3 - Limits/Proofs and Derivations/Chapter 2 - Limits of Functions/Proof of the First Fundamental Limit\|Proof of the First Fundamental Limit]])
 
-Complementing the trigonometric limit at the origin, the continuous counterpart to [[Chapter 1 - Limits of Sequences|Euler's sequential limit]] $\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$ governs exponential growth across a continuous variable $x \to \infty$. For any real $x > 1$, bracketing $x$ between consecutive natural numbers via its integer floor $n_x := \lfloor x \rfloor \in \mathbb{N}$ ($\lfloor x \rfloor \le x < \lfloor x \rfloor + 1$) yields:
+Complementing the trigonometric limit at the origin, the continuous counterpart to [[Mathematics/Real Analysis 1/Module 3 - Limits/Chapter 1 - Limits of Sequences\|Euler's sequential limit]] $\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$ governs exponential growth across a continuous variable $x \to \infty$. For any real $x > 1$, bracketing $x$ between consecutive natural numbers via its integer floor $n_x := \lfloor x \rfloor \in \mathbb{N}$ ($\lfloor x \rfloor \le x < \lfloor x \rfloor + 1$) yields:
 $$
 \begin{gather}
 \left(1 + \frac{1}{\lfloor x \rfloor + 1}\right)^{\lfloor x \rfloor} < \left(1 + \frac{1}{x}\right)^x < \left(1 + \frac{1}{\lfloor x \rfloor}\right)^{\lfloor x \rfloor + 1} \tag{12}
@@ -278,4 +278,4 @@ $$
 \lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e \qquad \text{and} \qquad \lim_{t \to 0} (1 + t)^{1/t} = e.
 \end{gather}
 $$
-(see [[Proof of the Second Fundamental Limit]])
+(see [[Mathematics/Real Analysis 1/Module 3 - Limits/Proofs and Derivations/Chapter 2 - Limits of Functions/Proof of the Second Fundamental Limit\|Proof of the Second Fundamental Limit]])

@@ -202,7 +202,7 @@ $$
 \text{there exists at least one point } c \in (a, b) \text{ such that } f(c) = \gamma.
 \end{gather}
 $$
-(see [[Proof of the Darboux Intermediate-Value Theorem]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of the Darboux Intermediate-Value Theorem\|Proof of the Darboux Intermediate-Value Theorem]])
 
 Defining the shifted function $g(x) := f(x) - \gamma$, the endpoint values satisfy:
 $$
@@ -219,7 +219,7 @@ $$
 \text{Then the direct image } f(I) \subseteq \mathbb{R} \text{ is either a single point or an interval.}
 \end{gather}
 $$
-(see [[Proof of the Image of an Interval under Continuous Mappings]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of the Image of an Interval under Continuous Mappings\|Proof of the Image of an Interval under Continuous Mappings]])
 
 In classical topology, a subset of the real line is connected if and only if it is an interval. 
 
@@ -253,7 +253,7 @@ $$
 
 In the equation of step 7, the function is locally bounded at every individual point in $(0, 1)$, but balloons to infinity as $x \to 0^+$. In the equation of step 8, the function is continuous everywhere, but diverges as $x \to \infty$. 
 
-To bridge the chasm between local and global boundedness, the domain must satisfy [[Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers|compactness]]: 
+To bridge the chasm between local and global boundedness, the domain must satisfy [[Mathematics/Real Analysis 1/Module 2 - The Space of Real Numbers/Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers\|compactness]]: 
 $$
 \begin{gather}
 \textbf{Theorem: Weierstrass Global Boundedness Theorem} \\[5mm]
@@ -262,7 +262,7 @@ $$
 \exists M \in \mathbb{R}_{>0} \quad \text{such that} \quad \forall x \in K, \quad |f(x)| \le M
 \end{gather}
 $$
-(see [[Proof of the Weierstrass Global Boundedness Theorem]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of the Weierstrass Global Boundedness Theorem\|Proof of the Weierstrass Global Boundedness Theorem]])
 
 ### The Second Weierstrass Theorem: Attainment of Extrema
 Boundedness guarantees that the supremum and infimum of the functional image are finite real numbers. 
@@ -283,7 +283,7 @@ $$
 \exists x_*, x^* \in K \quad \text{such that} \quad f(x_*) = \inf_{x \in K} f(x) \quad \text{and} \quad f(x^*) = \sup_{x \in K} f(x)
 \end{gather}
 $$
-(see [[Proof of the Weierstrass Extreme Value Theorem]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of the Weierstrass Extreme Value Theorem\|Proof of the Weierstrass Extreme Value Theorem]])
 
 The geometry of compact image compaction and extremal attainment is illustrated below:
 ```easy-tikz
@@ -325,7 +325,7 @@ $$
 \text{In particular, if } K = [a, b], \text{ then } f([a, b]) = [m, M], \text{ where } m = \min f \text{ and } M = \max f.
 \end{gather}
 $$
-(see [[Proof of Compact Image Compaction]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of Compact Image Compaction\|Proof of Compact Image Compaction]])
 
 By the Heine–Borel Theorem, compactness in $\mathbb{R}$ is equivalent to being closed and bounded. 
 
@@ -429,7 +429,7 @@ $$
 \text{If } f \text{ is continuous at every point of } K, \text{ then } f \text{ is uniformly continuous on } K.
 \end{gather}
 $$
-(see [[Proof of Cantor's Uniform Continuity Theorem]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of Cantor's Uniform Continuity Theorem\|Proof of Cantor's Uniform Continuity Theorem]])
 
 Cantor's theorem establishes that on closed bounded intervals $[a, b]$, delta collapse is impossible, with the universal control distance $\delta(\varepsilon)$ being guaranteed to exist.
 
@@ -441,7 +441,7 @@ $$
 \text{If } \{x_n\}_{n=1}^\infty \subseteq E \text{ is a Cauchy sequence, then the image sequence } \{f(x_n)\}_{n=1}^\infty \text{ is a Cauchy sequence in } \mathbb{R}.
 \end{gather}
 $$
-(see [[Proof of Preservation of Cauchy Sequences Under Uniform Continuity]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of Preservation of Cauchy Sequences Under Uniform Continuity\|Proof of Preservation of Cauchy Sequences Under Uniform Continuity]])
 
 Under purely pointwise continuity, Cauchy preservation fails: the sequence $x_n = \frac{1}{n}$ is Cauchy in $(0, 1)$, but the continuous function $f(x) = \frac{1}{x}$ maps it to $f(x_n) = n$, which diverges to infinity. 
 
@@ -469,7 +469,7 @@ $$
 & \hspace{1.5in} 3. \ \text{Uniform Criterion: } f \text{ is uniformly continuous on } E \iff \lim_{\delta \to 0^+} \omega_f(\delta) = 0.
 \end{align}
 $$
-(see [[Proof of Fundamental Properties of the Modulus of Continuity]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of Fundamental Properties of the Modulus of Continuity\|Proof of Fundamental Properties of the Modulus of Continuity]])
 
 The asymptotic behavior of $\omega_f(\delta)$ as $\delta \to 0^+$ provides a classification of regularity named after *Rudolf Lipschitz* and *Otto Hölder*: 
 $$
@@ -505,7 +505,7 @@ $$
 \text{Then } f \text{ is continuous on } I \text{ if and only if the direct image set } J = f(I) \text{ is an interval.}
 \end{gather}
 $$
-(see [[Proof of Strictly Monotonic Continuous Bijections]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of Strictly Monotonic Continuous Bijections\|Proof of Strictly Monotonic Continuous Bijections]])
 For a general function, an interval image does not imply continuity (as shown by Darboux counterexamples). However, for a *strictly monotonic* function, any discontinuity must be a jump discontinuity of the first kind. 
 A jump discontinuity would excise an open gap from the codomain, preventing the image from forming an interval. Consequently, for strictly monotonic mappings on intervals, connectedness of the image is equivalent to continuity.
 
@@ -519,7 +519,7 @@ $$
 \text{is strictly monotonic in the same direction as } f, \text{ and is continuous at every point of } J.
 \end{gather}
 $$
-(see [[Proof of the Continuity of the Inverse Function]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of the Continuity of the Inverse Function\|Proof of the Continuity of the Inverse Function]])
 
 The topological symmetry of the inverse mapping is visualized below:
 ```easy-tikz

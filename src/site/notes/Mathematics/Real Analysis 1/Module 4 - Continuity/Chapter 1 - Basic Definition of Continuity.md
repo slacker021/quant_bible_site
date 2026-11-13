@@ -67,13 +67,13 @@ $$\begin{gather}
 \end{gather}$$
 
 ### The Isolated Point Phenomenon
-The presence or absence of neighboring domain points profoundly alters the operational meaning of continuity. Recall from [[Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers|limit points]] that a point $a \in E$ is an accumulation point of $E$ ($a \in E'$) if every punctured neighborhood $\mathring{U}(a) := U(a) \setminus \{a\}$ contains at least one element of $E$. Conversely, if $a \in E$ is not an accumulation point, it is an *isolated point* of $E$: 
+The presence or absence of neighboring domain points profoundly alters the operational meaning of continuity. Recall from [[Mathematics/Real Analysis 1/Module 2 - The Space of Real Numbers/Chapter 3 - Basic Lemmas Connected with the Completeness of the Real Numbers\|limit points]] that a point $a \in E$ is an accumulation point of $E$ ($a \in E'$) if every punctured neighborhood $\mathring{U}(a) := U(a) \setminus \{a\}$ contains at least one element of $E$. Conversely, if $a \in E$ is not an accumulation point, it is an *isolated point* of $E$: 
 $$\begin{gather}
 \textbf{Lemma: Vacuous Continuity at Isolated Domain Points} \\[5mm]
 \text{Let } E \subseteq \mathbb{R} \text{ and let } f: E \to \mathbb{R}. \\[2mm]
 \text{If } a \in E \setminus E' \text{ is an isolated point of } E, \text{ then } f \text{ is automatically continuous at } a.
 \end{gather}$$
-(see [[Proof of the Vacuous Continuity at Isolated Domain Points]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof of the Vacuous Continuity at Isolated Domain Points\|Proof of the Vacuous Continuity at Isolated Domain Points]])
 
 Because an isolated point $a \in E$ admits an open radius $\delta_0 > 0$ such that $(a - \delta_0, a + \delta_0) \cap E = \{a\}$, the antecedent $|x - a| < \delta_0$ for $x \in E$ forces $x = a$. The consequent $|f(a) - f(a)| = 0 < \varepsilon$ is satisfied unconditionally for every $\varepsilon > 0$. 
 
@@ -84,7 +84,7 @@ $$\begin{gather}
 \text{Then } f \text{ is continuous at } a \text{ if and only if the functional limit exists and equals } f(a)\text{:} \\[3.5mm]
 f \text{ is continuous at } a \iff \lim_{E \ni x \to a} f(x) = f(a)
 \end{gather}$$
-(see [[Proof of the Commutation of Continuous Mappings with Accumulation Limits]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof of the Commutation of Continuous Mappings with Accumulation Limits\|Proof of the Commutation of Continuous Mappings with Accumulation Limits]])
 
 Because the identity mapping satisfies $\lim_{E \ni x \to a} x = a$, the theorem demonstrates that continuity at an accumulation point represents the exact condition permitting an operator to commute with the limit process:
 $$\lim_{E \ni x \to a} f(x) = f\left(\lim_{E \ni x \to a} x\right) \tag{1}$$
@@ -105,7 +105,7 @@ $$\begin{gather}
 \text{5. Cauchy Local Oscillation:} \quad &\omega(f; a) := \lim_{\delta \to 0^+} \omega(f; U_\delta(a) \cap E) = 0.
 \end{align}
 \end{gather}$$
-(see [[Proof of the Master Equivalence Architecture of Continuity]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof of the Master Equivalence Architecture of Continuity\|Proof of the Master Equivalence Architecture of Continuity]])
 
 The logical equivalence of these five pillars forms a closed deductive cycle:
 ```easy-tikz
@@ -170,7 +170,7 @@ $$\begin{gather}
 \text{for every open set } G \subseteq \mathbb{R}, \text{ the complete preimage } f^{-1}(G) \text{ is relatively open in } E\text{:} \\[3.5mm]
 f \in C(E; \mathbb{R}) \iff \forall G \subseteq \mathbb{R} \text{ open}, \ \exists \Omega \subseteq \mathbb{R} \text{ open such that } f^{-1}(G) = \Omega \cap E
 \end{gather}$$
-(see [[Proof of the Global Open Preimage Characterization]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof of the Global Open Preimage Characterization\|Proof of the Global Open Preimage Characterization]])
 
 $$\begin{gather}
 \textbf{Corollary: Closed Preimage Duality} \\[5mm]
@@ -178,7 +178,7 @@ $$\begin{gather}
 \text{The function } f \text{ is continuous on } E \text{ if and only if for every closed set } F \subseteq \mathbb{R}, \\[2mm]
 \text{the complete preimage } f^{-1}(F) \text{ is relatively closed in } E.
 \end{gather}$$
-(see [[Proof of the Closed Preimage Duality]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof of the Closed Preimage Duality\|Proof of the Closed Preimage Duality]])
 
 By taking set complements, $f^{-1}(\mathbb{R} \setminus G) = E \setminus f^{-1}(G)$, demonstrating that the preservation of openness under preimages directly implies the preservation of closedness under preimages.
 
@@ -193,7 +193,7 @@ By taking set complements, $f^{-1}(\mathbb{R} \setminus G) = E \setminus f^{-1}(
 
 ---
 # Directional Continuity and Jump Operators
-At interior points of a domain, an argument can approach a target point along two opposing trajectories: the left-hand direction ($x < a$) and right-hand direction ($x > a$). Disentangling these trajectories via [[Chapter 2 - Limits of Functions|one-sided limits]] isolates directional functional behavior: 
+At interior points of a domain, an argument can approach a target point along two opposing trajectories: the left-hand direction ($x < a$) and right-hand direction ($x > a$). Disentangling these trajectories via [[Mathematics/Real Analysis 1/Module 3 - Limits/Chapter 2 - Limits of Functions\|one-sided limits]] isolates directional functional behavior: 
 $$\begin{gather}
 \textbf{Definition: Directional Continuity} \\[5mm]
 \text{Let } E \subseteq \mathbb{R}, \text{ let } f: E \to \mathbb{R}, \text{ and let } a \in E. \\[3.5mm]
@@ -210,7 +210,7 @@ $$\begin{gather}
 \text{left-continuous and right-continuous at } a\text{:} \\[3.5mm]
 f \text{ is continuous at } a \iff \lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = f(a)
 \end{gather}$$
-(see [[Proof of the Two-Sided Equivalence Principle]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof of the Two-Sided Equivalence Principle\|Proof of the Two-Sided Equivalence Principle]])
 
 When the directional limits exist as finite real numbers but fail to coincide, the function exhibits a finite jump: 
 $$\begin{gather}
@@ -334,7 +334,7 @@ L, & x = a \end{cases} \\[3.5mm]
 \text{is continuous at the point } a. 
 \end{gather}
 $$
-(see [[Proof of Removable Discontinuities and Continuous Extensions]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof of Removable Discontinuities and Continuous Extensions\|Proof of Removable Discontinuities and Continuous Extensions]])
 
 ---
 # The Pathological Gallery (Classical Counterexamples)
@@ -348,7 +348,7 @@ $$\begin{gather}
 \text{The Dirichlet function } \mathbf{1}_{\mathbb{Q}}: \mathbb{R} \to \mathbb{R} \text{ is discontinuous at every point } a \in \mathbb{R}. \\[2mm]
 \text{Every point } a \in \mathbb{R} \text{ is an essential discontinuity of the second kind.}
 \end{gather}$$
-(see [[Proof of the Total Discontinuity of the Dirichlet Function]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof of the Total Discontinuity of the Dirichlet Function\|Proof of the Total Discontinuity of the Dirichlet Function]])
 
 ##### Analytical Assessment 
 By the density of both the rational numbers $\mathbb{Q}$ and the irrational numbers $\mathbb{R} \setminus \mathbb{Q}$, every open interval $(a - \delta, a + \delta)$, regardless of how small $\delta > 0$ is chosen, contains points mapping to $1$ and points mapping to $0$. Choosing an error tolerance $\varepsilon_0 = \frac{1}{2}$ guarantees that the Cauchy metric condition fails for every point $a \in \mathbb{R}$. 
@@ -364,7 +364,7 @@ $$\begin{gather}
 \text{Thomae's function } R \text{ is discontinuous at every rational point } a \in \mathbb{Q} \cap (0, 1), \\[2mm]
 \text{and continuous at every irrational point } a \in (0, 1) \setminus \mathbb{Q}.
 \end{gather}$$
-(see [[Proof that Thomae's Function is Dense-Irrational Continuous]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof that Thomae's Function is Dense-Irrational Continuous\|Proof that Thomae's Function is Dense-Irrational Continuous]])
 
 ##### Analytical Assessment 
 At any rational point $a = \frac{p_0}{q_0}$, the functional value is strictly positive: $R(a) = \frac{1}{q_0} > 0$. By the density of the irrationals, every interval $(a - \delta, a + \delta)$ contains an irrational $\xi$ where $R(\xi) = 0$. Setting $\varepsilon_0 = \frac{1}{2q_0}$ causes the metric condition to fail for all $\delta > 0$, proving discontinuity at rational inputs.
@@ -382,7 +382,7 @@ $$\begin{gather}
 \text{The function } f(x) = x \cdot \mathbf{1}_{\mathbb{Q}}(x) \text{ is continuous at exactly one point: } x = 0. \\[2mm]
 \text{It is discontinuous at every non-zero point } x \in \mathbb{R} \setminus \{0\}.
 \end{gather}$$
-(see [[Proof of the Single-Point Continuity of Modulated Indicator]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof of the Single-Point Continuity of Modulated Indicator\|Proof of the Single-Point Continuity of Modulated Indicator]])
 
 ##### Analytical Assessment 
 For all $x \in \mathbb{R}$, the absolute value is bounded by $|f(x)| \le |x|$. At $x = 0$, $f(0) = 0$. Given $\varepsilon > 0$, selecting $\delta = \varepsilon$ guarantees that $|x - 0| < \delta \implies |f(x) - f(0)| \le |x| < \varepsilon$, establishing continuity at the origin. 
@@ -398,7 +398,7 @@ $$\begin{gather}
 \text{The function } f(x) = \sin(1/x) \text{ possesses no limit as } x \to 0. \\[2mm]
 \text{No assignment of } f(0) \in \mathbb{R} \text{ can make the function continuous at } x = 0.
 \end{gather}$$
-(see [[Proof that the Reciprocal Sine Function is Discontinuous When Its Input is Zero]])
+(see [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 1/Proof that the Reciprocal Sine Function is Discontinuous When Its Input is Zero\|Proof that the Reciprocal Sine Function is Discontinuous When Its Input is Zero]])
 
 ##### Analytical Assessment 
 The failure of the limit is revealed via the Heine sequential criterion. Construct two sequences converging to zero:
