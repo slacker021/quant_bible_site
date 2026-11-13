@@ -2,6 +2,21 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis-1/module-5-differentiation/chapter-6-primitives/","dg-note-properties":{}}
 ---
 
+```easy-tikz
+title $\text{Phase Portrait of the Oscillatory Primitive and Discontinuous Derivative}$
+xlabel $x$
+ylabel $y$
+show x from -1.316 to 1.684 and y from -1.46 to 1.54
+axes on the edges
+size 12 x 8
+plot f(x) = x^2 * sin(1.0 / (abs(x) + 0.04)), from x = -1.2 to 1.2, in cyan, thick
+plot envelope_pos(x) = x^2, from x = -1.2 to 1.2, in orange, dashed
+plot envelope_neg(x) = -x^2, from x = -1.2 to 1.2, in orange, dashed
+mark (0.0, 0.0), in green, large
+write "$F(x) = x^2 \\sin(1/x)$" at (-1.24, 0.02) in teal, right
+write "$y = \\pm x^2$" at (0.33, 0) in orange, right
+write "$F'(0) = 0 \\text{ exists everywhere}$" at (-0.66, 0.68) in green, right
+```
 # The Concept of the Primitive Mapping
 
 ### Definition and Fundamental Properties of Primitives
@@ -58,6 +73,7 @@ write "$F(x) - C_1$" at (2.05, -1.3) in teal, right
 write "$F(x)$" at (2.55, 3.65) in orange, right
 write "$F(x) + C_2$" at (1.55, 4.7) in green, right
 write "$\\text{Identical Slopes: } F'(x_0) = f(x_0)$" at (-2.38, -2.1) in gray, right
+
 ```
 
 The transformation of primitives under smooth coordinate changes provides an essential invariance property:
@@ -70,12 +86,12 @@ $$
 \Phi'(t) = \frac{d}{dt}\big(F(\varphi(t))\big) = f(\varphi(t)) \varphi'(t) \quad \forall t \in J.
 \end{gather}
 $$
-(see [[Proof of Invariance of Primitives under Diffeomorphisms]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of Invariance of Primitives under Diffeomorphisms\|Proof of Invariance of Primitives under Diffeomorphisms]])
 
 ### The Darboux Continuity Constraint for Primitives
 A fundamental question arises: Does every real mapping $f: I \to \mathbb{R}$ admit a primitive? The answer is negative. The existence of an antiderivative imposes rigid structural constraints upon the local and global geometry of $f$.
 
-By [[Chapter 3 - The Basic Theorems of Differential Calculus#The Darboux Intermediate-Value Property of Derivatives|Darboux's Theorem on Derivatives]], the derivative of any everywhere differentiable function on an interval possesses the *intermediate value property* (the Darboux property). Specifically, if $f = F'$, then for any two points $a, b \in I$ with $a < b$, the image $f([a, b])$ contains the entire closed interval bounded by $f(a)$ and $f(b)$.
+By [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Chapter 3 - The Basic Theorems of Differential Calculus#The Darboux Intermediate-Value Property of Derivatives\|Darboux's Theorem on Derivatives]], the derivative of any everywhere differentiable function on an interval possesses the *intermediate value property* (the Darboux property). Specifically, if $f = F'$, then for any two points $a, b \in I$ with $a < b$, the image $f([a, b])$ contains the entire closed interval bounded by $f(a)$ and $f(b)$.
 
 $$
 \begin{gather}
@@ -85,7 +101,7 @@ $$
 \text{or removable discontinuities at any point of } I.
 \end{gather}
 $$
-(see [[Proof of Darboux Obstruction and Intermediate Value Theorem for Derivatives]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of Darboux Obstruction and Intermediate Value Theorem for Derivatives\|Proof of Darboux Obstruction and Intermediate Value Theorem for Derivatives]])
 
 The practical implication of Darboux's obstruction is immediate: elementary step functions, such as the Heaviside step function $H: \mathbb{R} \to \mathbb{R}$ defined by:
 $$
@@ -126,9 +142,10 @@ plot f(x) = x^2 * sin(1.0 / (abs(x) + 0.04)), from x = -1.2 to 1.2, in cyan, thi
 plot envelope_pos(x) = x^2, from x = -1.2 to 1.2, in orange, dashed
 plot envelope_neg(x) = -x^2, from x = -1.2 to 1.2, in orange, dashed
 mark (0.0, 0.0), in green, large
-write "$F(x) = x^2 \sin(1/x)$" at (0.45, 0.95), in cyan, right
-write "$y = \pm x^2$" at (0.85, 0.65), in orange, right
-write "$F'(0) = 0 \\text{ exists everywhere}$" at (-0.66, 0.68) in green, right
+write "$F(x) = x^2 \\sin(1/x)$" at (-0.49, 0.5) in cyan, right
+write "$y = \\pm x^2$" at (0.5, 0) in orange, right
+write "$F'(0) = 0 \\text{ exists everywhere}$" at (-0.66, -0.5) in green, right
+
 ```
 
 ---
@@ -144,7 +161,7 @@ $$
 \int \big(\alpha f(x) + \beta g(x)\big) \, dx = \alpha \int f(x) \, dx + \beta \int g(x) \, dx.
 \end{gather}
 $$
-(see [[Proof of Linearity of Primitives and Method of Decomposition]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of Linearity of Primitives and Method of Decomposition\|Proof of Linearity of Primitives and Method of Decomposition]])
 
 The practical consequence of linearity is the *method of decomposition*: an integrand that resists immediate recognition may be decomposed into an algebraic sum of elementary components, each of which admits a standard tabulated antiderivative.
 
@@ -164,7 +181,7 @@ $$
 \int f(x) \, dx = \left[ \int f(\varphi(t)) \varphi'(t) \, dt \right]_{t = \varphi^{-1}(x)}.
 \end{gather}
 $$
-(see [[Proof of Change of Variables Formula for Indefinite Integrals]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of Change of Variables Formula for Indefinite Integrals\|Proof of Change of Variables Formula for Indefinite Integrals]])
 
 The validity of the inverse substitution rule requires that $\varphi'(t)$ maintains a strict sign on $J$, ensuring that $\varphi$ is strictly monotonic and topologically homeomorphic onto its image.
 
@@ -178,7 +195,7 @@ $$
 \int u(x) v'(x) \, dx = u(x) v(x) - \int u'(x) v(x) \, dx.
 \end{gather}
 $$
-(see [[Proof of Integration by Parts for Primitives]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of Integration by Parts for Primitives\|Proof of Integration by Parts for Primitives]])
 
 Expressed in differential notation with $du = u'(x)\,dx$ and $dv = v'(x)\,dx$, this identity assumes the compact form:
 $$
@@ -198,7 +215,7 @@ I_{n+1}(x) = \frac{x}{2n (x^2 + 1)^n} + \frac{2n - 1}{2n} I_n(x) \quad \forall n
 \text{anchored by the base primitive } I_1(x) = \arctan(x) + C.
 \end{gather}
 $$
-(see [[Proof of Recursive Invariant for Quadratic Denominators]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of Recursive Invariant for Quadratic Denominators\|Proof of Recursive Invariant for Quadratic Denominators]])
 
 ---
 # Integration of Rational Functions and Algebraic Decidability
@@ -230,7 +247,7 @@ $$
 \frac{P_0(x)}{Q(x)} = \sum_{j=1}^r \sum_{\ell=1}^{m_j} \frac{A_{j,\ell}}{(x - a_j)^\ell} + \sum_{k=1}^s \sum_{r=1}^{n_k} \frac{B_{k,r} x + C_{k,r}}{(x^2 + p_k x + q_k)^r}.
 \end{gather}
 $$
-(see [[Proof of Partial Fraction Decomposition Theorem over the Real Field]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of Partial Fraction Decomposition Theorem over the Real Field\|Proof of Partial Fraction Decomposition Theorem over the Real Field]])
 
 ### Reduction Formulas and Primitives of Quadratic Denominators
 By linearity, evaluating the indefinite integral of any rational function reduces to integrating terms of two elementary classes:
@@ -266,7 +283,7 @@ $$
 \operatorname{Res}\big(R(x); \alpha_j\big) = 0 \quad \forall j \in \{1, \dots, r\}.
 \end{gather}
 $$
-(see [[Proof of Ostrowsky's Rational Integral Criterion]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of Ostrowsky's Rational Integral Criterion\|Proof of Ostrowsky's Rational Integral Criterion]])
 
 ---
 # Transformation of Non-Rational and Trigonometric Classes
@@ -284,7 +301,7 @@ $$
 \int R(\sin x, \cos x) \, dx = \left[ \int R\left(\frac{2t}{1 + t^2}, \frac{1 - t^2}{1 + t^2}\right) \frac{2 \, dt}{1 + t^2} \right]_{t = \tan(x/2)}.
 \end{gather}
 $$
-(see [[Proof of Weierstrass Universal Substitution Theorem]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of Weierstrass Universal Substitution Theorem\|Proof of Weierstrass Universal Substitution Theorem]])
 
 The geometric underpinning of the Weierstrass substitution is the stereographic projection of the unit circle $u^2 + v^2 = 1$ from the point $(-1, 0)$ onto the vertical axis $u = 0$. Every ray through $(-1, 0)$ with slope $t$ intersects the unit circle at a unique point $(\cos x, \sin x)$:
 
@@ -304,9 +321,10 @@ mark (-1.0, 0.0), in green, large
 mark (0.0, 1.2), in orange, large
 mark (0.47, 0.88), in cyan, large
 write "$(-1, 0)$" at (-1.1, -0.05) in green, left
-write "$(0, t)$" at (0.1, 1.35), in orange, right
-write "$(\cos x, \sin x)$" at (0.6, 1.05), in cyan, right
+write "$(0, t)$" at (0.1, 1.35) in orange, right
+write "$(\\cos x, \\sin x)$" at (0.6, 1.05) in cyan, right
 write "$\\text{Projection Ray: } v = t(u + 1)$" at (-2.18, 1.35) in orange, right
+
 ```
 
 Although the substitution $t = \tan(x/2)$ is algebraically universal, it can inflate polynomial degrees. When integrands possess parity symmetries, specialized alternative transformations reduce computational overhead:
@@ -334,7 +352,7 @@ x = \frac{\pm 2\sqrt{c}t - b}{a - t^2}, \quad dx = 2\frac{\pm \sqrt{c}t^2 - bt \
 x = \frac{a x_2 - x_1 t^2}{a - t^2}, \quad dx = \frac{2a(x_2 - x_1)t}{(a - t^2)^2} \, dt.
 \end{gather}
 $$
-(see [[Proof of the Three Euler Substitutions for Quadratic Irrationals]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of the Three Euler Substitutions for Quadratic Irrationals\|Proof of the Three Euler Substitutions for Quadratic Irrationals]])
 
 A fundamental question regarding algebraic integrability was resolved by Pafnuty Chebyshev: Under what conditions can an irrational differential binomial be integrated in terms of elementary functions?
 
@@ -351,5 +369,5 @@ $$
 3. \; \frac{p + 1}{q} + r \in \mathbb{Z} \quad (\text{rationalization via } a x^{-q} + b = t^s, \text{ where } s \text{ is the denominator of } r).
 \end{gather}
 $$
-(see [[Proof of Chebyshev's Differential Binomial Theorem]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 6 - Primitives/Proof of Chebyshev's Differential Binomial Theorem\|Proof of Chebyshev's Differential Binomial Theorem]])
 

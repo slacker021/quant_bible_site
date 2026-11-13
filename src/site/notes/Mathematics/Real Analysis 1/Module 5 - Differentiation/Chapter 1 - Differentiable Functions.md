@@ -2,6 +2,62 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis-1/module-5-differentiation/chapter-1-differentiable-functions/","dg-note-properties":{}}
 ---
 
+```easy-tikz
+title $\text{The Differential Triangle and Secant-to-Tangent Convergence}$
+xlabel $x$
+ylabel $y$
+show x from 0 to 8.5 and y from 0 to 6.5
+axes on the edges
+size 12 x 8
+plot f(x) = 1.0 + 0.3*x + 0.06*x^2, from x = 1.0 to 7.8, in cyan, very thick
+plot secant(x) = 2.44 + 0.87*(x - 3.0), from x = 1.8 to 7.5, in orange, thick, dashed
+plot tangent(x) = 2.44 + 0.66*(x - 3.0), from x = 1.0 to 7.8, in green, thick
+draw a line from (3.0, 0) to (3.0, 2.44), in gray, dashed
+draw a line from (6.5, 0) to (6.5, 2.44), in gray, dashed
+draw a line from (3.0, 2.44) to (6.5, 2.44), in gray, dashed
+draw a line from (6.5, 2.44) to (6.5, 4.75), in green, very thick
+draw a line from (6.5, 4.75) to (6.5, 5.49), in red, very thick
+mark (3.0, 2.44), in cyan, large
+mark (6.5, 5.49), in orange, large
+mark (6.5, 4.75), in green, large
+write "$x_0$" at (2.7, 0.65) in gray, below
+write "$x_0 + h$" at (7, 0.6) in gray, below
+write "$P(x_0, f(x_0))$" at (2.8, 2.7) in cyan, left
+write "$Q(x_0+h, f(x_0+h))$" at (6.05, 5.8) in orange, left
+write "$\\text{Secant } S_h$" at (4.2, 3.85) in orange
+write "$\\text{Tangent } T$" at (7.25, 4.8) in green, below
+write "$dx = h$" at (4.75, 2.15) in gray, below
+write "$df = f'(x_0)h$" at (4.78, 2.85) in green, right
+write "$o(h)$" at (6.85, 5.7) in red, right
+```
+```easy-tikz
+title $\text{The Differential Triangle and Secant-to-Tangent Convergence}$
+xlabel $x$
+ylabel $y$
+show x from 0 to 8.5 and y from 0 to 6.5
+axes on the edges
+size 12 x 8
+plot f(x) = 1.0 + 0.3*x + 0.06*x^2, from x = 1.0 to 7.8, in cyan, very thick
+plot secant(x) = 2.44 + 0.87*(x - 3.0), from x = 1.8 to 7.5, in orange, thick, dashed
+plot tangent(x) = 2.44 + 0.66*(x - 3.0), from x = 1.0 to 7.8, in green, thick
+draw a line from (3.0, 0) to (3.0, 2.44), in gray, dashed
+draw a line from (6.5, 0) to (6.5, 2.44), in gray, dashed
+draw a line from (3.0, 2.44) to (6.5, 2.44), in gray, dashed
+draw a line from (6.5, 2.44) to (6.5, 4.75), in green, very thick
+draw a line from (6.5, 4.75) to (6.5, 5.49), in red, very thick
+mark (3.0, 2.44), in cyan, large
+mark (6.5, 5.49), in orange, large
+mark (6.5, 4.75), in green, large
+write "$x_0$" at (2.7, 0.65) in gray, below
+write "$x_0 + h$" at (7, 0.6) in gray, below
+write "$P(x_0, f(x_0))$" at (2.8, 2.7) in cyan, left
+write "$Q(x_0+h, f(x_0+h))$" at (6.05, 5.8) in orange, left
+write "$\\text{Secant } S_h$" at (4.2, 3.85) in orange
+write "$\\text{Tangent } T$" at (7.25, 4.95) in green, below
+write "$dx = h$" at (4.75, 2.15) in gray, below
+write "$df = f'(x_0)h$" at (4.78, 2.85) in green, right
+write "$o(h)$" at (6.6, 5.45) in red, right
+```
 # Local Linear Approximation
 The foundational concepts of real analysis established in preceding modules govern how mathematical mappings behave under spatial transformations. In [[Mathematics/Real Analysis 1/Module 4 - Continuity/Chapter 1 - Basic Definition of Continuity\|Module 4]], continuity emerged as the mathematical formulation of proximity preservation: a mapping is continuous if it maps sufficiently close points in a domain to arbitrarily close points in a codomain. Yet, while continuity guarantees stability, it remains qualitatively blind to direction, rate, and dynamical momentum. A continuous curve may turn violently, fracture into infinite directional oscillations, or present vertical precipices that defy physical realization.
 
@@ -500,13 +556,14 @@ mark (6.5, 5.49), in orange, large
 mark (6.5, 4.75), in green, large
 write "$x_0$" at (2.7, 0.65) in gray, below
 write "$x_0 + h$" at (7, 0.6) in gray, below
-write "$P(x_0, f(x_0))$" at (2.8, 2.7), in cyan, left
+write "$P(x_0, f(x_0))$" at (2.8, 2.7) in cyan, left
 write "$Q(x_0+h, f(x_0+h))$" at (6.05, 5.8) in orange, left
 write "$\\text{Secant } S_h$" at (4.2, 3.85) in orange
 write "$\\text{Tangent } T$" at (7.63, 5.1) in green, below
-write "$dx = h$" at (4.75, 2.15), in gray, below
+write "$dx = h$" at (4.75, 2.15) in gray, below
 write "$df = f'(x_0)h$" at (4.78, 2.85) in green, right
 write "$o(h)$" at (6.85, 5.7) in red, right
+
 ```
 
 ### The Pathology Gallery (Corners, Cusps, and Vertical Tangents)
@@ -522,11 +579,12 @@ plot f(x) = abs(x), from x = -3.0 to 3.0, in cyan, thick
 draw a line from (0.0, 0.0) to (2.5, 2.5) in orange, very thick, dashed
 draw a line from (0.0, 0.0) to (-2.5, 2.5) in orange, very thick, dashed
 raw tool {"type":"points","name":"P1","points":"(0.0, 0.0);","size":"large"}
-write "$\text{Corner Point: } f'_-(0) = -1 \neq f'_+(0) = +1$" at (0.0, -1.0), in white, below
+write "$\\text{Corner Point: } f'_-(0) = -1 \\neq f'_+(0) = +1$" at (0.0, -1.0) in gray, below
 write "$y = |x|$" at (2.35, 3.35) in teal, right
 write "$f'_+(0) = +1$" at (3.4, 2.3) in orange, below
 write "$f'_-(0) = -1$" at (-3.15, 2.3) in orange, below
 write "$(0,0)$" at (0, -0.5) in red, center
+
 ```
 
 The neon red marker highlights the singular apex where the left-hand and right-hand tangents disagree, precluding the existence of a single linear approximation.

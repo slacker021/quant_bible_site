@@ -2,6 +2,31 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis-1/module-5-differentiation/chapter-4-the-study-of-functions-using-methods-of-differential-calculus/","dg-note-properties":{}}
 ---
 
+```easy-tikz
+title $\text{Convexity: Secant Chord Domination and Slope Ordering}$
+xlabel $x$
+ylabel $y$
+show x from 0.0 to 7.5 and y from 0.0 to 6.5
+axes on the edges
+size 12 x 8
+plot f(x) = 0.15*x*x - 0.2*x + 1.2, from x = 0.8 to 6.8, in cyan, very thick
+draw a line from (1.5, 1.2375) to (6.2, 5.726), in orange, thick
+draw a line from (1.5, 1.2375) to (3.8, 2.606), in green, dashed
+draw a line from (3.8, 2.606) to (6.2, 5.726), in purple, dashed
+draw a line from (1.5, 0.0) to (1.5, 1.2375), in gray, dashed
+draw a line from (3.8, 0.0) to (3.8, 2.606), in gray, dashed
+draw a line from (6.2, 0.0) to (6.2, 5.726), in gray, dashed
+mark (1.5, 1.2375), in orange, large
+mark (3.8, 2.606), in green, large
+mark (6.2, 5.726), in orange, large
+write "$x_1$" at (1.7, 0.45) in gray, center
+write "$x$" at (4, 0.4) in gray, center
+write "$x_2$" at (6.4, 0.4) in gray, center
+write "$\\text{Secant Chord}$" at (3.5, 4.3) in orange, center
+write "$f(x)$" at (6.25, 6.55) in teal, center
+write "$\\text{Slope } k_1$" at (2.9, 1.3) in green, center
+write "$\\text{Slope } k_2$" at (5.3, 3.8) in purple, center
+```
 # Differential Topology of the Continuum and Monotonic Deformation
 Possessing the ability to compute a derivative at an isolated point does not immediately yield a complete geometric portrait of a function. A strictly positive derivative $f'(x_0) > 0$ guarantees only that $f$ increases locally across an immediate neighborhood of $x_0$; it does not, by itself, preclude the graph from oscillating erratically, plunging steeply elsewhere, or forming pathological singularities. To reconstruct the global architecture of a curve—its intervals of monotonicity, its extremal peaks and valleys, its regions of upward or downward convexity, its asymptotes, and its singular branching behaviors—analysis must synthesize local derivatives into an overarching investigative apparatus. 
 
@@ -195,8 +220,9 @@ write "$\\text{Interface } y = 0$" at (3.8, 0.4) in gray, right
 write "$\\text{Medium 1 } (c_1)$" at (1.4, 0.85) in teal, center
 write "$\\text{Medium 2 } (c_2)$" at (5.05, -0.95) in orange, center
 write "$(x, 0)$" at (3.35, 0.45) in green, center
-write "$\alpha_1$" at (2.5, 1.2) in cyan, center
-write "$\alpha_2$" at (3.5, -1.2) in orange, center
+write "$\\alpha_1$" at (2.5, 1.2) in cyan, center
+write "$\\alpha_2$" at (3.5, -1.2) in orange, center
+
 ```
 
 ### Classical Algebraic Inequalities via Differential Optimization
@@ -213,7 +239,7 @@ $$
 \end{align}
 \end{gather}
 $$
-(see [[Proof of the Generalized Power-Bernoulli Differential Inequality]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of the Generalized Power-Bernoulli Differential Inequality\|Proof of the Generalized Power-Bernoulli Differential Inequality]])
 
 Applying substitution and homogenization to the Power-Bernoulli inequality yields the celebrated inequality of Young:
 $$
@@ -229,7 +255,7 @@ $$
 \text{In each case, equality is attained if and only if } a = b.
 \end{gather}
 $$
-(see [[Proof of Young's Conjugate Inequality]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Young's Conjugate Inequality\|Proof of Young's Conjugate Inequality]])
 
 Summing scaled instances of Young's inequality across finite index sets produces the classical discrete $l^p$ inequalities:
 $$
@@ -243,7 +269,7 @@ $$
 \text{Equality holds if and only if the vectors } (x_1^p, \dots, x_n^p) \text{ and } (y_1^q, \dots, y_n^q) \text{ are collinear.}
 \end{gather}
 $$
-(see [[Proof of Hölder's Discrete Summation Inequality]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Hölder's Discrete Summation Inequality\|Proof of Hölder's Discrete Summation Inequality]])
 
 From Hölder's inequality emerges the subadditivity of the discrete $l^p$ norm, known as Minkowski's inequality:
 $$
@@ -257,7 +283,7 @@ $$
 \text{For } p > 1, \text{ equality holds if and only if } (x_1, \dots, x_n) \text{ and } (y_1, \dots, y_n) \text{ are collinear.}
 \end{gather}
 $$
-(see [[Proof of Minkowski's Norm Triangle Inequality]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Minkowski's Norm Triangle Inequality\|Proof of Minkowski's Norm Triangle Inequality]])
 
 ---
 # Convexity, Chordal Secants, and Subdifferential Geometry
@@ -308,20 +334,20 @@ size 12 x 8
 plot f(x) = 0.15*x*x - 0.2*x + 1.2, from x = 0.8 to 6.8, in cyan, very thick
 draw a line from (1.5, 1.2375) to (6.2, 5.726), in orange, thick
 draw a line from (1.5, 1.2375) to (3.8, 2.606), in green, dashed
-draw a line from (3.8, 2.606) to (6.2, 5.726), in orchid, dashed
+draw a line from (3.8, 2.606) to (6.2, 5.726), in purple, dashed
 draw a line from (1.5, 0.0) to (1.5, 1.2375), in gray, dashed
 draw a line from (3.8, 0.0) to (3.8, 2.606), in gray, dashed
 draw a line from (6.2, 0.0) to (6.2, 5.726), in gray, dashed
 mark (1.5, 1.2375), in orange, large
 mark (3.8, 2.606), in green, large
 mark (6.2, 5.726), in orange, large
-write "$x_1$" at (1.5, 0.4) in gray, center
-write "$x$" at (3.8, 0.4) in gray, center
-write "$x_2$" at (6.2, 0.4) in gray, center
+write "$x_1$" at (1.75, 0.4) in gray, center
+write "$x$" at (4.05, 0.4) in gray, center
+write "$x_2$" at (6.45, 0.4) in gray, center
 write "$\\text{Secant Chord}$" at (3.5, 4.3) in orange, center
 write "$f(x)$" at (6.25, 6.55) in teal, center
 write "$\\text{Slope } k_1$" at (2.9, 1.3) in green, center
-write "$\text{Slope } k_2$" at (5.3, 3.8) in orchid, center
+write "$\\text{Slope } k_2$" at (5.3, 3.8) in purple, center
 ```
 
 ### Differential Criteria for Convexity
@@ -336,7 +362,7 @@ $$
 \end{align}
 \end{gather}
 $$
-(see [[Proof of First-Order Monotonicity Characterization of Convexity]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of First-Order Monotonicity Characterization of Convexity\|Proof of First-Order Monotonicity Characterization of Convexity]])
 
 If $f$ possesses a second derivative, the monotonicity theorem for first derivatives immediately provides the standard second-order test:
 $$
@@ -349,7 +375,7 @@ $$
 \end{align}
 \end{gather}
 $$
-(see [[Proof of Second-Order Differential Criterion for Convexity]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Second-Order Differential Criterion for Convexity\|Proof of Second-Order Differential Criterion for Convexity]])
 
 ### The Supporting Hyperplane Property
 Geometrically, a convex planar region lies entirely on one side of any supporting line tangent to its boundary. Analytically, this means the tangent line to the graph of a convex function serves as a global lower affine support:
@@ -362,7 +388,7 @@ f(x) \ge f(x_0) + f'(x_0)(x - x_0) \\[3.5mm]
 \text{Furthermore, } f \text{ is strictly convex if and only if this inequality is strict for all } x \neq x_0.
 \end{gather}
 $$
-(see [[Proof of Supporting Tangent Characterization of Convexity]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Supporting Tangent Characterization of Convexity\|Proof of Supporting Tangent Characterization of Convexity]])
 
 ### Inflection Points and Convexity Inversion
 A point at which a curve transitions from one direction of convexity to the opposite is called an *inflection point*:
@@ -385,7 +411,7 @@ $$
 f''(x_0) = 0
 \end{gather}
 $$
-(see [[Proof of Necessary Condition for an Inflection Point]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Necessary Condition for an Inflection Point\|Proof of Necessary Condition for an Inflection Point]])
 
 >[!warning]+ Warning: The Fallacy of Tangent Crossing
 >Note that $f''(x_0) = 0$ is strictly necessary, not sufficient. For $f(x) = x^4$, $f''(0) = 0$, yet $f''(x) = 12x^2 \ge 0$ everywhere; the function remains strictly convex on all of $\mathbb{R}$, and $x = 0$ is a strict global minimum, not an inflection point.
@@ -413,6 +439,7 @@ write "$\\text{Concave: } f''(x) < 0$" at (2.45, 1.35) in teal, center
 write "$\\text{Convex: } f''(x) > 0$" at (-2.4, -1.2) in teal, center
 write "$\\text{Inflection Point } (0, 0)$" at (-0.05, 0.05) in green, left
 write "$\\text{Inflexional Tangent } y = x$" at (0.1, -0.13) in orange, right
+
 ```
 
 ### Jensen's Generalized Convex Inequality
@@ -427,7 +454,7 @@ f\left(\sum_{i=1}^n \alpha_i x_i\right) \le \sum_{i=1}^n \alpha_i f(x_i) \\[3.5m
 \text{if and only if } x_1 = x_2 = \dots = x_n.
 \end{gather}
 $$
-(see [[Proof of Jensen's Generalized Convex Inequality]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Jensen's Generalized Convex Inequality\|Proof of Jensen's Generalized Convex Inequality]])
 
 ---
 # Structural Regularity and Dual Transforms of Convex Mappings
@@ -443,7 +470,7 @@ f\left(\frac{x_1 + x_2}{2}\right) \le \frac{f(x_1) + f(x_2)}{2} \\[3.5mm]
 \text{then } f \text{ is convex on } (a, b).
 \end{gather}
 $$
-(see [[Proof of Midpoint-Convexity Characterization of Continuous Mappings]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Midpoint-Convexity Characterization of Continuous Mappings\|Proof of Midpoint-Convexity Characterization of Continuous Mappings]])
 
 ### Asymptotic Rigidity and Boundedness
 Convexity imposes severe constraints on the growth of a function defined across the entire real line:
@@ -459,7 +486,7 @@ $$
 \end{align}
 \end{gather}
 $$
-(see [[Proof of Asymptotic Rigidity and Boundedness of Convex Functions]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Asymptotic Rigidity and Boundedness of Convex Functions\|Proof of Asymptotic Rigidity and Boundedness of Convex Functions]])
 
 ### Unilateral Differentiability and Countability of Singularities
 While a convex function need not be everywhere differentiable (as exhibited by $f(x) = |x|$ at $x = 0$), its directional derivatives exist everywhere:
@@ -478,7 +505,7 @@ $$
 \end{align}
 \end{gather}
 $$
-(see [[Proof of Unilateral Differential Structure of Convex Functions]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Unilateral Differential Structure of Convex Functions\|Proof of Unilateral Differential Structure of Convex Functions]])
 
 ### The Legendre-Fenchel Conjugate Transform
 In mathematical physics, thermodynamics, and quantitative optimization, the *Legendre-Fenchel transform* converts a convex function of position into a dual convex function of momentum (or slope):
@@ -498,7 +525,7 @@ f^*(t) := \sup_{x \in I} \big(tx - f(x)\big) \\[3.5mm]
 \end{align}
 \end{gather}
 $$
-(see [[Proof of the Legendre-Fenchel Duality and Conjugate Convexity]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of the Legendre-Fenchel Duality and Conjugate Convexity\|Proof of the Legendre-Fenchel Duality and Conjugate Convexity]])
 
 >[!info]+ Remark: Duality of Power Monomials
 >Let $\alpha > 1$, and consider the power monomial $f(x) = \frac{1}{\alpha} x^\alpha$ defined on $[0, \infty)$. Solving $t = f'(x) = x^{\alpha - 1}$ yields $x(t) = t^{1/(\alpha - 1)}$. Defining the conjugate exponent $\beta$ by $\frac{1}{\alpha} + \frac{1}{\beta} = 1$, one finds that $\beta = \frac{\alpha}{\alpha - 1}$.
@@ -531,7 +558,7 @@ R(x) := \frac{1}{|k(x)|} = \frac{\left(1 + [f'(x)]^2\right)^{3/2}}{|f''(x)|} \\[
 \text{if and only if the second derivative vanishes at an inflection candidate.}
 \end{gather}
 $$
-(see [[Proof of Differential Curvature and Geometric Osculation of Planar Curves]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of Differential Curvature and Geometric Osculation of Planar Curves\|Proof of Differential Curvature and Geometric Osculation of Planar Curves]])
 
 ### The Adamović-Mitrinović Trigonometric Inequality
 Differential monotonicity analysis yields sharp bounds on classical circular functions:
@@ -542,7 +569,7 @@ $$
 \cos(x) < \left(\frac{\sin(x)}{x}\right)^3
 \end{gather}
 $$
-(see [[Proof of the Adamović-Mitrinović Trigonometric Inequality]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of the Adamović-Mitrinović Trigonometric Inequality\|Proof of the Adamović-Mitrinović Trigonometric Inequality]])
 
 ---
 # Indeterminate Forms and L'Hôpital's Asymptotic Rules
@@ -564,7 +591,7 @@ $$
 \lim_{x \to a^+} \frac{f(x)}{g(x)} = A
 \end{gather}
 $$
-(see [[Proof of the Cauchy-L'Hôpital Indeterminate Ratio Rule]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 4 - The Study of Functions Using Methods of Differential Calculus/Proof of the Cauchy-L'Hôpital Indeterminate Ratio Rule\|Proof of the Cauchy-L'Hôpital Indeterminate Ratio Rule]])
 
 An identical assertion holds for left-sided limits $x \to b^-$, two-sided limits $x \to x_0$, and infinite endpoints $x \to \pm\infty$.
 
@@ -631,6 +658,7 @@ write "$\\text{Oblique Asymptote } y = x$" at (4.7, 5.2) in orange, left
 write "$x = -1$" at (-2.3, -2.7) in gray, right
 write "$x = 1$" at (1.1, 2.6) in gray, right
 write "$\\text{Inflection } (0, 0)$" at (-3.7, 4.8) in green, right
+
 ```
 
 ---

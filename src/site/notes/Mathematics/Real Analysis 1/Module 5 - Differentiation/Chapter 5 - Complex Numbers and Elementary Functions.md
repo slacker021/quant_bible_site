@@ -123,7 +123,7 @@ The geometry of complex arithmetic is visualized in the complex Argand plane:
 title $\text{Geometric Representation of Complex Arithmetic in the Argand Plane}$
 xlabel $\operatorname{Re}(z)$
 ylabel $\operatorname{Im}(z)$
-show x from -1.0 to 6.5 and y from -1.0 to 5.5
+show x from -1.0 to 6.5 and y from -2.0 to 4.5
 axes on the edges
 size 12 x 8
 draw an arrow from (0.0, 0.0) to (3.5, 1.2) in cyan, thick
@@ -140,10 +140,10 @@ mark (3.5, -1.2), in red, large
 write "$z_1 = x_1 + i y_1$" at (3.7, 1.0) in cyan, right
 write "$z_2 = x_2 + i y_2$" at (1.3, 3.4) in orange, left
 write "$z_1 + z_2$" at (5.1, 4.6) in green, right
-write "$\overline{z}_1 = x_1 - i y_1$" at (3.7, -1.2) in red, right
-write "$\text{Parallelogram Addition Rule}$" at (2.2, 4.8) in white, center
-```
+write "$\\overline{z}_1 = x_1 - i y_1$" at (3.7, -1.2) in red, right
+write "$\\text{Parallelogram Addition Rule}$" at (2.2, 4.8) in gray, center
 
+```
 The geometric representation illustrates that complex addition conforms to the vector addition parallelogram law in $\mathbb{R}^2$, while conjugation corresponds to specular reflection across the horizontal real axis.
 
 >[!danger]+ Intuition: The Field with Spatial Vision
@@ -169,7 +169,7 @@ $$
   \exp(z_1 + z_2) = \exp(z_1) \exp(z_2)
 \end{gather}
 $$
-(see [[Proof of Absolute Convergence and Cauchy Product for the Complex Exponential Series]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Absolute Convergence and Cauchy Product for the Complex Exponential Series\|Proof of Absolute Convergence and Cauchy Product for the Complex Exponential Series]])
 
 The functional identity $\exp(z_1 + z_2) = \exp(z_1) \exp(z_2)$ establishes that the exponential mapping is a group homomorphism from the additive group of complex numbers $(\mathbb{C}, +)$ into the multiplicative group of non-zero complex numbers $(\mathbb{C}^\times, \cdot)$. 
 
@@ -205,7 +205,7 @@ $$
   e^z = e^{x + iy} = e^x \big(\cos(y) + i \sin(y)\big)
 \end{gather}
 $$
-(see [[Proof of Euler's Formula and Group Homomorphism of Exp]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Euler's Formula and Group Homomorphism of Exp\|Proof of Euler's Formula and Group Homomorphism of Exp]])
 
 Euler's formula elevates trigonometry from geometric ratios of triangles to intrinsic algebraic identities of the complex exponential. The circular functions $\cos(z)$ and $\sin(z)$ are defined for arbitrary complex arguments $z \in \mathbb{C}$ by:
 $$
@@ -236,7 +236,7 @@ $$
   \sin(\alpha + \beta) = \sin(\alpha)\cos(\beta) + \cos(\alpha)\sin(\beta)
 \end{gather}
 $$
-(see [[Proof of Trigonometric Addition Formulas via Euler's Homomorphism]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Trigonometric Addition Formulas via Euler's Homomorphism\|Proof of Trigonometric Addition Formulas via Euler's Homomorphism]])
 
 The polar decomposition of complex numbers emerges naturally from Euler's identity. Every complex number $z = x + iy \neq 0$ can be represented as:
 $$
@@ -268,12 +268,13 @@ draw a line from (0.0, 0.0) to (0.7071, 0.0) in green, thick
 mark (0.7071, 0.7071), in orange, large
 mark (1.0, 0.0), in cyan, large
 mark (-1.0, 0.0), in red, large
-write "$e^{i\theta} = \cos(\theta) + i\sin(\theta)$" at (0.75, 0.85) in orange, right
-write "$\cos(\theta)$" at (0.35, -0.15) in green, center
-write "$\sin(\theta)$" at (0.75, 0.35) in green, right
-write "$e^{i\pi} = -1$" at (-1.05, 0.2) in red, left
+write "$e^{i\\theta} = \\cos(\\theta) + i\\sin(\\theta)$" at (0.6, 0.95) in orange, right
+write "$\\cos(\\theta)$" at (0.35, -0.15) in green, center
+write "$\\sin(\\theta)$" at (0.75, 0.35) in green, right
+write "$e^{i\\pi} = -1$" at (-1.05, 0.2) in red, left
 write "$1$" at (1.1, 0.1) in cyan, right
-write "$\mathbb{S}^1 \subset \mathbb{C}$" at (0.0, 1.15) in cyan, center
+write "$\\mathbb{S}^1 \\subset \\mathbb{C}$" at (0.0, 1.15) in cyan, center
+
 ```
 
 >[!info]+ Remark: Euler's Gem
@@ -307,7 +308,7 @@ $$
   \text{the power series } \sum_{n=0}^\infty c_n (z - z_0)^n \text{ converges absolutely.}
 \end{gather}
 $$
-(see [[Proof of Abel's Lemma for Power Series]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Abel's Lemma for Power Series\|Proof of Abel's Lemma for Power Series]])
 
 Applying the supremum limit across all terms yields the exact formula for the maximal radius of convergence, established by Augustin-Louis Cauchy and Jacques Hadamard: 
 $$
@@ -321,7 +322,7 @@ $$
   B_R(z_0) := \{z \in \mathbb{C} : |z - z_0| < R\}, \text{ and diverges for all } |z - z_0| > R.
 \end{gather}
 $$
-(see [[Proof of Cauchy-Hadamard Radius Formula and Convergence Disk]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Cauchy-Hadamard Radius Formula and Convergence Disk\|Proof of Cauchy-Hadamard Radius Formula and Convergence Disk]])
 
 In practice, the limit of absolute coefficient ratios often provides a direct calculation of the radius:
 $$
@@ -332,7 +333,7 @@ $$
   \text{then the radius of convergence is given by } R = \frac{1}{\lambda}.
 \end{gather}
 $$
-(see [[Proof of D'Alembert Ratio Test for Complex Series]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of D'Alembert Ratio Test for Complex Series\|Proof of D'Alembert Ratio Test for Complex Series]])
 
 A central theorem of analysis is that a power series defines an infinitely differentiable function within its open disk of convergence, and its derivative can be computed by differentiating the series term-by-term. Crucially, term-by-term differentiation preserves the radius of convergence identically: 
 $$
@@ -344,7 +345,7 @@ $$
   \limsup_{n \to \infty} \sqrt[n]{n |c_n|} = \limsup_{n \to \infty} \sqrt[n]{|c_n|}
 \end{gather}
 $$
-(see [[Proof of Cauchy-Hadamard Derivative Invariance]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Cauchy-Hadamard Derivative Invariance\|Proof of Cauchy-Hadamard Derivative Invariance]])
 
 $$
 \begin{gather}
@@ -356,7 +357,7 @@ $$
   \text{By induction, } f \text{ is infinitely differentiable on } B_R(z_0), \text{ with } c_n = \frac{f^{(n)}(z_0)}{n!}.
 \end{gather}
 $$
-(see [[Proof of Term-by-Term Differentiation of Power Series]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Term-by-Term Differentiation of Power Series\|Proof of Term-by-Term Differentiation of Power Series]])
 
 The nested topology of convergence disks and uniform convergence is illustrated below:
 ```easy-tikz
@@ -377,6 +378,7 @@ write "$z_0$" at (0.1, -0.3) in green, right
 write "$r < R \\ \\text{(Uniform Convergence)}$" at (1.35, -0.8) in orange, left
 write "$R = \\frac{1}{L} \\text{(Boundary of Convergence)}$" at (0.2, 3.6) in teal, left
 write "$\\text{Divergence Zone } (|z - z_0| > R)$" at (2, -3.2) in red, center
+
 ```
 
 ### Uniqueness of Analytic Expansions and Zeros of Analytic Functions
@@ -391,7 +393,7 @@ $$
   \text{then } a_n = b_n \text{ for all } n \ge 0, \text{ and consequently } f(z) = g(z) \text{ on all of } B_R(z_0).
 \end{gather}
 $$
-(see [[Proof of Identity Theorem for Analytic Power Series Expansions]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Identity Theorem for Analytic Power Series Expansions\|Proof of Identity Theorem for Analytic Power Series Expansions]])
 
 A direct corollary of the Identity Theorem is the *Isolation of Zeros*: if an analytic function $f$ on a connected domain is not identically zero, its roots cannot accumulate within the domain. Each zero $z_*$ has a finite order $m \in \mathbb{N}$ such that $f(z) = (z - z_*)^m h(z)$ with $h(z_*) \neq 0$.
 
@@ -428,7 +430,7 @@ $$
   P(z_0) = 0
 \end{gather}
 $$
-(see [[Proof of the Fundamental Theorem of Algebra (Minimum Modulus Principle)]])
+(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of the Fundamental Theorem of Algebra (Minimum Modulus Principle)\|Proof of the Fundamental Theorem of Algebra (Minimum Modulus Principle)]])
 
 By the division algorithm for polynomials, if $P(z_0) = 0$, then $P(z) = (z - z_0) Q(z)$ for some polynomial $Q(z)$ of degree $n - 1$. Iterating this factorization $n$ times yields the complete linear factorization:
 $$
