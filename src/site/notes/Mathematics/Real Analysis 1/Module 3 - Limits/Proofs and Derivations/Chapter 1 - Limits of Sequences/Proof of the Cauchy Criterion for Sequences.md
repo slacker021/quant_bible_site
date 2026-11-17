@@ -4,7 +4,8 @@
 
 Let $\{x_n\}_{n=1}^\infty$ be a sequence of real numbers.
 
-**Necessity ($\implies$):**
+---
+# Necessity 
 Assume that the sequence $\{x_n\}$ converges to a finite limit $A \in \mathbb{R}$, and let $\varepsilon > 0$ be arbitrary.
 
 By the definition of convergence applied to the positive tolerance $\frac{\varepsilon}{2} > 0$, there exists an index $N \in \mathbb{N}$ such that $|x_n - A| < \frac{\varepsilon}{2}$ for all $n > N$. For any two indices $n > N$ and $m > N$, adding and subtracting $A$ within the absolute difference and applying the [[Mathematics/Real Analysis 1/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 2 - The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers/Proof of the Triangle Inequality\|Triangle Inequality]] yields:
@@ -21,7 +22,8 @@ $$
 $$
 Therefore, $\{x_n\}$ is a Cauchy sequence.
 
-**Sufficiency ($\impliedby$):**
+---
+# Sufficiency
 Conversely, assume that $\{x_n\}$ is a Cauchy sequence. First, it is established that $\{x_n\}$ is bounded in $\mathbb{R}$.
 
 Instantiating the Cauchy definition with $\varepsilon = 1 > 0$ guarantees the existence of an index $N_0 \in \mathbb{N}$ such that $|x_n - x_m| < 1$ for all $n, m > N_0$. Fixing $m = N_0 + 1 > N_0$, the Triangle Inequality reveals that for all $n > N_0$:

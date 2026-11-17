@@ -7,7 +7,7 @@ Let $M$ be the ambient universal set, and let $A$, $B$, and $C$ be arbitrary sub
 ---
 # Proposition 1
 
-**Forward Inclusion:**
+### Forward Inclusion
 Let $x \in A \cap (B \cup C)$. By the definition of the set intersection: 
 $$
 \begin{gather}
@@ -34,7 +34,7 @@ A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C) \tag{4}
 \end{gather}
 $$
 
-**Reverse Inclusion:**
+### Reverse Inclusion
 Let $x \in (A \cap B) \cup (A \cap C)$. By the definition of the set union: 
 $$
 \begin{gather}
@@ -76,7 +76,7 @@ $$
 ---
 # Proposition 2
 
-**Forward Inclusion:**
+### Forward Inclusion
 Let $x \in A \cup (B \cap C)$. By the definition of the set union: 
 $$
 \begin{gather}
@@ -103,7 +103,7 @@ A \cup (B \cap C) \subseteq (A \cup B) \cap (A \cup C) \tag{14}
 \end{gather}
 $$
 
-**Reverse Inclusion:**
+### Reverse Inclusion
 Let $x \in (A \cup B) \cap (A \cup C)$. By the definition of the set intersection: 
 $$
 \begin{gather}

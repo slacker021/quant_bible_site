@@ -2,8 +2,9 @@
 {"dg-publish":true,"permalink":"/mathematics/real-analysis-1/module-3-limits/proofs-and-derivations/chapter-1-limits-of-sequences/proof-of-q-ary-representation-theorem/","dg-note-properties":{}}
 ---
 
-Let $q \in \mathbb{N}$ with $q \ge 2$ be an integer base. A real number $x \in \mathbb{R}$ is rational if and only if its canonical $q$-ary expansion is eventually periodic.
+Let $q \in \mathbb{N}$ with $q \ge 2$ be an integer base.
 
+---
 # Proposition 1
 Let $x \in \mathbb{Q}$ be a rational number, expressed as $x = \frac{a}{b}$ with $a \in \mathbb{Z}$, $b \in \mathbb{N}$, and $\gcd(a, b) = 1$.
 

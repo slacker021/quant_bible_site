@@ -5,9 +5,9 @@
 Let $X, Y,$ and $Z$ be arbitrary sets.
 
 ---
-**Method 1 (Mutual Subset Inclusion):**
+# Method 1 (Mutual Subset Inclusion)
 
-**Forward Inclusion:**
+### Forward Inclusion
 Let $(a, b) \in (X \times Y) \cup (Z \times Y)$ be an arbitrary element. By the definition of the [[Mathematics/Real Analysis 1/Module 1 - General Mathematical Concepts and Notation/Chapter 2 - Naive Set Theory\|set union]], 
 $$
 \begin{gather}
@@ -32,7 +32,7 @@ $$
 \end{gather}
 $$
 
-**Reverse Inclusion:**
+### Reverse Inclusion
 Let $(a, b) \in (X \cup Z) \times Y$ be an arbitrary element. By the definition of the Cartesian product: 
 $$
 \begin{gather}
@@ -62,7 +62,7 @@ $$
 $$
 
 ---
-**Method 2 (Predicate Logic Equivalence):**
+# Method 2 (Predicate Logic Equivalence)
 The set identity can be verified through a continuous chain of logical equivalences. Let $(a, b)$ be an arbitrary ordered pair:
 $$
 \begin{aligned}

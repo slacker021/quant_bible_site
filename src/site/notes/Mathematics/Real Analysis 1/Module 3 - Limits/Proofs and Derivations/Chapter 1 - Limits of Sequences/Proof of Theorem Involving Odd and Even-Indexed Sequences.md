@@ -4,7 +4,8 @@
 
 Let $\{x_n\}_{n=1}^\infty$ be a sequence of real numbers, and let $A \in \mathbb{R}$.
 
-**Necessity ($\implies$):**
+---
+# Necessity
 Assume that the sequence $\{x_n\}$ converges to $A$: $\lim_{n \to \infty} x_n = A$.
 
 By the [[Mathematics/Real Analysis 1/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Corollary of Partial Limits Proposition\|subsequence convergence theorem]], every subsequence of a convergent sequence converges to the identical limit. Because the even-indexed terms $\{x_{2n}\}_{n=1}^\infty$ and odd-indexed terms $\{x_{2n+1}\}_{n=1}^\infty$ are subsequences of $\{x_n\}$ corresponding to the strictly increasing index progressions $n_k = 2k$ and $n_k = 2k + 1$, respectively, it follows immediately that: 
@@ -13,8 +14,8 @@ $$
 \lim_{n \to \infty} x_{2n} = A \quad \text{and} \quad \lim_{n \to \infty} x_{2n+1} = A \tag{1}
 \end{gather}
 $$
-
-**Sufficiency ($\impliedby$):**
+---
+# Sufficiency
 Conversely, assume that both the even-indexed and odd-indexed subsequences converge to $A$:
 $$
 \begin{gather}

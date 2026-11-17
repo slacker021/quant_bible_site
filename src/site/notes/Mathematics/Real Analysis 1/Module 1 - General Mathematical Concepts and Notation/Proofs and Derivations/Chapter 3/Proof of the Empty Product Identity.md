@@ -4,7 +4,7 @@
 
 Let $X$ and $Y$ be arbitrary sets.
 
-**Sufficiency ($\impliedby$):**
+# Sufficiency
 Assume that $(X = \emptyset) \lor (Y = \emptyset)$. To establish that $X \times Y = \emptyset$, proceed by contradiction. Assume that: 
 $$
 \begin{gather}
@@ -36,7 +36,8 @@ $$
 \end{gather}
 $$
 
-**Necessity ($\implies$):**
+---
+# Necessity
 To establish that $X \times Y = \emptyset \implies (X = \emptyset) \lor (Y = \emptyset)$, proceed by proving the contrapositive:
 $$
 \begin{gather}

@@ -7,7 +7,7 @@ Let $M$ be the ambient universal set, and let $A$ and $B$ be arbitrary subsets o
 ---
 # Proposition 1
 
-**Forward Inclusion:**
+### Forward Inclusion
 Let $x \in C_{M}(A \cup B)$. By the definition of the set complement: 
 $$
 \begin{gather}
@@ -45,7 +45,7 @@ C_{M}(A \cup B) \subseteq C_{M}(A) \cap C_{M}(B) \tag{6}
 \end{gather}
 $$
 
-**Reverse Inclusion:**
+### Reverse Inclusion
 Let $x \in C_{M}(A) \cap C_{M}(B)$. By the definition of the set intersection: 
 $$
 \begin{gather}
@@ -92,7 +92,7 @@ $$
 ---
 # Proposition 2
 
-**Forward Inclusion:**
+### Forward Inclusion
 Let $x \in C_{M}(A \cap B)$. By the definition of the set complement: 
 $$
 \begin{gather}
@@ -130,7 +130,7 @@ C_{M}(A \cap B) \subseteq C_{M}(A) \cup C_{M}(B) \tag{19}
 \end{gather}
 $$
 
-**Reverse Inclusion:**
+### Reverse Inclusion
 Let $x \in C_{M}(A) \cup C_{M}(B)$. By the definition of the set union: 
 $$
 \begin{gather}

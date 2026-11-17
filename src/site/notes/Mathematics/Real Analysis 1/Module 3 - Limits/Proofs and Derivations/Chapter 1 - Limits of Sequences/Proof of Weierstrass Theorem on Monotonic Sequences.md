@@ -8,10 +8,10 @@ Let $\{x_n\}$ be a sequence of real numbers.
 # Theorem 1
 Assume that $\{x_n\}$ is nondecreasing, meaning $x_n \le x_{n+1}$ for all $n \in \mathbb{N}$.
 
-**Necessity ($\implies$):**
+### Necessity
 Suppose $\{x_n\}$ converges to a finite limit $A \in \mathbb{R}$. By the [[Mathematics/Real Analysis 1/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Basic Properties of Limits\|Theorem on the Basic Properties of Limits]], every convergent sequence of real numbers is bounded, which guarantees in particular that $\{x_n\}$ is bounded above.
 
-**Sufficiency ($\impliedby$):**
+### Sufficiency
 Conversely, suppose that the nondecreasing sequence $\{x_n\}$ is bounded above. Let $E := \{x_n \mid n \in \mathbb{N}\} \subset \mathbb{R}$ denote the range of the sequence. Because $E$ is non-empty and bounded above in $\mathbb{R}$, the [[Mathematics/Real Analysis 1/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 1 - Basic Properties of Real Numbers/Proof of Least Upper Bound Principle\|Least Upper Bound Principle]] guarantees the existence of the finite supremum:
 $$
 \begin{gather}
@@ -41,10 +41,10 @@ $$
 # Theorem 2
 Assume that $\{x_n\}$ is nonincreasing, meaning $x_n \ge x_{n+1}$ for all $n \in \mathbb{N}$.
 
-**Necessity ($\implies$):**
+### Necessity
 If $\{x_n\}$ converges, then by the [[Mathematics/Real Analysis 1/Module 3 - Limits/Proofs and Derivations/Chapter 1 - Limits of Sequences/Proof of the Basic Properties of Limits\|Theorem on the Basic Properties of Limits]], $\{x_n\}$ is bounded and therefore bounded below.
 
-**Sufficiency ($\impliedby$):**
+### Sufficiency
 Suppose that the nonincreasing sequence $\{x_n\}$ is bounded below. By the [[Mathematics/Real Analysis 1/Module 2 - The Space of Real Numbers/Proofs and Derivations/Chapter 1 - Basic Properties of Real Numbers/Proof of Greatest Lower Bound Principle\|Greatest Lower Bound Principle]], the non-empty set $E := \{x_n \mid n \in \mathbb{N}\}$ possesses a finite infimum:
 $$
 \begin{gather}
