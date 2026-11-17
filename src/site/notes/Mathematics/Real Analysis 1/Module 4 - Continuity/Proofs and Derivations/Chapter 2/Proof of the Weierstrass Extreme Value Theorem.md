@@ -17,7 +17,8 @@ $$
 
 It remains to establish that there exist points $x^*, x_* \in K$ such that $f(x^*) = M$ and $f(x_*) = m$. 
 
-**Attainment of the Supremum:**
+---
+# Attainment of the Supremum
 By the characterization of the supremum, for every natural number $n \in \mathbb{N}$, the reduced value $M - \frac{1}{n}$ is not an upper bound for $f(K)$. 
 
 Therefore, there exists an element $x_n \in K$ such that:
@@ -74,7 +75,8 @@ f(x^*) = M = \sup_{x \in K} f(x) \tag{8}
 $$
 which proves that $f$ attains its absolute supremum at $x^* \in K$.
 
-**Attainment of the Infimum:**
+---
+# Attainment of the Infimum
 Consider the negated function $g: K \to \mathbb{R}$ defined by $g(x) := -f(x)$. 
 
 Because $f$ is continuous on $K$, $g$ is continuous on $K$ by [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of Preservation of Continuity under Algebraic Field Operations\|Proof of Preservation of Continuity under Algebraic Field Operations]]. 

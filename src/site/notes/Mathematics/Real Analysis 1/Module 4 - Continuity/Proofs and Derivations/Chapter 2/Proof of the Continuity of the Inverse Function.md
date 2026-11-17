@@ -6,7 +6,8 @@ Let $I \subseteq \mathbb{R}$ be an interval, and let $f: I \to \mathbb{R}$ be co
 
 Without loss of generality, assume that $f$ is strictly increasing. 
 
-**Bijectivity and Existence of the Inverse Mapping:**
+---
+# Bijectivity and Existence of the Inverse Mapping
 Let $x_1, x_2 \in I$ with $x_1 \ne x_2$. By trichotomy, either $x_1 < x_2$ or $x_2 < x_1$. 
 
 Because $f$ is strictly increasing:
@@ -27,7 +28,7 @@ $$
 \end{gather}
 $$
 
-**Strict Monotonicity of $f^{-1}$:**
+### Strict Monotonicity of $f^{-1}$
 Let $y_1, y_2 \in J$ with $y_1 < y_2$. 
 
 Define the unique preimage points:
@@ -52,7 +53,8 @@ $$
 
 Thus, the inverse mapping $f^{-1}: J \to I$ is strictly increasing on $J$.
 
-**Continuity of $f^{-1}$:**
+---
+# Continuity of $f^{-1}$
 Because $f$ is continuous on the interval $I$, the [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of the Image of an Interval under Continuous Mappings\|Proof of the Image of an Interval under Continuous Mappings]] establishes that the codomain $J = f(I)$ is an interval. 
 
 Now consider the inverse function $f^{-1}: J \to \mathbb{R}$. 

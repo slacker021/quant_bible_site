@@ -16,6 +16,7 @@ $$
 
 The derivatives of the six inverse hyperbolic functions on their open interior domains are established via the [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 2 - The Basic Rules of Differentiation/Proof of The Derivative of an Inverse Function\|Derivative of an Inverse Function Theorem]] and the [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 2 - The Basic Rules of Differentiation/Proof of The Chain Rule\|Chain Rule]].
 
+---
 # Proposition 1
 Let $x \in \mathbb{R}$. The area hyperbolic sine mapping is defined by:
 $$

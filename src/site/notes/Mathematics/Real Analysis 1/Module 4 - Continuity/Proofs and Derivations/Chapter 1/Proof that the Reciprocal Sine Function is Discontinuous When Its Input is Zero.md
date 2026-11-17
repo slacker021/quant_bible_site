@@ -8,7 +8,7 @@ $$
 f(x) := \sin\left(\frac{1}{x}\right) \tag{1}
 \end{gather}
 $$
-
+---
 # Proposition 1
 The non-existence of the limit as $x \to 0$ is demonstrated using the Heine sequential criterion (from the [[Mathematics/Real Analysis 1/Module 3 - Limits/Proofs and Derivations/Chapter 2 - Limits of Functions/Proof of the Equivalence of Cauchy and Heine Definitions\|Proof of the Equivalence of Cauchy and Heine Definitions]]). 
 

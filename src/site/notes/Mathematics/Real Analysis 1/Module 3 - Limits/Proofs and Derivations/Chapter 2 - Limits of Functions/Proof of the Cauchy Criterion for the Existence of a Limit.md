@@ -4,7 +4,8 @@
 
 Let $\mathcal{B}$ be a base in $X$, and let $f: X \to \mathbb{R}$.
 
-**Necessity ($\implies$):**
+---
+# Necessity
 Assume that $f$ possesses a limit over $\mathcal{B}$, denoted $\lim_{\mathcal{B}} f(x) = A \in \mathbb{R}$.
 
 Let $\varepsilon > 0$ be given. By definition of the limit, there exists an element $B \in \mathcal{B}$ such that:
@@ -27,7 +28,8 @@ $$
 $$
 Replacing $\varepsilon$ with $\frac{\varepsilon}{2}$ in step 1 yields the strict bound $\omega(f, B) < \varepsilon$.
 
-**Sufficiency ($\impliedby$):**
+---
+# Sufficiency
 Conversely, assume that for every $\varepsilon > 0$, there exists an element $B \in \mathcal{B}$ such that $\omega(f, B) < \varepsilon$.
 
 For each natural number $n \in \mathbb{N}$, choose an element $B_n' \in \mathcal{B}$ such that $\omega(f, B_n') < \frac{1}{n}$. Construct a nested sequence of base elements $\{B_n\}_{n=1}^\infty$ by setting $B_1 := B_1'$, and inductively selecting $B_{n+1} \in \mathcal{B}$ such that:

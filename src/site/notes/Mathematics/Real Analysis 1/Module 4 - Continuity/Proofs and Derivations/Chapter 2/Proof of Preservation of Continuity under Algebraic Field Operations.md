@@ -15,7 +15,6 @@ $$
 
 ---
 # Theorem 1
-
 Let $\alpha, \beta \in \mathbb{R}$. By the algebraic limit theorem for linear combinations of functions:
 $$
 \begin{gather}
@@ -34,7 +33,6 @@ Because the limit of the linear combination equals its evaluation at $a$, the fu
 
 ---
 # Theorem 2
-
 By the algebraic limit theorem for pointwise products of functions:
 $$
 \begin{gather}
@@ -53,7 +51,6 @@ Thus, the pointwise product $f \cdot g$ is continuous at $a$.
 
 ---
 # Theorem 3
-
 Suppose $g(a) \ne 0$. By [[Mathematics/Real Analysis 1/Module 4 - Continuity/Proofs and Derivations/Chapter 2/Proof of Local Neighborhood Invariance of Sign\|local sign preservation]], there exists an open neighborhood $U(a)$ such that $g(x) \ne 0$ for all $x \in E \cap U(a)$. 
 
 By the algebraic limit theorem for quotients of functions where the denominator limit is non-zero:
@@ -74,7 +71,6 @@ Consequently, the quotient mapping $f / g$ is continuous at $a$.
 
 ---
 # Theorem 4
-
 By the reverse triangle inequality, for all $x \in E$:
 $$
 \begin{gather}
@@ -95,7 +91,6 @@ Therefore, the absolute value function $|f|$ is continuous at $a$.
 
 ---
 # Theorem 5
-
 The pointwise maximum and minimum of two real functions can be expressed through algebraic identities involving absolute values:
 $$
 \begin{gather}

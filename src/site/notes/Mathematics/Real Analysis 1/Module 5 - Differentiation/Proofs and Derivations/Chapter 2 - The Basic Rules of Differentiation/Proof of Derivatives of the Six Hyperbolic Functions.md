@@ -4,6 +4,7 @@
 
 Let the exponential function $\exp(x) = e^x$ be defined on $\mathbb{R}$. From the [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 1 - Differentiable Functions/Proof of the Master Catalog of Elementary Derivatives\|Master Catalog of Elementary Derivatives]], the derivative of $e^x$ satisfies $\frac{d}{dx} e^x = e^x$. By the [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 2 - The Basic Rules of Differentiation/Proof of The Chain Rule\|Chain Rule]] applied to the linear argument $-x$, the derivative of $e^{-x}$ satisfies $\frac{d}{dx} e^{-x} = -e^{-x}$.
 
+---
 # Proposition 1
 Let $x \in \mathbb{R}$. The hyperbolic sine function is defined analytically by:
 $$

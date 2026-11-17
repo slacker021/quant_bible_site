@@ -10,6 +10,7 @@ $$
 $$
 and let $a \in \mathbb{R}$ be an arbitrary real number.
 
+---
 # Proposition 1
 Fix the error tolerance:
 $$

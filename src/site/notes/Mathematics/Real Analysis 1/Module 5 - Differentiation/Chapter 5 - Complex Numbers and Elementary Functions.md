@@ -169,7 +169,7 @@ $$
   \exp(z_1 + z_2) = \exp(z_1) \exp(z_2)
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Absolute Convergence and Cauchy Product for the Complex Exponential Series\|Proof of Absolute Convergence and Cauchy Product for the Complex Exponential Series]])
+(see [[Proof of Absolute Convergence and Cauchy Product for the Complex Exponential Series]])
 
 The functional identity $\exp(z_1 + z_2) = \exp(z_1) \exp(z_2)$ establishes that the exponential mapping is a group homomorphism from the additive group of complex numbers $(\mathbb{C}, +)$ into the multiplicative group of non-zero complex numbers $(\mathbb{C}^\times, \cdot)$. 
 
@@ -205,7 +205,7 @@ $$
   e^z = e^{x + iy} = e^x \big(\cos(y) + i \sin(y)\big)
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Euler's Formula and Group Homomorphism of Exp\|Proof of Euler's Formula and Group Homomorphism of Exp]])
+(see [[Proof of Euler's Formula and Group Homomorphism of Exp]])
 
 Euler's formula elevates trigonometry from geometric ratios of triangles to intrinsic algebraic identities of the complex exponential. The circular functions $\cos(z)$ and $\sin(z)$ are defined for arbitrary complex arguments $z \in \mathbb{C}$ by:
 $$
@@ -236,7 +236,7 @@ $$
   \sin(\alpha + \beta) = \sin(\alpha)\cos(\beta) + \cos(\alpha)\sin(\beta)
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Trigonometric Addition Formulas via Euler's Homomorphism\|Proof of Trigonometric Addition Formulas via Euler's Homomorphism]])
+(see [[Proof of Trigonometric Addition Formulas via Euler's Homomorphism]])
 
 The polar decomposition of complex numbers emerges naturally from Euler's identity. Every complex number $z = x + iy \neq 0$ can be represented as:
 $$
@@ -308,7 +308,7 @@ $$
   \text{the power series } \sum_{n=0}^\infty c_n (z - z_0)^n \text{ converges absolutely.}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Abel's Lemma for Power Series\|Proof of Abel's Lemma for Power Series]])
+(see [[Proof of Abel's Lemma for Power Series]])
 
 Applying the supremum limit across all terms yields the exact formula for the maximal radius of convergence, established by Augustin-Louis Cauchy and Jacques Hadamard: 
 $$
@@ -322,7 +322,7 @@ $$
   B_R(z_0) := \{z \in \mathbb{C} : |z - z_0| < R\}, \text{ and diverges for all } |z - z_0| > R.
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Cauchy-Hadamard Radius Formula and Convergence Disk\|Proof of Cauchy-Hadamard Radius Formula and Convergence Disk]])
+(see [[Proof of Cauchy-Hadamard Radius Formula and Convergence Disk]])
 
 In practice, the limit of absolute coefficient ratios often provides a direct calculation of the radius:
 $$
@@ -333,7 +333,7 @@ $$
   \text{then the radius of convergence is given by } R = \frac{1}{\lambda}.
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of D'Alembert Ratio Test for Complex Series\|Proof of D'Alembert Ratio Test for Complex Series]])
+(see [[Proof of D'Alembert Ratio Test for Complex Series]])
 
 A central theorem of analysis is that a power series defines an infinitely differentiable function within its open disk of convergence, and its derivative can be computed by differentiating the series term-by-term. Crucially, term-by-term differentiation preserves the radius of convergence identically: 
 $$
@@ -345,19 +345,19 @@ $$
   \limsup_{n \to \infty} \sqrt[n]{n |c_n|} = \limsup_{n \to \infty} \sqrt[n]{|c_n|}
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Cauchy-Hadamard Derivative Invariance\|Proof of Cauchy-Hadamard Derivative Invariance]])
+(see [[Proof of Cauchy-Hadamard Derivative Invariance]])
 
 $$
 \begin{gather}
 \textbf{Theorem: Term-by-Term Differentiation of Power Series} \\[5mm]
   \text{Let } f(z) = \sum_{n=0}^\infty c_n (z - z_0)^n \text{ have radius of convergence } R > 0. \\[2mm]
-  \text{Then } f \text{ is complex differentiable (analytic) at every point of the open disk } B_R(z_0), \\[2mm]
+  \text{Then } f \text{ is \textit{complex differentiable} (\textit{analytic}) at every point of the open disk } B_R(z_0), \\[2mm]
   \text{and its complex derivative } f'(z) = \lim_{w \to z} \frac{f(w) - f(z)}{w - z} \text{ satisfies:} \\[3.5mm]
   f'(z) = \sum_{n=1}^\infty n c_n (z - z_0)^{n-1} \\[3.5mm]
   \text{By induction, } f \text{ is infinitely differentiable on } B_R(z_0), \text{ with } c_n = \frac{f^{(n)}(z_0)}{n!}.
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Term-by-Term Differentiation of Power Series\|Proof of Term-by-Term Differentiation of Power Series]])
+(see [[Proof of Term-by-Term Differentiation of Power Series]])
 
 The nested topology of convergence disks and uniform convergence is illustrated below:
 ```easy-tikz
@@ -382,7 +382,7 @@ write "$\\text{Divergence Zone } (|z - z_0| > R)$" at (2, -3.2) in red, center
 ```
 
 ### Uniqueness of Analytic Expansions and Zeros of Analytic Functions
-Functions defined by convergent power series are termed *analytic*. Analytic functions possess an extraordinary degree of structural rigidity: they are completely determined by their values on an arbitrarily small set that contains an accumulation point: 
+Functions defined by convergent power series are termed analytic. Analytic functions possess an extraordinary degree of structural rigidity: they are completely determined by their values on an arbitrarily small set that contains an accumulation point: 
 $$
 \begin{gather}
 \textbf{Theorem: Identity Principle for Analytic Power Series Expansions} \\[5mm]
@@ -393,7 +393,7 @@ $$
   \text{then } a_n = b_n \text{ for all } n \ge 0, \text{ and consequently } f(z) = g(z) \text{ on all of } B_R(z_0).
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of Identity Theorem for Analytic Power Series Expansions\|Proof of Identity Theorem for Analytic Power Series Expansions]])
+(see [[Proof of Identity Theorem for Analytic Power Series Expansions]])
 
 A direct corollary of the Identity Theorem is the *Isolation of Zeros*: if an analytic function $f$ on a connected domain is not identically zero, its roots cannot accumulate within the domain. Each zero $z_*$ has a finite order $m \in \mathbb{N}$ such that $f(z) = (z - z_*)^m h(z)$ with $h(z_*) \neq 0$.
 
@@ -430,7 +430,7 @@ $$
   P(z_0) = 0
 \end{gather}
 $$
-(see [[Mathematics/Real Analysis 1/Module 5 - Differentiation/Proofs and Derivations/Chapter 5 - Complex Numbers and Elementary Functions/Proof of the Fundamental Theorem of Algebra (Minimum Modulus Principle)\|Proof of the Fundamental Theorem of Algebra (Minimum Modulus Principle)]])
+(see [[Proof of the Fundamental Theorem of Algebra (Minimum Modulus Principle)]])
 
 By the division algorithm for polynomials, if $P(z_0) = 0$, then $P(z) = (z - z_0) Q(z)$ for some polynomial $Q(z)$ of degree $n - 1$. Iterating this factorization $n$ times yields the complete linear factorization:
 $$
