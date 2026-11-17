@@ -1,11 +1,10 @@
 {
   "/": [
-    "The Quant's Bible",
     "Computer Science",
     "Mathematics",
+    "The Quant's Bible",
     "API and Data Sources",
     "Publications and Journals",
-    "Citations",
     "Terms of Use"
   ],
   "/Computer Science": [
@@ -49,7 +48,9 @@
     "Module 2 - The Space of Real Numbers",
     "Module 3 - Limits",
     "Module 4 - Continuity",
-    "Module 5 - Differentiation"
+    "Module 5 - Differentiation",
+    "Module 6 - Integration",
+    "Appendix"
   ],
   "/Mathematics/Real Analysis 1/Module 1 - General Mathematical Concepts and Notation": [
     "Chapter 1 - Basic Rules of Logic",
@@ -373,5 +374,67 @@
     "Proof of the Three Euler Substitutions for Quadratic Irrationals",
     "Proof of Uniqueness of Primitives up to Additive Constants on Connected Domains",
     "Proof of Weierstrass Universal Substitution Theorem"
+  ],
+  "/Mathematics/Real Analysis 1/Module 6 - Integration": [
+    "Proofs and Derivations",
+    "Chapter 1 - Definition of the Integral and Description of the Set of Integrable Functions",
+    "Chapter 2 - Linearity, Additivity, and Monotonicity of the Integral",
+    "Chapter 3 - The Integral and the Derivative",
+    "Chapter 4 - Improper Integrals"
+  ],
+  "/Mathematics/Real Analysis 1/Module 6 - Integration/Proofs and Derivations": [
+    "Chapter 1 - Definition of the Integral and Description of the Set of Integrable Functions",
+    "Chapter 2 - Linearity, Additivity, and Monotonicity of the Integral",
+    "Chapter 3 - The Integral and the Derivative",
+    "Chapter 4 - Improper Integrals"
+  ],
+  "/Mathematics/Real Analysis 1/Module 6 - Integration/Proofs and Derivations/Chapter 1 - Definition of the Integral and Description of the Set of Integrable Functions": [
+    "Proof of Darboux's Theorem on Limits of Upper and Lower Sums",
+    "Proof of Lebesgue's Criterion for Riemann Integrability",
+    "Proof of the Arbitrary Partition Darboux Inequality",
+    "Proof of the Continuous Composition Integrability Theorem",
+    "Proof of the Darboux Sum Monotonicity Under Refinement",
+    "Proof of the Integrability of Continuous Functions on Compact Intervals",
+    "Proof of the Integrability of Functions with Finitely Many Discontinuities",
+    "Proof of the Integrability of Monotone Functions",
+    "Proof of the Necessity of Boundedness for Riemann Integrability",
+    "Proof of the Riemann Integrability Criterion via Oscillation"
+  ],
+  "/Mathematics/Real Analysis 1/Module 6 - Integration/Proofs and Derivations/Chapter 2 - Linearity, Additivity, and Monotonicity of the Integral": [
+    "Proof of Interval Additivity of the Definite Integral",
+    "Proof of Monotonicity and the Absolute Value Integral Inequality",
+    "Proof of the Cauchy-Bunyakovsky-Schwarz Inequality for Integrals",
+    "Proof of the First Mean-Value Theorem for Integrals",
+    "Proof of the Generalized First Mean-Value Theorem for Integrals",
+    "Proof of the Generalized Orientation Additivity Formula",
+    "Proof of the Integrability of the Product of Integrable Functions",
+    "Proof of the Linearity of the Riemann Integral",
+    "Proof of the Second Mean-Value Theorem for Integrals"
+  ],
+  "/Mathematics/Real Analysis 1/Module 6 - Integration/Proofs and Derivations/Chapter 3 - The Integral and the Derivative": [
+    "Proof of Integration by Parts for Definite Integrals",
+    "Proof of Lipschitz Continuity and Differentiability of the Variable Upper Limit Integral",
+    "Proof of Taylor's Formula with Integral Remainder",
+    "Proof of the Change of Variable Formula for Definite Integrals",
+    "Proof of the Newton-Leibniz Formula",
+    "Proof of the Structural and Analytic Properties of the Natural Logarithm"
+  ],
+  "/Mathematics/Real Analysis 1/Module 6 - Integration/Proofs and Derivations/Chapter 4 - Improper Integrals": [
+    "Proof of Abel's Test for Improper Integrals",
+    "Proof of Change of Variable (Substitution) for Improper Integrals",
+    "Proof of Conditional Convergence of the Dirichlet Sinc Integral",
+    "Proof of Dirichlet's Test for Improper Integrals",
+    "Proof of Domain Additivity for Improper Integrals",
+    "Proof of Integration by Parts for Improper Integrals",
+    "Proof of the Cauchy Criterion for Convergence of Improper Integrals",
+    "Proof of the Cauchy-Maclaurin Integral Test and Series Remainder Bounds",
+    "Proof of the Convergence Criteria for Canonical p-Integrals",
+    "Proof of the Direct and Limit Comparison Tests for Improper Integrals",
+    "Proof of the Monotonicity Criterion for Non-Negative Improper Integrals",
+    "Proof of Vector Space Linearity of Improper Integrals",
+    "Proof that Absolute Convergence Implies Convergence for Improper Integrals"
+  ],
+  "/Mathematics/Real Analysis 1/Appendix": [
+    "Citations"
   ]
 }
