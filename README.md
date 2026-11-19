@@ -1,15 +1,17 @@
 # The Quant's Bible
-This is the second of two repositories dedicated to the _Quant's Bible_, a public and open-access knowledgebase containing rigorous mathematical foundations for independent quant researchers. This specific repository provides the web container that the viewer can see and interact with. 
+This is the second of three repositories dedicated to the _Quant's Bible_, a public and open-access knowledgebase containing rigorous mathematical foundations for independent quant researchers. This specific repository provides the web container that the viewer can see and interact with. 
 
 ### Technical Specifications
+
 ##### Primary Editor
-The primary editor used to alter the notes is _Obsidian_, which is a free software used for note-taking. Obsidian uses Markdown documents that enable simple note formatting and organization. 
+- The primary editor used to alter the notes is _Obsidian_, which is a free software used for note-taking. Obsidian uses Markdown documents that enable simple note formatting and organization.
+- For agentic workflows, _Google Antigravity_ is the IDE of choice for multi-agent coordination. 
 
 ##### Vercel
 The notes are hosted with the use of _Vercel_. 
 
 ##### Digital Garden
-In addition to Obsidian being the primary editor to organize the notes, the synchronization between the editor's local repository and Vercel's online servers is done with the _Digital Garden_ plugin. This is a free plugin that allows notes hosting without having to manually code all visual elements. Below are the specific extensions that were added to Digital Garden to extend its functionality: 
+In addition to Obsidian being the primary editor to organize the notes, the synchronization between the editor's local repository and Vercel's online servers is done with the _Digital Garden_ plugin. This is a free plugin that allows notes hosting without having to manually code all visual elements. Below are the specific extensions that were added to Digital Garden to extend its functionality, excluding core plugins that come with Digital Garden: 
 
 **1. Extensions by Ole Eskild Steenses**
 - _Copy Code Button_ adds a copy button to every code block, enabling readers to easily copy the code they are reading rather than having to manually scroll through the code block.
@@ -18,6 +20,7 @@ In addition to Obsidian being the primary editor to organize the notes, the sync
 - _Sidebar Controls_ allows readers to collapse the left sidebar, which provides a file tree that allows them to switch between various notes in the repository, and the right sidebar, which allows them to conveniently fast-forward or backward between various parts of the specific note they are reading.
 
 **2. Extensions by Kolten Bendickson**
+- _Appearance & Reading_ enables the rendering of 2D and 3D TikZ figures, with the figures being rendered as SVGs. 
 - _Clean Print_ adds a small print icon on the bottom-left that gives readers a:
 	- 	 Live layout preview to see how the page will look like before printing.
 	- 	 Study-sheet presets that allow for the alteration of size notes to account for reader's choice of paper used.
